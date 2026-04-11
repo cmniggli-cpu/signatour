@@ -1,0 +1,108 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Menu, X, ChevronDown } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { NAV_ITEMS } from '@/lib/constants'
+import Button from '@/components/ui/Button'
+import MobileMenu from './MobileMenu'
+
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [pathname])
+
+  return (
+    <>
+      <header
+        className={cn(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+          scrolled ? 'glass py-3' : 'bg-transparent py-6'
+        )}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <span className="text-xl font-black tracking-tight text-primary-900 uppercase">
+              Signa<span className="text-accent-500">tour</span>
+            </span>
+          </Link>
+
+          <nav className="hidden lg:flex items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <div key={item.label} className="relative group">
+                {item.children ? (
+                  <>
+                    <button
+                      className={cn(
+                        'flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200',
+                        'text-primary-600 hover:text-primary-900 hover:bg-primary-100/50'
+                      )}
+                    >
+                      {item.label}
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+                    </button>
+                    <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="bg-white rounded-2xl shadow-xl border border-primary-100 py-2 min-w-[220px]">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={cn(
+                              'block px-5 py-2.5 text-sm text-primary-600 hover:bg-cream hover:text-primary-900 transition-colors',
+                              pathname === child.href && 'text-primary-900 bg-cream font-medium'
+                            )}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      'px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200',
+                      'text-primary-600 hover:text-primary-900 hover:bg-primary-100/50',
+                      pathname === item.href && 'text-primary-900 bg-primary-100/50'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          <div className="hidden lg:block">
+            <Button href="/kontakt" variant="primary" size="sm">
+              Kontakt
+            </Button>
+          </div>
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden p-2 rounded-full text-primary-900 hover:bg-primary-100 transition-colors"
+            aria-label="Menü öffnen"
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </header>
+
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+    </>
+  )
+}
