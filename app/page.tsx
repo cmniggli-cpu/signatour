@@ -131,17 +131,23 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
-              'https://vtour.cloud/cxfvy',
-              'https://vtour.cloud/8p3cb',
-            ].map((url, i) => (
+              { id: 'e16tqj/ee82pes6', title: 'Referenz 1' },
+              { id: 'e16tqj/cltkwbjc', title: 'Referenz 2' },
+            ].map((tour, i) => (
               <AnimatedSection key={i} delay={i * 0.2}>
-                <div className="rounded-2xl overflow-hidden border border-primary-200/60 aspect-[16/10]">
+                <div className="group relative rounded-2xl overflow-hidden border border-primary-200/60 bg-cream aspect-[16/10] shadow-sm hover:shadow-md transition-shadow">
                   <iframe
-                    src={url}
+                    src={`https://vtour.cloud/${tour.id}`}
                     className="w-full h-full border-0"
+                    allow="accelerometer; magnetometer; gyroscope; fullscreen; autoplay; clipboard-write; encrypted-media; xr-spatial-tracking; gamepad;"
                     allowFullScreen
-                    title={`Referenzprojekt ${i + 1}`}
+                    title={tour.title}
                   />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-primary-900/80 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-semibold">
+                      {tour.title}
+                    </span>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
