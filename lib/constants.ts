@@ -1,10 +1,11 @@
 import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, AddOn, Stat, BranchenPackage } from './types'
 
-export const SITE_NAME = 'Signatour'
+export const SITE_NAME = 'Niggli 360° Signature Tours'
 export const SITE_URL = 'https://signatour.ch'
-export const SITE_DESCRIPTION = 'Professionelle 360-Grad-Rundgänge für Hotels, Restaurants, Spas, Fitnessstudios und Immobilien im DACH-Raum. Done-for-You ab CHF 690. Kein Abo.'
+export const SITE_DESCRIPTION = 'Premium 360°-Touren für Hotels, Spa, Gastronomie und Immobilien. Ihre Gäste erleben, buchen und kaufen direkt in der Tour. Schweizer Qualität, kein Abo.'
 export const CONTACT_EMAIL = 'info@signatour.ch'
-export const CONTACT_PHONE = '+41 (0) XX XXX XX XX'
+export const CONTACT_PHONE = '+41 76 652 17 37'
+export const CONTACT_ADDRESS = 'Rue de l\'Industrie 43, 2720 Tramelan'
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
@@ -22,7 +23,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Pakete', href: '/pakete' },
   { label: 'Über uns', href: '/ueber-uns' },
   { label: 'FAQ', href: '/faq' },
-  { label: 'Matterport Alternative', href: '/vergleich/matterport-alternative' },
 ]
 
 export const HERO_STATS: Stat[] = [
@@ -84,63 +84,48 @@ export const MARKET_STATS: Stat[] = [
 
 export const PRICING_TIERS: PricingTier[] = [
   {
-    name: 'Basis-Tour',
-    price: 'CHF 690',
-    priceRange: 'CHF 690–890',
-    description: 'Kleine Räumlichkeiten bis 100 m²',
-    hosting: '12 Monate Hosting inklusive',
+    name: 'Basic',
+    price: 'CHF 1\'797',
+    priceRange: 'CHF 1\'797',
+    description: 'Ideal für kleine Bereiche',
+    hosting: 'inkl. 12 Monate Basic Service',
     features: [
-      '5–10 Panoramapunkte',
-      'Professionelles HDR-Shooting',
-      'Basis-Navigation',
-      'Einbettungscode',
-      'Lieferung in 5–7 Arbeitstagen',
+      'bis 15 Panoramen',
+      '1080p Full-HD-Qualität',
+      'max. 5 Hotspots',
+      'Mobile optimiert',
+      '1 Korrekturrunde',
     ],
   },
   {
-    name: 'Business-Tour',
-    price: 'CHF 1.190',
-    priceRange: 'CHF 1.190–1.490',
-    description: 'Mittlere Räumlichkeiten 100–300 m²',
-    hosting: '12 Monate Hosting inklusive',
+    name: 'Signature',
+    price: 'CHF 4\'997',
+    priceRange: 'CHF 4\'997',
+    description: 'Der beliebteste Allrounder',
+    hosting: 'inkl. 12 Monate Signature Care',
     featured: true,
     features: [
-      '10–20 Panoramapunkte',
-      'HDR-Shooting + Nachbearbeitung',
-      'Info-Hotspots',
-      'Grundriss-Navigation',
-      'Individuelles Branding',
-      'Google Business Integration',
+      'bis 50 Panoramen',
+      '4K-Qualität',
+      'bis 25 Hotspots',
+      'Corporate Design Integration',
+      'Audio & Interaktionen',
+      '3 Korrekturrunden',
     ],
   },
   {
-    name: 'Premium-Tour',
-    price: 'CHF 1.690',
-    priceRange: 'CHF 1.690–2.490',
-    description: 'Grosse Räumlichkeiten 300–1\'000 m²',
-    hosting: '24 Monate Hosting inklusive',
+    name: 'Pro',
+    price: 'CHF 8\'497',
+    priceRange: 'CHF 8\'497',
+    description: 'Für Hotels, Thermen & Premium-Resorts',
+    hosting: 'inkl. 12 Monate Signature Evolution',
     features: [
-      '20–35 Panoramapunkte',
-      'Alles aus der Business-Tour',
-      'Interaktive Hotspots (Video, Links)',
-      'Mehrere Stockwerke',
-      'Grundriss pro Etage',
-      'Buchungssystem-Integration',
-    ],
-  },
-  {
-    name: 'Signature-Tour',
-    price: 'CHF 2.990',
-    priceRange: 'CHF 2.990–3.990',
-    description: 'Premium-Objekte ab 1\'000 m²',
-    hosting: '24 Monate Hosting inklusive',
-    features: [
-      '35+ Panoramapunkte',
-      'Alles aus der Premium-Tour',
-      'Geführter Tour-Modus',
-      'Video-Integration',
-      'Ambient Sound',
-      'Mehrsprachig',
+      'bis 100 Panoramen',
+      '8K-Qualität',
+      'unbegrenzte Hotspots',
+      'Buchungsintegration',
+      'Video & Interaktionen',
+      '5 Korrekturrunden',
     ],
   },
 ]

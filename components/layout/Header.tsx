@@ -33,9 +33,12 @@ export default function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-black tracking-tight text-primary-900 uppercase">
-              Signa<span className="text-accent-500">tour</span>
+          <Link href="/" className="flex items-center gap-2.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/niggli-logo.png" alt="Niggli 360 Signature Tours" className="w-11 h-11" />
+            <span className="flex flex-col leading-none">
+              <span className="text-[10px] tracking-[0.26em] uppercase text-primary-400 font-semibold">Niggli</span>
+              <span className="text-base sm:text-lg tracking-[0.05em] uppercase text-primary-900" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#C8901C' }}>360° Signature Tours</span>
             </span>
           </Link>
 
@@ -87,9 +90,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button href="/kontakt" variant="primary" size="sm">
-              Kontakt
-            </Button>
+            <Button href="/kontakt" variant="primary" size="sm">Kontakt</Button>
           </div>
 
           <button

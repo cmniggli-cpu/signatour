@@ -175,3 +175,192 @@ body {
   background: rgba(200, 150, 48, 0.2);
   color: #111110;
 }
+
+/* ============================================================
+   Niggli 360° — Homepage Design (scoped under .nigpage)
+   ============================================================ */
+.nigpage{
+  --g:#C8901C; --gd:#E3B23A; --ggrad:linear-gradient(135deg,#E3B23A,#C8901C);
+  --ink:#15120B; --ink2:#3a352c; --mut:#6d6657; --ln:rgba(20,17,11,.10);
+  --paper:#FBFAF6; --paper2:#F3EFE6; --white:#FFFFFF;
+  --dk:#0C0C0E; --dk2:#131318; --dln:rgba(227,178,58,.30); --dlns:rgba(255,255,255,.12);
+  --cream:#EFE7D8; --dmut:#A99E8C;
+  font-family:'Jost',system-ui,sans-serif;color:var(--ink);line-height:1.6;background:var(--paper)
+}
+.nigpage img{display:block;max-width:100%}
+.nigpage .serif{font-family:'Cormorant Garamond',serif}
+.nigpage .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.nigpage .blk{padding:78px 0}
+.nigpage .center{text-align:center}
+.nigpage .kicker{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--g);font-weight:600}
+.nigpage .sec{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.4vw,50px);line-height:1.05;margin-top:12px}
+.nigpage .sub{color:var(--mut);max-width:62ch;font-size:16.5px;margin-top:10px}
+.nigpage .center .sub{margin-left:auto;margin-right:auto}
+.nigpage .rule{width:52px;height:2px;background:var(--ggrad);margin:16px auto 0;border-radius:2px}
+.nigpage .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:8px;font-weight:600;font-size:15px;transition:.22s;cursor:pointer;text-decoration:none}
+.nigpage .btn-gold{background:var(--ggrad);color:#1a1304;box-shadow:0 10px 28px rgba(200,144,28,.22)}
+.nigpage .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(200,144,28,.32)}
+.nigpage .btn-ghost{border:1px solid var(--ln);color:var(--ink)}
+.nigpage .btn-ghost:hover{border-color:var(--g);color:var(--g)}
+.nigpage .icn{width:42px;height:42px}.nigpage .icn-sm{width:28px;height:28px}
+.nigpage .arrow{transition:.22s}.nigpage .btn:hover .arrow{transform:translateX(3px)}
+.nigpage .dark{background:var(--dk);color:var(--cream)}
+.nigpage .dark .sec{color:#fff}.nigpage .dark .sub{color:var(--dmut)}.nigpage .dark .kicker{color:var(--gd)}
+
+/* hero */
+.nigpage .hero{position:relative;color:#fff;overflow:hidden;background:var(--dk)}
+.nigpage .hero .bg{position:absolute;inset:0}
+.nigpage .hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.nigpage .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.92),rgba(8,8,10,.55) 60%,rgba(8,8,10,.35)),radial-gradient(60% 60% at 80% 10%,rgba(227,178,58,.16),transparent 60%)}
+.nigpage .hero .inner{position:relative;padding:84px 0 92px}
+.nigpage .hero .herologo{width:min(220px,52vw);height:auto;margin-bottom:10px;filter:drop-shadow(0 10px 34px rgba(0,0,0,.55))}
+.nigpage .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(36px,5.2vw,62px);line-height:1.05;margin:18px 0 14px;max-width:18ch}
+.nigpage .hero h1 em{font-style:italic;color:var(--gd)}
+.nigpage .hero .lead{font-size:19.5px;color:var(--cream);max-width:52ch}
+.nigpage .hero .lead .accent{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gd)}
+.nigpage .hero .cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:30px}
+.nigpage .hero .phone{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:500;text-decoration:none}
+.nigpage .hero .phone svg{color:var(--gd)}
+
+/* pillars */
+.nigpage .pillars .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.nigpage .pillar{text-align:center;padding:8px}
+.nigpage .pillar svg{margin:0 auto 14px;display:block;color:var(--g)}
+.nigpage .pillar h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+.nigpage .pillar p{font-size:13.5px;color:var(--mut)}
+
+/* feature cards */
+.nigpage .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.nigpage .fcard{background:var(--white);border:1px solid var(--ln);border-radius:14px;padding:28px 22px;text-align:center}
+.nigpage .fcard svg{margin:0 auto 16px;display:block;color:var(--g)}
+.nigpage .fcard h3{font-size:14px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.nigpage .fcard p{font-size:14px;color:var(--mut)}
+
+/* branchen */
+.nigpage .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.nigpage .bcard{border-radius:14px;overflow:hidden;position:relative;border:1px solid var(--ln);background:var(--white);transition:.25s;text-decoration:none;color:var(--ink);display:block}
+.nigpage .bcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.10)}
+.nigpage .bcard .ph{aspect-ratio:16/10;overflow:hidden}
+.nigpage .bcard .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.nigpage .bcard:hover .ph img{transform:scale(1.06)}
+.nigpage .bcard .bd{padding:18px 20px}
+.nigpage .bcard h3{font-size:18px;font-weight:600}
+.nigpage .bcard p{font-size:13.5px;color:var(--mut);margin-top:3px}
+.nigpage .bcard .more{color:var(--g);font-size:13px;font-weight:600;margin-top:10px;display:inline-block}
+.nigpage .bcard.empty{grid-column:1/-1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 30px;background:var(--paper2);border-style:dashed}
+.nigpage .bcard.empty h3{font-size:25px}
+.nigpage .bcard.empty p{font-size:15px;max-width:46ch}
+.nigpage .bcard.empty svg{width:54px;height:54px}
+.nigpage .bcard.empty svg{color:var(--g);margin-bottom:10px}
+
+/* comparison */
+.nigpage .cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.nigpage .cmp .col{padding:30px;border-radius:14px}
+.nigpage .cmp .std{background:rgba(255,255,255,.03);border:1px solid var(--dlns)}
+.nigpage .cmp .sig{background:linear-gradient(180deg,rgba(227,178,58,.12),rgba(227,178,58,.02));border:1px solid var(--dln)}
+.nigpage .cmp h3{font-family:'Cormorant Garamond',serif;font-size:24px;margin-bottom:20px}
+.nigpage .cmp .std h3{color:var(--dmut)}.nigpage .cmp .sig h3{color:var(--gd)}
+.nigpage .cmp ul{list-style:none;display:flex;flex-direction:column;gap:13px;margin:0;padding:0}
+.nigpage .cmp li{display:flex;gap:12px;font-size:15.5px}
+.nigpage .cmp .i{flex:none;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.nigpage .cmp .std .i{background:rgba(255,255,255,.07);color:var(--dmut)}.nigpage .cmp .std li{color:var(--dmut)}
+.nigpage .cmp .sig .i{background:var(--ggrad);color:#1a1304}.nigpage .cmp .sig li{color:#f3ead9}
+
+/* pricing */
+.nigpage .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:stretch}
+.nigpage .pcard{background:var(--white);border:1px solid var(--ln);border-radius:16px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
+.nigpage .pcard.best{border:1.5px solid var(--g);box-shadow:0 22px 50px rgba(0,0,0,.10);transform:translateY(-8px)}
+.nigpage .ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ggrad);color:#1a1304;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:6px}
+.nigpage .pcard h3{font-family:'Cormorant Garamond',serif;font-size:27px;margin-bottom:4px}
+.nigpage .pcard .for{color:var(--mut);font-size:13.5px;min-height:38px}
+.nigpage .pcard .price{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:38px;color:var(--g);margin:12px 0 2px}
+.nigpage .pcard .note{font-size:12px;color:var(--mut);margin-bottom:18px}
+.nigpage .pcard ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--ink2);margin:0 0 22px;padding:0}
+.nigpage .pcard li{display:flex;gap:9px;align-items:flex-start}.nigpage .pcard li svg{flex:none;margin-top:3px;color:var(--g);width:18px;height:18px}
+.nigpage .pcard .btn{margin-top:auto;justify-content:center}
+
+/* service */
+.nigpage .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.nigpage .scard{background:var(--white);border:1px solid var(--ln);border-radius:14px;padding:26px;position:relative}
+.nigpage .scard.rec{border-color:var(--g)}
+.nigpage .scard .tag{position:absolute;top:18px;right:18px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--g);border:1px solid var(--g);border-radius:5px;padding:3px 9px}
+.nigpage .scard h3{font-family:'Cormorant Garamond',serif;font-size:22px;margin-bottom:14px}
+.nigpage .scard ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:var(--ink2);margin:0 0 16px;padding:0}
+.nigpage .scard li{display:flex;gap:9px}.nigpage .scard li svg{flex:none;margin-top:3px;color:var(--g);width:18px;height:18px}
+.nigpage .scard .amt{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:30px;color:var(--g)}
+.nigpage .scard .amt small{font-size:13px;color:var(--mut);font-family:'Jost'}
+
+/* guarantee */
+.nigpage .guar{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.nigpage .gcard{background:var(--dk2);border:1px solid var(--dlns);border-radius:14px;padding:30px;text-align:center}
+.nigpage .gcard svg{margin:0 auto 14px;display:block;color:var(--gd)}
+.nigpage .gcard h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gd);margin-bottom:10px}
+.nigpage .gcard p{color:var(--cream);font-size:15px}
+.nigpage .nullrisk{margin-top:24px;text-align:center;padding:20px;border:1px solid var(--dln);border-radius:10px;background:linear-gradient(180deg,rgba(227,178,58,.12),transparent);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;letter-spacing:.16em;text-transform:uppercase;color:var(--gd)}
+
+/* options */
+.nigpage .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.nigpage .ocard{background:var(--white);border:1px solid var(--ln);border-radius:12px;padding:24px;text-align:center}
+.nigpage .ocard svg{margin:0 auto 12px;display:block;color:var(--g)}
+.nigpage .ocard h3{font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:700}
+.nigpage .ocard .pr{color:var(--g);font-weight:600;margin-top:8px;font-size:15px}
+
+/* refs */
+.nigpage .refs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.nigpage .ref{border:1px solid var(--ln);border-radius:14px;overflow:hidden;position:relative;background:var(--white)}
+.nigpage .ref iframe{width:100%;aspect-ratio:16/11;border:0;display:block}
+.nigpage .ref .badge{position:absolute;top:12px;left:12px;background:var(--ggrad);color:#1a1304;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;border-radius:6px;z-index:2}
+.nigpage .ref .bot{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.nigpage .ref .bot b{font-size:14.5px}.nigpage .ref .bot a{color:var(--g);font-size:13px;font-weight:600;white-space:nowrap;text-decoration:none}
+
+/* faq */
+.nigpage .faq{margin-top:34px;display:flex;flex-direction:column;gap:12px}
+.nigpage details{background:var(--white);border:1px solid var(--ln);border-radius:12px;padding:18px 24px}
+.nigpage summary{cursor:pointer;list-style:none;font-weight:600;font-size:16.5px;display:flex;justify-content:space-between;gap:14px}
+.nigpage summary::-webkit-details-marker{display:none}
+.nigpage summary::after{content:"+";color:var(--g);font-size:22px;line-height:1}
+.nigpage details[open] summary::after{content:"–"}
+.nigpage details p{color:var(--mut);font-size:15px;margin-top:12px}
+
+/* final */
+.nigpage .final{position:relative;overflow:hidden;color:#fff;text-align:center;border-radius:18px;background:var(--dk)}
+.nigpage .final .bg{position:absolute;inset:0}
+.nigpage .final .bg img{width:100%;height:100%;object-fit:cover;opacity:.34}
+.nigpage .final .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 50% 0%,rgba(227,178,58,.18),transparent 60%),rgba(8,8,10,.55)}
+.nigpage .final .inner{position:relative;padding:64px 40px}
+.nigpage .final h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,4vw,46px);margin-bottom:10px}
+.nigpage .final p{color:var(--cream);max-width:48ch;margin:0 auto 22px}
+.nigpage .final .phone{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gd);font-weight:700;margin-top:10px;display:inline-flex;gap:12px;align-items:center;text-decoration:none}
+
+@media(max-width:900px){.nigpage .pillars .grid{grid-template-columns:1fr 1fr}.nigpage .refs{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.nigpage .prices,.nigpage .svc{grid-template-columns:1fr}.nigpage .pcard.best{transform:none}}
+@media(max-width:820px){.nigpage .fgrid,.nigpage .bgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.nigpage .cmp{grid-template-columns:1fr}}
+@media(max-width:680px){.nigpage .guar,.nigpage .opts{grid-template-columns:1fr}}
+@media(max-width:620px){.nigpage .refs,.nigpage .bgrid{grid-template-columns:1fr}}
+
+/* ---- Niggli homepage: light / silver overrides (no black) ---- */
+.nigpage{--gd:#C8901C;--dk:#E9ECEF;--dk2:#FFFFFF;--dln:rgba(200,144,28,.32);--dlns:rgba(20,17,11,.10);--cream:#2a2620;--dmut:#6d6657}
+.nigpage .hero{color:var(--ink);background:linear-gradient(160deg,#F4F5F7 0%,#DCE0E5 100%)}
+.nigpage .hero .bg img{opacity:.14}
+.nigpage .hero .bg::after{background:linear-gradient(90deg,rgba(244,245,247,.90),rgba(244,245,247,.55) 60%,rgba(244,245,247,.30)),radial-gradient(60% 60% at 80% 10%,rgba(200,144,28,.12),transparent 60%)}
+.nigpage .hero .lead{color:var(--ink2)}
+.nigpage .hero .phone{color:var(--ink)}
+.nigpage .cmp .std{background:#fff}
+.nigpage .cmp .std .i{background:rgba(20,17,11,.07)}
+.nigpage .cmp .sig li{color:var(--ink)}
+.nigpage .final{color:var(--ink);background:linear-gradient(160deg,#F4F5F7,#DCE0E5)}
+.nigpage .final .bg img{opacity:.12}
+.nigpage .final .bg::after{background:radial-gradient(80% 120% at 50% 0%,rgba(200,144,28,.14),transparent 60%),rgba(244,245,247,.5)}
+
+/* ---- Legal pages ---- */
+.legal-prose h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1A1918;margin:32px 0 10px;border-bottom:1px solid rgba(20,17,11,.1);padding-bottom:6px}
+.legal-prose p{margin:10px 0;color:#3a352c;line-height:1.7}
+.legal-prose ul{margin:10px 0 10px 22px;list-style:disc}
+.legal-prose li{margin:6px 0;color:#3a352c}
+.legal-prose a{color:#C8901C}
+.legal-prose .box{background:#fff;border:1px solid rgba(20,17,11,.1);border-radius:12px;padding:18px 22px;margin:14px 0}
+
+.nigpage .fgrid3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.nigpage .fgrid3{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.nigpage .fgrid3{grid-template-columns:1fr}}
