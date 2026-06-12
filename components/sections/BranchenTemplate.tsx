@@ -11,6 +11,8 @@ const ALL_BRANCHEN = [
   { slug: 'spa-wellness', label: 'Spa & Wellness' },
   { slug: 'fitnessstudio', label: 'Fitnessstudios' },
   { slug: 'immobilien', label: 'Immobilien' },
+  { slug: 'banken-versicherungen', label: 'Banken, Versicherungen & Kanzleien' },
+  { slug: 'eventlocations', label: 'Eventlocations & Showrooms' },
 ]
 
 interface BranchenTemplateProps {

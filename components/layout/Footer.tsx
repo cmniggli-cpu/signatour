@@ -35,6 +35,8 @@ export default function Footer() {
                 { label: 'Spa & Wellness', href: '/branchen/spa-wellness' },
                 { label: 'Fitnessstudios', href: '/branchen/fitnessstudio' },
                 { label: 'Immobilien', href: '/branchen/immobilien' },
+                { label: 'Banken & Kanzleien', href: '/branchen/banken-versicherungen' },
+                { label: 'Eventlocations & Showrooms', href: '/branchen/eventlocations' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-primary-400 hover:text-white transition-colors text-sm">{link.label}</Link>
@@ -63,17 +65,18 @@ export default function Footer() {
             <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">Kontakt</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-primary-400">
-                <Mail className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
-                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{CONTACT_EMAIL}</a>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-primary-400">
                 <Phone className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
                 <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{CONTACT_PHONE}</a>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-primary-400">
+                <Mail className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{CONTACT_EMAIL}</a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-400">
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
                 <span>{CONTACT_ADDRESS}</span>
               </li>
+              <li className="text-xs text-primary-500">Beratung auf Deutsch & Französisch · Aufträge auch auf Englisch</li>
             </ul>
           </div>
         </div>

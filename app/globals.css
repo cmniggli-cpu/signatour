@@ -189,7 +189,9 @@ body {
 }
 .nigpage img{display:block;max-width:100%}
 .nigpage .serif{font-family:'Cormorant Garamond',serif}
-.nigpage .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.nigpage .wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+@media(min-width:640px){.nigpage .wrap{padding:0 24px}}
+@media(min-width:1024px){.nigpage .wrap{padding:0 32px}}
 .nigpage .blk{padding:78px 0}
 .nigpage .center{text-align:center}
 .nigpage .kicker{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--g);font-weight:600}

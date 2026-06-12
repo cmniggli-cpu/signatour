@@ -11,7 +11,7 @@ import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
 const contactInfo = [
   { icon: Phone, title: 'Telefon', description: CONTACT_PHONE, sub: 'Beratung verfügbar' },
   { icon: Mail, title: 'E-Mail', description: CONTACT_EMAIL, sub: 'Antwort innert Stunden' },
-  { icon: MapPin, title: 'Servicegebiet', description: 'Deutschschweiz & DACH-Region', sub: '' },
+  { icon: MapPin, title: 'Servicegebiet', description: 'Deutsch- und französischsprachige Schweiz', sub: 'Beratung auf Deutsch & Französisch – Aufträge auch auf Englisch' },
   { icon: Clock, title: 'Antwortzeit', description: 'Innerhalb von 24 Stunden', sub: '' },
   { icon: Heart, title: 'Unser Versprechen', description: 'Unverbindlich, ehrliche Beratung – auch wenn eine Tour gerade keinen Sinn macht.', sub: '' },
 ]

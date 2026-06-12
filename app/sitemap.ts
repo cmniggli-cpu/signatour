@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/branchen/spa-wellness', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/branchen/fitnessstudio', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/branchen/immobilien', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/branchen/banken-versicherungen', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/branchen/eventlocations', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/ueber-uns', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/impressum', priority: 0.2, changeFrequency: 'yearly' },

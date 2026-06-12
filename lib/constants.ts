@@ -18,6 +18,8 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Spa & Wellness', href: '/branchen/spa-wellness' },
       { label: 'Fitnessstudios', href: '/branchen/fitnessstudio' },
       { label: 'Immobilien', href: '/branchen/immobilien' },
+      { label: 'Banken & Kanzleien', href: '/branchen/banken-versicherungen' },
+      { label: 'Eventlocations & Showrooms', href: '/branchen/eventlocations' },
     ],
   },
   { label: 'Pakete', href: '/pakete' },
@@ -72,7 +74,7 @@ export const BENEFITS: Benefit[] = [
   { icon: 'Shield', title: 'DSGVO-konform', description: 'Schweizer/EU-Hosting, Aufnahmen ohne Personen, AVV inklusive.' },
   { icon: 'Database', title: 'Datenhoheit beim Kunden', description: 'Kein Vendor Lock-in. Selbst-Hosting jederzeit möglich.' },
   { icon: 'MapPin', title: 'Google Business Integration', description: '2× mehr Profilaufrufe mit 360-Grad-Inhalten.' },
-  { icon: 'User', title: 'Persönlicher Ansprechpartner', description: 'Ein Kontakt, kein Callcenter, Deutsch.' },
+  { icon: 'User', title: 'Persönlicher Ansprechpartner', description: 'Ein Kontakt, kein Callcenter – Deutsch, Französisch oder Englisch.' },
 ]
 
 export const MARKET_STATS: Stat[] = [
@@ -151,7 +153,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   { feature: 'Preismodell', signatour: 'ab CHF 990 einmalig', matterport: '$69/Monat + $5\'400 Kamera', ogulo: '€79/Monat + 24-Monatsvertrag', signatourWins: true },
   { feature: 'Vertragsbindung', signatour: 'Keine', matterport: 'Jährlich', ogulo: '24 Monate Minimum', signatourWins: true },
   { feature: 'Aufwand für Sie', signatour: 'Null (Done-for-You)', matterport: 'Selbst scannen (DIY)', ogulo: 'Selbst scannen (DIY)', signatourWins: true },
-  { feature: 'Support', signatour: 'Deutsch, persönlich', matterport: 'Englisch (Trustpilot 1.4/5)', ogulo: 'Deutsch', signatourWins: true },
+  { feature: 'Support', signatour: 'Persönlich – DE, FR & EN', matterport: 'Englisch (Trustpilot 1.4/5)', ogulo: 'Deutsch', signatourWins: true },
   { feature: 'Datenhoheit', signatour: 'Beim Kunden', matterport: 'Vendor Lock-in', ogulo: 'Ogulo-Cloud' },
   { feature: 'Branchen', signatour: 'Hotels, Gastro, Spa, Fitness, Immobilien', matterport: 'Hauptsächlich Immobilien', ogulo: 'Nur Immobilien' },
   { feature: 'DSGVO', signatour: 'CH/EU Hosting ✓', matterport: 'US-Cloud ✗', ogulo: 'DE Hosting ✓' },
@@ -283,6 +285,8 @@ export const INDUSTRIES_DROPDOWN = [
   'Spa / Wellness',
   'Fitnessstudio',
   'Immobilien',
+  'Bank / Versicherung / Kanzlei',
+  'Eventlocation / Showroom',
   'Andere',
 ]
 
@@ -300,7 +304,7 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
   { feature: 'Kamera nötig', signatour: 'Nein – wir bringen alles mit', matterport: 'Ja – Pro3 (USD 5\'400)', ogulo: '' },
   { feature: 'Vertragsbindung', signatour: 'Keine', matterport: 'Jährliche Abrechnung', ogulo: '', signatourWins: true },
   { feature: 'Versteckte Kosten', signatour: 'Keine – alles inklusive', matterport: 'Grundrisse $15–50, Exporte $49–150', ogulo: '', signatourWins: true },
-  { feature: 'Support', signatour: 'Deutsch, persönlich, lokal', matterport: 'Englisch (Trustpilot 1.4/5)', ogulo: '', signatourWins: true },
+  { feature: 'Support', signatour: 'Persönlich & lokal – DE, FR & EN', matterport: 'Englisch (Trustpilot 1.4/5)', ogulo: '', signatourWins: true },
   { feature: 'Datenhoheit', signatour: 'Beim Kunden – kein Lock-in', matterport: 'Vendor Lock-in – Kündigung = Datenverlust', ogulo: '', signatourWins: true },
   { feature: 'DSGVO', signatour: 'CH/EU Hosting ✓', matterport: 'US-Cloud ✗', ogulo: '', signatourWins: true },
   { feature: 'Branchen-Fokus', signatour: 'Hotels, Gastro, Spa, Fitness, Immobilien', matterport: 'Hauptsächlich Immobilien/AEC', ogulo: '' },
@@ -309,7 +313,7 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
 
 export const UEBER_UNS_REASONS = [
   { title: 'Done-for-You statt DIY', description: 'Wir kommen, fotografieren und liefern. Null Aufwand für Sie.' },
-  { title: 'Persönlich statt Callcenter', description: 'Ein Ansprechpartner, keine Tickets, Deutsch.' },
+  { title: 'Persönlich statt Callcenter', description: 'Ein Ansprechpartner, keine Tickets – auf Deutsch, Französisch oder Englisch.' },
   { title: 'Transparent statt versteckt', description: 'Einmalpreis, kein Abo, keine versteckten Kosten.' },
   { title: 'Lokal statt US-Cloud', description: 'Schweizer/EU-Server, DSGVO-konform.' },
   { title: 'Multi-Branche statt nur Immobilien', description: 'Hotels, Restaurants, Spas, Fitness, Immobilien.' },
