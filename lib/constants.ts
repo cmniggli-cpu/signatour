@@ -135,7 +135,7 @@ export const PRICING_TIERS: PricingTier[] = [
 export const ADDONS: AddOn[] = [
   {
     name: 'Signature Web – Webseite nach Mass',
-    price: 'auf Anfrage',
+    price: 'ab CHF 2\'500.–',
     nutzen: 'Tour und Webseite aus einer Hand – ein durchgängiges digitales Verkaufserlebnis.',
   },
   {
@@ -217,11 +217,12 @@ export const ADDONS: AddOn[] = [
 ]
 
 export const BRANCHEN_PACKAGES: BranchenPackage[] = [
-  { name: 'Makler-Vorteilskarte 5er', price: 'CHF 2\'990', description: '5 Touren, CHF 598 pro Tour' },
-  { name: 'Makler-Vorteilskarte 10er', price: 'CHF 5\'490', description: '10 Touren, CHF 549 pro Tour' },
-  { name: 'Gastro-Paket', price: 'CHF 1\'690', description: 'Restaurant-Tour mit Menü-Hotspots & Google Maps Integration' },
-  { name: 'Hotel-Paket', price: 'CHF 2\'490–3\'990', description: 'Zimmertypen, Spa, Restaurant, Lobby mit Buchungslink-Integration' },
-  { name: 'Fitness-Paket', price: 'CHF 1\'390', description: 'Trainingsbereich, Kursräume, Umkleiden mit Probetraining-Button' },
+  { name: 'Makler-Vorteilskarte Basic', price: 'CHF 1\'782', description: '2 Basic-Touren mit 10% Rabatt (CHF 891 pro Objekt, statt CHF 1\'980)' },
+  { name: 'Makler-Vorteilskarte Signature', price: 'CHF 3\'995', description: '2 Signature-Touren mit 20% Rabatt (statt CHF 4\'994)' },
+  { name: 'Makler-Vorteilskarte Pro', price: 'ab CHF 7\'195', description: '2 Pro-Touren mit 20% Rabatt (statt CHF 8\'994)' },
+  { name: 'Gastro-Paket', price: 'ab CHF 1\'690', description: 'Restaurant-Tour mit Menü-Hotspots & Google Maps Integration' },
+  { name: 'Hotel-Paket', price: 'ab CHF 2\'497', description: 'Zimmertypen, Spa, Restaurant, Lobby mit Buchungslink-Integration' },
+  { name: 'Fitness-Paket', price: 'ab CHF 1\'390', description: 'Trainingsbereich, Kursräume, Umkleiden mit Probetraining-Button' },
 ]
 
 export const COMPARISON_ROWS: ComparisonRow[] = [
@@ -313,8 +314,8 @@ export const FAQ_TECH: FAQ[] = [
     answer: 'Sie erhalten einen Einbettungscode (iFrame) und einen direkten Link zum Teilen per E-Mail, WhatsApp, Social Media und QR-Code. Direkte Integration in Google Business Profile möglich.',
   },
   {
-    question: 'Funktioniert die Tour auf Smartphones?',
-    answer: 'Ja, vollständig responsiv. Alle Geräte unterstützt – Desktop, Tablet, Smartphone. Touch-optimiert. Kein App-Download nötig.',
+    question: 'Auf welchen Geräten funktioniert die Tour?',
+    answer: 'Auf allen: Smartphone, Tablet, Desktop und TV – vollständig responsiv und touch-optimiert. Auch mit VR-Brille erlebbar, für den vollen Raumeindruck. Kein App-Download nötig.',
   },
   {
     question: 'Kann die Tour auf Google Maps angezeigt werden?',

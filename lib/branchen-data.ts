@@ -7,6 +7,7 @@ export interface BranchenPageData {
   badge: string
   headline: string
   tagline: string
+  heroImage?: string
   challenges: { title: string; description: string }[]
   stats: Stat[]
   statsNote?: string
@@ -31,10 +32,11 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
   hotel: {
     slug: 'hotel',
     metaTitle: '360-Grad-Rundgang für Hotels – mehr Direktbuchungen',
-    metaDescription: 'Mehr Direktbuchungen, weniger OTA-Provisionen: Professionelle 360-Grad-Touren für Hotels ab CHF 2\'490. Schweizer Anbieter, kein Abo.',
+    metaDescription: 'Mehr Direktbuchungen, weniger OTA-Provisionen: Professionelle 360-Grad-Touren für Hotels ab CHF 2\'497. Schweizer Anbieter, kein Abo.',
     badge: 'Hotels & Resorts',
     headline: '360-Grad-Rundgang für Ihr Hotel',
     tagline: 'Mehr Direktbuchungen, weniger OTA-Abhängigkeit. Zeigen Sie Gästen Zimmer, Spa, Restaurant und Lobby – bevor sie buchen.',
+    heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: 'OTA-Kosten fressen die Marge', description: 'CHF 30\'000–100\'000 jährlich für Hotels. 15–18% Provision pro Buchung an Booking.com & Co.' },
       { title: '«Viel schöner als auf den Bildern!»', description: '90% der Gäste sagen das. Aber online? Nur statische Fotos, die die Atmosphäre nicht transportieren.' },
@@ -64,14 +66,14 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     roiTitle: '10 Direktbuchungen = Tour bezahlt',
     roiDescription: 'Durchschnittliches Zimmer CHF 200/Nacht, 18% OTA-Gebühr = CHF 36 Ersparnis/Nacht. 10 Buchungen × 2 Nächte = CHF 720 gespart. Amortisiert sich oft im ersten Quartal.',
     packageName: 'Hotel-Paket',
-    packagePrice: 'CHF 2\'490–3\'990',
+    packagePrice: 'ab CHF 2\'497',
     packageFeatures: [
       'Alle Zimmertypen einzeln erfasst',
       'Lobby, Restaurant, Spa, Aussenbereiche',
       'Interaktive Hotspots (Buchungslink, Info)',
       'Grundriss-Navigation',
       'Google Business Integration',
-      '24 Monate Hosting',
+      'Inkl. 12 Monate Signature Evolution (Betreuungsservice)',
       'Mehrsprachige Hotspots (optional)',
     ],
     faqs: [
@@ -89,6 +91,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Gastronomie',
     headline: '360-Grad-Rundgang für Ihr Restaurant',
     tagline: '93% der Gäste googeln vor der Restaurantwahl. Zeigen Sie Ihr Ambiente – nicht nur die Speisekarte.',
+    heroImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: 'Unkontrollierte Google-Fotos', description: 'Gäste laden verwackelte, schlecht belichtete Handyfotos hoch, die den ersten Eindruck prägen.' },
       { title: 'Online-Unsichtbarkeit', description: 'Ohne visuellen Content verlieren Sie in den Suchergebnissen. Die Konkurrenz gewinnt.' },
@@ -119,13 +122,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       ],
     },
     packageName: 'Gastro-Paket',
-    packagePrice: 'CHF 1\'690',
+    packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
       'Professionelle Business-Tour (bis 300 m²)',
       'Google Business Profile Integration',
       'Website-Einbettung',
       '1 saisonales Update inklusive (Festtagsdeko, Sommertische)',
-      '3 Jahre Hosting inklusive',
+      'Inkl. 12 Monate Signature Care (Betreuungsservice)',
       'Lieferung in 5–7 Arbeitstagen',
     ],
     faqs: [
@@ -142,6 +145,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Spa & Wellness',
     headline: 'Ihre Wohlfühl-Atmosphäre erlebbar machen',
     tagline: 'Gäste sagen: «Es ist noch viel schöner als auf den Bildern.» Lassen Sie sie die Atmosphäre schon online spüren.',
+    heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: 'Atmosphäre nicht vermittelbar', description: 'Fotos zeigen Räume, aber nicht das Gefühl: Sauna-Wärme, Ruhebereich-Stille, Anlage-Ausmass.' },
       { title: 'Conversion-Lücke', description: 'Besucher sind interessiert, buchen aber nicht. Es fehlt das entscheidende Erlebnis, das Vertrauen schafft.' },
@@ -171,14 +175,14 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       ],
     },
     packageName: 'Spa & Wellness Premium-Tour',
-    packagePrice: 'CHF 1\'690–2\'490',
+    packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
       'Professionelle Premium-Tour (komplette Spa-Anlage)',
       'Shooting ausserhalb der Öffnungszeiten',
       'DSGVO-konforme Aufnahmen',
       'Google Business Integration',
       'Website-Einbettung',
-      '3 Jahre Hosting',
+      'Inkl. 12 Monate Signature Care (Betreuungsservice)',
       'Freigabeprozess vor Veröffentlichung',
     ],
     faqs: [
@@ -195,6 +199,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Fitness & Sport',
     headline: 'Ihr Studio erleben – bevor der erste Schritt gemacht ist',
     tagline: '82% recherchieren online. Senken Sie die Hemmschwelle für Erstbesucher.',
+    heroImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: '«Muss man erleben»', description: 'Qualität nicht beurteilbar ohne Besuch. Hohe Hemmschwelle für Erstbesucher.' },
       { title: '20% jährliche Fluktuation', description: 'Branche kämpft mit hoher Fluktuation. Mitglieder, die wissen was sie erwartet, bleiben länger.' },
@@ -225,13 +230,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     roiTitle: '2–3 neue Mitglieder = Tour bezahlt',
     roiDescription: 'EUR 960 Lifetime Value pro Mitglied. Weniger als 1 Monat Facebook Ads, aber wirkt 3 Jahre – ohne laufende Kosten, ohne Streuverlust.',
     packageName: 'Fitness-Paket',
-    packagePrice: 'CHF 1\'390',
+    packagePrice: 'ab CHF 1\'390',
     packageFeatures: [
       'Professionelle Business-Tour (komplettes Studio)',
       'Google Business Integration',
       'Website-Einbettung',
-      'Mobile-optimiert',
-      '3 Jahre Hosting',
+      'Optimiert für Mobile, Desktop, TV und VR-Brille',
+      'Inkl. 12 Monate Signature Care (Betreuungsservice)',
       'Lieferung in 5–7 Arbeitstagen',
     ],
     faqs: [
@@ -248,6 +253,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Immobilien & Makler',
     headline: 'Professionelle 360-Touren für Ihre Objekte',
     tagline: 'Weniger Besichtigungstourismus, mehr qualifizierte Interessenten. Ohne Langzeitvertrag.',
+    heroImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: 'Besichtigungstourismus', description: 'Quer durch die Stadt fahren, aufschliessen, präsentieren. Interessent sagt nach 5 Minuten: «Nicht was ich erwartet habe.»' },
       { title: 'Konkurrenz der Grossmakler', description: 'Engel & Völkers nutzen bereits virtuelle Touren und Visualisierungen. Ohne vergleichbare Präsenz verlieren Sie Mandate.' },
@@ -268,7 +274,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     captures: ['Wohnräume', 'Küche', 'Badezimmer', 'Aussenbereiche', 'Grundriss-Integration (optional)'],
     comparisonTitle: 'Makler-Vergleich: Signatour vs. Ogulo vs. Matterport',
     comparisonRows: [
-      { label: 'Preis pro Objekt', without: 'Ogulo: €49/Mt + Setup', with: 'ab CHF 549' },
+      { label: 'Preis pro Objekt', without: 'Ogulo: €49/Mt + Setup', with: 'ab CHF 891' },
       { label: 'Vertrag', without: 'Ogulo: 12 Monate Min.', with: 'Keiner' },
       { label: 'Aufwand', without: 'DIY', with: 'Null (Full Service)' },
       { label: 'Qualität', without: 'Abhängig von Ihren Fotos', with: 'Professioneller Fotograf' },
@@ -285,16 +291,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         'Eigene Website – Einfache Einbettung per iFrame oder Link',
       ],
     },
-    packageName: 'Makler-Vorteilskarten',
-    packagePrice: 'ab CHF 2\'990',
+    packageName: 'Makler-Vorteilskarte (2 Touren)',
+    packagePrice: 'ab CHF 1\'782',
     packageFeatures: [
-      '5er-Karte: CHF 2\'990 (CHF 598 pro Objekt)',
-      '10er-Karte: CHF 5\'490 (CHF 549 pro Objekt)',
+      '2× Basic: CHF 1\'782 statt 1\'980 – 10% Rabatt (CHF 891 pro Objekt)',
+      '2× Signature: CHF 3\'995 statt 4\'994 – 20% Rabatt',
+      '2× Pro: ab CHF 7\'195 statt 8\'994 – 20% Rabatt',
       'Flexibel einsetzbar, kein Ablaufdatum',
       'Google Integration je Objekt',
       'Portal-optimierte Einbettung',
+      'Inkl. 12 Monate Betreuungsservice pro Tour',
       'Full Service, kein Aufwand',
-      'Prioritäts-Terminvergabe (10er-Karte)',
     ],
     faqs: [
       { question: 'Wie schnell ist die Tour nach dem Shooting verfügbar?', answer: 'In der Regel 3–5 Arbeitstage. Dringend: 24–48h Express-Service verfügbar (Aufpreis).' },
@@ -310,6 +317,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Banken, Versicherungen & Kanzleien',
     headline: 'Vertrauen entsteht, bevor der erste Termin gebucht wird',
     tagline: 'Bei Finanz- und Rechtsdienstleistungen entscheidet der erste Eindruck über die Mandatsanfrage. Zeigen Sie Professionalität und Diskretion – noch bevor das Erstgespräch stattfindet.',
+    heroImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: 'Hohe Hemmschwelle vor dem Erstgespräch', description: 'Wer Vermögen, Versicherung oder Rechtsfall anvertraut, will vorher wissen, zu wem er geht. Eine anonyme Website senkt diese Hürde nicht.' },
       { title: 'Austauschbare Webauftritte', description: 'Stockfotos und Standardtexte prägen die Branche. Wer die eigenen Räume zeigt, beweist Substanz, wo andere nur behaupten.' },
@@ -339,14 +347,14 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       ],
     },
     packageName: 'Business-Paket für Dienstleister',
-    packagePrice: 'CHF 1\'690–2\'490',
+    packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
       'Empfang, Beratungsräume und repräsentative Bereiche',
       'Diskreter Freigabeprozess vor Veröffentlichung',
       'Info-Hotspots (Team, Dienstleistungen, Terminbuchung)',
       'Google Business Integration',
       'Website-Einbettung per Link oder iFrame',
-      '12 Monate Hosting & Service inklusive',
+      'Inkl. 12 Monate Signature Care (Betreuungsservice)',
       'Mehrsprachige Hotspots optional (DE/FR/EN)',
     ],
     faqs: [
@@ -364,6 +372,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Eventlocations & Showrooms',
     headline: 'Ihre Location überzeugt – noch bevor die Anfrage eintrifft',
     tagline: 'Brautpaare, Eventplaner und Einkäufer vergleichen online. Wer Saal, Bühne und Ambiente erlebbar macht, erhält die qualifizierte Anfrage – die Konkurrenz nur den Klick weiter.',
+    heroImage: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1900&q=80&auto=format&fit=crop',
     challenges: [
       { title: 'Jede Besichtigung kostet Stunden', description: 'Termin koordinieren, Location herrichten, durchführen – und der Interessent merkt nach 10 Minuten, dass der Saal zu klein ist.' },
       { title: 'Fotos zeigen keine Raumwirkung', description: 'Deckenhöhe, Proportionen, Blick von der Bühne: Genau das, was eine Location verkauft, kommt auf Fotos nicht zur Geltung.' },
@@ -395,14 +404,14 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     roiTitle: 'Ein einziges gebuchtes Event zahlt die Tour',
     roiDescription: 'Eine Hochzeit oder ein Firmenanlass bringt schnell mehrere tausend Franken Umsatz. Gewinnt die Tour nur einen einzigen zusätzlichen Abschluss, ist die Investition amortisiert – jede weitere Buchung ist Gewinn. Dazu sparen Sie die Stunden, die heute in Leerlauf-Besichtigungen fliessen.',
     packageName: 'Location-Paket',
-    packagePrice: 'CHF 1\'690–2\'490',
+    packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
       'Komplette Location inkl. Aussenbereiche',
       'Anfrage-Hotspots und PDF-Integration (Technik, Catering, Pläne)',
       'Google Business Integration',
       'Website-Einbettung per Link oder iFrame',
       'Teilbarer Link für Offerten und Social Media',
-      '12 Monate Hosting & Service inklusive',
+      'Inkl. 12 Monate Signature Care (Betreuungsservice)',
       'Saisonales Update optional (ab CHF 290)',
     ],
     faqs: [

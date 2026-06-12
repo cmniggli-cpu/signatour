@@ -34,6 +34,12 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
     <div className="nigpage">
       {/* Hero */}
       <section className="bhero">
+        {data.heroImage && (
+          <div className="bgimg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={data.heroImage} alt={`${data.badge} – 360°-Tour von Signatour`} fetchPriority="high" />
+          </div>
+        )}
         <div className="wrap">
           <div className="kicker">{data.badge}</div>
           <h1>{data.headline}</h1>

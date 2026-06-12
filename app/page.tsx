@@ -42,7 +42,7 @@ const Chk = () => <svg className="icn-sm" style={{ width: 18, height: 18 }}><use
 const FAQ_ITEMS = [
   { q: 'Was ist ein 360°-Rundgang?', a: 'Ein interaktiver Rundgang, durch den sich Besucher selbst bewegen – wie wenn sie vor Ort wären. Er läuft direkt im Browser, ohne App, und lässt sich mit Hotspots zum Buchen, Kaufen oder Anfragen ergänzen.' },
   { q: 'Wie lange dauert die Erstellung?', a: 'Das Shooting dauert 2–4 Stunden vor Ort. Die fertige Tour liefern wir in der Regel innerhalb von 5–10 Arbeitstagen.' },
-  { q: 'Brauche ich eine spezielle App oder Kamera?', a: 'Nein. Die Tour läuft auf jedem Gerät im Browser. Aufnahme, Technik und Hosting übernehmen wir vollständig.' },
+  { q: 'Brauche ich eine spezielle App oder Kamera?', a: 'Nein. Die Tour läuft auf jedem Gerät im Browser – Smartphone, Tablet, Desktop, TV und sogar VR-Brille. Aufnahme, Technik und Hosting übernehmen wir vollständig.' },
   { q: 'Ist das DSGVO-konform?', a: 'Ja. Hosting in der Schweiz/EU, Aufnahmen ausserhalb der Öffnungszeiten ohne Personen, AVV auf Wunsch inklusive.' },
   { q: 'Was passiert, wenn wir renovieren?', a: 'Mit einem Servicepaket aktualisieren wir betroffene Bereiche oder erstellen einzelne Punkte neu – Ihre Tour bleibt aktuell.' },
   { q: 'Was bringt mir das konkret – lohnt sich das?', a: 'Je nach Branche steigen Buchungen und Anfragen deutlich, und Besucher bleiben um ein Mehrfaches länger auf der Seite. Bei Immobilien etwa rund +87% mehr Aufrufe (Matterport). Bei nachweisbarem Mehrertrag amortisiert sich die Tour oft schon nach wenigen Buchungen.' },
@@ -205,7 +205,7 @@ export default function HomePage() {
               <a className="btn btn-ghost" href="/konfigurator.html">Anfragen</a>
             </div>
           </div>
-          <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>Alle Pakete: Google-Integration, responsiv, SEO-optimiert & auf Wunsch mehrsprachig.</p>
+          <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>Alle Pakete: Google-Integration, optimiert für Mobile, Desktop, TV & VR-Brille, SEO-optimiert & auf Wunsch mehrsprachig.</p>
         </div>
       </section>
 
@@ -235,7 +235,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center"><div className="kicker">Optionale Erweiterungen</div><h2 className="sec">Wenn es noch mehr sein darf</h2><div className="rule" /></div>
           <div className="opts">
-            <div className="ocard"><Icon id="i-code" /><h3>Signature Web – Webseite nach Mass</h3><div className="pr">auf Anfrage</div></div>
+            <div className="ocard"><Icon id="i-code" /><h3>Signature Web – Webseite nach Mass</h3><div className="pr">ab CHF 2&apos;500.–</div></div>
             <div className="ocard"><Icon id="i-globe" /><h3>Mehrsprachige Version (DE / FR / EN)</h3><div className="pr">ab CHF 300.– pro Sprache</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">ab CHF 180.– pro Panorama</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
