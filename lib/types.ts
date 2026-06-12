@@ -66,6 +66,8 @@ export interface ComparisonRow {
 export interface AddOn {
   name: string
   price: string
+  nutzen: string
+  hinweis?: string
 }
 
 export interface BranchenPackage {

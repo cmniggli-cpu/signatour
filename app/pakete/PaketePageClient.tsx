@@ -71,23 +71,47 @@ export default function PaketePageClient() {
           </AnimatedSection>
 
           <AnimatedSection>
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            {/* Desktop: 3-spaltige Tabelle */}
+            <div className="hidden md:block bg-white rounded-2xl shadow-lg overflow-hidden">
               <table className="w-full">
                 <thead>
                   <tr className="bg-primary-800 text-white">
-                    <th className="text-left p-4 font-bold">Zusatzleistung</th>
+                    <th className="text-left p-4 font-bold">Erweiterung</th>
+                    <th className="text-left p-4 font-bold">Nutzen</th>
                     <th className="text-right p-4 font-bold">Preis</th>
                   </tr>
                 </thead>
                 <tbody>
                   {ADDONS.map((addon, i) => (
                     <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-                      <td className="p-4 text-gray-800">{addon.name}</td>
-                      <td className="p-4 text-right font-semibold text-primary-800">{addon.price}</td>
+                      <td className="p-4 text-gray-800 font-medium align-top">
+                        {addon.name}
+                        {addon.hinweis && (
+                          <span className="mt-1.5 block">
+                            <span className="inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
+                          </span>
+                        )}
+                      </td>
+                      <td className="p-4 text-gray-600 text-sm align-top">{addon.nutzen}</td>
+                      <td className="p-4 text-right font-semibold text-primary-800 align-top">{addon.price}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {/* Mobil: gestapelte Karten */}
+            <div className="md:hidden space-y-4">
+              {ADDONS.map((addon, i) => (
+                <div key={i} className="bg-white rounded-2xl shadow-lg p-5">
+                  <h3 className="font-bold text-primary-800">{addon.name}</h3>
+                  {addon.hinweis && (
+                    <span className="mt-1.5 inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
+                  )}
+                  <p className="mt-2 text-sm text-gray-600">{addon.nutzen}</p>
+                  <p className="mt-3 text-right font-semibold text-primary-800">{addon.price}</p>
+                </div>
+              ))}
             </div>
           </AnimatedSection>
         </div>

@@ -133,12 +133,87 @@ export const PRICING_TIERS: PricingTier[] = [
 ]
 
 export const ADDONS: AddOn[] = [
-  { name: 'Hosting-Verlängerung', price: 'CHF 120–180/Jahr' },
-  { name: 'Saisonales Update', price: 'CHF 290–490' },
-  { name: 'Google Street View Publikation', price: 'CHF 150' },
-  { name: 'Signature Web – Webseite nach Mass (individuell programmiert)', price: 'auf Anfrage' },
-  { name: 'Express-Lieferung (48h)', price: '+30% auf Tour-Preis' },
-  { name: 'Grundriss-Erstellung', price: 'CHF 190–350' },
+  {
+    name: 'Signature Web – Webseite nach Mass',
+    price: 'auf Anfrage',
+    nutzen: 'Tour und Webseite aus einer Hand – ein durchgängiges digitales Verkaufserlebnis.',
+  },
+  {
+    name: 'Mehrsprachige Version (DE / FR / EN)',
+    price: 'ab CHF 300.– pro Sprache',
+    nutzen: 'Gäste und Käufer erleben die Tour in ihrer Sprache – mehr Reichweite, mehr Vertrauen.',
+  },
+  {
+    name: 'Furniture Removal',
+    price: 'ab CHF 180.– pro Panorama',
+    nutzen: 'Möblierte Räume werden digital geleert – ideal für Vermietung und Verkauf.',
+  },
+  {
+    name: 'Zusätzliche Panoramen',
+    price: 'ab CHF 150.– pro Szene',
+    nutzen: 'Die Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
+  },
+  {
+    name: 'Virtual Staging – virtuelle Möblierung',
+    price: 'ab CHF 240.– pro Panorama, ab 3 Panoramen CHF 200.–',
+    nutzen: 'Leere Räume werden zum eingerichteten Zuhause – der Interessent sieht das Potenzial, nicht die Leere.',
+  },
+  {
+    name: 'Google Street View & Google-Business-Einbindung',
+    price: 'CHF 490.– einmalig',
+    nutzen: 'Ihre Tour erscheint direkt in Google Maps und im Unternehmensprofil – Sichtbarkeit dort, wo Kunden suchen.',
+  },
+  {
+    name: 'Lead-Capture-Formular in der Tour',
+    price: 'CHF 390.– einmalig',
+    nutzen: 'Aus anonymen Besuchern werden qualifizierte Anfragen – mit Name und Mailadresse.',
+  },
+  {
+    name: 'Performance-Report Tour',
+    price: 'CHF 150.– pro Report',
+    nutzen: 'Aufrufe, beliebteste Räume, Klicks auf Buchungspunkte – der ROI Ihrer Tour schwarz auf weiss.',
+    hinweis: 'In Signature Care & Evolution bereits enthalten',
+  },
+  {
+    name: 'Performance-Report Webseite',
+    price: 'CHF 150.– pro Report / CHF 490.– pro Jahr (4 Reports)',
+    nutzen: 'Besucher, Verweildauer, Top-Seiten – Sie sehen, was Ihre Online-Präsenz leistet.',
+  },
+  {
+    name: 'Saisonales Szenen-Update',
+    price: 'CHF 180.– pro Szene / Saisonpaket CHF 650.–',
+    nutzen: 'Sommerterrasse, Weihnachtsstimmung, neue Bepflanzung – Ihre Tour bleibt aktuell und lebendig.',
+  },
+  {
+    name: 'Social-Media-Clip-Paket',
+    price: 'CHF 390.– (3 Hochformat-Clips)',
+    nutzen: 'Fertige Reels und Stories direkt aus Ihrer Tour – Content ohne eigenen Drehaufwand.',
+  },
+  {
+    name: 'Audio-Guide mit professioneller Sprecherstimme',
+    price: 'ab CHF 490.– pro Sprache',
+    nutzen: 'Ihre Räume bekommen eine Stimme – Atmosphäre und Storytelling statt blossem Text.',
+  },
+  {
+    name: '3D-Grundriss & Dollhouse-Ansicht',
+    price: 'ab CHF 390.–',
+    nutzen: 'Besucher erfassen das ganze Objekt auf einen Blick – sofortige Orientierung.',
+  },
+  {
+    name: 'QR-Code Print- & Display-Paket',
+    price: 'CHF 240.–',
+    nutzen: 'Fensteraufkleber, Tischaufsteller und Schilder führen direkt in die Tour – die Location wird zum Eingangstor.',
+  },
+  {
+    name: 'Express-Lieferung',
+    price: '+30% auf den Paketpreis',
+    nutzen: 'Ihre fertige Tour in 3 statt 5–10 Arbeitstagen.',
+  },
+  {
+    name: 'Tag-/Nacht-Modus',
+    price: 'ab CHF 180.– pro Szene',
+    nutzen: 'Dieselbe Szene bei Tag und bei Abendstimmung umschaltbar – stark für Restaurants und Eventlocations.',
+  },
 ]
 
 export const BRANCHEN_PACKAGES: BranchenPackage[] = [
