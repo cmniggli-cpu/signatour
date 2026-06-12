@@ -4,10 +4,13 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import Link from 'next/link'
 import { Send, CheckCircle } from 'lucide-react'
 import Input, { Select, Textarea } from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
-import { INDUSTRIES_DROPDOWN } from '@/lib/constants'
+import { INDUSTRIES_DROPDOWN, CONTACT_EMAIL } from '@/lib/constants'
+
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Bitte geben Sie Ihren Namen ein'),
@@ -20,6 +23,21 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>
 
+function buildMailto(data: ContactFormData) {
+  const body = [
+    `Name: ${data.name}`,
+    `E-Mail: ${data.email}`,
+    `Telefon: ${data.phone || '-'}`,
+    `Branche: ${data.industry || '-'}`,
+    `Fläche: ${data.area || '-'}`,
+    '',
+    data.message || '',
+    '',
+    '(Quelle: Kontaktformular signatour.ch)',
+  ].join('\n')
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Anfrage über signatour.ch – ${data.name}`)}&body=${encodeURIComponent(body)}`
+}
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
 
@@ -28,9 +46,24 @@ export default function ContactForm() {
   })
 
   const onSubmit = async (data: ContactFormData) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    console.log('Form data:', data)
-    setSubmitted(true)
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ...data,
+          _subject: `Anfrage über signatour.ch – ${data.name}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setSubmitted(true)
+    } catch {
+      // Fallback: E-Mail-Programm mit vorausgefüllter Anfrage öffnen, damit kein Lead verloren geht
+      window.location.href = buildMailto(data)
+      setSubmitted(true)
+    }
   }
 
   if (submitted) {
@@ -38,7 +71,7 @@ export default function ContactForm() {
       <div className="text-center py-12">
         <CheckCircle className="w-16 h-16 text-success mx-auto" />
         <h3 className="mt-4 text-2xl font-bold text-primary-900">Vielen Dank für Ihre Anfrage!</h3>
-        <p className="mt-2 text-primary-500">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+        <p className="mt-2 text-primary-500">Wir melden uns innerhalb von 24 Stunden persönlich bei Ihnen.</p>
       </div>
     )
   }
@@ -90,9 +123,13 @@ export default function ContactForm() {
       />
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? 'Wird gesendet...' : 'Anfrage senden'}
+        {isSubmitting ? 'Wird gesendet...' : 'Kostenlose Beratung anfragen'}
         <Send className="ml-2 w-5 h-5" />
       </Button>
+
+      <p className="text-xs text-primary-400 text-center">
+        Unverbindlich · Antwort innert 24 Stunden · Ihre Daten werden vertraulich behandelt (<Link href="/datenschutz" className="underline hover:text-primary-600">Datenschutz</Link>)
+      </p>
     </form>
   )
 }

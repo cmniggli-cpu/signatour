@@ -1,4 +1,9 @@
-import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
+import type { Metadata } from 'next'
+import { CONTACT_PHONE } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 const TEL = CONTACT_PHONE.replace(/[^+\d]/g, '')
 
@@ -34,6 +39,32 @@ const Icon = ({ id, c = 'icn' }: { id: string; c?: string }) => (
 )
 const Chk = () => <svg className="icn-sm" style={{ width: 18, height: 18 }}><use href="#i-check" /></svg>
 
+const FAQ_ITEMS = [
+  { q: 'Was ist ein 360°-Rundgang?', a: 'Ein interaktiver Rundgang, durch den sich Besucher selbst bewegen – wie wenn sie vor Ort wären. Er läuft direkt im Browser, ohne App, und lässt sich mit Hotspots zum Buchen, Kaufen oder Anfragen ergänzen.' },
+  { q: 'Wie lange dauert die Erstellung?', a: 'Das Shooting dauert 2–4 Stunden vor Ort. Die fertige Tour liefern wir in der Regel innerhalb von 5–10 Arbeitstagen.' },
+  { q: 'Brauche ich eine spezielle App oder Kamera?', a: 'Nein. Die Tour läuft auf jedem Gerät im Browser. Aufnahme, Technik und Hosting übernehmen wir vollständig.' },
+  { q: 'Ist das DSGVO-konform?', a: 'Ja. Hosting in der Schweiz/EU, Aufnahmen ausserhalb der Öffnungszeiten ohne Personen, AVV auf Wunsch inklusive.' },
+  { q: 'Was passiert, wenn wir renovieren?', a: 'Mit einem Servicepaket aktualisieren wir betroffene Bereiche oder erstellen einzelne Punkte neu – Ihre Tour bleibt aktuell.' },
+  { q: 'Was bringt mir das konkret – lohnt sich das?', a: 'Je nach Branche steigen Buchungen und Anfragen deutlich, und Besucher bleiben um ein Mehrfaches länger auf der Seite. Bei Immobilien etwa rund +87% mehr Aufrufe (Matterport). Bei nachweisbarem Mehrertrag amortisiert sich die Tour oft schon nach wenigen Buchungen.' },
+  { q: 'Was kostet eine Tour?', a: 'Transparente Fixpakete ab CHF 990 – der Preis hängt von Panoramen und Funktionen ab. Über den Paket-Konfigurator erhalten Sie in einer Minute eine unverbindliche Einschätzung.' },
+  { q: 'Gibt es ein Abo oder versteckte Kosten?', a: 'Nein. Die Tour gehört Ihnen. Ein jährliches Servicepaket (ab CHF 120) ist optional – keine langfristige Bindung, Kündigung per Jahresende.' },
+  { q: 'Wie wird der «Erfolg» gemessen?', a: 'Sie erhalten Besucherstatistiken: Aufrufe, Verweildauer, beliebteste Räume und Klicks auf Buchungs-Hotspots – Grundlage auch für unsere Erfolgs-Garantie.' },
+  { q: 'Was ist, wenn ich nicht zufrieden bin?', a: 'Doppelte Garantie: bis zu 3 Korrekturrunden – und keine messbare Verbesserung nach 90 Tagen? 50% des Paketpreises zurück.' },
+  { q: 'Worin unterscheidet sich das von Fotos oder einem Video?', a: 'Fotos und Videos zeigen, was wir zeigen wollen. Eine Signature Tour lässt den Besucher selbst entscheiden, wohin er schaut – und direkt handeln (buchen, anfragen). Das kann ein Video nicht.' },
+  { q: 'Ist das dasselbe wie Matterport?', a: 'Matterport ist ein 3D-Scan-Standard – oft mit monatlicher Plattformgebühr und Optik von der Stange. Unsere Tour ist in Ihrem Corporate Design, verkaufsaktiv und gehört Ihnen, ohne Abo-Zwang.' },
+  { q: 'Geht das auch mehrsprachig?', a: 'Ja – Deutsch, Französisch und Englisch. Zusatzsprachen ab CHF 300 pro Sprache.' },
+]
+
+const FAQ_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
 const BRANCHEN = [
   { img: '1566073771259-6a8506099945', href: '/branchen/hotel', t: 'Hotels & Gastronomie', d: 'Zimmer, Lobby, Ambiente und Tische erlebbar machen – mehr Direktbuchungen und Reservierungen.' },
   { img: '1540555700478-4be289fbecef', href: '/branchen/spa-wellness', t: 'Spa & Wellness', d: 'Ruhe und Hochwertigkeit spürbar machen.' },
@@ -50,26 +81,27 @@ export default function HomePage() {
       <section className="hero">
         <div className="bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1900&q=80&auto=format&fit=crop" alt="Premium Spa" />
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1900&q=80&auto=format&fit=crop" alt="Hotel-Pool als 360°-Verkaufserlebnis – Beispiel einer Signature Tour" fetchPriority="high" />
         </div>
         <div className="wrap inner">
-          <h1 className="serif">Premium-Erlebnisse, in die sich Ihre <em>Gäste verlieben</em>.</h1>
+          <h1 className="serif">Ihre Räume werden zum <em>besten Verkäufer</em> – rund um die Uhr.</h1>
           <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
-            Mit einer interaktiven 360°-Signature-Tour erleben Ihre Gäste den Raum, als wären sie schon da – und buchen, kaufen oder fragen direkt in der Tour an. Schweizer Qualität, kein Abo, voller Erfolg.</p>
+            Wir verwandeln Ihre Räumlichkeiten in ein digitales Verkaufserlebnis: Besucher erleben Ihr Angebot, bauen Vertrauen auf und buchen, kaufen oder fragen direkt in der Tour an – noch bevor das erste Gespräch stattfindet.</p>
           <div className="cta">
             <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
             <a className="btn btn-ghost" href="#referenzen">Referenz-Touren ansehen</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
+          <p className="herotrust">Schweizer Anbieter · Einmalpreis statt Abo · Antwort innert 24 Stunden</p>
         </div>
       </section>
 
       <section className="blk pillars">
         <div className="wrap"><div className="grid">
-          <div className="pillar"><Icon id="i-cal" /><h3>Mehr Buchungen</h3><p>Steigern Sie Ihre Direktbuchungen.</p></div>
-          <div className="pillar"><Icon id="i-coin" /><h3>Weniger Plattformgebühren</h3><p>Reduzieren Sie Kosten durch Plattformen.</p></div>
-          <div className="pillar"><Icon id="i-users" /><h3>Höhere Verweildauer</h3><p>Gäste bleiben länger auf Ihrer Seite.</p></div>
-          <div className="pillar"><Icon id="i-diamond" /><h3>Klare Differenzierung</h3><p>Heben Sie sich sichtbar von Mitbewerbern ab.</p></div>
+          <div className="pillar"><Icon id="i-users" /><h3>Mehr qualifizierte Anfragen</h3><p>Interessenten informieren sich bereits vor dem ersten Kontakt.</p></div>
+          <div className="pillar"><Icon id="i-target" /><h3>Weniger Leerläufe</h3><p>Unpassende Anfragen und unnötige Termine werden reduziert.</p></div>
+          <div className="pillar"><Icon id="i-shield" /><h3>Mehr Vertrauen</h3><p>Transparenz überzeugt noch vor dem ersten Gespräch.</p></div>
+          <div className="pillar"><Icon id="i-cal" /><h3>Höhere Abschlusschancen</h3><p>Gut informierte Interessenten entscheiden schneller.</p></div>
         </div></div>
       </section>
 
@@ -96,7 +128,8 @@ export default function HomePage() {
 
       <section className="blk" id="leistung">
         <div className="wrap center">
-          <div className="kicker">Was Sie erhalten</div><h2 className="sec">Mehr als ein Rundgang</h2><div className="rule" />
+          <div className="kicker">Was Sie erhalten</div><h2 className="sec">Ein digitaler Mitarbeiter, der nie Feierabend macht</h2>
+          <p className="sub">Eine Signature Tour ist kein Produkt, das man sich einmal ansieht. Sie ist ein Verkaufsinstrument, das Tag für Tag informiert, Vertrauen aufbaut und Anfragen auslöst.</p><div className="rule" />
           <div className="fgrid">
             <div className="fcard"><Icon id="i-cam" /><h3>Hochwertige 360°-Tour</h3><p>In Premium-Qualität, mit sauberer Boden- und Detailbearbeitung.</p></div>
             <div className="fcard"><Icon id="i-palette" /><h3>Corporate Design</h3><p>Perfekt auf Ihre Marke abgestimmt – Farben, Logo, Stil.</p></div>
@@ -126,9 +159,9 @@ export default function HomePage() {
       <section className="blk">
         <div className="wrap">
           <div className="fgrid fgrid3">
-            <div className="fcard"><Icon id="i-globe" /><h3>Rund um die Uhr offen</h3><p>Ihre Tour verkauft, während Sie schlafen.</p></div>
-            <div className="fcard"><Icon id="i-target" /><h3>Ein Aufwand, dauerhafter Nutzen</h3><p>Einmal erstellt, jahrelang im Einsatz.</p></div>
-            <div className="fcard"><Icon id="i-users" /><h3>Weniger Leerläufe</h3><p>Interessenten qualifizieren sich selbst vor dem Termin.</p></div>
+            <div className="fcard"><Icon id="i-globe" /><h3>Rund um die Uhr im Einsatz</h3><p>Ihre Tour verkauft, während Sie schlafen – 365 Tage im Jahr, auch ausserhalb der Geschäftszeiten.</p></div>
+            <div className="fcard"><Icon id="i-target" /><h3>Ein Aufwand, dauerhafter Nutzen</h3><p>Einmal erstellt, jahrelang im Einsatz – ohne laufende Werbekosten und ohne Streuverlust.</p></div>
+            <div className="fcard"><Icon id="i-chart" /><h3>Messbar statt Bauchgefühl</h3><p>Aufrufe, Verweildauer und Klicks auf Buchungspunkte – Sie sehen, was die Tour leistet.</p></div>
           </div>
         </div>
       </section>
@@ -213,9 +246,9 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center"><div className="kicker">Referenzprojekte</div><h2 className="sec">Sehen Sie selbst</h2><div className="rule" /></div>
           <div className="refs">
-            <div className="ref"><iframe src="https://vtour.cloud/e16tqj/ee82pes6/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz 1" /><div className="bot"><b>Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
-            <div className="ref"><iframe src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz 2" /><div className="bot"><b>Signature Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
-            <div className="ref"><span className="badge">Add-On</span><iframe src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-On: Furniture Removal" /><div className="bot"><b>Add-On: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour 1: Signature Tour" /><div className="bot"><b>Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour 2: Signature Tour" /><div className="bot"><b>Signature Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
+            <div className="ref"><span className="badge">Add-On</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-On: Furniture Removal" /><div className="bot"><b>Add-On: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
           </div>
         </div>
       </section>
@@ -224,20 +257,11 @@ export default function HomePage() {
         <div className="wrap" style={{ maxWidth: 820 }}>
           <div className="center"><div className="kicker">FAQ</div><h2 className="sec">Häufige Fragen</h2><div className="rule" /></div>
           <div className="faq">
-            <details><summary>Was ist ein 360°-Rundgang?</summary><p>Ein interaktiver Rundgang, durch den sich Besucher selbst bewegen – wie wenn sie vor Ort wären. Er läuft direkt im Browser, ohne App, und lässt sich mit Hotspots zum Buchen, Kaufen oder Anfragen ergänzen.</p></details>
-            <details><summary>Wie lange dauert die Erstellung?</summary><p>Das Shooting dauert 2–4 Stunden vor Ort. Die fertige Tour liefern wir in der Regel innerhalb von 5–10 Arbeitstagen.</p></details>
-            <details><summary>Brauche ich eine spezielle App oder Kamera?</summary><p>Nein. Die Tour läuft auf jedem Gerät im Browser. Aufnahme, Technik und Hosting übernehmen wir vollständig.</p></details>
-            <details><summary>Ist das DSGVO-konform?</summary><p>Ja. Hosting in der Schweiz/EU, Aufnahmen ausserhalb der Öffnungszeiten ohne Personen, AVV auf Wunsch inklusive.</p></details>
-            <details><summary>Was passiert, wenn wir renovieren?</summary><p>Mit einem Servicepaket aktualisieren wir betroffene Bereiche oder erstellen einzelne Punkte neu – Ihre Tour bleibt aktuell.</p></details>
-            <details><summary>Was bringt mir das konkret – lohnt sich das?</summary><p>Je nach Branche steigen Buchungen und Anfragen deutlich, und Besucher bleiben um ein Mehrfaches länger auf der Seite. Bei Immobilien etwa rund +87% mehr Aufrufe (Matterport). Bei nachweisbarem Mehrertrag amortisiert sich die Tour oft schon nach wenigen Buchungen.</p></details>
-            <details><summary>Was kostet eine Tour?</summary><p>Transparente Fixpakete ab CHF 990 – der Preis hängt von Panoramen und Funktionen ab. Über den Paket-Konfigurator erhalten Sie in einer Minute eine unverbindliche Einschätzung.</p></details>
-            <details><summary>Gibt es ein Abo oder versteckte Kosten?</summary><p>Nein. Die Tour gehört Ihnen. Ein jährliches Servicepaket (ab CHF 120) ist optional – keine langfristige Bindung, Kündigung per Jahresende.</p></details>
-            <details><summary>Wie wird der „Erfolg" gemessen?</summary><p>Sie erhalten Besucherstatistiken: Aufrufe, Verweildauer, beliebteste Räume und Klicks auf Buchungs-Hotspots – Grundlage auch für unsere Erfolgs-Garantie.</p></details>
-            <details><summary>Was ist, wenn ich nicht zufrieden bin?</summary><p>Doppelte Garantie: bis zu 3 Korrekturrunden – und keine messbare Verbesserung nach 90 Tagen? 50% des Paketpreises zurück.</p></details>
-            <details><summary>Worin unterscheidet sich das von Fotos oder einem Video?</summary><p>Fotos und Videos zeigen, was wir zeigen wollen. Eine Signature Tour lässt den Besucher selbst entscheiden, wohin er schaut – und direkt handeln (buchen, anfragen). Das kann ein Video nicht.</p></details>
-            <details><summary>Ist das dasselbe wie Matterport?</summary><p>Matterport ist ein 3D-Scan-Standard – oft mit monatlicher Plattformgebühr und Optik von der Stange. Unsere Tour ist in Ihrem Corporate Design, verkaufsaktiv und gehört Ihnen, ohne Abo-Zwang.</p></details>
-            <details><summary>Geht das auch mehrsprachig?</summary><p>Ja – Deutsch, Französisch und Englisch. Zusatzsprachen ab CHF 300 pro Sprache.</p></details>
+            {FAQ_ITEMS.map((f) => (
+              <details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>
+            ))}
           </div>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }} />
         </div>
       </section>
 
@@ -254,6 +278,7 @@ export default function HomePage() {
               <p>Ein unverbindliches Gespräch genügt, um zu klären, wie eine Signature Experience aus Besuchern Kunden macht.</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
               <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
+              <p className="finaltrust">Unverbindlich · Antwort innert 24 Stunden · Persönlich durch den Inhaber</p>
             </div>
           </div>
         </div>

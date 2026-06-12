@@ -7,6 +7,7 @@ const data = BRANCHEN_DATA['fitnessstudio']
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
+  alternates: { canonical: '/branchen/fitnessstudio' },
 }
 
 export default function FitnessstudioPage() {

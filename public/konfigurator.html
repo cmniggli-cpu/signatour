@@ -97,7 +97,7 @@ const CONFIG = {
   phone: "+41 76 652 17 37",
   phoneHref: "tel:+41766521737",
   email: "info@signatour.ch",
-  formEndpoint: "",   // leer = E-Mail-Versand an info@signatour.ch; oder Formspree-Endpoint eintragen
+  formEndpoint: "https://formsubmit.co/ajax/info@signatour.ch",   // AJAX-Versand; bei Fehler automatischer Mailto-Fallback
   branchen: [
     {id:"hotel",       name:"Hotel",                 desc:"Zimmer, Lobby & Aussicht erlebbar machen"},
     {id:"restaurant",  name:"Restaurant / Gastro",   desc:"Ambiente zeigen, bevor reserviert wird"},
@@ -266,12 +266,7 @@ function submit(){
     extras:chosenExtras, zusatzsprachen: state.extras.sprachen?state.langs:0,
     ...state.contact, quelle:"Paket-Konfigurator"
   };
-  if(CONFIG.formEndpoint){
-    const btn=panel.querySelector(".btn--primary"); btn.disabled=true; btn.textContent="Senden…";
-    fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload)})
-      .then(r=>{ if(!r.ok) throw new Error(); step=5; render(); })
-      .catch(()=>{ btn.disabled=false; btn.textContent="Angebot anfordern →"; alert("Senden fehlgeschlagen. Bitte rufen Sie uns an: "+CONFIG.phone); });
-  } else {
+  const mailtoFallback=()=>{
     const body=[
       "Branche: "+payload.branche,
       "Grösse: "+payload.groesse+" (empfohlenes Paket: "+payload.paket+")",
@@ -288,7 +283,17 @@ function submit(){
     ].join("\n");
     const mail="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Paket-Anfrage – "+payload.paket+" ("+payload.firma+")")+"&body="+encodeURIComponent(body);
     window.location.href=mail;
+    state.viaMail=true;
     step=5; render();
+  };
+  if(CONFIG.formEndpoint){
+    const btn=panel.querySelector(".btn--primary"); btn.disabled=true; btn.textContent="Senden…";
+    fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({...payload, _subject:"Paket-Anfrage – "+payload.paket+" ("+payload.firma+")", _template:"table", _captcha:"false"})})
+      .then(r=>{ if(!r.ok) throw new Error(); state.viaMail=false; step=5; render(); })
+      .catch(mailtoFallback);
+  } else {
+    mailtoFallback();
   }
 }
 function renderDone(){
@@ -301,7 +306,9 @@ function renderDone(){
   d.innerHTML=`
     <div class="mark">✓</div>
     <h2>Vielen Dank, ${state.contact.name.split(" ")[0]||""}!</h2>
-    <p>Es öffnet sich Ihr E-Mail-Programm mit der vorausgefüllten Anfrage${sz?` – empfohlenes Paket: <b style="color:var(--gold-soft)">${sz.pkg}</b>`:""}. Bitte nur noch absenden.</p>
+    <p>${state.viaMail
+      ? `Es öffnet sich Ihr E-Mail-Programm mit der vorausgefüllten Anfrage${sz?` – empfohlenes Paket: <b style="color:var(--gold-soft)">${sz.pkg}</b>`:""}. Bitte nur noch absenden.`
+      : `Ihre Anfrage ist bei uns eingegangen${sz?` – empfohlenes Paket: <b style="color:var(--gold-soft)">${sz.pkg}</b>`:""}.`}</p>
     <p>Wir melden uns innert <b>24 Stunden</b> mit einem konkreten, unverbindlichen Angebot.</p>
     <p>Lieber direkt sprechen?</p>
     <a class="phone" href="${CONFIG.phoneHref}">${CONFIG.phone}</a>`;

@@ -12,8 +12,8 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  title = 'Bereit für Ihren 360-Grad-Rundgang?',
-  subtitle = 'Lassen Sie uns unverbindlich besprechen, ob eine virtuelle Tour für Sie Sinn macht.',
+  title = 'Bereit, aus Besuchern Kunden zu machen?',
+  subtitle = 'In einem unverbindlichen Gespräch klären wir, wie eine Signature Tour in Ihrem Betrieb mehr qualifizierte Anfragen erzeugt – und ob sie sich für Sie rechnet.',
   buttonText = 'Kostenlose Beratung',
   buttonHref = '/kontakt',
 }: CTASectionProps) {
@@ -54,6 +54,7 @@ export default function CTASection({
             {buttonText}
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
+          <p className="mt-5 text-sm text-primary-500">Unverbindlich · Antwort innert 24 Stunden · Schweizer Anbieter</p>
         </motion.div>
       </div>
     </section>

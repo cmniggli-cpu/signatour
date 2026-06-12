@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Check, ArrowRight } from 'lucide-react'
 import PageHero from '@/components/sections/PageHero'
 import StatsBar from '@/components/sections/StatsBar'
@@ -10,11 +11,29 @@ import FAQAccordion from '@/components/features/FAQAccordion'
 import CTASection from '@/components/sections/CTASection'
 import type { BranchenPageData } from '@/lib/branchen-data'
 
+const ALL_BRANCHEN = [
+  { slug: 'hotel', label: 'Hotels' },
+  { slug: 'restaurant', label: 'Restaurants' },
+  { slug: 'spa-wellness', label: 'Spa & Wellness' },
+  { slug: 'fitnessstudio', label: 'Fitnessstudios' },
+  { slug: 'immobilien', label: 'Immobilien' },
+]
+
 interface BranchenTemplateProps {
   data: BranchenPageData
 }
 
 export default function BranchenTemplate({ data }: BranchenTemplateProps) {
+  const otherBranchen = ALL_BRANCHEN.filter((b) => b.slug !== data.slug)
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  }
   return (
     <>
       <PageHero
@@ -48,6 +67,11 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
 
       {/* Stats */}
       <StatsBar stats={data.stats} />
+      {data.statsNote && (
+        <div className="bg-primary-900 pb-6 -mt-6">
+          <p className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-primary-600">{data.statsNote}</p>
+        </div>
+      )}
 
       {/* What We Capture */}
       <section className="py-24">
@@ -173,12 +197,16 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
                 ))}
               </ul>
 
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
                 <Button href="/kontakt" variant="accent" size="lg" className="w-full sm:w-auto">
-                  Jetzt anfragen
+                  Kostenlose Beratung anfragen
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
+                <Link href="/pakete" className="text-sm text-primary-300 hover:text-white transition-colors text-center sm:text-left">
+                  Alle Pakete & Preise vergleichen →
+                </Link>
               </div>
+              <p className="mt-4 text-xs text-primary-400">Unverbindlich · Antwort innert 24 Stunden · Einmalpreis, kein Abo</p>
             </div>
           </AnimatedSection>
         </div>
@@ -198,7 +226,27 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
         </div>
       </section>
 
+      {/* Weitere Branchen – interne Verlinkung */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-bold text-primary-900">Auch interessant für andere Branchen</h2>
+          <p className="mt-2 text-sm text-primary-500">Jede Branche hat eigene Herausforderungen – und eine passende Lösung.</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {otherBranchen.map((b) => (
+              <Link
+                key={b.slug}
+                href={`/branchen/${b.slug}`}
+                className="px-5 py-2.5 rounded-full border border-primary-200 text-sm font-medium text-primary-700 hover:border-accent-500 hover:text-accent-600 transition-colors"
+              >
+                {b.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CTASection />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </>
   )
 }

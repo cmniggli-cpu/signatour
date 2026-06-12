@@ -99,7 +99,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
               </nav>
               <div className="mt-8 px-4">
                 <Button href="/kontakt" variant="primary" size="md" className="w-full">
-                  Kontakt
+                  Kostenlose Beratung
                 </Button>
               </div>
             </div>

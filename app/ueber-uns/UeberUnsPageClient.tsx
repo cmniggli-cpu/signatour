@@ -1,6 +1,7 @@
 'use client'
 
-import { Cpu, Heart, HandshakeIcon } from 'lucide-react'
+import { Cpu, Heart, HandshakeIcon, Phone, Mail } from 'lucide-react'
+import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
 import PageHero from '@/components/sections/PageHero'
 import AnimatedSection, { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection'
 import Card from '@/components/ui/Card'
@@ -14,7 +15,8 @@ export default function UeberUnsPageClient() {
     <>
       <PageHero
         badge="Über Signatour"
-        title="Ihr lokaler Partner für 360-Grad-Rundgänge"
+        title="Ihr Schweizer Partner für digitale Verkaufserlebnisse"
+        subtitle="Wir verkaufen keine Technik. Wir machen Ihr stärkstes Verkaufsargument – Ihre Räumlichkeiten – online erlebbar, damit aus Besuchern Kunden werden."
       />
 
       {/* Mission */}
@@ -28,6 +30,29 @@ export default function UeberUnsPageClient() {
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
               KMU-Inhaberinnen und Inhaber haben 14-Stunden-Tage. Sie verdienen einen Partner, der kommt, professionell arbeitet und ein fertiges Ergebnis liefert.
             </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Persönlicher Ansprechpartner */}
+      <section className="py-20 bg-section-gradient">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="bg-primary-900 rounded-3xl p-8 sm:p-12 text-center text-white">
+              <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">Ihr Ansprechpartner</span>
+              <h2 className="mt-3 text-2xl sm:text-3xl font-black">Marius Niggli – Gründer & Inhaber</h2>
+              <p className="mt-4 text-primary-300 leading-relaxed max-w-2xl mx-auto">
+                Vom ersten Gespräch über das Shooting bis zur fertigen Tour: Sie sprechen immer mit derselben Person – kein Callcenter, kein Ticket-System. Wer mit Herzblut arbeitet, bindet Kunden durch Qualität, nicht durch Verträge.
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 text-sm">
+                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="inline-flex items-center justify-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
+                  <Phone className="w-4 h-4" /> {CONTACT_PHONE}
+                </a>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center justify-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
+                  <Mail className="w-4 h-4" /> {CONTACT_EMAIL}
+                </a>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>

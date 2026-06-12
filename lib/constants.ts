@@ -1,8 +1,8 @@
 import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, AddOn, Stat, BranchenPackage } from './types'
 
 export const SITE_NAME = 'Niggli 360° Signature Tours'
-export const SITE_URL = 'https://signatour.ch'
-export const SITE_DESCRIPTION = 'Premium 360°-Touren für Hotels, Spa, Gastronomie und Immobilien. Ihre Gäste erleben, buchen und kaufen direkt in der Tour. Schweizer Qualität, kein Abo.'
+export const SITE_URL = 'https://www.signatour.ch'
+export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter, einmalige Investition, kein Abo.'
 export const CONTACT_EMAIL = 'info@signatour.ch'
 export const CONTACT_PHONE = '+41 76 652 17 37'
 export const CONTACT_ADDRESS = 'Rue de l\'Industrie 43, 2720 Tramelan'
@@ -28,7 +28,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const HERO_STATS: Stat[] = [
   { value: '48%', label: 'mehr Buchungen' },
   { value: '3×', label: 'längere Verweildauer' },
-  { value: 'ab 690', label: 'CHF pro Tour' },
+  { value: 'ab 990', label: 'CHF pro Tour' },
   { value: '0', label: 'Abo-Kosten' },
 ]
 
@@ -140,15 +140,15 @@ export const ADDONS: AddOn[] = [
 ]
 
 export const BRANCHEN_PACKAGES: BranchenPackage[] = [
-  { name: 'Makler-Vorteilskarte 5er', price: 'CHF 2.990', description: '5 Touren, CHF 598 pro Tour' },
-  { name: 'Makler-Vorteilskarte 10er', price: 'CHF 5.490', description: '10 Touren, CHF 549 pro Tour' },
-  { name: 'Gastro-Paket', price: 'CHF 1.690', description: 'Restaurant-Tour mit Menü-Hotspots & Google Maps Integration' },
-  { name: 'Hotel-Paket', price: 'CHF 2.490–3.990', description: 'Zimmertypen, Spa, Restaurant, Lobby mit Buchungslink-Integration' },
-  { name: 'Fitness-Paket', price: 'CHF 1.390', description: 'Trainingsbereich, Kursräume, Umkleiden mit Probetraining-Button' },
+  { name: 'Makler-Vorteilskarte 5er', price: 'CHF 2\'990', description: '5 Touren, CHF 598 pro Tour' },
+  { name: 'Makler-Vorteilskarte 10er', price: 'CHF 5\'490', description: '10 Touren, CHF 549 pro Tour' },
+  { name: 'Gastro-Paket', price: 'CHF 1\'690', description: 'Restaurant-Tour mit Menü-Hotspots & Google Maps Integration' },
+  { name: 'Hotel-Paket', price: 'CHF 2\'490–3\'990', description: 'Zimmertypen, Spa, Restaurant, Lobby mit Buchungslink-Integration' },
+  { name: 'Fitness-Paket', price: 'CHF 1\'390', description: 'Trainingsbereich, Kursräume, Umkleiden mit Probetraining-Button' },
 ]
 
 export const COMPARISON_ROWS: ComparisonRow[] = [
-  { feature: 'Preismodell', signatour: 'CHF 690 einmalig', matterport: '$69/Monat + $5\'400 Kamera', ogulo: '€79/Monat + 24-Monatsvertrag', signatourWins: true },
+  { feature: 'Preismodell', signatour: 'ab CHF 990 einmalig', matterport: '$69/Monat + $5\'400 Kamera', ogulo: '€79/Monat + 24-Monatsvertrag', signatourWins: true },
   { feature: 'Vertragsbindung', signatour: 'Keine', matterport: 'Jährlich', ogulo: '24 Monate Minimum', signatourWins: true },
   { feature: 'Aufwand für Sie', signatour: 'Null (Done-for-You)', matterport: 'Selbst scannen (DIY)', ogulo: 'Selbst scannen (DIY)', signatourWins: true },
   { feature: 'Support', signatour: 'Deutsch, persönlich', matterport: 'Englisch (Trustpilot 1.4/5)', ogulo: 'Deutsch', signatourWins: true },
@@ -164,7 +164,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Ab CHF 690 für die Basis-Tour (bis 100 m²). Kein Abo, keine versteckten Kosten. Hosting für 12–24 Monate inklusive.',
+    answer: 'Ab CHF 990 für das Basic-Paket (bis 15 Panoramen). Kein Abo, keine versteckten Kosten. 12 Monate Hosting und Service inklusive.',
   },
   {
     question: 'Wie lange dauert die Erstellung?',
@@ -214,7 +214,7 @@ export const FAQ_GENERAL: FAQ[] = [
 export const FAQ_COSTS: FAQ[] = [
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Basis-Tour ab CHF 690 (bis 100 m²), Business-Tour CHF 1.190–1.490, Premium-Tour CHF 1.690–2.490, Signature-Tour ab CHF 2.990. Einmalpreise, keine Abos, keine versteckten Kosten. Hosting 12–24 Monate inklusive.',
+    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 60 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise, keine Abos, keine versteckten Kosten. 12 Monate Hosting und Service inklusive.',
   },
   {
     question: 'Gibt es versteckte Kosten?',
@@ -245,7 +245,7 @@ export const FAQ_TECH: FAQ[] = [
   },
   {
     question: 'Was passiert nach Ablauf des Hostings?',
-    answer: 'Nach der inkludierten Laufzeit (12–24 Monate) kann das Hosting verlängert werden (CHF 120–180/Jahr) oder Sie exportieren die Tour-Dateien und hosten selbst. Kein Vendor Lock-in.',
+    answer: 'Nach den inkludierten 12 Monaten kann das Servicepaket verlängert werden (ab CHF 120/Jahr) oder Sie exportieren die Tour-Dateien und hosten selbst. Kein Vendor Lock-in.',
   },
 ]
 
@@ -271,9 +271,9 @@ export const FAQ_DATA: FAQ[] = [
 export const INCLUDED_BENEFITS = [
   'Professionelles Shooting vor Ort',
   'Nachbearbeitung & Optimierung',
-  'Hosting auf CH/EU-Servern (DSGVO-konform, 12 oder 24 Monate)',
+  'Hosting auf CH/EU-Servern (DSGVO-konform, 12 Monate inklusive)',
   'Einbettungscode & Direktlink',
-  'Persönliche Beratung',
+  'Persönliche Beratung durch den Inhaber',
   'Datenhoheit beim Kunden (kein Vendor Lock-in)',
 ]
 
@@ -296,7 +296,7 @@ export const MATTERPORT_REASONS = [
 ]
 
 export const MATTERPORT_COMPARISON: ComparisonRow[] = [
-  { feature: 'Preismodell', signatour: 'CHF 690 einmalig', matterport: '$69/Monat + USD 5\'400 Kamera', ogulo: '', signatourWins: true },
+  { feature: 'Preismodell', signatour: 'ab CHF 990 einmalig', matterport: '$69/Monat + USD 5\'400 Kamera', ogulo: '', signatourWins: true },
   { feature: 'Kamera nötig', signatour: 'Nein – wir bringen alles mit', matterport: 'Ja – Pro3 (USD 5\'400)', ogulo: '' },
   { feature: 'Vertragsbindung', signatour: 'Keine', matterport: 'Jährliche Abrechnung', ogulo: '', signatourWins: true },
   { feature: 'Versteckte Kosten', signatour: 'Keine – alles inklusive', matterport: 'Grundrisse $15–50, Exporte $49–150', ogulo: '', signatourWins: true },

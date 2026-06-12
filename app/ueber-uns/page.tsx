@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import UeberUnsPageClient from './UeberUnsPageClient'
 
 export const metadata: Metadata = {
-  title: 'Über uns',
-  description: 'Ihr lokaler Partner für 360-Grad-Rundgänge. Done-for-You, persönlich, transparent, DSGVO-konform.',
+  title: 'Über uns – Ihr Schweizer Partner',
+  description: 'Ihr Schweizer Partner für digitale Verkaufserlebnisse: Done-for-You, persönlich, transparent, DSGVO-konform.',
+  alternates: { canonical: '/ueber-uns' },
 }
 
 export default function UeberUnsPage() {

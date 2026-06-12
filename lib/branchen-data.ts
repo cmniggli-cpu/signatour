@@ -9,6 +9,7 @@ export interface BranchenPageData {
   tagline: string
   challenges: { title: string; description: string }[]
   stats: Stat[]
+  statsNote?: string
   captures: string[]
   comparisonTitle?: string
   comparisonRows?: { label: string; without: string; with: string }[]
@@ -28,8 +29,8 @@ export interface BranchenPageData {
 export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
   hotel: {
     slug: 'hotel',
-    metaTitle: '360-Grad-Rundgang für Hotels',
-    metaDescription: 'Mehr Direktbuchungen, weniger OTA-Abhängigkeit. Professionelle 360-Grad-Touren für Hotels ab CHF 2.490.',
+    metaTitle: '360-Grad-Rundgang für Hotels – mehr Direktbuchungen',
+    metaDescription: 'Mehr Direktbuchungen, weniger OTA-Provisionen: Professionelle 360-Grad-Touren für Hotels ab CHF 2\'490. Schweizer Anbieter, kein Abo.',
     badge: 'Hotels & Resorts',
     headline: '360-Grad-Rundgang für Ihr Hotel',
     tagline: 'Mehr Direktbuchungen, weniger OTA-Abhängigkeit. Zeigen Sie Gästen Zimmer, Spa, Restaurant und Lobby – bevor sie buchen.',
@@ -44,6 +45,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '3×', label: 'längere Verweildauer auf Ihrer Website' },
       { value: '2×', label: 'mehr Google-Profilaufrufe' },
     ],
+    statsNote: 'Quellen: Google Street View Business-Daten, Matterport Insights, Branchenstudien Hospitality',
     captures: ['Zimmertypen (Einzel, Doppel, Suite)', 'Lobby & Empfang', 'Restaurant', 'Spa & Wellness', 'Eventlocations', 'Aussenbereiche'],
     comparisonTitle: 'Hotel mit vs. ohne 360-Tour',
     comparisonRows: [
@@ -56,7 +58,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     roiTitle: '10 Direktbuchungen = Tour bezahlt',
     roiDescription: 'Durchschnittliches Zimmer CHF 200/Nacht, 18% OTA-Gebühr = CHF 36 Ersparnis/Nacht. 10 Buchungen × 2 Nächte = CHF 720 gespart. Amortisiert sich oft im ersten Quartal.',
     packageName: 'Hotel-Paket',
-    packagePrice: 'CHF 2.490–3.990',
+    packagePrice: 'CHF 2\'490–3\'990',
     packageFeatures: [
       'Alle Zimmertypen einzeln erfasst',
       'Lobby, Restaurant, Spa, Aussenbereiche',
@@ -92,9 +94,10 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '2×', label: 'mehr Google-Maps-Aufrufe' },
       { value: '93%', label: 'googeln vor der Restaurantwahl' },
     ],
+    statsNote: 'Quellen: Google Street View Business-Daten, Branchenstudien Gastronomie',
     captures: ['Gastraum', 'Terrasse & Aussenbereiche', 'Bar & Lounge', 'Separées & Events', 'Küche (optional) – zeigt Transparenz, schafft Vertrauen'],
-    roiTitle: 'CHF 1.36 pro Tag – weniger als ein Espresso',
-    roiDescription: 'CHF 1.490 / 3 Jahre = CHF 1.36/Tag. Nur 1 zusätzliche Reservation/Woche zahlt die Investition. Durchschnittliche Rechnung CHF 45 pro Person = über CHF 7\'000 zusätzlicher Jahresumsatz.',
+    roiTitle: 'CHF 1.55 pro Tag – weniger als ein Espresso',
+    roiDescription: 'CHF 1\'690 auf 3 Jahre gerechnet = rund CHF 1.55 pro Tag. Bereits 1 zusätzliche Reservation pro Woche zahlt die Investition: Bei einer durchschnittlichen Rechnung von CHF 45 pro Person sind das über CHF 7\'000 zusätzlicher Jahresumsatz.',
     extraSection: {
       title: 'Google Business Integration',
       description: 'Ihre 360-Tour wird direkt in Ihr Google Business Profile eingebettet. Professionelle Aufnahmen ersetzen unkontrollierte Gästefotos.',
@@ -106,7 +109,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       ],
     },
     packageName: 'Gastro-Paket',
-    packagePrice: 'CHF 1.690',
+    packagePrice: 'CHF 1\'690',
     packageFeatures: [
       'Professionelle Business-Tour (bis 300 m²)',
       'Google Business Profile Integration',
@@ -140,6 +143,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '4–5×', label: 'längere Verweildauer auf Seiten mit 360-Tour' },
       { value: '15–25%', label: 'Adoption im DACH-Raum – Ihr Vorsprung jetzt' },
     ],
+    statsNote: 'Quellen: Matterport Insights, Branchenstudien Wellness & Hospitality',
     captures: ['Saunalandschaft', 'Behandlungsräume', 'Ruhebereiche', 'Pools & Whirlpools', 'Aussenbereiche', 'Garten / Naturbecken / Panoramablick'],
     extraSection: {
       title: 'Privatsphäre & Diskretion',
@@ -153,7 +157,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       ],
     },
     packageName: 'Spa & Wellness Premium-Tour',
-    packagePrice: 'CHF 1.690–2.490',
+    packagePrice: 'CHF 1\'690–2\'490',
     packageFeatures: [
       'Professionelle Premium-Tour (komplette Spa-Anlage)',
       'Shooting ausserhalb der Öffnungszeiten',
@@ -187,6 +191,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '2×', label: 'mehr Google Maps Aufrufe vs. Einträge ohne Tour' },
       { value: 'EUR 960', label: 'durchschnittlicher Lifetime Value pro Mitglied (24 Monate × €40)' },
     ],
+    statsNote: 'Quellen: Google Street View Business-Daten, Branchenstudien Fitness',
     captures: ['Trainingsfläche', 'Freihantelbereich', 'Cardio-Bereich', 'Kursraum/-räume', 'Wellness & Sauna (falls vorhanden)', 'Umkleiden & Duschen'],
     extraSection: {
       title: 'Qualität statt Preis',
@@ -202,7 +207,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     roiTitle: '2–3 neue Mitglieder = Tour bezahlt',
     roiDescription: 'EUR 960 Lifetime Value pro Mitglied. Weniger als 1 Monat Facebook Ads, aber wirkt 3 Jahre – ohne laufende Kosten, ohne Streuverlust.',
     packageName: 'Fitness-Paket',
-    packagePrice: 'CHF 1.390',
+    packagePrice: 'CHF 1\'390',
     packageFeatures: [
       'Professionelle Business-Tour (komplettes Studio)',
       'Google Business Integration',
@@ -236,10 +241,11 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '5×', label: 'schnellerer Verkauf durch vorqualifizierte Interessenten' },
       { value: '3×', label: 'längere Verweildauer auf Inserat' },
     ],
+    statsNote: 'Quellen: Matterport Insights, National Association of Realtors (NAR)',
     captures: ['Wohnräume', 'Küche', 'Badezimmer', 'Aussenbereiche', 'Grundriss-Integration (optional)'],
     comparisonTitle: 'Makler-Vergleich: Signatour vs. Ogulo vs. Matterport',
     comparisonRows: [
-      { label: 'Preis pro Objekt', without: 'Ogulo: €49/Mt + Setup', with: 'CHF 490' },
+      { label: 'Preis pro Objekt', without: 'Ogulo: €49/Mt + Setup', with: 'ab CHF 549' },
       { label: 'Vertrag', without: 'Ogulo: 12 Monate Min.', with: 'Keiner' },
       { label: 'Aufwand', without: 'DIY', with: 'Null (Full Service)' },
       { label: 'Qualität', without: 'Abhängig von Ihren Fotos', with: 'Professioneller Fotograf' },
@@ -257,10 +263,10 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       ],
     },
     packageName: 'Makler-Vorteilskarten',
-    packagePrice: 'ab CHF 2.990',
+    packagePrice: 'ab CHF 2\'990',
     packageFeatures: [
-      '5er-Karte: CHF 2.990 (CHF 598 pro Objekt)',
-      '10er-Karte: CHF 5.490 (CHF 549 pro Objekt)',
+      '5er-Karte: CHF 2\'990 (CHF 598 pro Objekt)',
+      '10er-Karte: CHF 5\'490 (CHF 549 pro Objekt)',
       'Flexibel einsetzbar, kein Ablaufdatum',
       'Google Integration je Objekt',
       'Portal-optimierte Einbettung',

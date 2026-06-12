@@ -17,8 +17,13 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-5 text-primary-400 text-sm leading-relaxed">
-              Premium 360°-Touren, die Räume online erlebbar machen – und aus Besuchern Kunden.
+              Wir verwandeln Räume in digitale Verkaufserlebnisse – damit aus Besuchern Kunden werden.
             </p>
+            <ul className="mt-5 space-y-1.5 text-xs text-primary-500">
+              <li>✓ Schweizer Anbieter, persönlicher Ansprechpartner</li>
+              <li>✓ Einmalpreis – kein Abo, keine Vertragsbindung</li>
+              <li>✓ DSGVO-konformes Hosting in CH/EU</li>
+            </ul>
           </div>
 
           <div>

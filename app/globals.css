@@ -221,6 +221,8 @@ body {
 .nigpage .hero .cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:30px}
 .nigpage .hero .phone{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:500;text-decoration:none}
 .nigpage .hero .phone svg{color:var(--gd)}
+.nigpage .herotrust{margin-top:18px;font-size:13px;letter-spacing:.05em;color:var(--mut)}
+.nigpage .finaltrust{font-size:13px;letter-spacing:.04em;margin-top:14px;color:#5a430f}
 
 /* pillars */
 .nigpage .pillars .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}

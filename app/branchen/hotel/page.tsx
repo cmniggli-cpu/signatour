@@ -7,6 +7,7 @@ const data = BRANCHEN_DATA['hotel']
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
+  alternates: { canonical: '/branchen/hotel' },
 }
 
 export default function HotelPage() {

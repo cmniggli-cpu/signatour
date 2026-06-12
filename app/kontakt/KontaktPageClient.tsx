@@ -20,9 +20,9 @@ export default function KontaktPageClient() {
   return (
     <>
       <PageHero
-        badge="Lassen Sie uns sprechen"
+        badge="Kostenlose Beratung"
         title="Lassen Sie uns sprechen"
-        subtitle="Unverbindliche Beratung – wir schauen gemeinsam, ob eine 360-Tour für Sie Sinn macht."
+        subtitle="Unverbindlich und ehrlich: Wir klären gemeinsam, ob sich eine Signature Tour für Ihren Betrieb rechnet – Antwort innert 24 Stunden, persönlich durch den Inhaber."
       />
 
       <section className="py-20">

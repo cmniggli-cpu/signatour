@@ -90,7 +90,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button href="/kontakt" variant="primary" size="sm">Kontakt</Button>
+            <Button href="/kontakt" variant="primary" size="sm">Kostenlose Beratung</Button>
           </div>
 
           <button

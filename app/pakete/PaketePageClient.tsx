@@ -20,11 +20,19 @@ export default function PaketePageClient() {
       {/* Pricing Cards */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {PRICING_TIERS.map((tier, i) => (
               <PricingCard key={tier.name} tier={tier} showRange index={i} />
             ))}
           </div>
+          <AnimatedSection className="mt-12">
+            <div className="max-w-3xl mx-auto bg-primary-900 rounded-2xl p-6 sm:p-8 text-center">
+              <h3 className="text-lg font-bold text-white">Doppelte Garantie – null Risiko</h3>
+              <p className="mt-2 text-sm text-primary-300 leading-relaxed">
+                Bis zu 3 Korrekturrunden, bis die Tour Ihren Ansprüchen entspricht. Und keine messbare Verbesserung nach 90 Tagen? Wir erstatten 50% des Paketpreises zurück.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
