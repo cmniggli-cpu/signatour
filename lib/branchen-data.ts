@@ -10,6 +10,7 @@ export interface BranchenPageData {
   challenges: { title: string; description: string }[]
   stats: Stat[]
   statsNote?: string
+  sources?: { label: string; url: string }[]
   captures: string[]
   comparisonTitle?: string
   comparisonRows?: { label: string; without: string; with: string }[]
@@ -46,6 +47,11 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '2×', label: 'mehr Google-Profilaufrufe' },
     ],
     statsNote: 'Quellen: Google Street View Business-Daten, Matterport Insights, Branchenstudien Hospitality',
+    sources: [
+      { label: 'Omni-Hotels-Studie: 67% höhere Buchungswahrscheinlichkeit mit 360°-Tour (EXP360)', url: 'https://exp360.com/blog/how-hotels-use-vr-360-images-and-videos-to-increase-bookings/' },
+      { label: 'Visiting Media: Wie virtuelle Touren Hotelbuchungen steigern', url: 'https://visitingmedia.com/5-ways-virtual-tours-help-hotels-increase-bookings/' },
+      { label: 'ScienceDirect: AR/VR in Hotels – Wirkung auf Gästezufriedenheit und Buchungsabsicht', url: 'https://www.sciencedirect.com/science/article/pii/S0278431923002050' },
+    ],
     captures: ['Zimmertypen (Einzel, Doppel, Suite)', 'Lobby & Empfang', 'Restaurant', 'Spa & Wellness', 'Eventlocations', 'Aussenbereiche'],
     comparisonTitle: 'Hotel mit vs. ohne 360-Tour',
     comparisonRows: [
@@ -95,6 +101,10 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '93%', label: 'googeln vor der Restaurantwahl' },
     ],
     statsNote: 'Quellen: Google Street View Business-Daten, Branchenstudien Gastronomie',
+    sources: [
+      { label: 'Google/Ipsos «Impact of Search Listings»: Einträge mit virtueller Tour wecken doppelt so häufig Interesse (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
+      { label: 'Panoee: Wie Google Street View Ladenbesuche steigert', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
+    ],
     captures: ['Gastraum', 'Terrasse & Aussenbereiche', 'Bar & Lounge', 'Separées & Events', 'Küche (optional) – zeigt Transparenz, schafft Vertrauen'],
     roiTitle: 'CHF 1.55 pro Tag – weniger als ein Espresso',
     roiDescription: 'CHF 1\'690 auf 3 Jahre gerechnet = rund CHF 1.55 pro Tag. Bereits 1 zusätzliche Reservation pro Woche zahlt die Investition: Bei einer durchschnittlichen Rechnung von CHF 45 pro Person sind das über CHF 7\'000 zusätzlicher Jahresumsatz.',
@@ -144,6 +154,10 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '15–25%', label: 'Adoption im DACH-Raum – Ihr Vorsprung jetzt' },
     ],
     statsNote: 'Quellen: Matterport Insights, Branchenstudien Wellness & Hospitality',
+    sources: [
+      { label: 'EXP360: 360°-Inhalte im Hotel- und Wellnessbereich', url: 'https://exp360.com/blog/how-hotels-use-vr-360-images-and-videos-to-increase-bookings/' },
+      { label: 'ScienceDirect: Virtuelle Touren und Kundenzufriedenheit – Quasi-Experiment (Airbnb)', url: 'https://www.sciencedirect.com/science/article/abs/pii/S1447677025000105' },
+    ],
     captures: ['Saunalandschaft', 'Behandlungsräume', 'Ruhebereiche', 'Pools & Whirlpools', 'Aussenbereiche', 'Garten / Naturbecken / Panoramablick'],
     extraSection: {
       title: 'Privatsphäre & Diskretion',
@@ -192,6 +206,10 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: 'EUR 960', label: 'durchschnittlicher Lifetime Value pro Mitglied (24 Monate × €40)' },
     ],
     statsNote: 'Quellen: Google Street View Business-Daten, Branchenstudien Fitness',
+    sources: [
+      { label: 'Google/Ipsos «Impact of Search Listings»: doppelt so viel Interesse mit virtueller Tour (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
+      { label: 'TeliportMe: Marktanalyse Virtual-Tour-Software 2024', url: 'https://teliportme.com/blog/a-deep-dive-into-the-virtual-tour-software-market/' },
+    ],
     captures: ['Trainingsfläche', 'Freihantelbereich', 'Cardio-Bereich', 'Kursraum/-räume', 'Wellness & Sauna (falls vorhanden)', 'Umkleiden & Duschen'],
     extraSection: {
       title: 'Qualität statt Preis',
@@ -242,6 +260,11 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { value: '3×', label: 'längere Verweildauer auf Inserat' },
     ],
     statsNote: 'Quellen: Matterport Insights, National Association of Realtors (NAR)',
+    sources: [
+      { label: 'Matterport-Studie: Käufer und Verkäufer bevorzugen Inserate mit 3D-Tour deutlich', url: 'https://matterport.com/news/new-study-shows-property-buyers-and-sellers-overwhelmingly-prefer-listings-3d-tours' },
+      { label: 'Matterport: Objekte mit 3D-Tour verkaufen sich bis zu 31% schneller', url: 'https://matterport.com/blog/3d-tours-properties-sell-31-faster-and-higher-price' },
+      { label: 'NAR: Home Buyers & Sellers Generational Trends Report', url: 'https://www.nar.realtor/research-and-statistics/research-reports/home-buyer-and-seller-generational-trends' },
+    ],
     captures: ['Wohnräume', 'Küche', 'Badezimmer', 'Aussenbereiche', 'Grundriss-Integration (optional)'],
     comparisonTitle: 'Makler-Vergleich: Signatour vs. Ogulo vs. Matterport',
     comparisonRows: [

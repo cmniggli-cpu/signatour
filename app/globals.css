@@ -382,3 +382,37 @@ body {
 .nigpage .fgrid3{grid-template-columns:repeat(3,1fr)}
 @media(max-width:820px){.nigpage .fgrid3{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.nigpage .fgrid3{grid-template-columns:1fr}}
+
+/* ---- Branchenseiten im Startseiten-Look ---- */
+.nigpage .bhero{background:linear-gradient(160deg,#F4F5F7 0%,#DCE0E5 100%);padding:150px 0 64px;text-align:center}
+.nigpage .bhero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4.8vw,56px);line-height:1.07;margin:14px auto 0;max-width:22ch;color:var(--ink)}
+.nigpage .bhero .sub{margin:16px auto 0;font-size:17px;max-width:58ch}
+.nigpage .bhero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.nigpage .tcard{background:var(--white);border:1px solid var(--ln);border-radius:14px;padding:26px 24px;height:100%}
+.nigpage .tcard h3{font-size:16.5px;font-weight:600;margin-bottom:8px}
+.nigpage .tcard p{font-size:14px;color:var(--mut)}
+.nigpage .bstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;margin-top:38px}
+.nigpage .bstat .v{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(32px,3.6vw,46px);color:var(--g);line-height:1}
+.nigpage .bstat .l{font-size:13.5px;margin-top:8px;color:var(--cream)}
+.nigpage .bsources{margin-top:28px;font-size:12px;line-height:1.8;color:var(--dmut);max-width:72ch;margin-left:auto;margin-right:auto}
+.nigpage .bsources a{color:var(--g);text-decoration:none}
+.nigpage .bsources a:hover{text-decoration:underline}
+.nigpage .bchecks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px;text-align:left}
+.nigpage .bchecks1{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}
+.nigpage .bcheck{display:flex;gap:11px;align-items:flex-start;background:var(--white);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--ink2)}
+.nigpage .bcheck svg{color:var(--g);flex:none;margin-top:2px}
+.nigpage .btabwrap{margin-top:38px;border:1px solid var(--ln);border-radius:14px;overflow:hidden;background:var(--white)}
+.nigpage .btab{width:100%;border-collapse:collapse;font-size:14px}
+.nigpage .btab th{background:var(--ink);color:#fff;font-weight:600;padding:15px 18px;text-align:left;font-size:13px;letter-spacing:.04em}
+.nigpage .btab th.gold{color:var(--gd)}
+.nigpage .btab td{padding:14px 18px;border-top:1px solid var(--ln);text-align:left}
+.nigpage .btab .lbl{font-weight:600;color:var(--ink)}
+.nigpage .btab .without{color:var(--mut)}
+.nigpage .btab .with span{background:rgba(200,144,28,.12);color:#8a6312;font-weight:600;padding:5px 12px;border-radius:99px;font-size:13px;display:inline-block}
+.nigpage .roi{background:var(--paper2);border:1px solid var(--ln);border-radius:18px;padding:46px 36px}
+.nigpage .pcard .plink{display:block;text-align:center;margin-top:14px;font-size:13.5px;color:var(--mut);text-decoration:none}
+.nigpage .pcard .plink:hover{color:var(--g)}
+.nigpage .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.nigpage .chip{border:1px solid var(--ln);border-radius:99px;padding:10px 22px;font-size:13.5px;font-weight:500;color:var(--ink);text-decoration:none;background:var(--white);transition:.2s}
+.nigpage .chip:hover{border-color:var(--g);color:var(--g)}
+@media(max-width:640px){.nigpage .bchecks{grid-template-columns:1fr}.nigpage .btab th,.nigpage .btab td{padding:11px 12px;font-size:13px}}
