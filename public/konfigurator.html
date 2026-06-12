@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paket-Konfigurator · Niggli 360° Signature Tours</title>
+<style>
+:root{
+  --bg:#0d0d0f; --bg2:#16161a; --card:#1b1b20; --card-hover:#22222a;
+  --line:#2c2c34; --gold:#c9a24b; --gold-soft:#e3c773; --gold-dim:#8a6f33;
+  --text:#f4f1ea; --muted:#a39d92; --green:#5cb874; --red:#e0785f;
+  --radius:16px; --shadow:0 18px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 50% -10%,#1d1d22 0%,var(--bg) 60%);
+  color:var(--text); line-height:1.5; min-height:100vh;
+  display:flex; align-items:flex-start; justify-content:center; padding:32px 16px;
+}
+.kf{width:100%; max-width:760px}
+.kf__head{text-align:center; margin-bottom:26px}
+.kf__eyebrow{font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:10px}
+.kf__title{font-size:30px; font-weight:700; margin:0 0 8px; letter-spacing:.3px}
+.kf__sub{color:var(--muted); font-size:15px; max-width:520px; margin:0 auto}
+.kf__steps{display:flex; gap:8px; margin:26px 0 22px}
+.kf__steps .seg{flex:1; height:4px; border-radius:99px; background:var(--line); overflow:hidden}
+.kf__steps .seg.done{background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+.kf__steplabel{display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:24px; letter-spacing:.4px}
+.kf__steplabel b{color:var(--text)}
+.panel{background:linear-gradient(180deg,var(--bg2),var(--card)); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:30px 28px}
+.panel h2{font-size:20px; margin:0 0 4px}
+.panel .hint{color:var(--muted); font-size:14px; margin:0 0 20px}
+.grid{display:grid; gap:12px}
+.grid.cols2{grid-template-columns:repeat(2,1fr)}
+.grid.cols3{grid-template-columns:repeat(3,1fr)}
+.tile{position:relative; text-align:left; cursor:pointer; border:1.5px solid var(--line); background:var(--card); border-radius:14px; padding:16px 16px; transition:.15s ease; display:flex; flex-direction:column; gap:4px; color:var(--text)}
+.tile:hover{background:var(--card-hover); border-color:var(--gold-dim)}
+.tile .t-name{font-weight:600; font-size:15px}
+.tile .t-desc{font-size:12.5px; color:var(--muted)}
+.tile .t-price{font-size:12.5px; color:var(--gold-soft); margin-top:2px}
+.tile.sel{border-color:var(--gold); background:rgba(201,162,75,.10); box-shadow:0 0 0 1px var(--gold) inset}
+.tile .check{position:absolute; top:12px; right:12px; width:20px; height:20px; border-radius:50%; border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:12px; color:#0d0d0f; background:transparent}
+.tile.sel .check{background:var(--gold); border-color:var(--gold)}
+.tile.sel .check::after{content:"✓"}
+.field{margin-bottom:14px}
+.field label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px; letter-spacing:.3px}
+.field input,.field textarea{width:100%; background:var(--bg); border:1.5px solid var(--line); border-radius:12px; color:var(--text); font-size:15px; padding:12px 14px; font-family:inherit; transition:.15s}
+.field input:focus,.field textarea:focus{outline:none; border-color:var(--gold)}
+.field input.err,.field textarea.err{border-color:var(--red)}
+.req{color:var(--gold)}
+.errmsg{color:var(--red); font-size:12px; margin-top:5px; display:none}
+.errmsg.show{display:block}
+.summary{margin-top:18px; background:rgba(201,162,75,.07); border:1px solid var(--gold-dim); border-radius:14px; padding:16px 18px}
+.summary .s-row{display:flex; justify-content:space-between; font-size:13.5px; color:var(--muted); padding:3px 0}
+.summary .s-row span:last-child{color:var(--text)}
+.summary .s-pkg{font-size:13px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); font-weight:700}
+.summary .s-total{display:flex; justify-content:space-between; align-items:baseline; margin-top:10px; padding-top:10px; border-top:1px dashed var(--gold-dim)}
+.summary .s-total b{font-size:24px} .summary .s-total small{color:var(--muted); font-size:12px}
+.nav{display:flex; justify-content:space-between; gap:12px; margin-top:24px}
+.btn{font-family:inherit; font-size:15px; font-weight:600; border-radius:12px; padding:13px 22px; cursor:pointer; border:1.5px solid var(--line); background:transparent; color:var(--text); transition:.15s}
+.btn:hover{border-color:var(--gold-dim)}
+.btn--ghost{visibility:hidden}
+.btn--primary{background:linear-gradient(180deg,var(--gold-soft),var(--gold)); color:#1a1407; border:none; box-shadow:0 8px 22px rgba(201,162,75,.28)}
+.btn--primary:hover{filter:brightness(1.05)}
+.btn--primary:disabled{opacity:.45; cursor:not-allowed; filter:none; box-shadow:none}
+.trust{text-align:center; color:var(--muted); font-size:12.5px; margin-top:16px; letter-spacing:.3px}
+.trust .dot{color:var(--gold-dim); margin:0 6px}
+.lang-add{display:flex; align-items:center; gap:10px; margin-top:10px; font-size:13.5px; color:var(--muted)}
+.lang-add input{width:64px; text-align:center; padding:8px}
+.done{text-align:center; padding:14px 6px}
+.done .mark{width:64px; height:64px; border-radius:50%; margin:0 auto 16px; background:rgba(92,184,116,.15); border:1.5px solid var(--green); color:var(--green); display:flex; align-items:center; justify-content:center; font-size:30px}
+.done h2{font-size:22px; margin:0 0 8px}
+.done p{color:var(--muted); max-width:440px; margin:0 auto 6px}
+.done .phone{color:var(--gold-soft); font-weight:600; font-size:18px; margin-top:12px; display:inline-block; text-decoration:none}
+.backlink{display:block;text-align:center;margin-top:18px;color:var(--muted);font-size:13px;text-decoration:none}
+.backlink:hover{color:var(--gold-soft)}
+@media(max-width:560px){.kf__title{font-size:24px}.grid.cols3{grid-template-columns:1fr}.grid.cols2{grid-template-columns:1fr}.panel{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="kf">
+  <div class="kf__head">
+    <div class="kf__eyebrow">Paket-Konfigurator</div>
+    <h1 class="kf__title">Finden Sie Ihr passendes Paket</h1>
+    <p class="kf__sub">In 4 Schritten zu Ihrer unverbindlichen Einschätzung. Antwort innert 24 Stunden – kostenlos und ohne Verpflichtung.</p>
+  </div>
+  <div class="kf__steps" id="steps"><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div></div>
+  <div class="kf__steplabel"><span id="stepName">Branche</span><span><b id="stepNum">1</b> / 4</span></div>
+  <div class="panel" id="panel"></div>
+  <div class="trust" id="trust">Unverbindlich <span class="dot">·</span> Antwort innert 24 h <span class="dot">·</span> Daten in der Schweiz 🔒</div>
+  <a class="backlink" href="/">← Zurück zur Website</a>
+</div>
+<script>
+const CONFIG = {
+  phone: "+41 76 652 17 37",
+  phoneHref: "tel:+41766521737",
+  email: "info@signatour.ch",
+  formEndpoint: "",   // leer = E-Mail-Versand an info@signatour.ch; oder Formspree-Endpoint eintragen
+  branchen: [
+    {id:"hotel",       name:"Hotel",                 desc:"Zimmer, Lobby & Aussicht erlebbar machen"},
+    {id:"restaurant",  name:"Restaurant / Gastro",   desc:"Ambiente zeigen, bevor reserviert wird"},
+    {id:"spa",         name:"Spa & Wellness",        desc:"Ruhe & Hochwertigkeit spürbar machen"},
+    {id:"fitness",     name:"Fitnessstudio",         desc:"Geräte & Atmosphäre, Hemmschwelle senken"},
+    {id:"immobilien",  name:"Immobilien",            desc:"Objekte rund um die Uhr begehbar"},
+    {id:"banken",      name:"Bank / Versicherung / Kanzlei", desc:"Premium-Büros & Beratungsräume"},
+    {id:"andere",      name:"Andere Branche",        desc:"Jeder Betrieb mit sehenswerten Räumen"},
+  ],
+  groessen: [
+    {id:"klein",  name:"Klein",   desc:"bis 15 Panoramen · einzelne Bereiche",     pkg:"Basic",     price:990, prefix:""},
+    {id:"mittel", name:"Mittel",  desc:"bis 60 Panoramen · ganzer Betrieb",        pkg:"Signature", price:2497, prefix:""},
+    {id:"gross",  name:"Gross",   desc:"bis 100 Panoramen · Hotel/Resort/Center",  pkg:"Pro",       price:4497, prefix:"ab "},
+  ],
+  extras: [
+    {id:"buchung",  name:"Buchungs-Integration",   note:"in Signature & Pro enthalten", add:0,   priced:false},
+    {id:"sprachen", name:"Mehrsprachig (DE/FR/EN)",note:"+ CHF 300 pro Zusatzsprache",  add:300, priced:true, perLang:true},
+    {id:"moebel",   name:"Furniture Removal",      note:"+ ab CHF 180 pro Panorama",    add:180, priced:true, perPano:true},
+    {id:"web",      name:"Signature Web (Webseite)",note:"individuell programmiert · auf Anfrage", add:0, priced:false},
+  ],
+};
+let step = 1;
+const state = { branche:null, groesse:null, extras:{}, langs:1, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
+const stepNames = ["Branche","Grösse","Extras","Kontakt"];
+const fmt = n => "CHF " + n.toLocaleString("de-CH").replace(/,/g,"’");
+const panel = document.getElementById("panel");
+const steps = document.getElementById("steps").children;
+const trust = document.getElementById("trust");
+function render(){
+  document.getElementById("stepNum").textContent = step;
+  document.getElementById("stepName").textContent = stepNames[step-1];
+  for(let i=0;i<4;i++) steps[i].classList.toggle("done", i < step);
+  trust.style.display = "block";
+  if(step===1) renderBranche();
+  else if(step===2) renderGroesse();
+  else if(step===3) renderExtras();
+  else if(step===4) renderKontakt();
+  else if(step===5) renderDone();
+}
+function nav(backVisible, nextLabel, nextEnabled, onNext){
+  const wrap=document.createElement("div"); wrap.className="nav";
+  const back=document.createElement("button");
+  back.className="btn"+(backVisible?"":" btn--ghost"); back.textContent="← Zurück";
+  back.onclick=()=>{ step--; render(); };
+  const next=document.createElement("button");
+  next.className="btn btn--primary"; next.textContent=nextLabel; next.disabled=!nextEnabled;
+  next.onclick=onNext;
+  wrap.appendChild(back); wrap.appendChild(next);
+  panel.appendChild(wrap);
+}
+function header(title,hint){
+  panel.innerHTML="";
+  const h=document.createElement("h2"); h.textContent=title; panel.appendChild(h);
+  const p=document.createElement("p"); p.className="hint"; p.textContent=hint; panel.appendChild(p);
+}
+function renderBranche(){
+  header("In welcher Branche sind Sie tätig?","So zeigen wir Ihnen passende Beispiele und Funktionen.");
+  const g=document.createElement("div"); g.className="grid cols2";
+  CONFIG.branchen.forEach(b=>{
+    const t=document.createElement("button"); t.className="tile"+(state.branche===b.id?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${b.name}</span><span class="t-desc">${b.desc}</span>`;
+    t.onclick=()=>{ state.branche=b.id; render(); };
+    g.appendChild(t);
+  });
+  panel.appendChild(g);
+  nav(false,"Weiter →",!!state.branche,()=>{ step=2; render(); });
+}
+function renderGroesse(){
+  header("Wie gross ist Ihr Betrieb?","Bestimmt das empfohlene Paket. Feinheiten klären wir im Gespräch.");
+  const g=document.createElement("div"); g.className="grid cols3";
+  CONFIG.groessen.forEach(s=>{
+    const t=document.createElement("button"); t.className="tile"+(state.groesse===s.id?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${s.name}</span><span class="t-desc">${s.desc}</span>
+                 <span class="t-price">${s.pkg} · ${s.prefix}${fmt(s.price)}</span>`;
+    t.onclick=()=>{ state.groesse=s.id; render(); };
+    g.appendChild(t);
+  });
+  panel.appendChild(g);
+  nav(true,"Weiter →",!!state.groesse,()=>{ step=3; render(); });
+}
+function renderExtras(){
+  header("Wünschen Sie Extras?","Mehrfachauswahl möglich – alles optional.");
+  const g=document.createElement("div"); g.className="grid cols2";
+  CONFIG.extras.forEach(x=>{
+    const on=!!state.extras[x.id];
+    const t=document.createElement("button"); t.className="tile"+(on?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${x.name}</span><span class="t-price">${x.note}</span>`;
+    t.onclick=()=>{ state.extras[x.id]=!on; render(); };
+    g.appendChild(t);
+  });
+  panel.appendChild(g);
+  if(state.extras.sprachen){
+    const la=document.createElement("div"); la.className="lang-add";
+    la.innerHTML=`<span>Anzahl Zusatzsprachen:</span>`;
+    const inp=document.createElement("input"); inp.type="number"; inp.min=1; inp.max=2; inp.value=state.langs;
+    inp.onchange=()=>{ state.langs=Math.max(1,Math.min(2,parseInt(inp.value||1))); render(); };
+    la.appendChild(inp); panel.appendChild(la);
+  }
+  panel.appendChild(buildSummary());
+  nav(true,"Weiter →",true,()=>{ step=4; render(); });
+}
+function renderKontakt(){
+  header("Fast geschafft – wohin dürfen wir die Einschätzung senden?","Wir melden uns innert 24 h mit einem konkreten Angebot.");
+  const mk=(key,label,req,type,ph)=>{
+    const f=document.createElement("div"); f.className="field";
+    f.innerHTML=`<label>${label}${req?' <span class="req">*</span>':''}</label>`;
+    const inp=document.createElement(type==="textarea"?"textarea":"input");
+    if(type!=="textarea") inp.type=type||"text";
+    if(type==="textarea") inp.rows=3;
+    inp.placeholder=ph||""; inp.value=state.contact[key]||"";
+    inp.oninput=()=>{ state.contact[key]=inp.value; inp.classList.remove("err"); f.querySelector(".errmsg")?.classList.remove("show"); };
+    f.appendChild(inp);
+    const e=document.createElement("div"); e.className="errmsg"; e.textContent="Bitte ausfüllen"; f.appendChild(e);
+    f.dataset.key=key; f.dataset.req=req?"1":"";
+    return f;
+  };
+  panel.appendChild(mk("name","Name",true,"text","Vor- und Nachname"));
+  panel.appendChild(mk("email","E-Mail",true,"email","name@firma.ch"));
+  panel.appendChild(mk("firma","Firma / Betrieb",true,"text","Name Ihres Betriebs"));
+  panel.appendChild(mk("tel","Telefon (optional)",false,"tel","+41 …"));
+  panel.appendChild(mk("msg","Nachricht (optional)",false,"textarea","Etwas, das wir wissen sollten?"));
+  panel.appendChild(buildSummary());
+  nav(true,"Angebot anfordern →",true,submit);
+}
+function buildSummary(){
+  const s=document.createElement("div"); s.className="summary";
+  const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
+  if(!sz){ s.innerHTML=`<div class="s-row"><span>Wählen Sie eine Grösse für eine Preis-Einschätzung.</span><span></span></div>`; return s; }
+  let total=sz.price; const rows=[];
+  rows.push(`<div class="s-row"><span class="s-pkg">Paket ${sz.pkg}</span><span>${sz.prefix}${fmt(sz.price)}</span></div>`);
+  let approx = !!sz.prefix;
+  CONFIG.extras.forEach(x=>{
+    if(state.extras[x.id] && x.priced){
+      let add=x.add; let label=x.name;
+      if(x.perLang){ add=x.add*state.langs; label+=` (${state.langs}×)`; }
+      if(x.perPano){ approx=true; label+=" (ab)"; }
+      total+=add;
+      rows.push(`<div class="s-row"><span>+ ${label}</span><span>+ ${fmt(add)}</span></div>`);
+    } else if(state.extras[x.id] && !x.priced){
+      rows.push(`<div class="s-row"><span>+ ${x.name}</span><span>${x.id==="web"?"auf Anfrage":"inkl."}</span></div>`);
+    }
+  });
+  s.innerHTML = rows.join("") +
+    `<div class="s-total"><span><small>Geschätzte Investition</small><br><b>${approx?"ab ":""}${fmt(total)}</b></span>
+     <small>einmalig · zzgl. opt. Service ab CHF 120/Jahr</small></div>`;
+  return s;
+}
+function submit(){
+  let ok=true;
+  panel.querySelectorAll(".field").forEach(f=>{
+    if(f.dataset.req){
+      const inp=f.querySelector("input,textarea"); const val=(inp.value||"").trim();
+      let bad=!val;
+      if(f.dataset.key==="email" && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) bad=true;
+      if(bad){ ok=false; inp.classList.add("err"); const e=f.querySelector(".errmsg");
+        e.textContent = (f.dataset.key==="email" && val) ? "Bitte gültige E-Mail eingeben" : "Bitte ausfüllen";
+        e.classList.add("show"); }
+    }
+  });
+  if(!ok) return;
+  const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
+  const chosenExtras=CONFIG.extras.filter(x=>state.extras[x.id]).map(x=>x.name);
+  const payload={
+    branche:(CONFIG.branchen.find(b=>b.id===state.branche)||{}).name,
+    groesse:sz?sz.name:"", paket:sz?sz.pkg:"",
+    extras:chosenExtras, zusatzsprachen: state.extras.sprachen?state.langs:0,
+    ...state.contact, quelle:"Paket-Konfigurator"
+  };
+  if(CONFIG.formEndpoint){
+    const btn=panel.querySelector(".btn--primary"); btn.disabled=true; btn.textContent="Senden…";
+    fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload)})
+      .then(r=>{ if(!r.ok) throw new Error(); step=5; render(); })
+      .catch(()=>{ btn.disabled=false; btn.textContent="Angebot anfordern →"; alert("Senden fehlgeschlagen. Bitte rufen Sie uns an: "+CONFIG.phone); });
+  } else {
+    const body=[
+      "Branche: "+payload.branche,
+      "Grösse: "+payload.groesse+" (empfohlenes Paket: "+payload.paket+")",
+      "Extras: "+(payload.extras.join(", ")||"keine"),
+      "Zusatzsprachen: "+payload.zusatzsprachen,
+      "",
+      "Name: "+payload.name,
+      "Firma: "+payload.firma,
+      "E-Mail: "+payload.email,
+      "Telefon: "+payload.tel,
+      "Nachricht: "+payload.msg,
+      "",
+      "(Quelle: Paket-Konfigurator)"
+    ].join("\n");
+    const mail="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Paket-Anfrage – "+payload.paket+" ("+payload.firma+")")+"&body="+encodeURIComponent(body);
+    window.location.href=mail;
+    step=5; render();
+  }
+}
+function renderDone(){
+  for(let i=0;i<4;i++) steps[i].classList.add("done");
+  document.getElementById("stepNum").textContent="✓"; document.getElementById("stepName").textContent="Fertig";
+  trust.style.display="none";
+  const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
+  panel.innerHTML="";
+  const d=document.createElement("div"); d.className="done";
+  d.innerHTML=`
+    <div class="mark">✓</div>
+    <h2>Vielen Dank, ${state.contact.name.split(" ")[0]||""}!</h2>
+    <p>Es öffnet sich Ihr E-Mail-Programm mit der vorausgefüllten Anfrage${sz?` – empfohlenes Paket: <b style="color:var(--gold-soft)">${sz.pkg}</b>`:""}. Bitte nur noch absenden.</p>
+    <p>Wir melden uns innert <b>24 Stunden</b> mit einem konkreten, unverbindlichen Angebot.</p>
+    <p>Lieber direkt sprechen?</p>
+    <a class="phone" href="${CONFIG.phoneHref}">${CONFIG.phone}</a>`;
+  panel.appendChild(d);
+}
+(function(){var p=new URLSearchParams(location.search).get("b"); if(p && CONFIG.branchen.some(function(b){return b.id===p;})) state.branche=p;})();
+render();
+</script>
+</body>
+</html>

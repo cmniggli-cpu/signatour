@@ -22,6 +22,9 @@ const ICON_DEFS = `
 <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
 <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5"/></symbol>
 <symbol id="i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11"/><path d="M4 11a2 2 0 0 1 2 2v3h12v-3a2 2 0 0 1 4 0v6H2v-6a2 2 0 0 1 2-2Z"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m9 8-4 4 4 4M15 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M13 3 4 14h6l-1 7 9-11h-6l1-7Z"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
 <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 3.5 9 4l1 3.5L8.3 9.2a12 12 0 0 0 6.5 6.5l1.7-1.7L20 15l.5 2.5a2 2 0 0 1-2 2.3A16 16 0 0 1 4.2 5.5a2 2 0 0 1 2.3-2Z"/></symbol>
 </defs></svg>`
@@ -32,12 +35,11 @@ const Icon = ({ id, c = 'icn' }: { id: string; c?: string }) => (
 const Chk = () => <svg className="icn-sm" style={{ width: 18, height: 18 }}><use href="#i-check" /></svg>
 
 const BRANCHEN = [
-  { img: '1566073771259-6a8506099945', t: 'Hotels', d: 'Zimmer, Lobby & Aussicht erlebbar machen – mehr Direktbuchungen.' },
-  { img: '1517248135467-4c7edcad34c4', t: 'Restaurants', d: 'Ambiente und Tische zeigen, bevor reserviert wird.' },
-  { img: '1540555700478-4be289fbecef', t: 'Spa & Wellness', d: 'Ruhe und Hochwertigkeit spürbar machen.' },
-  { img: '1534438327276-14e5300c3a48', t: 'Fitnessstudios', d: 'Geräte und Atmosphäre zeigen – Hemmschwelle senken.' },
-  { img: '1512917774080-9991f1c4c750', t: 'Immobilien', d: 'Objekte rund um die Uhr begehbar – weniger unnötige Besichtigungen.' },
-  { img: '1497366754035-f200968a6e72', t: 'Banken, Versicherungen & Kanzleien', d: 'Premium-Büros und Beratungsräume, die schon online Vertrauen schaffen.' },
+  { img: '1566073771259-6a8506099945', href: '/branchen/hotel', t: 'Hotels & Gastronomie', d: 'Zimmer, Lobby, Ambiente und Tische erlebbar machen – mehr Direktbuchungen und Reservierungen.' },
+  { img: '1540555700478-4be289fbecef', href: '/branchen/spa-wellness', t: 'Spa & Wellness', d: 'Ruhe und Hochwertigkeit spürbar machen.' },
+  { img: '1534438327276-14e5300c3a48', href: '/branchen/fitnessstudio', t: 'Fitnessstudios', d: 'Geräte und Atmosphäre zeigen – Hemmschwelle senken.' },
+  { img: '1512917774080-9991f1c4c750', href: '/branchen/immobilien', t: 'Immobilien', d: 'Objekte rund um die Uhr begehbar – weniger unnötige Besichtigungen.' },
+  { img: '1497366754035-f200968a6e72', href: '/kontakt', t: 'Banken, Versicherungen & Kanzleien', d: 'Premium-Büros und Beratungsräume, die schon online Vertrauen schaffen.' },
 ]
 
 export default function HomePage() {
@@ -51,13 +53,12 @@ export default function HomePage() {
           <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1900&q=80&auto=format&fit=crop" alt="Premium Spa" />
         </div>
         <div className="wrap inner">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="herologo" src="/niggli-logo.png" alt="Niggli – 360° Signature Tours" />
           <h1 className="serif">Premium-Erlebnisse, in die sich Ihre <em>Gäste verlieben</em>.</h1>
-          <p className="lead"><span className="accent">Erleben beginnt heute nicht vor Ort – sondern online.</span><br />
-            Interaktive 360°-Touren für Hotels, Spa, Gastronomie und Immobilien. Ihre Gäste erleben den Raum – und buchen, kaufen oder fragen direkt in der Tour an.</p>
+          <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
+            Mit einer interaktiven 360°-Signature-Tour erleben Ihre Gäste den Raum, als wären sie schon da – und buchen, kaufen oder fragen direkt in der Tour an. Schweizer Qualität, kein Abo, voller Erfolg.</p>
           <div className="cta">
-            <a className="btn btn-gold" href={`mailto:${CONTACT_EMAIL}`}>Kostenlose Beratung <span className="arrow">→</span></a>
+            <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
+            <a className="btn btn-ghost" href="#referenzen">Referenz-Touren ansehen</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
         </div>
@@ -80,7 +81,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="bgrid">
             {BRANCHEN.map((b) => (
-              <a className="bcard" href={`mailto:${CONTACT_EMAIL}`} key={b.t}>
+              <a className="bcard" href={b.href} key={b.t}>
                 <div className="ph">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img loading="lazy" src={`https://images.unsplash.com/photo-${b.img}?w=900&q=80&auto=format&fit=crop`} alt={b.t} />
@@ -88,7 +89,7 @@ export default function HomePage() {
                 <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">Mehr erfahren →</span></div>
               </a>
             ))}
-            <a className="bcard empty" href={`mailto:${CONTACT_EMAIL}`}><Icon id="i-diamond" /><h3>Andere Branche?</h3><p>Für jeden Betrieb mit sehenswerten Räumlichkeiten.</p><span className="more">Kontakt aufnehmen →</span></a>
+            <a className="bcard empty" href="/kontakt"><Icon id="i-diamond" /><h3>Andere Branche?</h3><p>Für jeden Betrieb mit sehenswerten Räumlichkeiten.</p><span className="more">Kontakt aufnehmen →</span></a>
           </div>
         </div>
       </section>
@@ -101,6 +102,10 @@ export default function HomePage() {
             <div className="fcard"><Icon id="i-palette" /><h3>Corporate Design</h3><p>Perfekt auf Ihre Marke abgestimmt – Farben, Logo, Stil.</p></div>
             <div className="fcard"><Icon id="i-pin" /><h3>Interaktive Hotspots</h3><p>Buchungs- und Infopunkte: mehr Interaktion, mehr Ergebnisse.</p></div>
             <div className="fcard"><Icon id="i-globe" /><h3>Website & Google</h3><p>Optimiert eingebunden. Sichtbar, schnell, überall verfügbar.</p></div>
+            <div className="fcard"><Icon id="i-chart" /><h3>Messbarer Erfolg</h3><p>Analytics-Report: Aufrufe, beliebteste Räume und Klicks – Zahlen statt Bauchgefühl.</p></div>
+            <div className="fcard"><Icon id="i-shield" /><h3>Voller Besitz, kein Abo</h3><p>Die Tour gehört Ihnen. Keine Plattform-Miete – nur ein faires, optionales Servicepaket.</p></div>
+            <div className="fcard"><Icon id="i-bolt" /><h3>Blitzschnelle Ladezeit</h3><p>Mobil optimiert – jede Sekunde Ladezeit entscheidet über Conversion.</p></div>
+            <div className="fcard"><Icon id="i-phone" /><h3>Schweizer Ansprechpartner</h3><p>Kein Callcenter, kein Ticket-System – direkt mit dem Macher. Hosting in CH/EU, DSGVO-konform.</p></div>
           </div>
         </div>
       </section>
@@ -111,9 +116,19 @@ export default function HomePage() {
             <p className="sub">Die meisten Touren lassen Besucher nur schauen. Eine Signature Experience lässt sie handeln.</p></div>
           <div className="cmp">
             <div className="col std"><h3>Standard-Tour</h3><ul>
-              <li><span className="i">—</span> Nur anschauen</li><li><span className="i">—</span> Statisch, passiv</li><li><span className="i">—</span> Optik von der Stange</li><li><span className="i">—</span> Besucher klickt weg</li><li><span className="i">—</span> Keine direkte Handlung</li></ul></div>
+              <li><span className="i">—</span> Nur anschauen</li><li><span className="i">—</span> Statisch, passiv</li><li><span className="i">—</span> Optik von der Stange</li><li><span className="i">—</span> Besucher klickt weg</li><li><span className="i">—</span> Keine direkte Handlung</li><li><span className="i">—</span> Keine Daten</li><li><span className="i">—</span> Einmal erstellt, dann veraltet</li><li><span className="i">—</span> Abo-/Plattformbindung</li><li><span className="i">—</span> Anbieter im Ausland</li><li><span className="i">—</span> Verkauft nie aktiv mit</li><li><span className="i">—</span> Hohe Hemmschwelle zum Kontakt</li><li><span className="i">—</span> Geht in der Masse unter</li><li><span className="i">—</span> Nur einsprachig</li><li><span className="i">—</span> Nicht erweiterbar</li></ul></div>
             <div className="col sig"><h3>Signature Experience</h3><ul>
-              <li><span className="i">✓</span> Direkt buchen, kaufen oder anfragen</li><li><span className="i">✓</span> Interaktiv & verkaufsaktiv</li><li><span className="i">✓</span> In Ihrem Corporate Design</li><li><span className="i">✓</span> Besucher bleibt länger</li><li><span className="i">✓</span> Aus Interesse wird Kontakt</li></ul></div>
+              <li><span className="i">✓</span> Direkt buchen, kaufen oder anfragen</li><li><span className="i">✓</span> Interaktiv & verkaufsaktiv</li><li><span className="i">✓</span> In Ihrem Corporate Design</li><li><span className="i">✓</span> Besucher bleibt länger</li><li><span className="i">✓</span> Aus Interesse wird Kontakt</li><li><span className="i">✓</span> Messbar dank Analytics-Report</li><li><span className="i">✓</span> Wird laufend weiterentwickelt</li><li><span className="i">✓</span> Gehört Ihnen, kein Zwang</li><li><span className="i">✓</span> Schweizer Qualität & Ansprechpartner</li><li><span className="i">✓</span> Verkauft rund um die Uhr – 365 Tage</li><li><span className="i">✓</span> Senkt die Hemmschwelle für den ersten Kontakt</li><li><span className="i">✓</span> Hebt Sie sichtbar von der Konkurrenz ab</li><li><span className="i">✓</span> Mehrsprachig erlebbar (DE/FR/EN)</li><li><span className="i">✓</span> Jederzeit mit neuen Inhalten erweiterbar</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="blk">
+        <div className="wrap">
+          <div className="fgrid fgrid3">
+            <div className="fcard"><Icon id="i-globe" /><h3>Rund um die Uhr offen</h3><p>Ihre Tour verkauft, während Sie schlafen.</p></div>
+            <div className="fcard"><Icon id="i-target" /><h3>Ein Aufwand, dauerhafter Nutzen</h3><p>Einmal erstellt, jahrelang im Einsatz.</p></div>
+            <div className="fcard"><Icon id="i-users" /><h3>Weniger Leerläufe</h3><p>Interessenten qualifizieren sich selbst vor dem Termin.</p></div>
           </div>
         </div>
       </section>
@@ -138,22 +153,22 @@ export default function HomePage() {
           <div className="prices">
             <div className="pcard">
               <h3>Basic</h3><div className="for">Ideal für kleine Bereiche</div>
-              <div className="price">CHF 1&apos;797.–</div><div className="note">einmalig · inkl. 12 Monate Basic Service</div>
+              <div className="price">CHF 990.–</div><div className="note">einmalig · inkl. 12 Monate Basic Service</div>
               <ul><li><Chk /> bis 15 Panoramen</li><li><Chk /> 1080p Full-HD-Qualität</li><li><Chk /> max. 5 Hotspots</li><li><Chk /> Mobile optimiert</li><li><Chk /> 1 Korrekturrunde</li></ul>
-              <a className="btn btn-ghost" href={`mailto:${CONTACT_EMAIL}`}>Anfragen</a>
+              <a className="btn btn-ghost" href="/konfigurator.html">Anfragen</a>
             </div>
             <div className="pcard best">
               <div className="ribbon">Bestseller</div>
               <h3>Signature</h3><div className="for">Der beliebteste Allrounder</div>
-              <div className="price">CHF 4&apos;997.–</div><div className="note">einmalig · inkl. 12 Monate Signature Care</div>
-              <ul><li><Chk /> bis 50 Panoramen</li><li><Chk /> 4K-Qualität</li><li><Chk /> bis 25 Hotspots</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Audio & Interaktionen</li><li><Chk /> 3 Korrekturrunden</li></ul>
-              <a className="btn btn-gold" href={`mailto:${CONTACT_EMAIL}`}>Anfragen</a>
+              <div className="price">CHF 2&apos;497.–</div><div className="note">einmalig · inkl. 12 Monate Signature Care</div>
+              <ul><li><Chk /> bis 60 Panoramen</li><li><Chk /> 4K-Qualität</li><li><Chk /> bis 25 Hotspots</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Audio & Interaktionen</li><li><Chk /> 3 Korrekturrunden</li></ul>
+              <a className="btn btn-gold" href="/konfigurator.html">Anfragen</a>
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">Für Hotels, Thermen & Premium-Resorts</div>
-              <div className="price">CHF 8&apos;497.–</div><div className="note">einmalig · inkl. 12 Monate Signature Evolution</div>
+              <div className="price">ab CHF 4&apos;497.–</div><div className="note">inkl. 12 Monate Signature Evolution · Einzelofferte für grosse Projekte</div>
               <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> unbegrenzte Hotspots</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
-              <a className="btn btn-ghost" href={`mailto:${CONTACT_EMAIL}`}>Anfragen</a>
+              <a className="btn btn-ghost" href="/konfigurator.html">Anfragen</a>
             </div>
           </div>
           <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>Alle Pakete: Google-Integration, responsiv, SEO-optimiert & auf Wunsch mehrsprachig.</p>
@@ -186,9 +201,9 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center"><div className="kicker">Optionale Erweiterungen</div><h2 className="sec">Wenn es noch mehr sein darf</h2><div className="rule" /></div>
           <div className="opts">
-            <div className="ocard"><Icon id="i-drone" /><h3>Drohnenaufnahmen / Luft-Panorama</h3><div className="pr">ab CHF 600.–</div></div>
-            <div className="ocard"><Icon id="i-globe" /><h3>Mehrsprachige Version (DE / FR / EN)</h3><div className="pr">ab CHF 400.–</div></div>
-            <div className="ocard"><Icon id="i-sofa" /><h3>Add-On: Furniture Removal</h3><div className="pr">ab CHF 120.– pro Panorama</div></div>
+            <div className="ocard"><Icon id="i-code" /><h3>Signature Web – Webseite nach Mass</h3><div className="pr">auf Anfrage</div></div>
+            <div className="ocard"><Icon id="i-globe" /><h3>Mehrsprachige Version (DE / FR / EN)</h3><div className="pr">ab CHF 300.– pro Sprache</div></div>
+            <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">ab CHF 180.– pro Panorama</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
           </div>
         </div>
@@ -214,6 +229,14 @@ export default function HomePage() {
             <details><summary>Brauche ich eine spezielle App oder Kamera?</summary><p>Nein. Die Tour läuft auf jedem Gerät im Browser. Aufnahme, Technik und Hosting übernehmen wir vollständig.</p></details>
             <details><summary>Ist das DSGVO-konform?</summary><p>Ja. Hosting in der Schweiz/EU, Aufnahmen ausserhalb der Öffnungszeiten ohne Personen, AVV auf Wunsch inklusive.</p></details>
             <details><summary>Was passiert, wenn wir renovieren?</summary><p>Mit einem Servicepaket aktualisieren wir betroffene Bereiche oder erstellen einzelne Punkte neu – Ihre Tour bleibt aktuell.</p></details>
+            <details><summary>Was bringt mir das konkret – lohnt sich das?</summary><p>Je nach Branche steigen Buchungen und Anfragen deutlich, und Besucher bleiben um ein Mehrfaches länger auf der Seite. Bei Immobilien etwa rund +87% mehr Aufrufe (Matterport). Bei nachweisbarem Mehrertrag amortisiert sich die Tour oft schon nach wenigen Buchungen.</p></details>
+            <details><summary>Was kostet eine Tour?</summary><p>Transparente Fixpakete ab CHF 990 – der Preis hängt von Panoramen und Funktionen ab. Über den Paket-Konfigurator erhalten Sie in einer Minute eine unverbindliche Einschätzung.</p></details>
+            <details><summary>Gibt es ein Abo oder versteckte Kosten?</summary><p>Nein. Die Tour gehört Ihnen. Ein jährliches Servicepaket (ab CHF 120) ist optional – keine langfristige Bindung, Kündigung per Jahresende.</p></details>
+            <details><summary>Wie wird der „Erfolg" gemessen?</summary><p>Sie erhalten Besucherstatistiken: Aufrufe, Verweildauer, beliebteste Räume und Klicks auf Buchungs-Hotspots – Grundlage auch für unsere Erfolgs-Garantie.</p></details>
+            <details><summary>Was ist, wenn ich nicht zufrieden bin?</summary><p>Doppelte Garantie: bis zu 3 Korrekturrunden – und keine messbare Verbesserung nach 90 Tagen? 50% des Paketpreises zurück.</p></details>
+            <details><summary>Worin unterscheidet sich das von Fotos oder einem Video?</summary><p>Fotos und Videos zeigen, was wir zeigen wollen. Eine Signature Tour lässt den Besucher selbst entscheiden, wohin er schaut – und direkt handeln (buchen, anfragen). Das kann ein Video nicht.</p></details>
+            <details><summary>Ist das dasselbe wie Matterport?</summary><p>Matterport ist ein 3D-Scan-Standard – oft mit monatlicher Plattformgebühr und Optik von der Stange. Unsere Tour ist in Ihrem Corporate Design, verkaufsaktiv und gehört Ihnen, ohne Abo-Zwang.</p></details>
+            <details><summary>Geht das auch mehrsprachig?</summary><p>Ja – Deutsch, Französisch und Englisch. Zusatzsprachen ab CHF 300 pro Sprache.</p></details>
           </div>
         </div>
       </section>
@@ -229,8 +252,8 @@ export default function HomePage() {
               <div className="kicker">Bereit für Ihre Premium Experience?</div>
               <h2 className="serif">Lassen Sie uns Ihr Angebot digital zum Leben erwecken.</h2>
               <p>Ein unverbindliches Gespräch genügt, um zu klären, wie eine Signature Experience aus Besuchern Kunden macht.</p>
-              <a className="btn btn-gold" href={`mailto:${CONTACT_EMAIL}`}>Kostenlose Beratung <span className="arrow">→</span></a>
-              <div><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
+              <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
+              <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
             </div>
           </div>
         </div>

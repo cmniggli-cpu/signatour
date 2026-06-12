@@ -85,8 +85,8 @@ export const MARKET_STATS: Stat[] = [
 export const PRICING_TIERS: PricingTier[] = [
   {
     name: 'Basic',
-    price: 'CHF 1\'797',
-    priceRange: 'CHF 1\'797',
+    price: 'CHF 990',
+    priceRange: 'CHF 990',
     description: 'Ideal für kleine Bereiche',
     hosting: 'inkl. 12 Monate Basic Service',
     features: [
@@ -99,13 +99,13 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     name: 'Signature',
-    price: 'CHF 4\'997',
-    priceRange: 'CHF 4\'997',
+    price: 'CHF 2\'497',
+    priceRange: 'CHF 2\'497',
     description: 'Der beliebteste Allrounder',
     hosting: 'inkl. 12 Monate Signature Care',
     featured: true,
     features: [
-      'bis 50 Panoramen',
+      'bis 60 Panoramen',
       '4K-Qualität',
       'bis 25 Hotspots',
       'Corporate Design Integration',
@@ -115,8 +115,8 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     name: 'Pro',
-    price: 'CHF 8\'497',
-    priceRange: 'CHF 8\'497',
+    price: 'ab CHF 4\'497',
+    priceRange: 'ab CHF 4\'497',
     description: 'Für Hotels, Thermen & Premium-Resorts',
     hosting: 'inkl. 12 Monate Signature Evolution',
     features: [
@@ -134,7 +134,7 @@ export const ADDONS: AddOn[] = [
   { name: 'Hosting-Verlängerung', price: 'CHF 120–180/Jahr' },
   { name: 'Saisonales Update', price: 'CHF 290–490' },
   { name: 'Google Street View Publikation', price: 'CHF 150' },
-  { name: 'Drohnenaufnahmen', price: 'CHF 350–590' },
+  { name: 'Signature Web – Webseite nach Mass (individuell programmiert)', price: 'auf Anfrage' },
   { name: 'Express-Lieferung (48h)', price: '+30% auf Tour-Preis' },
   { name: 'Grundriss-Erstellung', price: 'CHF 190–350' },
 ]
