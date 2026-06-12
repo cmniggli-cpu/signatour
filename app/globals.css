@@ -258,6 +258,14 @@ body {
 .nigpage .bcard.empty svg{color:var(--g);margin-bottom:10px}
 
 /* comparison */
+.nigpage .cmptoggle{position:absolute;opacity:0;pointer-events:none}
+.nigpage .cmp li.xtr{display:none}
+.nigpage .cmptoggle:checked ~ .cmp li.xtr{display:flex}
+.nigpage .cmpbtn{display:inline-flex;padding:12px 26px;border:1px solid var(--dln);border-radius:8px;font-weight:600;font-size:14px;color:var(--g);cursor:pointer;transition:.2s;user-select:none}
+.nigpage .cmpbtn:hover{border-color:var(--g);transform:translateY(-1px)}
+.nigpage .cmpbtn .hide{display:none}
+.nigpage .cmptoggle:checked ~ .center .cmpbtn .show{display:none}
+.nigpage .cmptoggle:checked ~ .center .cmpbtn .hide{display:inline}
 .nigpage .cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
 .nigpage .cmp .col{padding:30px;border-radius:14px}
 .nigpage .cmp .std{background:rgba(255,255,255,.03);border:1px solid var(--dlns)}
@@ -403,6 +411,18 @@ body {
 .nigpage .bsources{margin-top:28px;font-size:12px;line-height:1.8;color:var(--dmut);max-width:72ch;margin-left:auto;margin-right:auto}
 .nigpage .bsources a{color:var(--g);text-decoration:none}
 .nigpage .bsources a:hover{text-decoration:underline}
+
+/* Zahlen statt Versprechen – dunkles Premium-Band */
+.nigpage .statsdark{position:relative;background:#0E0D0B;color:#EFE7D8;padding:92px 0;border-top:1px solid rgba(227,178,58,.35);border-bottom:1px solid rgba(227,178,58,.35);overflow:hidden}
+.nigpage .statsdark::before{content:"";position:absolute;inset:0;background:radial-gradient(65% 95% at 50% 0%,rgba(227,178,58,.13),transparent 60%);pointer-events:none}
+.nigpage .statsdark .wrap{position:relative}
+.nigpage .statsdark .kicker{color:#E3B23A}
+.nigpage .statsdark .sec{color:#fff}
+.nigpage .statsdark .bstat .v{font-size:clamp(44px,5vw,64px);color:#E3B23A;text-shadow:0 0 34px rgba(227,178,58,.25)}
+.nigpage .statsdark .bstat .l{color:#CFC6B4;font-size:14px}
+.nigpage .statsdark .bstats{margin-top:44px}
+.nigpage .statsdark .bsources{color:#8d8674}
+.nigpage .statsdark .bsources a{color:#E3B23A}
 .nigpage .bchecks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px;text-align:left}
 .nigpage .bchecks1{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}
 .nigpage .bcheck{display:flex;gap:11px;align-items:flex-start;background:var(--white);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--ink2)}

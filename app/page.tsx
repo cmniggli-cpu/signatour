@@ -148,11 +148,44 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center"><div className="kicker">Der Unterschied</div><h2 className="sec">Standard-Tour vs. Signature Experience</h2>
             <p className="sub">Die meisten Touren lassen Besucher nur schauen. Eine Signature Experience lässt sie handeln.</p></div>
+          <input type="checkbox" id="cmpmore" className="cmptoggle" />
           <div className="cmp">
             <div className="col std"><h3>Standard-Tour</h3><ul>
-              <li><span className="i">—</span> Nur anschauen</li><li><span className="i">—</span> Statisch, passiv</li><li><span className="i">—</span> Optik von der Stange</li><li><span className="i">—</span> Besucher klickt weg</li><li><span className="i">—</span> Keine direkte Handlung</li><li><span className="i">—</span> Keine Daten</li><li><span className="i">—</span> Einmal erstellt, dann veraltet</li><li><span className="i">—</span> Abo-/Plattformbindung</li><li><span className="i">—</span> Anbieter im Ausland</li><li><span className="i">—</span> Verkauft nie aktiv mit</li><li><span className="i">—</span> Hohe Hemmschwelle zum Kontakt</li><li><span className="i">—</span> Geht in der Masse unter</li><li><span className="i">—</span> Nur einsprachig</li><li><span className="i">—</span> Nicht erweiterbar</li></ul></div>
+              <li><span className="i">—</span> Nur anschauen</li>
+              <li><span className="i">—</span> Verkauft nie aktiv mit</li>
+              <li><span className="i">—</span> Keine direkte Handlung</li>
+              <li><span className="i">—</span> Optik von der Stange</li>
+              <li><span className="i">—</span> Keine Daten</li>
+              <li><span className="i">—</span> Abo-/Plattformbindung</li>
+              <li><span className="i">—</span> Anbieter im Ausland</li>
+              <li className="xtr"><span className="i">—</span> Statisch, passiv</li>
+              <li className="xtr"><span className="i">—</span> Besucher klickt weg</li>
+              <li className="xtr"><span className="i">—</span> Hohe Hemmschwelle zum Kontakt</li>
+              <li className="xtr"><span className="i">—</span> Geht in der Masse unter</li>
+              <li className="xtr"><span className="i">—</span> Nur einsprachig</li>
+              <li className="xtr"><span className="i">—</span> Nicht erweiterbar</li>
+              <li className="xtr"><span className="i">—</span> Einmal erstellt, dann veraltet</li></ul></div>
             <div className="col sig"><h3>Signature Experience</h3><ul>
-              <li><span className="i">✓</span> Direkt buchen, kaufen oder anfragen</li><li><span className="i">✓</span> Interaktiv & verkaufsaktiv</li><li><span className="i">✓</span> In Ihrem Corporate Design</li><li><span className="i">✓</span> Besucher bleibt länger</li><li><span className="i">✓</span> Aus Interesse wird Kontakt</li><li><span className="i">✓</span> Messbar dank Analytics-Report</li><li><span className="i">✓</span> Wird laufend weiterentwickelt</li><li><span className="i">✓</span> Gehört Ihnen, kein Zwang</li><li><span className="i">✓</span> Schweizer Qualität & Ansprechpartner</li><li><span className="i">✓</span> Verkauft rund um die Uhr – 365 Tage</li><li><span className="i">✓</span> Senkt die Hemmschwelle für den ersten Kontakt</li><li><span className="i">✓</span> Hebt Sie sichtbar von der Konkurrenz ab</li><li><span className="i">✓</span> Mehrsprachig erlebbar (DE/FR/EN)</li><li><span className="i">✓</span> Jederzeit mit neuen Inhalten erweiterbar</li></ul></div>
+              <li><span className="i">✓</span> Direkt buchen, kaufen oder anfragen</li>
+              <li><span className="i">✓</span> Verkauft rund um die Uhr – 365 Tage</li>
+              <li><span className="i">✓</span> Aus Interesse wird Kontakt</li>
+              <li><span className="i">✓</span> In Ihrem Corporate Design</li>
+              <li><span className="i">✓</span> Messbar dank Analytics-Report</li>
+              <li><span className="i">✓</span> Gehört Ihnen, kein Zwang</li>
+              <li><span className="i">✓</span> Schweizer Qualität & Ansprechpartner</li>
+              <li className="xtr"><span className="i">✓</span> Interaktiv & verkaufsaktiv</li>
+              <li className="xtr"><span className="i">✓</span> Besucher bleibt länger</li>
+              <li className="xtr"><span className="i">✓</span> Senkt die Hemmschwelle für den ersten Kontakt</li>
+              <li className="xtr"><span className="i">✓</span> Hebt Sie sichtbar von der Konkurrenz ab</li>
+              <li className="xtr"><span className="i">✓</span> Mehrsprachig erlebbar (DE/FR/EN)</li>
+              <li className="xtr"><span className="i">✓</span> Jederzeit mit neuen Inhalten erweiterbar</li>
+              <li className="xtr"><span className="i">✓</span> Wird laufend weiterentwickelt</li></ul></div>
+          </div>
+          <div className="center" style={{ marginTop: 22 }}>
+            <label htmlFor="cmpmore" className="cmpbtn">
+              <span className="show">Alle 14 Unterschiede anzeigen +</span>
+              <span className="hide">Weniger anzeigen –</span>
+            </label>
           </div>
         </div>
       </section>
@@ -237,9 +270,17 @@ export default function HomePage() {
           <div className="opts">
             <div className="ocard"><Icon id="i-code" /><h3>Signature Web – Webseite nach Mass</h3><div className="pr">ab CHF 2&apos;500.–</div></div>
             <div className="ocard"><Icon id="i-globe" /><h3>Mehrsprachige Version (DE / FR / EN)</h3><div className="pr">ab CHF 300.– pro Sprache</div></div>
+            <div className="ocard"><Icon id="i-palette" /><h3>Virtual Staging – virtuelle Möblierung</h3><div className="pr">ab CHF 240.– pro Panorama</div></div>
+            <div className="ocard"><Icon id="i-pin" /><h3>Google Street View & Business-Einbindung</h3><div className="pr">CHF 490.– einmalig</div></div>
+            <div className="ocard"><Icon id="i-users" /><h3>Lead-Capture-Formular in der Tour</h3><div className="pr">CHF 390.– einmalig</div></div>
+            <div className="ocard"><Icon id="i-play" /><h3>Social-Media-Clip-Paket</h3><div className="pr">CHF 390.– (3 Clips)</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">ab CHF 180.– pro Panorama</div></div>
+            <div className="ocard"><Icon id="i-bolt" /><h3>Tag-/Nacht-Modus</h3><div className="pr">ab CHF 180.– pro Szene</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
           </div>
+          <p className="center" style={{ marginTop: 22 }}>
+            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle 16 Erweiterungen mit Nutzen & Preisen ansehen →</a>
+          </p>
         </div>
       </section>
 

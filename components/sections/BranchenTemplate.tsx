@@ -70,7 +70,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       </section>
 
       {/* Stats */}
-      <section className="blk dark">
+      <section className="blk statsdark">
         <div className="wrap center">
           <div className="kicker">Was eine Signature Tour bewirkt</div>
           <h2 className="sec">Zahlen statt Versprechen</h2>
