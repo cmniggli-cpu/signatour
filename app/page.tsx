@@ -71,6 +71,7 @@ const BRANCHEN = [
   { img: '1534438327276-14e5300c3a48', href: '/branchen/fitnessstudio', t: 'Fitnessstudios', d: 'Geräte und Atmosphäre zeigen – Hemmschwelle senken.' },
   { img: '1512917774080-9991f1c4c750', href: '/branchen/immobilien', t: 'Immobilien', d: 'Objekte rund um die Uhr begehbar – weniger unnötige Besichtigungen.' },
   { img: '1497366754035-f200968a6e72', href: '/kontakt', t: 'Banken, Versicherungen & Kanzleien', d: 'Premium-Büros und Beratungsräume, die schon online Vertrauen schaffen.' },
+  { img: '1519167758481-83f550bb49b3', href: '/kontakt', t: 'Eventlocations & Showrooms', d: 'Säle, Locations und Ausstellungsflächen wirken lassen – Kunden erleben den Raum vor der Anfrage.' },
 ]
 
 export default function HomePage() {
