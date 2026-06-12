@@ -316,13 +316,14 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { title: 'Premium-Räume bleiben unsichtbar', description: 'In repräsentative Empfangs- und Beratungsräume wurde investiert – online sieht sie niemand, bevor der Termin stattfindet.' },
     ],
     stats: [
+      { value: '49%', label: 'der Mandanten beurteilen eine Kanzlei online, bevor sie anrufen' },
       { value: '94%', label: 'höhere wahrgenommene Vertrauenswürdigkeit mit vollständigem Online-Auftritt' },
       { value: '2×', label: 'mehr Interesse bei Einträgen mit virtueller Tour' },
-      { value: '3×', label: 'längere Verweildauer auf der Website' },
       { value: '24/7', label: 'Ihr Empfang ist digital immer geöffnet' },
     ],
     sources: [
-      { label: 'Google/Ipsos «Impact of Search Listings»: Vertrauen und Interesse mit virtueller Tour (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
+      { label: 'Digital Roots Media: 49% beurteilen die Kanzlei über die Website, bevor sie anrufen', url: 'https://www.digitalrootsmedia.com/blog/legal/law-firm-web-design-convert-visitors-clients/' },
+      { label: 'Google/Ipsos «Impact of Search Listings»: 94% höhere wahrgenommene Seriosität, 2× mehr Interesse mit virtueller Tour (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
       { label: 'Panoee: Wirkung von Street-View-Inhalten auf lokale Unternehmen', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
     ],
     captures: ['Empfang & Lobby', 'Beratungsräume', 'Sitzungszimmer', 'Schalterhalle (Banken)', 'Bibliothek & Arbeitsbereiche (Kanzleien)', 'Aussenauftritt & Zugang'],
@@ -369,14 +370,15 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { title: 'Entscheidungen fallen im Vergleich', description: 'Wer mehrere Locations prüft, entscheidet nach dem Bauchgefühl aus dem ersten Online-Eindruck. Ohne Tour fällt dieser Eindruck dünn aus.' },
     ],
     stats: [
-      { value: '2×', label: 'mehr Interesse bei Einträgen mit virtueller Tour' },
-      { value: '3×', label: 'längere Verweildauer auf der Website' },
-      { value: '44%', label: 'der Lokalsuchen laufen über Google Maps' },
+      { value: '+40%', label: 'mehr Leads mit virtueller Showroom-Tour' },
+      { value: '+30%', label: 'höhere Online-Interaktion mit 360°-Showroom' },
+      { value: '2×', label: 'mehr Interesse bei Google-Einträgen mit Tour' },
       { value: '24/7', label: 'Besichtigung möglich – auch sonntags um 22 Uhr' },
     ],
     sources: [
+      { label: 'Travvir: Virtuelle Touren bringen rund 40% mehr Leads als reine Fotos (Automotive)', url: 'https://travvir.com/blog/en/virtual-tour-car-dealerships' },
+      { label: 'Spyne: +30% Kundeninteraktion mit 3D-/360°-Showroom-Touren', url: 'https://www.spyne.ai/blogs/3d-virtual-tours-for-car-dealerships' },
       { label: 'Google/Ipsos «Impact of Search Listings»: 2× mehr Interesse mit virtueller Tour (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
-      { label: 'Panoee: Google Street View und lokale Sichtbarkeit', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
     ],
     captures: ['Säle & Eventflächen', 'Foyer & Empfang', 'Bühne & Technik', 'Terrassen & Aussenbereiche', 'Showroom- & Ausstellungsflächen', 'Anfahrt & Parking'],
     extraSection: {
