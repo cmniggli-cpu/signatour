@@ -22,6 +22,8 @@ Verbindliches CD für signatour.ch. Bei jeder UI-/Text-Änderung einhalten. Das 
 | Paper | `#FBFAF6` | Standard-Sektion (`--paper`) |
 | Paper2 / Cream | `#F3EFE6` / `#F7F5F0` | Wechsel-Sektionen, Cream-Karten (`--paper2`, `cream`) |
 | Weiss | `#FFFFFF` | Karten auf Paper-Grund, Tabellen |
+| Silber-Blau (Hellblau) | `#E9ECEF` | `sky-200` → helle Sektionsflächen (Vergleich, Garantie) |
+| Hero-Verlauf | `160deg,#F4F5F7→#DCE0E5` | `sky-100`/`sky-300` → Hero-Hintergrund, kühle Flächen |
 
 **Regel:** Gold + Pastell tragen Flächen. **Marine = seltener, punktueller Akzent, nie grosser Balken.**
 **Schwarz nie als Hintergrund** (durch Marine ersetzt).
