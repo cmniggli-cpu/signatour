@@ -44,8 +44,9 @@ Verbindliches CD für signatour.ch. Bei jeder UI-/Text-Änderung einhalten. Das 
   `PricingCard`, `Card`). Diese sind aufs CD getrimmt – Titel via `.cd-serif`.
 
 ## Komponenten-Regeln
-- **Buttons:** Primär = Gold-Verlauf, dunkler Text. CTA-/Kontaktfelder **immer Gold** (`CTASection`).
-  Header-Button darf dunkel bleiben. Ghost = Outline.
+- **Buttons:** Primär = **Marineblau `#0C1B2E` mit goldener Schrift `#E3B23A`** (`btn-gold`, Button-Variante
+  `primary`). Ausnahme: auf Marine-Flächen (z.B. Signature-Preiskarte) gold-gefüllter Button für Kontrast
+  (Variante `accent`). Ghost = Outline. Die CTA-/Garantie-**Felder** selbst bleiben Gold; der Button darin ist Marine.
 - **Karten-Regel:**
   - weisser Hintergrund → **Cream-Karte** (`bg-cream` + `border-accent-200/70`), goldene Hairline;
     goldene Nummer (Cormorant) nur bei **gezählten** Listen.

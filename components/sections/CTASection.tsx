@@ -56,7 +56,7 @@ export default function CTASection({
           <a
             href={buttonHref}
             className="inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 px-9 py-4 text-base rounded-full"
-            style={{ background: '#1A1304', color: '#F7DC8A' }}
+            style={{ background: '#0C1B2E', color: '#E3B23A' }}
           >
             {buttonText}
             <ArrowRight className="ml-2 w-5 h-5" />
