@@ -24,7 +24,7 @@ export default function UeberUnsPageClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Unsere Mission</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-primary-800">
+            <h2 className="mt-3 text-3xl sm:text-4xl cd-serif text-primary-800">
               Wir machen das stärkste Verkaufsargument von KMUs – ihre Räumlichkeiten – online erlebbar.
             </h2>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
@@ -40,7 +40,7 @@ export default function UeberUnsPageClient() {
           <AnimatedSection>
             <div className="bg-primary-900 rounded-3xl p-8 sm:p-12 text-center text-white">
               <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">Ihr Ansprechpartner</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl font-black">Marius Niggli – Gründer & Inhaber</h2>
+              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif">Marius Niggli – Gründer & Inhaber</h2>
               <p className="mt-4 text-primary-300 leading-relaxed max-w-2xl mx-auto">
                 Vom ersten Gespräch über das Shooting bis zur fertigen Tour: Sie sprechen immer mit derselben Person – kein Callcenter, kein Ticket-System. Wer mit Herzblut arbeitet, bindet Kunden durch Qualität, nicht durch Verträge.
               </p>
@@ -62,7 +62,7 @@ export default function UeberUnsPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Warum Signatour</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-primary-800">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
               6 Gründe für Signatour
             </h2>
           </AnimatedSection>
@@ -85,7 +85,7 @@ export default function UeberUnsPageClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Technologie</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-primary-800">
+            <h2 className="mt-3 text-3xl sm:text-4xl cd-serif text-primary-800">
               Professionelle Software aus Europa
             </h2>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
@@ -117,7 +117,7 @@ export default function UeberUnsPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Unsere Werte</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-primary-800">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
               Woran wir glauben
             </h2>
           </AnimatedSection>

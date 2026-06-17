@@ -30,7 +30,7 @@ export default function CTASection({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight"
+          className="text-4xl sm:text-5xl lg:text-6xl cd-serif text-white leading-[1.05]"
         >
           {title}
         </motion.h2>

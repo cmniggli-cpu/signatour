@@ -31,7 +31,7 @@ export default function KontaktPageClient() {
             {/* Form */}
             <AnimatedSection className="lg:col-span-3" direction="left">
               <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h2 className="text-2xl font-bold text-primary-800 mb-6">Anfrage senden</h2>
+                <h2 className="text-3xl cd-serif text-primary-900 mb-6">Anfrage senden</h2>
                 <ContactForm />
               </div>
             </AnimatedSection>

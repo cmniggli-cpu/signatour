@@ -41,7 +41,7 @@ export default function PricingCard({ tier, showRange = false, index = 0 }: Pric
       </div>
 
       <div className="mt-6">
-        <span className={cn('text-4xl font-black', tier.featured ? 'text-white' : 'text-primary-900')}>
+        <span className={cn('text-5xl cd-serif', tier.featured ? 'text-accent-400' : 'text-accent-600')}>
           {showRange ? tier.priceRange : tier.price}
         </span>
         <span className={cn('ml-2 text-sm', tier.featured ? 'text-primary-400' : 'text-primary-400')}>einmalig</span>

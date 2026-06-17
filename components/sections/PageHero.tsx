@@ -23,7 +23,7 @@ export default function PageHero({ badge, title, subtitle }: PageHeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary-400 mb-6">{badge}</span>
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.26em] text-accent-600 mb-6">{badge}</span>
           </motion.div>
         )}
 
@@ -31,7 +31,7 @@ export default function PageHero({ badge, title, subtitle }: PageHeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-5xl lg:text-7xl font-black text-primary-900 leading-tight tracking-tight"
+          className="text-5xl sm:text-6xl lg:text-7xl cd-serif text-primary-900 leading-[1.05]"
         >
           {title}
         </motion.h1>

@@ -41,7 +41,7 @@ export default function PaketePageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Spezialpakete</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-primary-800">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
               Branchenspezifische Pakete
             </h2>
           </AnimatedSection>
@@ -51,7 +51,7 @@ export default function PaketePageClient() {
               <StaggerItem key={pkg.name}>
                 <Card className="h-full">
                   <h3 className="text-lg font-bold text-primary-800">{pkg.name}</h3>
-                  <div className="mt-2 text-2xl font-black text-primary-800">{pkg.price}</div>
+                  <div className="mt-2 text-3xl cd-serif text-accent-600">{pkg.price}</div>
                   <p className="mt-2 text-sm text-gray-600">{pkg.description}</p>
                 </Card>
               </StaggerItem>
@@ -65,7 +65,7 @@ export default function PaketePageClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Zusatzleistungen</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-primary-800">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
               Optionale Add-ons
             </h2>
           </AnimatedSection>
@@ -121,7 +121,7 @@ export default function PaketePageClient() {
       <section className="py-20 bg-section-gradient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary-800">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
               Bei jedem Paket inklusive
             </h2>
           </AnimatedSection>

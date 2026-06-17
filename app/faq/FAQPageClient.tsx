@@ -27,7 +27,7 @@ export default function FAQPageClient() {
           {sections.map((section) => (
             <div key={section.title}>
               <AnimatedSection>
-                <h2 className="text-2xl font-bold text-primary-800 mb-6">{section.title}</h2>
+                <h2 className="text-3xl cd-serif text-primary-900 mb-6">{section.title}</h2>
               </AnimatedSection>
               <FAQAccordion faqs={section.faqs} />
             </div>
