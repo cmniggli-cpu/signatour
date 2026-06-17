@@ -309,11 +309,11 @@ body {
 
 /* guarantee */
 .nigpage .guar{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
-.nigpage .gcard{background:var(--dk2);border:1px solid var(--dlns);border-radius:14px;padding:30px;text-align:center}
-.nigpage .gcard svg{margin:0 auto 14px;display:block;color:var(--gd)}
-.nigpage .gcard h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gd);margin-bottom:10px}
-.nigpage .gcard p{color:var(--cream);font-size:15px}
-.nigpage .nullrisk{margin-top:24px;text-align:center;padding:20px;border:1px solid var(--dln);border-radius:10px;background:linear-gradient(180deg,rgba(227,178,58,.12),transparent);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;letter-spacing:.16em;text-transform:uppercase;color:var(--gd)}
+.nigpage .gcard{background:var(--ggrad);border:0;border-radius:14px;padding:30px;text-align:center;box-shadow:0 16px 38px rgba(200,144,28,.24)}
+.nigpage .gcard svg{margin:0 auto 14px;display:block;color:#231703}
+.nigpage .gcard h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#231703;margin-bottom:10px}
+.nigpage .gcard p{color:#3c2c08;font-size:15px}
+.nigpage .nullrisk{margin-top:24px;text-align:center;padding:20px;border:1px solid rgba(227,178,58,.3);border-radius:10px;background:#0C1B2E;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;letter-spacing:.16em;text-transform:uppercase;color:var(--gd)}
 
 /* options */
 .nigpage .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
@@ -363,6 +363,7 @@ body {
 .nigpage .hero .bg::after{background:linear-gradient(90deg,rgba(244,245,247,.90),rgba(244,245,247,.55) 60%,rgba(244,245,247,.30)),radial-gradient(60% 60% at 80% 10%,rgba(200,144,28,.12),transparent 60%)}
 .nigpage .hero .lead{color:var(--ink2)}
 .nigpage .hero .phone{color:var(--ink)}
+.nigpage .dark .sec{color:var(--ink)}
 .nigpage .cmp .std{background:#fff}
 .nigpage .cmp .std .i{background:rgba(20,17,11,.07)}
 .nigpage .cmp .sig li{color:var(--ink)}
@@ -459,6 +460,11 @@ body {
   .nigpage .vc.wi::before{color:var(--g)}
 }
 .nigpage .roi{background:var(--paper2);border:1px solid var(--ln);border-radius:18px;padding:46px 36px}
+.nigpage .roicalc{margin:28px auto 0;max-width:520px;text-align:left}
+.nigpage .roistep{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:13px 2px;border-bottom:1px dashed rgba(20,17,11,.16)}
+.nigpage .roistep span{color:var(--ink2);font-size:14.5px}
+.nigpage .roistep b{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;color:var(--g);white-space:nowrap}
+.nigpage .roiresult{margin:24px auto 0;max-width:520px;background:var(--ggrad);color:#231703;font-weight:600;padding:15px 22px;border-radius:12px;font-size:15.5px;line-height:1.45}
 .nigpage .pcard .plink{display:block;text-align:center;margin-top:14px;font-size:13.5px;color:var(--mut);text-decoration:none}
 .nigpage .pcard .plink:hover{color:var(--g)}
 .nigpage .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}

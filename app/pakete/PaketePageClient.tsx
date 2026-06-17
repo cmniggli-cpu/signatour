@@ -26,9 +26,9 @@ export default function PaketePageClient() {
             ))}
           </div>
           <AnimatedSection className="mt-12">
-            <div className="max-w-3xl mx-auto bg-marine-900 rounded-2xl p-6 sm:p-8 text-center">
-              <h3 className="text-lg font-bold text-white">Doppelte Garantie – null Risiko</h3>
-              <p className="mt-2 text-sm text-primary-300 leading-relaxed">
+            <div className="max-w-3xl mx-auto rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'linear-gradient(135deg,#F7DC8A 0%,#E3B23A 55%,#C8901C 100%)' }}>
+              <h3 className="text-xl cd-serif" style={{ color: '#231703' }}>Doppelte Garantie – null Risiko</h3>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: '#3c2c08' }}>
                 Bis zu 3 Korrekturrunden, bis die Tour Ihren Ansprüchen entspricht. Und keine messbare Verbesserung nach 90 Tagen? Wir erstatten 50% des Paketpreises zurück.
               </p>
             </div>

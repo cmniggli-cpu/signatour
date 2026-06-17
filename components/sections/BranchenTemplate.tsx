@@ -163,11 +163,19 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {/* ROI */}
       {data.roiTitle && (
         <section className="blk">
-          <div className="wrap center" style={{ maxWidth: 880 }}>
+          <div className="wrap center" style={{ maxWidth: 760 }}>
             <div className="roi">
               <div className="kicker">Rechnet sich das?</div>
               <h2 className="sec" style={{ fontSize: 'clamp(26px,3.4vw,38px)' }}>{data.roiTitle}</h2>
-              <p className="sub" style={{ margin: '14px auto 0' }}>{data.roiDescription}</p>
+              {data.roiSteps && (
+                <div className="roicalc">
+                  {data.roiSteps.map((s) => (
+                    <div className="roistep" key={s.label}><span>{s.label}</span><b>{s.value}</b></div>
+                  ))}
+                </div>
+              )}
+              {data.roiResult && <div className="roiresult">{data.roiResult}</div>}
+              {!data.roiSteps && data.roiDescription && <p className="sub" style={{ margin: '14px auto 0' }}>{data.roiDescription}</p>}
             </div>
           </div>
         </section>

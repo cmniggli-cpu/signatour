@@ -19,6 +19,8 @@ export interface BranchenPageData {
   comparisonWithoutSub?: string
   comparisonRows?: { label: string; without: string; with: string }[]
   roiTitle?: string
+  roiSteps?: { label: string; value: string }[]
+  roiResult?: string
   roiDescription?: string
   packageName: string
   packagePrice: string
@@ -70,8 +72,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { label: 'Google-Sichtbarkeit', without: 'Standard-Eintrag', with: 'Bevorzugte Platzierung mit Tour' },
       { label: 'Bildqualität', without: 'Handy-Schnappschüsse', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
     ],
-    roiTitle: '10 Direktbuchungen = Tour bezahlt',
-    roiDescription: 'Durchschnittliches Zimmer CHF 200/Nacht, 18% OTA-Gebühr = CHF 36 Ersparnis/Nacht. 10 Buchungen × 2 Nächte = CHF 720 gespart. Amortisiert sich oft im ersten Quartal.',
+    roiTitle: 'Schon 10 Direktbuchungen zahlen Ihre Tour',
+    roiSteps: [
+      { label: 'Durchschnittlicher Zimmerpreis', value: 'CHF 200 / Nacht' },
+      { label: 'Gesparte OTA-Provision (18%)', value: 'CHF 36 / Nacht' },
+      { label: '10 Direktbuchungen à 2 Nächte', value: 'CHF 720 gespart' },
+    ],
+    roiResult: 'Die Tour amortisiert sich oft schon im ersten Quartal.',
     packageName: 'Hotel-Paket',
     packagePrice: 'ab CHF 2\'497',
     packageFeatures: [
@@ -116,8 +123,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { label: 'Panoee: Wie Google Street View Ladenbesuche steigert', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
     ],
     captures: ['Gastraum', 'Terrasse & Aussenbereiche', 'Bar & Lounge', 'Separées & Events', 'Küche (optional) – zeigt Transparenz, schafft Vertrauen'],
-    roiTitle: 'CHF 1.55 pro Tag – weniger als ein Espresso',
-    roiDescription: 'CHF 1\'690 auf 3 Jahre gerechnet = rund CHF 1.55 pro Tag. Bereits 1 zusätzliche Reservation pro Woche zahlt die Investition: Bei einer durchschnittlichen Rechnung von CHF 45 pro Person sind das über CHF 7\'000 zusätzlicher Jahresumsatz.',
+    roiTitle: 'Weniger als ein Espresso pro Tag',
+    roiSteps: [
+      { label: 'Investition (Gastro-Paket)', value: 'CHF 1\'690 einmalig' },
+      { label: 'Auf 3 Jahre gerechnet', value: 'CHF 1.55 / Tag' },
+      { label: '1 Reservation mehr pro Woche (CHF 45 p.P.)', value: '> CHF 7\'000 / Jahr' },
+    ],
+    roiResult: 'Eine einzige Zusatz-Reservation pro Woche zahlt die ganze Tour.',
     extraSection: {
       title: 'Google Business Integration',
       description: 'Ihre 360-Tour wird direkt in Ihr Google Business Profile eingebettet. Professionelle Aufnahmen ersetzen unkontrollierte Gästefotos.',
@@ -256,8 +268,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         '«Will hier trainieren»-Gefühl vor dem Probetraining',
       ],
     },
-    roiTitle: '2–3 neue Mitglieder = Tour bezahlt',
-    roiDescription: 'EUR 960 Lifetime Value pro Mitglied. Weniger als 1 Monat Facebook Ads, aber wirkt 3 Jahre – ohne laufende Kosten, ohne Streuverlust.',
+    roiTitle: '2 neue Mitglieder zahlen Ihre Tour',
+    roiSteps: [
+      { label: 'Wert pro Mitglied (24 Mt. × CHF 40)', value: 'rund CHF 960' },
+      { label: 'Investition (Fitness-Paket)', value: 'CHF 1\'390 einmalig' },
+      { label: 'Break-even', value: '2 neue Mitglieder' },
+    ],
+    roiResult: 'Wirkt 3 Jahre – ohne laufende Werbekosten, ohne Streuverlust.',
     comparisonTitle: 'Studio mit vs. ohne Signature Tour',
     comparisonKicker: 'Der Unterschied',
     comparisonWithoutHead: 'Nur Fotos',
@@ -335,6 +352,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         'Eigene Website – Einfache Einbettung per iFrame oder Link',
       ],
     },
+    roiTitle: 'Ein gewonnenes Mandat zahlt die ganze Karte',
+    roiSteps: [
+      { label: 'Tour pro Objekt (10er-Karte)', value: 'CHF 549' },
+      { label: 'Mehr Klicks auf Inserate', value: '+40%' },
+      { label: 'Höhere Kontaktrate auf Inserate', value: '+95%' },
+    ],
+    roiResult: 'Ein einziges zusätzlich gewonnenes Mandat zahlt die komplette Vorteilskarte.',
     packageName: 'Makler-Vorteilskarte (2 Touren)',
     packagePrice: 'ab CHF 1\'782',
     packageFeatures: [
@@ -456,8 +480,13 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         'Teilbarer Link für Offerten, E-Mails und Social Media',
       ],
     },
-    roiTitle: 'Ein einziges gebuchtes Event zahlt die Tour',
-    roiDescription: 'Eine Hochzeit oder ein Firmenanlass bringt schnell mehrere tausend Franken Umsatz. Gewinnt die Tour nur einen einzigen zusätzlichen Abschluss, ist die Investition amortisiert – jede weitere Buchung ist Gewinn. Dazu sparen Sie die Stunden, die heute in Leerlauf-Besichtigungen fliessen.',
+    roiTitle: 'Ein gebuchtes Event zahlt Ihre Tour',
+    roiSteps: [
+      { label: 'Investition (Location-Paket)', value: 'ab CHF 1\'690 einmalig' },
+      { label: 'Umsatz pro Event (Hochzeit, Anlass)', value: 'mehrere Tausend CHF' },
+      { label: 'Break-even', value: '1 zusätzlicher Abschluss' },
+    ],
+    roiResult: 'Jede weitere Buchung ist Gewinn – plus gesparte Leerlauf-Besichtigungen.',
     comparisonTitle: 'Location mit vs. ohne Signature Tour',
     comparisonKicker: 'Der Unterschied',
     comparisonWithoutHead: 'Nur Fotos & Grundriss',
