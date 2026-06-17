@@ -68,11 +68,14 @@ export default function UeberUnsPageClient() {
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {UEBER_UNS_REASONS.map((reason) => (
+            {UEBER_UNS_REASONS.map((reason, i) => (
               <StaggerItem key={reason.title}>
-                <Card className="h-full">
-                  <h3 className="text-lg font-bold text-primary-800">{reason.title}</h3>
-                  <p className="mt-2 text-gray-600 leading-relaxed">{reason.description}</p>
+                <Card className="h-full bg-cream border-accent-200/70">
+                  <div className="flex items-baseline gap-3">
+                    <span className="cd-serif text-3xl text-accent-600 leading-none">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="text-lg font-bold text-primary-900">{reason.title}</h3>
+                  </div>
+                  <p className="mt-3 text-primary-600 leading-relaxed">{reason.description}</p>
                 </Card>
               </StaggerItem>
             ))}
@@ -127,7 +130,7 @@ export default function UeberUnsPageClient() {
               const Icon = valueIcons[i]
               return (
                 <StaggerItem key={value.title}>
-                  <Card className="h-full text-center">
+                  <Card className="h-full text-center bg-cream border-accent-200/70">
                     <div className="mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center text-[#1a1304] shadow-lg shadow-accent-600/30">
                       <Icon className="w-7 h-7" />
                     </div>
