@@ -149,6 +149,11 @@ export const ADDONS: AddOn[] = [
     nutzen: 'Möblierte Räume werden digital geleert – ideal für Vermietung und Verkauf.',
   },
   {
+    name: 'Nadir-Patch 100% (Boden makellos)',
+    price: 'ab CHF 90.– pro Tour',
+    nutzen: 'Statt verschwommenem Stativ-Fleck ein sauberer Boden oder Ihr Logo – ein Detail, das Profis sofort sehen.',
+  },
+  {
     name: 'Zusätzliche Panoramen',
     price: 'ab CHF 150.– pro Szene',
     nutzen: 'Die Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
@@ -233,6 +238,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   { feature: 'Datenhoheit', signatour: 'Beim Kunden', matterport: 'Vendor Lock-in', ogulo: 'Ogulo-Cloud' },
   { feature: 'Branchen', signatour: 'Hotels, Gastro, Spa, Fitness, Immobilien', matterport: 'Hauptsächlich Immobilien', ogulo: 'Nur Immobilien' },
   { feature: 'DSGVO', signatour: 'CH/EU Hosting ✓', matterport: 'US-Cloud ✗', ogulo: 'DE Hosting ✓' },
+  { feature: 'Boden (Nadir) sauber', signatour: 'Zu 95% retuschiert, optional 100%', matterport: 'Verschwommener Fleck über dem Stativ', ogulo: 'Logo-/Blur-Patch' },
 ]
 
 export const HOMEPAGE_FAQS: FAQ[] = [
@@ -318,6 +324,10 @@ export const FAQ_TECH: FAQ[] = [
     answer: 'Auf allen: Smartphone, Tablet, Desktop und TV – vollständig responsiv und touch-optimiert. Auch mit VR-Brille erlebbar, für den vollen Raumeindruck. Kein App-Download nötig.',
   },
   {
+    question: 'Wie sauber ist der Boden unter der Kamera (Nadir)?',
+    answer: 'Bei 360°-Touren steht die Kamera auf einem Stativ. Wo Anbieter wie Matterport den Boden mit einem verschwommenen Fleck überdecken, retuschieren wir den Nadir-Punkt zu 95% sauber weg. Auf Wunsch gibt es als Add-on die 100%-Lösung mit makellosem Boden oder Ihrem Logo.',
+  },
+  {
     question: 'Kann die Tour auf Google Maps angezeigt werden?',
     answer: 'Ja, direkt im Google Business Profile und Google Maps integrierbar. 2× mehr Profilaufrufe mit 360-Grad-Inhalten. Google Street View Publikation verfügbar (CHF 150).',
   },
@@ -385,6 +395,7 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
   { feature: 'DSGVO', signatour: 'CH/EU Hosting ✓', matterport: 'US-Cloud ✗', ogulo: '', signatourWins: true },
   { feature: 'Branchen-Fokus', signatour: 'Hotels, Gastro, Spa, Fitness, Immobilien', matterport: 'Hauptsächlich Immobilien/AEC', ogulo: '' },
   { feature: 'Aufwand für Kunden', signatour: 'Null – Done-for-You', matterport: 'Hoch – Kamera kaufen, selbst scannen, Software lernen', ogulo: '', signatourWins: true },
+  { feature: 'Boden (Nadir) sauber', signatour: 'Zu 95% retuschiert, optional 100%', matterport: 'Verschwommener Fleck über dem Stativ', ogulo: '', signatourWins: true },
 ]
 
 export const UEBER_UNS_REASONS = [

@@ -412,16 +412,16 @@ body {
 .nigpage .bsources a{color:var(--g);text-decoration:none}
 .nigpage .bsources a:hover{text-decoration:underline}
 
-/* Zahlen statt Versprechen – dunkles Premium-Band */
-.nigpage .statsdark{position:relative;background:#0E0D0B;color:#EFE7D8;padding:92px 0;border-top:1px solid rgba(227,178,58,.35);border-bottom:1px solid rgba(227,178,58,.35);overflow:hidden}
-.nigpage .statsdark::before{content:"";position:absolute;inset:0;background:radial-gradient(65% 95% at 50% 0%,rgba(227,178,58,.13),transparent 60%);pointer-events:none}
+/* Zahlen statt Versprechen – Marine-Premium-Band */
+.nigpage .statsdark{position:relative;background:#0C1B2E;color:#E6EBF1;padding:92px 0;border-top:1px solid rgba(227,178,58,.35);border-bottom:1px solid rgba(227,178,58,.35);overflow:hidden}
+.nigpage .statsdark::before{content:"";position:absolute;inset:0;background:radial-gradient(65% 95% at 50% 0%,rgba(227,178,58,.14),transparent 60%);pointer-events:none}
 .nigpage .statsdark .wrap{position:relative}
 .nigpage .statsdark .kicker{color:#E3B23A}
 .nigpage .statsdark .sec{color:#fff}
 .nigpage .statsdark .bstat .v{font-size:clamp(44px,5vw,64px);color:#E3B23A;text-shadow:0 0 34px rgba(227,178,58,.25)}
-.nigpage .statsdark .bstat .l{color:#CFC6B4;font-size:14px}
+.nigpage .statsdark .bstat .l{color:#AFBBCB;font-size:14px}
 .nigpage .statsdark .bstats{margin-top:44px}
-.nigpage .statsdark .bsources{color:#8d8674}
+.nigpage .statsdark .bsources{color:#6c7c90}
 .nigpage .statsdark .bsources a{color:#E3B23A}
 .nigpage .bchecks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px;text-align:left}
 .nigpage .bchecks1{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}

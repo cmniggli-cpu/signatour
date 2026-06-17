@@ -51,7 +51,8 @@ const FAQ_ITEMS = [
   { q: 'Wie wird der «Erfolg» gemessen?', a: 'Sie erhalten Besucherstatistiken: Aufrufe, Verweildauer, beliebteste Räume und Klicks auf Buchungs-Hotspots – Grundlage auch für unsere Erfolgs-Garantie.' },
   { q: 'Was ist, wenn ich nicht zufrieden bin?', a: 'Doppelte Garantie: bis zu 3 Korrekturrunden – und keine messbare Verbesserung nach 90 Tagen? 50% des Paketpreises zurück.' },
   { q: 'Worin unterscheidet sich das von Fotos oder einem Video?', a: 'Fotos und Videos zeigen, was wir zeigen wollen. Eine Signature Tour lässt den Besucher selbst entscheiden, wohin er schaut – und direkt handeln (buchen, anfragen). Das kann ein Video nicht.' },
-  { q: 'Ist das dasselbe wie Matterport?', a: 'Matterport ist ein 3D-Scan-Standard – oft mit monatlicher Plattformgebühr und Optik von der Stange. Unsere Tour ist in Ihrem Corporate Design, verkaufsaktiv und gehört Ihnen, ohne Abo-Zwang.' },
+  { q: 'Ist das dasselbe wie Matterport?', a: 'Matterport ist ein 3D-Scan-Standard – oft mit monatlicher Plattformgebühr und Optik von der Stange. Unsere Tour ist in Ihrem Corporate Design, verkaufsaktiv und gehört Ihnen, ohne Abo-Zwang. Ein sichtbarer Qualitätsunterschied: Wo Matterport den Boden unter der Kamera mit einem verschwommenen Fleck überdeckt (sonst sähe man das Stativ), retuschieren wir diesen Nadir-Punkt zu 95% sauber weg – auf Wunsch zu 100% mit makellosem Boden oder Ihrem Logo.' },
+  { q: 'Was ist mit dem Boden unter der Kamera (Nadir)?', a: 'Bei 360°-Aufnahmen steht die Kamera auf einem Stativ – ohne Bearbeitung wäre es im Bild sichtbar. Viele Anbieter setzen einfach einen verschwommenen Fleck oder ein Logo darüber. Wir retuschieren den Boden zu 95% sauber, sodass er natürlich wirkt. Wer es perfekt will, erhält als Add-on die 100%-Lösung mit makellosem Boden oder eingesetztem Logo.' },
   { q: 'Geht das auch mehrsprachig?', a: 'Ja – Deutsch, Französisch und Englisch. Zusatzsprachen ab CHF 300 pro Sprache.' },
 ]
 
