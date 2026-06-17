@@ -23,7 +23,7 @@ export default function PricingCard({ tier, showRange = false, index = 0 }: Pric
       className={cn(
         'relative rounded-2xl p-8 flex flex-col h-full border',
         tier.featured
-          ? 'bg-primary-900 text-white border-primary-900'
+          ? 'bg-marine-900 text-white border-marine-900'
           : 'bg-white border-primary-200/60 card-shadow'
       )}
     >

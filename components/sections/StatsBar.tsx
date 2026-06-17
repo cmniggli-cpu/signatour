@@ -10,7 +10,7 @@ interface StatsBarProps {
 
 export default function StatsBar({ stats, dark = true }: StatsBarProps) {
   return (
-    <section className={dark ? 'bg-primary-900' : 'bg-white'}>
+    <section className={dark ? 'bg-marine-900' : 'bg-white'}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (

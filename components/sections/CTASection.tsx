@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Button from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
 
 interface CTASectionProps {
@@ -18,10 +17,12 @@ export default function CTASection({
   buttonHref = '/kontakt',
 }: CTASectionProps) {
   return (
-    <section className="bg-primary-900 relative overflow-hidden">
+    <section
+      className="relative overflow-hidden"
+      style={{ background: 'linear-gradient(125deg,#F7DC8A 0%,#E3B23A 32%,#C8901C 60%,#E3B23A 100%)' }}
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 right-[10%] w-64 h-64 bg-accent-500/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-10 left-[10%] w-48 h-48 bg-white/5 rounded-full blur-[80px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-40 bg-white/25 rounded-full blur-[120px]" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
@@ -30,7 +31,8 @@ export default function CTASection({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl lg:text-6xl cd-serif text-white leading-[1.05]"
+          className="text-4xl sm:text-5xl lg:text-6xl cd-serif leading-[1.05]"
+          style={{ color: '#231703' }}
         >
           {title}
         </motion.h2>
@@ -39,7 +41,8 @@ export default function CTASection({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-5 text-lg text-primary-400 max-w-2xl mx-auto"
+          className="mt-5 text-lg max-w-2xl mx-auto"
+          style={{ color: '#3c2c08' }}
         >
           {subtitle}
         </motion.p>
@@ -50,11 +53,15 @@ export default function CTASection({
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-10"
         >
-          <Button href={buttonHref} variant="accent" size="lg">
+          <a
+            href={buttonHref}
+            className="inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 px-9 py-4 text-base rounded-full"
+            style={{ background: '#1A1304', color: '#F7DC8A' }}
+          >
             {buttonText}
             <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-          <p className="mt-5 text-sm text-primary-500">Unverbindlich · Antwort innert 24 Stunden · Schweizer Anbieter</p>
+          </a>
+          <p className="mt-5 text-sm" style={{ color: '#5a430f' }}>Unverbindlich · Antwort innert 24 Stunden · Schweizer Anbieter</p>
         </motion.div>
       </div>
     </section>

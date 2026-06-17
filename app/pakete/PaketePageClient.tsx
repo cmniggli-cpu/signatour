@@ -26,7 +26,7 @@ export default function PaketePageClient() {
             ))}
           </div>
           <AnimatedSection className="mt-12">
-            <div className="max-w-3xl mx-auto bg-primary-900 rounded-2xl p-6 sm:p-8 text-center">
+            <div className="max-w-3xl mx-auto bg-marine-900 rounded-2xl p-6 sm:p-8 text-center">
               <h3 className="text-lg font-bold text-white">Doppelte Garantie – null Risiko</h3>
               <p className="mt-2 text-sm text-primary-300 leading-relaxed">
                 Bis zu 3 Korrekturrunden, bis die Tour Ihren Ansprüchen entspricht. Und keine messbare Verbesserung nach 90 Tagen? Wir erstatten 50% des Paketpreises zurück.
@@ -75,7 +75,7 @@ export default function PaketePageClient() {
             <div className="hidden md:block bg-white rounded-2xl shadow-lg overflow-hidden">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-primary-800 text-white">
+                  <tr className="bg-marine-900 text-white">
                     <th className="text-left p-4 font-bold">Erweiterung</th>
                     <th className="text-left p-4 font-bold">Nutzen</th>
                     <th className="text-right p-4 font-bold">Preis</th>

@@ -38,7 +38,7 @@ export default function UeberUnsPageClient() {
       <section className="py-20 bg-section-gradient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="bg-primary-900 rounded-3xl p-8 sm:p-12 text-center text-white">
+            <div className="bg-marine-900 rounded-3xl p-8 sm:p-12 text-center text-white">
               <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">Ihr Ansprechpartner</span>
               <h2 className="mt-3 text-2xl sm:text-3xl cd-serif">Marius Niggli – Gründer & Inhaber</h2>
               <p className="mt-4 text-primary-300 leading-relaxed max-w-2xl mx-auto">
@@ -128,7 +128,7 @@ export default function UeberUnsPageClient() {
               return (
                 <StaggerItem key={value.title}>
                   <Card className="h-full text-center">
-                    <div className="mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-800 to-primary-500 flex items-center justify-center text-white shadow-lg shadow-primary-800/20">
+                    <div className="mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center text-[#1a1304] shadow-lg shadow-accent-600/30">
                       <Icon className="w-7 h-7" />
                     </div>
                     <h3 className="mt-5 text-xl font-bold text-primary-800">{value.title}</h3>
