@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { NAV_ITEMS } from '@/lib/constants'
 import Button from '@/components/ui/Button'
 import MobileMenu from './MobileMenu'
+import SiteSearch from '@/components/features/SiteSearch'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -89,17 +90,21 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <SiteSearch />
             <Button href="/kontakt" variant="primary" size="sm">Kostenlose Beratung</Button>
           </div>
 
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 rounded-full text-primary-900 hover:bg-primary-100 transition-colors"
-            aria-label="Menü öffnen"
-          >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          <div className="flex items-center gap-1 lg:hidden">
+            <SiteSearch />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-full text-primary-900 hover:bg-primary-100 transition-colors"
+              aria-label="Menü öffnen"
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
