@@ -81,20 +81,22 @@ export default function HomePage() {
       <div dangerouslySetInnerHTML={{ __html: ICON_DEFS }} />
 
       <section className="hero">
-        <div className="bg">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1900&q=80&auto=format&fit=crop" alt="Hotel-Pool als 360°-Verkaufserlebnis – Beispiel einer Signature Tour" fetchPriority="high" />
-        </div>
         <div className="wrap inner">
-          <h1 className="serif">Ihre Räume werden zum <em>besten Verkäufer</em> – rund um die Uhr.</h1>
-          <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
-            Wir verwandeln Ihre Räumlichkeiten in ein digitales Verkaufserlebnis: Besucher erleben Ihr Angebot, bauen Vertrauen auf und buchen, kaufen oder fragen direkt in der Tour an – noch bevor das erste Gespräch stattfindet.</p>
-          <div className="cta">
-            <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
-            <a className="btn btn-ghost" href="#referenzen">Referenz-Touren ansehen</a>
-            <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
+          <div className="hcol">
+            <h1 className="serif">Ihre Räume werden zum <em>besten Verkäufer</em> – rund um die Uhr.</h1>
+            <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
+              Wir verwandeln Ihre Räumlichkeiten in ein digitales Verkaufserlebnis: Besucher erleben Ihr Angebot, bauen Vertrauen auf und buchen, kaufen oder fragen direkt in der Tour an – noch bevor das erste Gespräch stattfindet.</p>
+            <div className="cta">
+              <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
+              <a className="btn btn-ghost" href="#referenzen">Referenz-Touren ansehen</a>
+              <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
+            </div>
+            <p className="herotrust">Schweizer Anbieter · Einmalpreis statt Abo · Antwort innert 24 Stunden</p>
           </div>
-          <p className="herotrust">Schweizer Anbieter · Einmalpreis statt Abo · Antwort innert 24 Stunden</p>
+          <div className="hfig">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/hero-lens.jpg" alt="Niggli 360° Signature Tours – gold-weisse Kameralinse als Sinnbild für virtuelle Verkaufserlebnisse" width="560" height="560" fetchPriority="high" />
+          </div>
         </div>
       </section>
 
