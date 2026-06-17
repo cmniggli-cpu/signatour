@@ -53,7 +53,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       </section>
 
       {/* Challenges */}
-      <section className="blk">
+      <section className="blk" style={{ background: 'var(--white)' }}>
         <div className="wrap center">
           <div className="kicker">Die Herausforderung</div>
           <h2 className="sec">Kennen Sie das?</h2>

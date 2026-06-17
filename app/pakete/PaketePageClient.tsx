@@ -49,8 +49,8 @@ export default function PaketePageClient() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {BRANCHEN_PACKAGES.map((pkg) => (
               <StaggerItem key={pkg.name}>
-                <Card className="h-full">
-                  <h3 className="text-lg font-bold text-primary-800">{pkg.name}</h3>
+                <Card className="h-full bg-cream border-accent-200/70">
+                  <h3 className="text-lg font-bold text-primary-900">{pkg.name}</h3>
                   <div className="mt-2 text-3xl cd-serif text-accent-600">{pkg.price}</div>
                   <p className="mt-2 text-sm text-gray-600">{pkg.description}</p>
                 </Card>
