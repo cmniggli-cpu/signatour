@@ -135,28 +135,26 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {/* Comparison */}
       {data.comparisonRows && (
         <section className="blk" style={{ background: 'var(--paper2)' }}>
-          <div className="wrap center" style={{ maxWidth: 880 }}>
+          <div className="wrap center" style={{ maxWidth: 920 }}>
+            <div className="kicker">{data.comparisonKicker ?? 'Der ehrliche Vergleich'}</div>
             <h2 className="sec">{data.comparisonTitle}</h2>
             <div className="rule" />
-            <div className="btabwrap">
-              <table className="btab">
-                <thead>
-                  <tr>
-                    <th>Kriterium</th>
-                    <th>Ohne 360°-Tour</th>
-                    <th className="gold">Mit Signatour</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.comparisonRows.map((row) => (
-                    <tr key={row.label}>
-                      <td className="lbl">{row.label}</td>
-                      <td className="without">{row.without}</td>
-                      <td className="with"><span>{row.with}</span></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="vtab">
+              <div className="vrow vhead">
+                <div className="vc crit">Kriterium</div>
+                <div className="vc wo">
+                  {data.comparisonWithoutHead ?? 'Ohne Signatour'}
+                  {data.comparisonWithoutSub && <span>{data.comparisonWithoutSub}</span>}
+                </div>
+                <div className="vc wi">Mit Signatour</div>
+              </div>
+              {data.comparisonRows.map((row) => (
+                <div className="vrow" key={row.label}>
+                  <div className="vc crit">{row.label}</div>
+                  <div className="vc wo" data-l={data.comparisonWithoutHead ?? 'Andere'}><span className="dash">–</span>{row.without}</div>
+                  <div className="vc wi" data-l="Mit Signatour"><span className="ck">✓</span>{row.with}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

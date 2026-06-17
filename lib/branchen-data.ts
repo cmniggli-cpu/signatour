@@ -14,6 +14,9 @@ export interface BranchenPageData {
   sources?: { label: string; url: string }[]
   captures: string[]
   comparisonTitle?: string
+  comparisonKicker?: string
+  comparisonWithoutHead?: string
+  comparisonWithoutSub?: string
   comparisonRows?: { label: string; without: string; with: string }[]
   roiTitle?: string
   roiDescription?: string
@@ -55,13 +58,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { label: 'ScienceDirect: AR/VR in Hotels – Wirkung auf Gästezufriedenheit und Buchungsabsicht', url: 'https://www.sciencedirect.com/science/article/pii/S0278431923002050' },
     ],
     captures: ['Zimmertypen (Einzel, Doppel, Suite)', 'Lobby & Empfang', 'Restaurant', 'Spa & Wellness', 'Eventlocations', 'Aussenbereiche'],
-    comparisonTitle: 'Hotel mit vs. ohne 360-Tour',
+    comparisonTitle: 'Hotel mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Ohne 360°-Tour',
+    comparisonWithoutSub: 'nur Fotos auf der Website',
     comparisonRows: [
-      { label: 'Verweildauer', without: '1–2 Minuten', with: '5–8 Minuten' },
-      { label: 'Direktbuchungsrate', without: 'Durchschnittlich', with: '+48% höher' },
-      { label: 'Gäste-Vertrauen', without: 'Gering (nur Fotos)', with: 'Hoch (virtuelles Erlebnis)' },
-      { label: 'Google-Sichtbarkeit', without: 'Standard', with: 'Bevorzugte Platzierung' },
-      { label: 'OTA-Abhängigkeit', without: 'Hoch', with: 'Reduziert' },
+      { label: 'Verweildauer', without: '1–2 Minuten, dann klickt der Gast weg', with: '5–8 Minuten im Erlebnis' },
+      { label: 'Direktbuchungen', without: 'Gast bucht zurück auf Booking & Co.', with: '+48% mehr Direktbuchungen' },
+      { label: 'Gäste-Vertrauen', without: 'Gering – nur statische Fotos', with: 'Hoch – Zimmer & Spa vorab erlebbar' },
+      { label: 'OTA-Provisionen', without: '15–18% pro Buchung', with: 'Spürbar reduziert' },
+      { label: 'Google-Sichtbarkeit', without: 'Standard-Eintrag', with: 'Bevorzugte Platzierung mit Tour' },
+      { label: 'Bildqualität', without: 'Handy-Schnappschüsse', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
     ],
     roiTitle: '10 Direktbuchungen = Tour bezahlt',
     roiDescription: 'Durchschnittliches Zimmer CHF 200/Nacht, 18% OTA-Gebühr = CHF 36 Ersparnis/Nacht. 10 Buchungen × 2 Nächte = CHF 720 gespart. Amortisiert sich oft im ersten Quartal.',
@@ -121,6 +128,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         'Wettbewerbsvorteil vs. Restaurants ohne Tour',
       ],
     },
+    comparisonTitle: 'Restaurant mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Nur Fotos & Speisekarte',
+    comparisonRows: [
+      { label: 'Erster Eindruck online', without: 'Verwackelte Gästefotos bei Google', with: 'Professionelles Ambiente, das Sie steuern' },
+      { label: 'Reservierungen', without: 'Gast ist unsicher, klickt weiter', with: 'Ambiente überzeugt vor der Reservation' },
+      { label: 'Google Maps', without: 'Standard-Eintrag', with: 'Tour im Profil – mehr Klicks & Anrufe' },
+      { label: 'Aufwand', without: 'Kein Marketing neben dem Tagesgeschäft', with: 'Einmal erstellt, arbeitet jahrelang' },
+      { label: 'Aktualität', without: 'Fotos veralten', with: 'Saisonale Updates möglich' },
+      { label: 'Bildqualität', without: 'Handy-Schnappschüsse', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
+    ],
     packageName: 'Gastro-Paket',
     packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
@@ -174,6 +192,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         'Optional: bestimmte Bereiche ausschliessen',
       ],
     },
+    comparisonTitle: 'Spa mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Nur Fotos',
+    comparisonRows: [
+      { label: 'Atmosphäre', without: 'Fotos zeigen Räume, nicht das Gefühl', with: 'Ruhe & Hochwertigkeit spürbar' },
+      { label: 'Buchungen', without: 'Interessent zögert', with: 'Erlebnis schafft Vertrauen → Buchung' },
+      { label: 'Diskretion', without: 'Gästefotos unkontrolliert', with: 'Aufnahmen ohne Gäste, Freigabe vorab' },
+      { label: 'Differenzierung', without: 'Wie alle anderen', with: 'Sichtbarer Vorsprung vor Ketten' },
+      { label: 'Google-Sichtbarkeit', without: 'Standard-Eintrag', with: 'Tour im Profil' },
+      { label: 'Bildqualität', without: 'Schnappschüsse', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
+    ],
     packageName: 'Spa & Wellness Premium-Tour',
     packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
@@ -229,6 +258,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     },
     roiTitle: '2–3 neue Mitglieder = Tour bezahlt',
     roiDescription: 'EUR 960 Lifetime Value pro Mitglied. Weniger als 1 Monat Facebook Ads, aber wirkt 3 Jahre – ohne laufende Kosten, ohne Streuverlust.',
+    comparisonTitle: 'Studio mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Nur Fotos',
+    comparisonRows: [
+      { label: 'Hemmschwelle', without: 'Erstbesucher unsicher, kommt nicht', with: 'Studio vorab erlebbar → Probetraining' },
+      { label: 'Differenzierung', without: 'Geht gegen Discounter unter', with: 'Qualität sichtbar gemacht' },
+      { label: 'Mitgliederbindung', without: 'Falsche Erwartungen, schnelle Kündigung', with: 'Wer weiss, was ihn erwartet, bleibt länger' },
+      { label: 'Google Maps', without: 'Standard-Eintrag', with: 'Tour im Profil – mehr Aufrufe' },
+      { label: 'Social Media', without: 'Kein teilbarer Content', with: 'Teilbarer Link für Instagram & Co.' },
+      { label: 'Bildqualität', without: 'Schnappschüsse', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
+    ],
     packageName: 'Fitness-Paket',
     packagePrice: 'ab CHF 1\'390',
     packageFeatures: [
@@ -272,13 +312,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { label: 'NAR: Home Buyers & Sellers Generational Trends Report', url: 'https://www.nar.realtor/research-and-statistics/research-reports/home-buyer-and-seller-generational-trends' },
     ],
     captures: ['Wohnräume', 'Küche', 'Badezimmer', 'Aussenbereiche', 'Grundriss-Integration (optional)'],
-    comparisonTitle: 'Makler-Vergleich: Signatour vs. Ogulo vs. Matterport',
+    comparisonTitle: 'Warum Makler zu Signatour wechseln',
+    comparisonKicker: 'Der ehrliche Vergleich',
+    comparisonWithoutHead: 'Übliche Anbieter',
+    comparisonWithoutSub: 'Ogulo, Matterport',
     comparisonRows: [
-      { label: 'Preis pro Objekt', without: 'Ogulo: €49/Mt + Setup', with: 'ab CHF 891' },
-      { label: 'Vertrag', without: 'Ogulo: 12 Monate Min.', with: 'Keiner' },
-      { label: 'Aufwand', without: 'DIY', with: 'Null (Full Service)' },
-      { label: 'Qualität', without: 'Abhängig von Ihren Fotos', with: 'Professioneller Fotograf' },
-      { label: 'Google Business', without: 'Nicht inklusive', with: 'Inklusive' },
+      { label: 'Preis pro Objekt', without: '€49/Monat + Setup, läuft ewig weiter', with: 'ab CHF 891 einmalig – dann gehört sie Ihnen' },
+      { label: 'Vertragsbindung', without: '12–24 Monate Mindestlaufzeit', with: 'Keine – Vorteilskarte ohne Ablaufdatum' },
+      { label: 'Ihr Aufwand', without: 'Selbst scannen, Software lernen (DIY)', with: 'Null – wir kommen, fotografieren, liefern' },
+      { label: 'Bildqualität', without: 'Abhängig von Ihren eigenen Fotos', with: 'Profi-Fotograf, sauberer Boden (Nadir 95–100%)' },
+      { label: 'Google & Portale', without: 'Nicht inklusive', with: 'Google Business, Homegate & ImmoScout inklusive' },
+      { label: 'Datenhoheit', without: 'Anbieter-Cloud, Kündigung = Datenverlust', with: 'Bei Ihnen – kein Vendor Lock-in' },
     ],
     extraSection: {
       title: 'Portal-Kompatibilität',
@@ -346,6 +390,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
         'DSGVO-konformes Hosting in der Schweiz/EU, AVV inklusive',
       ],
     },
+    comparisonTitle: 'Mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Nur Website & Stockfotos',
+    comparisonRows: [
+      { label: 'Erster Eindruck', without: 'Anonyme Stockfotos', with: 'Ihre echten Räume – sofort Vertrauen' },
+      { label: 'Hemmschwelle', without: 'Hoch vor dem Erstgespräch', with: 'Gesenkt – Mandant kennt Sie vorab' },
+      { label: 'Diskretion', without: 'Keine Kontrolle', with: 'Ohne Personen/Dokumente, Freigabeprozess' },
+      { label: 'Differenzierung', without: 'Austauschbarer Auftritt', with: 'Sichtbar professionell' },
+      { label: 'Verfügbarkeit', without: 'Nur zu Bürozeiten', with: 'Digitaler Empfang rund um die Uhr' },
+      { label: 'Bildqualität', without: 'Stockmaterial', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
+    ],
     packageName: 'Business-Paket für Dienstleister',
     packagePrice: 'ab CHF 1\'690',
     packageFeatures: [
@@ -403,6 +458,17 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     },
     roiTitle: 'Ein einziges gebuchtes Event zahlt die Tour',
     roiDescription: 'Eine Hochzeit oder ein Firmenanlass bringt schnell mehrere tausend Franken Umsatz. Gewinnt die Tour nur einen einzigen zusätzlichen Abschluss, ist die Investition amortisiert – jede weitere Buchung ist Gewinn. Dazu sparen Sie die Stunden, die heute in Leerlauf-Besichtigungen fliessen.',
+    comparisonTitle: 'Location mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Nur Fotos & Grundriss',
+    comparisonRows: [
+      { label: 'Besichtigungen', without: 'Viele Leerlauf-Termine', with: 'Vorqualifiziert – nur ernsthafte Anfragen' },
+      { label: 'Raumwirkung', without: 'Fotos zeigen Proportionen nicht', with: 'Saal & Bühne wirklich erlebbar' },
+      { label: 'Varianten', without: 'Ein Standardbild', with: 'Bankett, Konzert, Seminar umschaltbar' },
+      { label: 'Unterlagen', without: 'Separate PDFs verschicken', with: 'Technik & Catering direkt in der Tour' },
+      { label: 'Verfügbarkeit', without: 'Nur nach Terminabsprache', with: '24/7 begehbar' },
+      { label: 'Bildqualität', without: 'Schnappschüsse', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
+    ],
     packageName: 'Location-Paket',
     packagePrice: 'ab CHF 1\'690',
     packageFeatures: [

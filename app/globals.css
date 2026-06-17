@@ -435,14 +435,29 @@ body {
 .nigpage .bchecks1{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}
 .nigpage .bcheck{display:flex;gap:11px;align-items:flex-start;background:var(--white);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--ink2)}
 .nigpage .bcheck svg{color:var(--g);flex:none;margin-top:2px}
-.nigpage .btabwrap{margin-top:38px;border:1px solid var(--ln);border-radius:14px;overflow:hidden;background:var(--white)}
-.nigpage .btab{width:100%;border-collapse:collapse;font-size:14px}
-.nigpage .btab th{background:var(--ink);color:#fff;font-weight:600;padding:15px 18px;text-align:left;font-size:13px;letter-spacing:.04em}
-.nigpage .btab th.gold{color:var(--gd)}
-.nigpage .btab td{padding:14px 18px;border-top:1px solid var(--ln);text-align:left}
-.nigpage .btab .lbl{font-weight:600;color:var(--ink)}
-.nigpage .btab .without{color:var(--mut)}
-.nigpage .btab .with span{background:rgba(200,144,28,.12);color:#8a6312;font-weight:600;padding:5px 12px;border-radius:99px;font-size:13px;display:inline-block}
+/* Vergleichstabelle im CD (hell, Signatour-Spalte gold hervorgehoben) */
+.nigpage .vtab{margin-top:36px;background:#fff;border:1px solid var(--ln);border-radius:14px;overflow:hidden;text-align:left}
+.nigpage .vrow{display:grid;grid-template-columns:1.1fr 1fr 1.15fr}
+.nigpage .vrow .vc{padding:15px 18px;border-bottom:1px solid rgba(20,17,11,.07);font-size:14px;display:flex;gap:8px;align-items:flex-start;line-height:1.45}
+.nigpage .vrow:last-child .vc{border-bottom:0}
+.nigpage .vc.crit{font-weight:600;color:var(--ink)}
+.nigpage .vc.wo{color:#8a8277;font-size:13.5px}
+.nigpage .vc.wi{background:rgba(200,144,28,.07);color:var(--ink);font-weight:500;font-size:13.5px}
+.nigpage .vc .dash{color:#bdb4a4;flex:none}
+.nigpage .vc .ck{color:var(--g);flex:none;margin-top:1px;font-weight:700}
+.nigpage .vhead .vc{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--mut);border-bottom:2px solid rgba(20,17,11,.12);display:block}
+.nigpage .vhead .vc.wi{color:var(--g);border-bottom:2px solid var(--g)}
+.nigpage .vhead .vc.wo span{display:block;font-weight:400;letter-spacing:0;text-transform:none;font-size:11px;color:#a39c8e;margin-top:2px}
+@media(max-width:640px){
+  .nigpage .vhead{display:none}
+  .nigpage .vrow{grid-template-columns:1fr;padding:14px 0;border-bottom:1px solid rgba(20,17,11,.1)}
+  .nigpage .vrow:last-child{border-bottom:0}
+  .nigpage .vrow .vc{border-bottom:0;padding:4px 16px;flex-wrap:wrap}
+  .nigpage .vc.crit{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;padding-bottom:4px}
+  .nigpage .vc.wo::before,.nigpage .vc.wi::before{content:attr(data-l);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#a39c8e;display:block;width:100%;margin-bottom:2px;font-weight:600}
+  .nigpage .vc.wi{background:rgba(200,144,28,.08);margin:5px 12px;border-radius:8px;padding:9px 12px}
+  .nigpage .vc.wi::before{color:var(--g)}
+}
 .nigpage .roi{background:var(--paper2);border:1px solid var(--ln);border-radius:18px;padding:46px 36px}
 .nigpage .pcard .plink{display:block;text-align:center;margin-top:14px;font-size:13.5px;color:var(--mut);text-decoration:none}
 .nigpage .pcard .plink:hover{color:var(--g)}
