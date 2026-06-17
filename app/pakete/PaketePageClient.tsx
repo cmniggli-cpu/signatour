@@ -71,20 +71,20 @@ export default function PaketePageClient() {
           </AnimatedSection>
 
           <AnimatedSection>
-            {/* Desktop: 3-spaltige Tabelle */}
-            <div className="hidden md:block bg-white rounded-2xl shadow-lg overflow-hidden">
+            {/* Desktop: 3-spaltige Tabelle im hellen Gold-/Pastell-CD */}
+            <div className="hidden md:block bg-white rounded-2xl border border-primary-200/60 card-shadow overflow-hidden">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-marine-900 text-white">
-                    <th className="text-left p-4 font-bold">Erweiterung</th>
-                    <th className="text-left p-4 font-bold">Nutzen</th>
-                    <th className="text-right p-4 font-bold">Preis</th>
+                  <tr className="border-b-2 border-primary-100">
+                    <th className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-400">Erweiterung</th>
+                    <th className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-400">Nutzen</th>
+                    <th className="text-right px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent-600">Preis</th>
                   </tr>
                 </thead>
                 <tbody>
                   {ADDONS.map((addon, i) => (
-                    <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-                      <td className="p-4 text-gray-800 font-medium align-top">
+                    <tr key={i} className={`border-b border-primary-50 last:border-0 ${i % 2 === 1 ? 'bg-cream' : 'bg-white'}`}>
+                      <td className="px-5 py-4 text-primary-900 font-medium align-top">
                         {addon.name}
                         {addon.hinweis && (
                           <span className="mt-1.5 block">
@@ -92,8 +92,8 @@ export default function PaketePageClient() {
                           </span>
                         )}
                       </td>
-                      <td className="p-4 text-gray-600 text-sm align-top">{addon.nutzen}</td>
-                      <td className="p-4 text-right font-semibold text-primary-800 align-top">{addon.price}</td>
+                      <td className="px-5 py-4 text-primary-500 text-sm align-top">{addon.nutzen}</td>
+                      <td className="px-5 py-4 text-right align-top"><span className="text-accent-600 font-semibold">{addon.price}</span></td>
                     </tr>
                   ))}
                 </tbody>
@@ -103,13 +103,13 @@ export default function PaketePageClient() {
             {/* Mobil: gestapelte Karten */}
             <div className="md:hidden space-y-4">
               {ADDONS.map((addon, i) => (
-                <div key={i} className="bg-white rounded-2xl shadow-lg p-5">
-                  <h3 className="font-bold text-primary-800">{addon.name}</h3>
+                <div key={i} className="bg-white rounded-2xl border border-primary-200/60 card-shadow p-5">
+                  <h3 className="font-bold text-primary-900">{addon.name}</h3>
                   {addon.hinweis && (
                     <span className="mt-1.5 inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
                   )}
-                  <p className="mt-2 text-sm text-gray-600">{addon.nutzen}</p>
-                  <p className="mt-3 text-right font-semibold text-primary-800">{addon.price}</p>
+                  <p className="mt-2 text-sm text-primary-500">{addon.nutzen}</p>
+                  <p className="mt-3 text-right font-semibold text-accent-600">{addon.price}</p>
                 </div>
               ))}
             </div>
