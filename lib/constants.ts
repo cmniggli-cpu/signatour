@@ -286,6 +286,33 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
   },
 ]
 
+export interface OrderPackage { id: string; name: string; price: string; from: number; approx?: boolean }
+export interface OrderOption { id: string; name: string; price: string; add: number; approx?: boolean }
+
+export const ORDER_PACKAGES: OrderPackage[] = [
+  { id: 'basic', name: 'Basic', price: 'CHF 990.–', from: 990 },
+  { id: 'signature', name: 'Signature', price: 'CHF 2\'497.–', from: 2497 },
+  { id: 'pro', name: 'Pro', price: 'ab CHF 4\'497.–', from: 4497, approx: true },
+  { id: 'immo-einzel', name: 'Immobilien – Einzelobjekt', price: 'CHF 2\'497.– pro Objekt', from: 2497 },
+  { id: 'immo-5', name: 'Immobilien – 5er-Vorteilskarte', price: 'CHF 9\'990.–', from: 9990 },
+  { id: 'immo-10', name: 'Immobilien – 10er-Vorteilskarte', price: 'CHF 16\'230.–', from: 16230 },
+  { id: 'hotel', name: 'Hotel & Resort', price: 'ab CHF 3\'490.–', from: 3490, approx: true },
+  { id: 'spa', name: 'Spa & Wellness', price: 'ab CHF 3\'490.–', from: 3490, approx: true },
+  { id: 'restaurant', name: 'Restaurant & Gastro', price: 'ab CHF 2\'890.–', from: 2890, approx: true },
+  { id: 'fitness', name: 'Fitness', price: 'ab CHF 2\'890.–', from: 2890, approx: true },
+  { id: 'banken', name: 'Banken / Versicherung / Kanzlei (1 Standort)', price: 'ab CHF 2\'497.– pro Standort', from: 2497, approx: true },
+  { id: 'event', name: 'Eventlocation & Showroom', price: 'ab CHF 2\'990.–', from: 2990, approx: true },
+]
+
+export const ORDER_OPTIONS: OrderOption[] = [
+  { id: 'sprachen', name: 'Mehrsprachig (DE / FR / EN)', price: '+ ab CHF 300.– pro Sprache', add: 300, approx: true },
+  { id: 'street', name: 'Google Street View & Business-Einbindung', price: '+ CHF 490.–', add: 490 },
+  { id: 'lead', name: 'Lead-Capture-Formular in der Tour', price: '+ CHF 390.–', add: 390 },
+  { id: 'nadir', name: 'Nadir-Patch 100% (Boden makellos)', price: '+ ab CHF 90.–', add: 90, approx: true },
+  { id: 'tagnacht', name: 'Tag-/Nacht-Modus', price: '+ ab CHF 180.– pro Szene', add: 180, approx: true },
+  { id: 'clips', name: 'Social-Media-Clip-Paket', price: '+ CHF 390.–', add: 390 },
+]
+
 export const SERVICE_TIERS: ServiceTier[] = [
   {
     name: 'Basic Service',

@@ -8,6 +8,11 @@ import Card from '@/components/ui/Card'
 import CTASection from '@/components/sections/CTASection'
 import { PRICING_TIERS, ADDONS, BRANCHEN_PACKAGES, INCLUDED_BENEFITS, SERVICE_TIERS } from '@/lib/constants'
 
+const ORDER_MAP: Record<string, string> = {
+  immobilien: 'immo-einzel', hotel: 'hotel', spa: 'spa', restaurant: 'restaurant',
+  fitness: 'fitness', banken: 'banken', events: 'event',
+}
+
 export default function PaketePageClient() {
   return (
     <>
@@ -62,7 +67,7 @@ export default function PaketePageClient() {
                   </ul>
                   {pkg.note && <p className="mt-3 text-xs text-primary-500">{pkg.note}</p>}
                   <a
-                    href={`/konfigurator.html?b=${pkg.cfg}`}
+                    href={`/bestellen?paket=${ORDER_MAP[pkg.cfg] ?? ''}`}
                     className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-marine-900 text-accent-400 px-5 py-2.5 text-sm font-semibold hover:bg-marine-800 transition-colors"
                   >
                     Paket bestellen →

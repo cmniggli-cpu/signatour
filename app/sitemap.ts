@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: { path: string; priority: number; changeFrequency: 'weekly' | 'monthly' | 'yearly' }[] = [
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: '/pakete', priority: 0.9, changeFrequency: 'monthly' },
+    { path: '/bestellen', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/branchen/hotel', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/branchen/restaurant', priority: 0.8, changeFrequency: 'monthly' },
