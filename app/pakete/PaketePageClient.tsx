@@ -61,6 +61,12 @@ export default function PaketePageClient() {
                     ))}
                   </ul>
                   {pkg.note && <p className="mt-3 text-xs text-primary-500">{pkg.note}</p>}
+                  <a
+                    href={`/konfigurator.html?b=${pkg.cfg}`}
+                    className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-marine-900 text-accent-400 px-5 py-2.5 text-sm font-semibold hover:bg-marine-800 transition-colors"
+                  >
+                    Paket bestellen →
+                  </a>
                 </Card>
               </StaggerItem>
             ))}

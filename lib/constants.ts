@@ -229,6 +229,7 @@ export const ADDONS: AddOn[] = [
 export const BRANCHEN_PACKAGES: BranchenPackage[] = [
   {
     name: 'Immobilien – Signature-Vorteilskarten',
+    cfg: 'immobilien',
     intro: 'Für Makler von Premium- und Luxusobjekten. Jede Tour in Signature-Qualität, voll im Corporate Design.',
     lines: [
       'Einzelobjekt: CHF 2\'497.– pro Objekt',
@@ -239,40 +240,46 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
   },
   {
     name: 'Hotel & Resort',
+    cfg: 'hotel',
     intro: 'Signature-Tour mit Buchungslink-Hotspots, Mehrsprachigkeit (DE / FR / EN) und Google-Business-Einbindung.',
     lines: ['ab CHF 3\'490.–'],
     note: 'Grosse Häuser, Thermen und Resorts: Pro-Linie ab CHF 4\'497.–',
   },
   {
     name: 'Spa & Wellness',
+    cfg: 'spa',
     intro: 'Signature-Tour mit Audio-Guide und Tag-/Nacht-Modus für spürbare Atmosphäre.',
     lines: ['ab CHF 3\'490.–'],
     note: 'Optional erweiterbar mit der Vier-Jahreszeiten-Terrasse (siehe Add-ons).',
   },
   {
     name: 'Restaurant & Gastro',
+    cfg: 'restaurant',
     intro: 'Signature-Tour mit Google-Business-Einbindung, Tag-/Nacht-Modus und QR-Code-Paket für Tisch und Schaufenster.',
     lines: ['ab CHF 2\'890.–'],
     note: 'Kleine Lokale: Basic-Tour ab CHF 990.–',
   },
   {
     name: 'Fitness',
+    cfg: 'fitness',
     intro: 'Signature-Tour mit Lead-Capture-Formular («Probetraining anfragen») und Google-Business-Einbindung.',
     lines: ['ab CHF 2\'890.–'],
   },
   {
     name: 'Banken, Versicherungen & Kanzleien – Filial-Staffel',
+    cfg: 'banken',
     intro: 'Signature-Tour im Corporate Design, ein Ansprechpartner für alle Standorte.',
     lines: [
       '1 Standort: CHF 2\'497.–',
       '3–4 Standorte: CHF 2\'247.– pro Standort (10%)',
-      '5–9 Standorte: CHF 1\'998.– pro Standort (20%)',
+      '5–9 Standorte: CHF 1\'873.– pro Standort (25%)',
       'ab 10 Standorten: CHF 1\'623.– pro Standort (35%)',
     ],
     note: 'Ab 20 Standorten Rahmenvertrag. Empfohlen mit Servicepaket pro Standort für laufende Aktualität und Betreuung.',
   },
   {
     name: 'Eventlocations & Showrooms',
+    cfg: 'events',
     intro: 'Signature-Tour mit Tag-/Nacht-Modus, Video-Hotspots und Social-Media-Clips.',
     lines: ['ab CHF 2\'990.–'],
     note: 'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'497.–',

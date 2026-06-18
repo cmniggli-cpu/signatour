@@ -427,7 +427,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     packageFeatures: [
       '1 Standort: CHF 2\'497.–',
       '3–4 Standorte: CHF 2\'247.– pro Standort (10%)',
-      '5–9 Standorte: CHF 1\'998.– pro Standort (20%)',
+      '5–9 Standorte: CHF 1\'873.– pro Standort (25%)',
       'ab 10 Standorten: CHF 1\'623.– pro Standort (35%)',
       'Signature-Tour im Corporate Design, ein Ansprechpartner für alle Standorte',
       'Diskreter Freigabeprozess vor Veröffentlichung',

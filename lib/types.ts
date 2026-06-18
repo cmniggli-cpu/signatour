@@ -75,6 +75,7 @@ export interface BranchenPackage {
   intro: string
   lines: string[]
   note?: string
+  cfg: string
 }
 
 export interface ServiceTier {

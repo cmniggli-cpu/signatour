@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Check, Star } from 'lucide-react'
-import Button from '@/components/ui/Button'
 import type { PricingTier } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
@@ -59,14 +58,15 @@ export default function PricingCard({ tier, showRange = false, index = 0 }: Pric
       </ul>
 
       <div className="mt-8">
-        <Button
-          href="/kontakt"
-          variant={tier.featured ? 'accent' : 'outline'}
-          size="md"
-          className="w-full"
+        <a
+          href="/konfigurator.html"
+          className={cn(
+            'inline-flex w-full items-center justify-center rounded-full px-7 py-3 text-sm font-semibold tracking-wide transition-colors',
+            tier.featured ? 'bg-accent-500 text-white hover:bg-accent-600' : 'bg-marine-900 text-accent-400 hover:bg-marine-800'
+          )}
         >
-          {tier.cta || 'Jetzt anfragen'}
-        </Button>
+          {tier.cta || 'Paket bestellen'}
+        </a>
       </div>
     </motion.div>
   )
