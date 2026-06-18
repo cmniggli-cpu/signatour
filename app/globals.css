@@ -363,8 +363,8 @@ body {
 /* ---- Niggli homepage: light / silver overrides (no black) ---- */
 .nigpage{--gd:#C8901C;--dk:#E9ECEF;--dk2:#FFFFFF;--dln:rgba(200,144,28,.32);--dlns:rgba(20,17,11,.10);--cream:#2a2620;--dmut:#6d6657}
 .nigpage .hero{color:var(--ink);background:linear-gradient(160deg,#F4F5F7 0%,#DCE0E5 100%)}
-.nigpage .hero .bg img{opacity:.14}
-.nigpage .hero .bg::after{background:linear-gradient(90deg,rgba(244,245,247,.90),rgba(244,245,247,.55) 60%,rgba(244,245,247,.30)),radial-gradient(60% 60% at 80% 10%,rgba(200,144,28,.12),transparent 60%)}
+.nigpage .hero .bg img{opacity:.32;filter:saturate(.92) contrast(1.02)}
+.nigpage .hero .bg::after{background:linear-gradient(90deg,rgba(244,245,247,.92),rgba(244,245,247,.62) 52%,rgba(244,245,247,.28)),radial-gradient(70% 75% at 82% 8%,rgba(200,144,28,.20),transparent 62%)}
 .nigpage .hero .lead{color:var(--ink2)}
 .nigpage .hero .phone{color:var(--ink)}
 .nigpage .dark .sec{color:var(--ink)}
@@ -409,8 +409,8 @@ body {
 /* ---- Branchenseiten im Startseiten-Look ---- */
 .nigpage .bhero{position:relative;overflow:hidden;background:linear-gradient(160deg,#F4F5F7 0%,#DCE0E5 100%);padding:150px 0 64px;text-align:center}
 .nigpage .bhero .bgimg{position:absolute;inset:0}
-.nigpage .bhero .bgimg img{width:100%;height:100%;object-fit:cover;opacity:.22}
-.nigpage .bhero .bgimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(244,245,247,.82) 0%,rgba(236,238,241,.72) 55%,rgba(244,245,247,.96) 100%),radial-gradient(70% 80% at 80% 0%,rgba(200,144,28,.14),transparent 60%)}
+.nigpage .bhero .bgimg img{width:100%;height:100%;object-fit:cover;opacity:.30;filter:saturate(.92) contrast(1.02)}
+.nigpage .bhero .bgimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(244,245,247,.80) 0%,rgba(236,238,241,.66) 52%,rgba(244,245,247,.95) 100%),radial-gradient(70% 80% at 82% 4%,rgba(200,144,28,.20),transparent 62%)}
 .nigpage .bhero .wrap{position:relative;z-index:1}
 .nigpage .bhero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4.8vw,56px);line-height:1.07;margin:14px auto 0;max-width:22ch;color:var(--ink)}
 .nigpage .bhero .sub{margin:16px auto 0;font-size:17px;max-width:58ch}
