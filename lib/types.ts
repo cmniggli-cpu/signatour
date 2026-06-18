@@ -72,6 +72,14 @@ export interface AddOn {
 
 export interface BranchenPackage {
   name: string
+  intro: string
+  lines: string[]
+  note?: string
+}
+
+export interface ServiceTier {
+  name: string
   price: string
-  description: string
+  features: string[]
+  recommended?: boolean
 }

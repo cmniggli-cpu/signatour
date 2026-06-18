@@ -1,4 +1,4 @@
-import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, AddOn, Stat, BranchenPackage } from './types'
+import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, AddOn, Stat, BranchenPackage, ServiceTier } from './types'
 
 export const SITE_NAME = 'Niggli 360° Signature Tours'
 export const SITE_URL = 'https://www.signatour.ch'
@@ -190,6 +190,11 @@ export const ADDONS: AddOn[] = [
     nutzen: 'Sommerterrasse, Weihnachtsstimmung, neue Bepflanzung – Ihre Tour bleibt aktuell und lebendig.',
   },
   {
+    name: 'Vier-Jahreszeiten-Terrasse',
+    price: 'CHF 1\'490.– / Jahr',
+    nutzen: 'Vier Shootings pro Jahr als umschaltbare Saisonszenen – der Aussenbereich bleibt ganzjährig aktuell.',
+  },
+  {
     name: 'Social-Media-Clip-Paket',
     price: 'CHF 390.– (3 Hochformat-Clips)',
     nutzen: 'Fertige Reels und Stories direkt aus Ihrer Tour – Content ohne eigenen Drehaufwand.',
@@ -222,12 +227,75 @@ export const ADDONS: AddOn[] = [
 ]
 
 export const BRANCHEN_PACKAGES: BranchenPackage[] = [
-  { name: 'Makler-Vorteilskarte Basic', price: 'CHF 1\'782', description: '2 Basic-Touren mit 10% Rabatt (CHF 891 pro Objekt, statt CHF 1\'980)' },
-  { name: 'Makler-Vorteilskarte Signature', price: 'CHF 3\'995', description: '2 Signature-Touren mit 20% Rabatt (statt CHF 4\'994)' },
-  { name: 'Makler-Vorteilskarte Pro', price: 'ab CHF 7\'195', description: '2 Pro-Touren mit 20% Rabatt (statt CHF 8\'994)' },
-  { name: 'Gastro-Paket', price: 'ab CHF 1\'690', description: 'Restaurant-Tour mit Menü-Hotspots & Google Maps Integration' },
-  { name: 'Hotel-Paket', price: 'ab CHF 2\'497', description: 'Zimmertypen, Spa, Restaurant, Lobby mit Buchungslink-Integration' },
-  { name: 'Fitness-Paket', price: 'ab CHF 1\'390', description: 'Trainingsbereich, Kursräume, Umkleiden mit Probetraining-Button' },
+  {
+    name: 'Immobilien – Signature-Vorteilskarten',
+    intro: 'Für Makler von Premium- und Luxusobjekten. Jede Tour in Signature-Qualität, voll im Corporate Design.',
+    lines: [
+      'Einzelobjekt: CHF 2\'497.– pro Objekt',
+      '5er-Vorteilskarte: CHF 9\'990.– (CHF 1\'998.– pro Objekt, rund 20% Vorteil)',
+      '10er-Vorteilskarte: CHF 16\'230.– (CHF 1\'623.– pro Objekt, 35% Vorteil)',
+    ],
+    note: 'Flexibel einsetzbar, kein Ablaufdatum. Inkl. 12 Monate Betreuungsservice pro Tour.',
+  },
+  {
+    name: 'Hotel & Resort',
+    intro: 'Signature-Tour mit Buchungslink-Hotspots, Mehrsprachigkeit (DE / FR / EN) und Google-Business-Einbindung.',
+    lines: ['ab CHF 3\'490.–'],
+    note: 'Grosse Häuser, Thermen und Resorts: Pro-Linie ab CHF 4\'497.–',
+  },
+  {
+    name: 'Spa & Wellness',
+    intro: 'Signature-Tour mit Audio-Guide und Tag-/Nacht-Modus für spürbare Atmosphäre.',
+    lines: ['ab CHF 3\'490.–'],
+    note: 'Optional erweiterbar mit der Vier-Jahreszeiten-Terrasse (siehe Add-ons).',
+  },
+  {
+    name: 'Restaurant & Gastro',
+    intro: 'Signature-Tour mit Google-Business-Einbindung, Tag-/Nacht-Modus und QR-Code-Paket für Tisch und Schaufenster.',
+    lines: ['ab CHF 2\'890.–'],
+    note: 'Kleine Lokale: Basic-Tour ab CHF 990.–',
+  },
+  {
+    name: 'Fitness',
+    intro: 'Signature-Tour mit Lead-Capture-Formular («Probetraining anfragen») und Google-Business-Einbindung.',
+    lines: ['ab CHF 2\'890.–'],
+  },
+  {
+    name: 'Banken, Versicherungen & Kanzleien – Filial-Staffel',
+    intro: 'Signature-Tour im Corporate Design, ein Ansprechpartner für alle Standorte.',
+    lines: [
+      '1 Standort: CHF 2\'497.–',
+      '3–4 Standorte: CHF 2\'247.– pro Standort (10%)',
+      '5–9 Standorte: CHF 2\'123.– pro Standort (15%)',
+      'ab 10 Standorten: individuelle Offerte / Rahmenvertrag',
+    ],
+    note: 'Empfohlen mit Servicepaket pro Standort für laufende Aktualität und Betreuung.',
+  },
+  {
+    name: 'Eventlocations & Showrooms',
+    intro: 'Signature-Tour mit Tag-/Nacht-Modus, Video-Hotspots und Social-Media-Clips.',
+    lines: ['ab CHF 2\'990.–'],
+    note: 'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'497.–',
+  },
+]
+
+export const SERVICE_TIERS: ServiceTier[] = [
+  {
+    name: 'Basic Service',
+    price: 'CHF 120.– / Jahr',
+    features: ['Betrieb & Sicherheit (Hosting)', 'SSL-Zertifikat & Backups', '1 kleine Anpassung pro Jahr', 'Besucherstatistik'],
+  },
+  {
+    name: 'Signature Care',
+    price: 'CHF 360.– / Jahr',
+    recommended: true,
+    features: ['Alles aus Basic Service', '3 Anpassungen pro Jahr', '1 jährliches Tour-Update', 'Einblicke ins Besucherverhalten', 'Priorität beim Support'],
+  },
+  {
+    name: 'Signature Evolution',
+    price: 'CHF 600.– / Jahr',
+    features: ['Alles aus Signature Care', '9 Anpassungen pro Jahr', '2 jährliche «Knowledge-Upgrades»', 'Performance-Optimierung', 'Quartalsweise Traffic-Reports'],
+  },
 ]
 
 export const COMPARISON_ROWS: ComparisonRow[] = [
@@ -264,7 +332,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     question: 'Was passiert, wenn wir renovieren?',
-    answer: 'Einzelne Bereiche können jederzeit aktualisiert werden (ab CHF 290). Perfekter Zeitpunkt: direkt nach der Renovation.',
+    answer: 'Einzelne Bereiche können jederzeit aktualisiert werden (ab CHF 180.– pro Szene). Perfekter Zeitpunkt: direkt nach der Renovation.',
   },
   {
     question: 'Für welche Branchen eignet sich ein 360-Grad-Rundgang?',
@@ -312,6 +380,18 @@ export const FAQ_COSTS: FAQ[] = [
     question: 'Wie läuft ein Shooting ab?',
     answer: 'Wir bringen eine professionelle 360-Grad-Kamera mit. 2–4 Stunden Shooting je nach Grösse, idealerweise ausserhalb der Öffnungszeiten. Saubere, aufgeräumte Räume genügen – wir kümmern uns um alles Weitere.',
   },
+  {
+    question: 'Wie läuft die Bezahlung?',
+    answer: 'Transparent und in zwei Schritten: 50% bei Auftragsbestätigung, 50% bei Freigabe der fertigen Tour. Bei grösseren Projekten ab CHF 5\'000.– vereinbaren wir Teilzahlungen (40% bei Bestätigung, 30% nach dem Shooting, 30% bei Freigabe). Die Tour geht online, sobald die Schlusszahlung erfolgt ist. Einmalpreis, kein Abo, keine versteckten Kosten.',
+  },
+  {
+    question: 'Wie funktioniert die Bezahlung der Vorteilskarte?',
+    answer: 'Die Vorteilskarte wird bei Kauf vollständig bezahlt – dafür erhalten Sie den vollen Mengenvorteil von bis zu 35%. Danach rufen Sie Ihre Touren flexibel ab, ohne weitere Rechnung pro Objekt und ohne festes Ablaufdatum. Jede Tour liefern wir im jeweils aktuellen Signature-Standard.',
+  },
+  {
+    question: 'Was passiert, wenn ich kein Servicepaket nehme?',
+    answer: 'Ihre Tour gehört Ihnen. In jedem Paket sind 12 Monate Betrieb inklusive. Danach haben Sie die Wahl: Mit einem Servicepaket übernehmen wir weiterhin Hosting, Updates und Auswertung. Oder Sie erhalten den vollständigen Output-Ordner Ihrer Tour auf einem USB-Stick und hosten sie selbst, ganz ohne laufende Kosten – eine einmalige Bereitstellungspauschale von CHF 150.– deckt Export und Übergabe. Der Stick enthält die fertige, lauffähige Tour zum Selbsthosten. Möchten Sie die Tour später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
+  },
 ]
 
 export const FAQ_TECH: FAQ[] = [
@@ -344,11 +424,11 @@ export const FAQ_DATA: FAQ[] = [
   },
   {
     question: 'Was passiert bei einer Renovation?',
-    answer: 'Teilbereiche können jederzeit aktualisiert werden (ab CHF 290). Die bestehende Tour bleibt online, kann Raum für Raum erneuert werden. Perfekter Zeitpunkt: direkt nach der Investition.',
+    answer: 'Teilbereiche können jederzeit aktualisiert werden (ab CHF 180.– pro Szene). Die bestehende Tour bleibt online, kann Raum für Raum erneuert werden. Perfekter Zeitpunkt: direkt nach der Investition.',
   },
   {
     question: 'Kann die Tour nachträglich geändert werden?',
-    answer: 'Ja. Hotspots, Texte, Links, Branding können jederzeit angepasst werden. Neue Panoramapunkte oder aktualisierte Bereiche ab CHF 290.',
+    answer: 'Ja. Hotspots, Texte, Links, Branding können jederzeit angepasst werden. Neue Panoramapunkte oder aktualisierte Bereiche ab CHF 180.– pro Szene.',
   },
   {
     question: 'Wem gehören die Daten und die Tour?',

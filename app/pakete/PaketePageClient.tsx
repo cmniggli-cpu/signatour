@@ -6,7 +6,7 @@ import PricingCard from '@/components/sections/PricingCard'
 import AnimatedSection, { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection'
 import Card from '@/components/ui/Card'
 import CTASection from '@/components/sections/CTASection'
-import { PRICING_TIERS, ADDONS, BRANCHEN_PACKAGES, INCLUDED_BENEFITS } from '@/lib/constants'
+import { PRICING_TIERS, ADDONS, BRANCHEN_PACKAGES, INCLUDED_BENEFITS, SERVICE_TIERS } from '@/lib/constants'
 
 export default function PaketePageClient() {
   return (
@@ -51,8 +51,16 @@ export default function PaketePageClient() {
               <StaggerItem key={pkg.name}>
                 <Card className="h-full bg-cream border-accent-200/70">
                   <h3 className="text-lg font-bold text-primary-900">{pkg.name}</h3>
-                  <div className="mt-2 text-3xl cd-serif text-accent-600">{pkg.price}</div>
-                  <p className="mt-2 text-sm text-gray-600">{pkg.description}</p>
+                  <p className="mt-2 text-sm text-primary-600 leading-relaxed">{pkg.intro}</p>
+                  <ul className="mt-4 space-y-2">
+                    {pkg.lines.map((line) => (
+                      <li key={line} className="flex items-start gap-2 text-sm text-primary-800">
+                        <Check className="w-4 h-4 text-accent-600 mt-0.5 shrink-0" />
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {pkg.note && <p className="mt-3 text-xs text-primary-500">{pkg.note}</p>}
                 </Card>
               </StaggerItem>
             ))}
@@ -133,6 +141,69 @@ export default function PaketePageClient() {
                   <Check className="w-5 h-5 text-success mt-0.5 shrink-0" />
                   <span className="text-gray-700 font-medium">{benefit}</span>
                 </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Ablauf */}
+      <section className="py-20 bg-section-gradient">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-14">
+            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Ablauf</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
+              So läuft die Zusammenarbeit
+            </h2>
+          </AnimatedSection>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { n: '1', t: 'Beratung & Offerte', d: 'Unverbindlich – wir klären Ziele, Räume und das passende Paket.' },
+              { n: '2', t: 'Bestätigung & Anzahlung', d: 'Auftragsbestätigung und 50% Anzahlung. Erst danach planen wir den Aufnahmetermin.' },
+              { n: '3', t: 'Shooting & Produktion', d: 'Aufnahme vor Ort und Produktion Ihrer Signature Tour.' },
+              { n: '4', t: 'Freigabe & Go-live', d: 'Freigabe und Schlusszahlung – danach geht Ihre Tour live.' },
+            ].map((step) => (
+              <StaggerItem key={step.n}>
+                <Card className="h-full bg-cream border-accent-200/70">
+                  <span className="cd-serif text-3xl text-accent-600 leading-none">{step.n}</span>
+                  <h3 className="mt-2 text-base font-bold text-primary-900">{step.t}</h3>
+                  <p className="mt-2 text-sm text-primary-600 leading-relaxed">{step.d}</p>
+                </Card>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Servicepakete */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-14">
+            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Betreuung & Weiterentwicklung</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
+              Jährliche Servicepakete
+            </h2>
+            <p className="mt-4 text-primary-500 max-w-2xl mx-auto">Optional und jederzeit kündbar – damit Ihre Tour aktuell, sicher und messbar bleibt.</p>
+          </AnimatedSection>
+
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {SERVICE_TIERS.map((tier) => (
+              <StaggerItem key={tier.name}>
+                <Card className={`h-full relative ${tier.recommended ? 'border-2 border-accent-500' : ''}`}>
+                  {tier.recommended && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center bg-accent-500 text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Empfohlen</span>
+                  )}
+                  <h3 className="text-lg font-bold text-primary-900">{tier.name}</h3>
+                  <div className="mt-2 text-2xl cd-serif text-accent-600">{tier.price}</div>
+                  <ul className="mt-5 space-y-2.5">
+                    {tier.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2 text-sm text-primary-700">
+                        <Check className="w-4 h-4 text-accent-600 mt-0.5 shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
               </StaggerItem>
             ))}
           </StaggerContainer>
