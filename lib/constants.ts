@@ -266,10 +266,10 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
     lines: [
       '1 Standort: CHF 2\'497.–',
       '3–4 Standorte: CHF 2\'247.– pro Standort (10%)',
-      '5–9 Standorte: CHF 2\'123.– pro Standort (15%)',
-      'ab 10 Standorten: individuelle Offerte / Rahmenvertrag',
+      '5–9 Standorte: CHF 1\'998.– pro Standort (20%)',
+      'ab 10 Standorten: CHF 1\'623.– pro Standort (35%)',
     ],
-    note: 'Empfohlen mit Servicepaket pro Standort für laufende Aktualität und Betreuung.',
+    note: 'Ab 20 Standorten Rahmenvertrag. Empfohlen mit Servicepaket pro Standort für laufende Aktualität und Betreuung.',
   },
   {
     name: 'Eventlocations & Showrooms',
