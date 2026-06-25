@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Mail, Phone, MapPin } from 'lucide-react'
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS, CONTACT_UID } from '@/lib/constants'
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS } from '@/lib/constants'
 
 export default function Footer() {
   return (
@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-400">
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
-                <span>{CONTACT_ADDRESS}<br />UID: {CONTACT_UID}</span>
+                <span>{CONTACT_ADDRESS}</span>
               </li>
               <li className="text-xs text-primary-500">Beratung auf Deutsch & Französisch · Aufträge auch auf Englisch</li>
             </ul>
