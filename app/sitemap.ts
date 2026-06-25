@@ -18,9 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/branchen/eventlocations', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/ueber-uns', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
-    { path: '/impressum', priority: 0.2, changeFrequency: 'yearly' },
-    { path: '/datenschutz', priority: 0.2, changeFrequency: 'yearly' },
-    { path: '/agb', priority: 0.2, changeFrequency: 'yearly' },
+    // Rechtsseiten (/impressum, /datenschutz, /agb) sind bewusst auf noindex
+    // und daher nicht in der Sitemap.
   ]
 
   return routes.map((route) => ({

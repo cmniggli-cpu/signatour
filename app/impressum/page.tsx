@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import LegalPage from '@/components/sections/LegalPage'
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS } from '@/lib/constants'
 
-export const metadata: Metadata = { title: 'Impressum' }
+export const metadata: Metadata = { title: 'Impressum', robots: { index: false, follow: true } }
 const TEL = CONTACT_PHONE.replace(/[^+\d]/g, '')
 
 export default function ImpressumPage() {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import LegalPage from '@/components/sections/LegalPage'
 
-export const metadata: Metadata = { title: 'AGB' }
+export const metadata: Metadata = { title: 'AGB', robots: { index: false, follow: true } }
 
 export default function AgbPage() {
   return (

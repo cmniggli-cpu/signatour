@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import LegalPage from '@/components/sections/LegalPage'
 import { CONTACT_EMAIL, CONTACT_ADDRESS } from '@/lib/constants'
 
-export const metadata: Metadata = { title: 'Datenschutz' }
+export const metadata: Metadata = { title: 'Datenschutz', robots: { index: false, follow: true } }
 
 export default function DatenschutzPage() {
   return (
