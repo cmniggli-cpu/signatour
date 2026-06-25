@@ -29,23 +29,23 @@ const bg = `
   <rect x="24" y="24" width="${W - 48}" height="${H - 48}" rx="14"
         fill="none" stroke="#C89630" stroke-opacity="0.45" stroke-width="2"/>
 
-  <!-- Textblock rechts neben dem Logo -->
-  <text x="472" y="228" font-family="Georgia, 'Times New Roman', serif" font-size="27"
-        fill="#E5C080" letter-spacing="4">NIGGLI · 360° SIGNATURE TOURS</text>
+  <!-- Textblock rechts neben dem Logo (vertikal zentriert wie das Logo) -->
+  <text x="472" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="27"
+        fill="#E5C080" letter-spacing="4">VIRTUELLE 360°-ERLEBNISSE</text>
 
-  <text x="468" y="318" font-family="Georgia, 'Times New Roman', serif" font-size="74"
+  <text x="468" y="258" font-family="Georgia, 'Times New Roman', serif" font-size="74"
         font-weight="700" fill="#F7F5F0">360°-Touren,</text>
-  <text x="468" y="402" font-family="Georgia, 'Times New Roman', serif" font-size="74"
+  <text x="468" y="342" font-family="Georgia, 'Times New Roman', serif" font-size="74"
         font-weight="700" font-style="italic" fill="#D4A550">die verkaufen.</text>
 
-  <text x="470" y="468" font-family="Arial, Helvetica, sans-serif" font-size="25"
+  <text x="470" y="408" font-family="Arial, Helvetica, sans-serif" font-size="25"
         fill="#B8C2CE">Premium-Rundgänge für Hotels, Spa, Gastro &amp; Immobilien.</text>
 
   <!-- Gold-Akzentlinie -->
-  <rect x="472" y="498" width="64" height="3" fill="#C89630"/>
+  <rect x="472" y="438" width="64" height="3" fill="#C89630"/>
 
-  <text x="472" y="542" font-family="Arial, Helvetica, sans-serif" font-size="24"
-        fill="#E5C080" letter-spacing="1">Schweizer Anbieter · Einmalpreis statt Abo</text>
+  <text x="472" y="482" font-family="Arial, Helvetica, sans-serif" font-size="24"
+        fill="#E5C080" letter-spacing="1">Schweizer Qualität · Mehr qualifizierte Anfragen</text>
 </svg>`
 
 const logoSize = 360
