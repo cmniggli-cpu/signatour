@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { Search, X } from 'lucide-react'
 import { SEARCH_INDEX, type SearchEntry } from '@/lib/search-data'
+import { useDictionary, localizedHref } from '@/lib/i18n/client'
 
 function scoreEntry(entry: SearchEntry, tokens: string[]): number {
   const title = entry.title.toLowerCase()
@@ -22,6 +23,7 @@ export default function SiteSearch() {
   const [query, setQuery] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
+  const { locale, t } = useDictionary()
 
   const results = useMemo(() => {
     const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean)
@@ -59,7 +61,7 @@ export default function SiteSearch() {
 
   const go = (href: string) => {
     setOpen(false)
-    if (href.startsWith('/') && !href.endsWith('.html')) router.push(href)
+    if (href.startsWith('/') && !href.endsWith('.html')) router.push(localizedHref(href, locale))
     else window.location.href = href
   }
 
@@ -68,15 +70,15 @@ export default function SiteSearch() {
       {/* Trigger: Pill auf Desktop, Icon auf Mobile */}
       <button
         onClick={() => setOpen(true)}
-        aria-label="Website durchsuchen"
+        aria-label={t.search.ariaSearch}
         className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full border border-primary-200 text-sm text-primary-500 hover:border-accent-500 hover:text-accent-600 transition-colors min-w-[180px]"
       >
         <Search className="w-4 h-4" />
-        <span>Suchen…</span>
+        <span>{t.search.triggerLabel}</span>
       </button>
       <button
         onClick={() => setOpen(true)}
-        aria-label="Website durchsuchen"
+        aria-label={t.search.ariaSearch}
         className="lg:hidden p-2 rounded-full text-primary-900 hover:bg-primary-100 transition-colors"
       >
         <Search className="w-5 h-5" />
@@ -99,22 +101,22 @@ export default function SiteSearch() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter' && results[0]) go(results[0].href) }}
-                placeholder="Die ganze Website durchsuchen…"
+                placeholder={t.search.placeholderLong}
                 className="flex-1 bg-transparent outline-none text-primary-900 placeholder:text-primary-400 text-base"
               />
-              <button onClick={() => setOpen(false)} aria-label="Schliessen" className="p-1 text-primary-400 hover:text-primary-700">
+              <button onClick={() => setOpen(false)} aria-label={t.search.ariaClose} className="p-1 text-primary-400 hover:text-primary-700">
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             <div className="max-h-[60vh] overflow-y-auto">
               {query.trim() === '' && (
-                <p className="px-5 py-6 text-sm text-primary-400">Suchen Sie nach Branchen, Preisen, Themen … z.B. «Hotel», «Preis», «Datenschutz».</p>
+                <p className="px-5 py-6 text-sm text-primary-400">{t.search.emptyHint}</p>
               )}
               {query.trim() !== '' && results.length === 0 && (
                 <div className="px-5 py-6 text-sm text-primary-500">
-                  Keine Treffer für «{query}».{' '}
-                  <a href="/kontakt" onClick={() => setOpen(false)} className="text-accent-600 underline">Fragen Sie uns direkt →</a>
+                  {t.search.noResultsBefore} «{query}».{' '}
+                  <a href={localizedHref('/kontakt', locale)} onClick={() => setOpen(false)} className="text-accent-600 underline">{t.search.askUs}</a>
                 </div>
               )}
               {results.map((r) => (

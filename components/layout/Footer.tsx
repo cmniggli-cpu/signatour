@@ -1,14 +1,36 @@
 import Link from 'next/link'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS } from '@/lib/constants'
+import { getDictionary } from '@/lib/i18n/server'
+import { localizedHref } from '@/lib/i18n/config'
 
-export default function Footer() {
+export default async function Footer() {
+  const { locale, t } = await getDictionary()
+  const loc = (href: string) => localizedHref(href, locale)
+
+  const branchen = [
+    { label: t.branchenLabels.hotel, href: '/branchen/hotel' },
+    { label: t.branchenLabels.restaurant, href: '/branchen/restaurant' },
+    { label: t.branchenLabels.spa, href: '/branchen/spa-wellness' },
+    { label: t.branchenLabels.fitness, href: '/branchen/fitnessstudio' },
+    { label: t.branchenLabels.immobilien, href: '/branchen/immobilien' },
+    { label: t.branchenLabels.banken, href: '/branchen/banken-versicherungen' },
+    { label: t.branchenLabels.events, href: '/branchen/eventlocations' },
+  ]
+
+  const info = [
+    { label: t.footer.linkPakete, href: '/pakete' },
+    { label: t.footer.linkUeberUns, href: '/ueber-uns' },
+    { label: t.footer.linkFaq, href: '/faq' },
+    { label: t.footer.linkKontakt, href: '/kontakt' },
+  ]
+
   return (
     <footer className="bg-marine-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <Link href="/" className="inline-flex items-center gap-2.5">
+            <Link href={loc('/')} className="inline-flex items-center gap-2.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/niggli-logo.png" alt="Niggli 360 Signature Tours" className="w-14 h-14" />
               <span className="flex flex-col leading-none">
@@ -17,52 +39,39 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-5 text-primary-400 text-sm leading-relaxed">
-              Wir verwandeln Räume in digitale Verkaufserlebnisse – damit aus Besuchern Kunden werden.
+              {t.footer.tagline}
             </p>
             <ul className="mt-5 space-y-1.5 text-xs text-primary-500">
-              <li>✓ Schweizer Anbieter, persönlicher Ansprechpartner</li>
-              <li>✓ Einmalpreis – kein Abo, keine Vertragsbindung</li>
-              <li>✓ DSGVO-konformes Hosting in CH/EU</li>
+              <li>✓ {t.footer.bullet1}</li>
+              <li>✓ {t.footer.bullet2}</li>
+              <li>✓ {t.footer.bullet3}</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">Branchen</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">{t.footer.branchenTitle}</h3>
             <ul className="space-y-3">
-              {[
-                { label: 'Hotels', href: '/branchen/hotel' },
-                { label: 'Restaurants', href: '/branchen/restaurant' },
-                { label: 'Spa & Wellness', href: '/branchen/spa-wellness' },
-                { label: 'Fitnessstudios', href: '/branchen/fitnessstudio' },
-                { label: 'Immobilien', href: '/branchen/immobilien' },
-                { label: 'Banken & Kanzleien', href: '/branchen/banken-versicherungen' },
-                { label: 'Eventlocations & Showrooms', href: '/branchen/eventlocations' },
-              ].map((link) => (
+              {branchen.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-primary-400 hover:text-white transition-colors text-sm">{link.label}</Link>
+                  <Link href={loc(link.href)} className="text-primary-400 hover:text-white transition-colors text-sm">{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">Informationen</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">{t.footer.infoTitle}</h3>
             <ul className="space-y-3">
-              {[
-                { label: 'Pakete & Preise', href: '/pakete' },
-                { label: 'Über uns', href: '/ueber-uns' },
-                { label: 'FAQ', href: '/faq' },
-                { label: 'Kontakt', href: '/kontakt' },
-              ].map((link) => (
+              {info.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-primary-400 hover:text-white transition-colors text-sm">{link.label}</Link>
+                  <Link href={loc(link.href)} className="text-primary-400 hover:text-white transition-colors text-sm">{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">Kontakt</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-widest text-primary-300 mb-5">{t.footer.kontaktTitle}</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-primary-400">
                 <Phone className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
@@ -76,17 +85,17 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
                 <span>{CONTACT_ADDRESS}</span>
               </li>
-              <li className="text-xs text-primary-500">Beratung auf Deutsch & Französisch · Aufträge auch auf Englisch</li>
+              <li className="text-xs text-primary-500">{t.footer.languages}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-500">© {new Date().getFullYear()} Niggli – 360° Signature Tours. Alle Rechte vorbehalten.</p>
+          <p className="text-sm text-primary-500">© {new Date().getFullYear()} Niggli – 360° Signature Tours. {t.footer.rights}</p>
           <div className="flex gap-8 text-sm text-primary-500">
-            <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
-            <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
-            <Link href="/agb" className="hover:text-white transition-colors">AGB</Link>
+            <Link href={loc('/impressum')} className="hover:text-white transition-colors">{t.footer.impressum}</Link>
+            <Link href={loc('/datenschutz')} className="hover:text-white transition-colors">{t.footer.datenschutz}</Link>
+            <Link href={loc('/agb')} className="hover:text-white transition-colors">{t.footer.agb}</Link>
           </div>
         </div>
       </div>

@@ -1,44 +1,61 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { headers } from 'next/headers'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
+import { defaultLocale, isLocale, localeHtml, localeOg, stripLocale, type Locale } from '@/lib/i18n/config'
+import { buildAlternates } from '@/lib/i18n/seo'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-export const metadata: Metadata = {
-  title: {
-    default: `360°-Touren, die verkaufen – Hotels, Spa, Gastro & Immobilien | ${SITE_NAME}`,
-    template: `%s | ${SITE_NAME}`,
-  },
-  description: SITE_DESCRIPTION,
-  metadataBase: new URL(SITE_URL),
-  verification: {
-    google: 'rFUfyoAdrSXUBMgwPDBZiswiultn5Wt40t7Bvs2Kji0',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'de_CH',
-    url: SITE_URL,
-    siteName: SITE_NAME,
-    title: `360°-Touren, die verkaufen – Hotels, Spa, Gastro & Immobilien | ${SITE_NAME}`,
+async function requestLocaleAndPath(): Promise<{ locale: Locale; basePath: string }> {
+  const h = await headers()
+  const value = h.get('x-locale')
+  const locale = isLocale(value) ? value : defaultLocale
+  const pathname = h.get('x-pathname') || '/'
+  return { locale, basePath: stripLocale(pathname) }
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { locale, basePath } = await requestLocaleAndPath()
+  const title = `360°-Touren, die verkaufen – Hotels, Spa, Gastro & Immobilien | ${SITE_NAME}`
+
+  return {
+    title: {
+      default: title,
+      template: `%s | ${SITE_NAME}`,
+    },
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: `${SITE_NAME} – 360°-Touren, die verkaufen`,
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `360°-Touren, die verkaufen – Hotels, Spa, Gastro & Immobilien | ${SITE_NAME}`,
-    description: SITE_DESCRIPTION,
-    images: ['/og-image.jpg'],
-  },
+    metadataBase: new URL(SITE_URL),
+    alternates: buildAlternates(basePath, locale),
+    verification: {
+      google: 'rFUfyoAdrSXUBMgwPDBZiswiultn5Wt40t7Bvs2Kji0',
+    },
+    openGraph: {
+      type: 'website',
+      locale: localeOg[locale],
+      url: `${SITE_URL}${basePath === '/' ? '' : basePath}`,
+      siteName: SITE_NAME,
+      title,
+      description: SITE_DESCRIPTION,
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${SITE_NAME} – 360°-Touren, die verkaufen`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: SITE_DESCRIPTION,
+      images: ['/og-image.jpg'],
+    },
+  }
 }
 
 const TEL_E164 = CONTACT_PHONE.replace(/[^+\d]/g, '')
@@ -117,9 +134,10 @@ const BUSINESS_JSONLD = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const { locale } = await requestLocaleAndPath()
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang={localeHtml[locale]} className={inter.variable}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

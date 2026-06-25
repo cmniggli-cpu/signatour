@@ -6,8 +6,8 @@ import { usePathname } from 'next/navigation'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { NAV_ITEMS } from '@/lib/constants'
 import Button from '@/components/ui/Button'
+import { useDictionary, localizedHref } from '@/lib/i18n/client'
 
 interface MobileMenuProps {
   open: boolean
@@ -17,6 +17,28 @@ interface MobileMenuProps {
 export default function MobileMenu({ open, onClose }: MobileMenuProps) {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
   const pathname = usePathname()
+  const { locale, t } = useDictionary()
+  const loc = (href: string) => localizedHref(href, locale)
+
+  const navItems = [
+    { label: t.nav.home, href: '/' },
+    {
+      label: t.nav.branchen,
+      href: '#',
+      children: [
+        { label: t.branchenLabels.hotel, href: '/branchen/hotel' },
+        { label: t.branchenLabels.restaurant, href: '/branchen/restaurant' },
+        { label: t.branchenLabels.spa, href: '/branchen/spa-wellness' },
+        { label: t.branchenLabels.fitness, href: '/branchen/fitnessstudio' },
+        { label: t.branchenLabels.immobilien, href: '/branchen/immobilien' },
+        { label: t.branchenLabels.banken, href: '/branchen/banken-versicherungen' },
+        { label: t.branchenLabels.events, href: '/branchen/eventlocations' },
+      ],
+    },
+    { label: t.nav.pakete, href: '/pakete' },
+    { label: t.nav.ueberUns, href: '/ueber-uns' },
+    { label: t.nav.faq, href: '/faq' },
+  ]
 
   return (
     <AnimatePresence>
@@ -38,7 +60,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           >
             <div className="p-6 pt-20">
               <nav className="space-y-1">
-                {NAV_ITEMS.map((item) => (
+                {navItems.map((item) => (
                   <div key={item.label}>
                     {item.children ? (
                       <>
@@ -67,11 +89,11 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                                 {item.children.map((child) => (
                                   <Link
                                     key={child.href}
-                                    href={child.href}
+                                    href={loc(child.href)}
                                     onClick={onClose}
                                     className={cn(
                                       'block px-4 py-2.5 text-sm text-primary-500 hover:text-primary-900 hover:bg-white rounded-xl transition-colors',
-                                      pathname === child.href && 'text-primary-900 bg-white font-medium'
+                                      pathname === loc(child.href) && 'text-primary-900 bg-white font-medium'
                                     )}
                                   >
                                     {child.label}
@@ -84,11 +106,11 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                       </>
                     ) : (
                       <Link
-                        href={item.href}
+                        href={loc(item.href)}
                         onClick={onClose}
                         className={cn(
                           'block px-4 py-3 font-medium text-sm text-primary-700 hover:text-primary-900 hover:bg-white rounded-xl transition-colors',
-                          pathname === item.href && 'text-primary-900 bg-white'
+                          pathname === loc(item.href) && 'text-primary-900 bg-white'
                         )}
                       >
                         {item.label}
@@ -98,8 +120,8 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                 ))}
               </nav>
               <div className="mt-8 px-4">
-                <Button href="/kontakt" variant="primary" size="md" className="w-full">
-                  Kostenlose Beratung
+                <Button href={loc('/kontakt')} variant="primary" size="md" className="w-full">
+                  {t.nav.beratungCta}
                 </Button>
               </div>
             </div>
