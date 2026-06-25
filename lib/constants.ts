@@ -6,6 +6,7 @@ export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserleb
 export const CONTACT_EMAIL = 'info@signatour.ch'
 export const CONTACT_PHONE = '+41 76 652 17 37'
 export const CONTACT_ADDRESS = 'Rue de l\'Industrie 43, 2720 Tramelan'
+export const CONTACT_UID = 'CHE-368.437.989'
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
