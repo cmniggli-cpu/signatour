@@ -2,7 +2,14 @@ import type { Metadata } from 'next'
 import { CONTACT_PHONE } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'de-CH': '/',
+      'fr-CH': '/fr',
+      'x-default': '/',
+    },
+  },
 }
 
 const TEL = CONTACT_PHONE.replace(/[^+\d]/g, '')
@@ -86,6 +93,11 @@ export default function HomePage() {
           <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1900&q=80&auto=format&fit=crop" alt="Hotel-Pool als 360°-Verkaufserlebnis – Beispiel einer Signature Tour" fetchPriority="high" />
         </div>
         <div className="wrap inner">
+          <p style={{ marginBottom: 16, fontSize: 13, letterSpacing: '0.08em', color: 'var(--g)' }}>
+            <span style={{ fontWeight: 600 }}>Deutsch</span>
+            <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
+            <a href="/fr" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.7 }}>Français</a>
+          </p>
           <h1 className="serif">Ihre Räume werden zum <em>besten Verkäufer</em> – rund um die Uhr.</h1>
           <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
             Wir verwandeln Ihre Räumlichkeiten in ein digitales Verkaufserlebnis: Besucher erleben Ihr Angebot, bauen Vertrauen auf und buchen, kaufen oder fragen direkt in der Tour an – noch bevor das erste Gespräch stattfindet.</p>
