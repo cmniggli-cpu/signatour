@@ -48,7 +48,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
             <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung <span className="arrow">→</span></a>
             <a className="btn btn-ghost" href="#paket">Paket & Preis ansehen</a>
           </div>
-          <p className="herotrust">Unverbindlich · Antwort innert 24 Stunden · Einmalpreis, kein Abo</p>
+          <p className="herotrust">Unverbindlich · Antwort innert 24 Stunden · Die Tour gehört Ihnen, kein Abo</p>
         </div>
       </section>
 
@@ -191,7 +191,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
             <div className="ribbon">Empfohlen</div>
             <h3>{data.packageName}</h3>
             <div className="price">{data.packagePrice}</div>
-            <div className="note">einmalig · kein Abo, keine Vertragsbindung</div>
+            <div className="note">einmalig · die Tour gehört Ihnen, kein Abo</div>
             <ul>
               {data.packageFeatures.map((f) => (
                 <li key={f}><Check size={18} /> {f}</li>

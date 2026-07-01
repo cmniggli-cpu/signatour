@@ -2,7 +2,7 @@ import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, Ad
 
 export const SITE_NAME = 'Niggli 360° Signature Tours'
 export const SITE_URL = 'https://www.signatour.ch'
-export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter, einmalige Investition, kein Abo.'
+export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter – die Tour gehört Ihnen, kein Abo.'
 export const CONTACT_EMAIL = 'info@signatour.ch'
 export const CONTACT_PHONE = '+41 76 652 17 37'
 export const CONTACT_ADDRESS = 'Rue de l\'Industrie 43, 2720 Tramelan'
@@ -70,10 +70,10 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ]
 
 export const BENEFITS: Benefit[] = [
-  { icon: 'BadgeCheck', title: 'Kein Abo, kein Vertrag', description: 'Einmalpreis. Keine monatlichen Kosten. Keine Überraschungen.' },
+  { icon: 'BadgeCheck', title: 'Kein Abo, kein Vertrag', description: 'Die Tour gehört Ihnen – Einmalpreis statt Plattform-Miete. Ein Servicepaket ist optional.' },
   { icon: 'Handshake', title: 'Alles aus einer Hand', description: 'Von der Beratung bis zum Hosting. Nichts installieren, kaufen oder lernen.' },
   { icon: 'Shield', title: 'DSGVO-konform', description: 'Schweizer/EU-Hosting, Aufnahmen ohne Personen, AVV inklusive.' },
-  { icon: 'Database', title: 'Datenhoheit beim Kunden', description: 'Kein Vendor Lock-in. Selbst-Hosting jederzeit möglich.' },
+  { icon: 'Database', title: 'Datenhoheit beim Kunden', description: 'Die Tour gehört Ihnen – kein Vendor Lock-in, keine Plattform-Abhängigkeit.' },
   { icon: 'MapPin', title: 'Google Business Integration', description: '2× mehr Profilaufrufe mit 360-Grad-Inhalten.' },
   { icon: 'User', title: 'Persönlicher Ansprechpartner', description: 'Ein Kontakt, kein Callcenter – Deutsch, Französisch oder Englisch.' },
 ]
@@ -351,7 +351,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Ab CHF 990 für das Basic-Paket (bis 15 Panoramen). Kein Abo, keine versteckten Kosten. 12 Monate Hosting und Service inklusive.',
+    answer: 'Ab CHF 990 für das Basic-Paket (bis 15 Panoramen). Die Tour gehört Ihnen – kein Abo. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
   },
   {
     question: 'Wie lange dauert die Erstellung?',
@@ -401,11 +401,11 @@ export const FAQ_GENERAL: FAQ[] = [
 export const FAQ_COSTS: FAQ[] = [
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 60 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise, keine Abos, keine versteckten Kosten. 12 Monate Hosting und Service inklusive.',
+    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 60 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise statt Abo – die Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
   },
   {
     question: 'Gibt es versteckte Kosten?',
-    answer: 'Nein. Transparente Einmalpreise. Shooting, Nachbearbeitung, Hosting und Einbettungscode – alles inklusive. Optionale Extras (Drohne, Street View, Express) sind klar ausgewiesen.',
+    answer: 'Nein. Der einmalige Paketpreis deckt Shooting, Nachbearbeitung, Hosting und Einbettungscode ab – die Tour gehört Ihnen. 12 Monate Service sind enthalten, danach optional ab CHF 120.–/Jahr. Optionale Extras (Drohne, Street View, Express) sind klar ausgewiesen.',
   },
   {
     question: 'Wie lange dauert die Erstellung?',
@@ -417,7 +417,7 @@ export const FAQ_COSTS: FAQ[] = [
   },
   {
     question: 'Wie läuft die Bezahlung?',
-    answer: 'Transparent und in zwei Schritten: 50% bei Auftragsbestätigung, 50% bei Freigabe der fertigen Tour. Bei grösseren Projekten ab CHF 5\'000.– vereinbaren wir Teilzahlungen (40% bei Bestätigung, 30% nach dem Shooting, 30% bei Freigabe). Die Tour geht online, sobald die Schlusszahlung erfolgt ist. Einmalpreis, kein Abo, keine versteckten Kosten.',
+    answer: 'Transparent und in zwei Schritten: 50% bei Auftragsbestätigung, 50% bei Freigabe der fertigen Tour. Bei grösseren Projekten ab CHF 5\'000.– vereinbaren wir Teilzahlungen (40% bei Bestätigung, 30% nach dem Shooting, 30% bei Freigabe). Die Tour geht online, sobald die Schlusszahlung erfolgt ist. Einmalpreis, kein Abo – die Tour gehört Ihnen; ein Servicepaket ist danach optional (ab CHF 120.–/Jahr).',
   },
   {
     question: 'Wie funktioniert die Bezahlung der Vorteilskarte?',
@@ -425,7 +425,7 @@ export const FAQ_COSTS: FAQ[] = [
   },
   {
     question: 'Was passiert, wenn ich kein Servicepaket nehme?',
-    answer: 'Ihre Tour gehört Ihnen. In jedem Paket sind 12 Monate Betrieb inklusive. Danach haben Sie die Wahl: Mit einem Servicepaket übernehmen wir weiterhin Hosting, Updates und Auswertung. Oder Sie erhalten den vollständigen Output-Ordner Ihrer Tour auf einem USB-Stick und hosten sie selbst, ganz ohne laufende Kosten – eine einmalige Bereitstellungspauschale von CHF 150.– deckt Export und Übergabe. Der Stick enthält die fertige, lauffähige Tour zum Selbsthosten. Möchten Sie die Tour später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
+    answer: 'Ihre Tour gehört Ihnen. In jedem Paket sind 12 Monate Betrieb des gehosteten Viewer- und Embed-Links inklusive. Danach hält ein optionales Servicepaket ab CHF 120.–/Jahr Ihre Tour online – inklusive Hosting, Updates und Auswertung. Ohne Servicepaket bleibt die Tour nicht automatisch online; für Sonderfälle finden wir gemeinsam eine individuelle Lösung. Möchten Sie die Tour später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
   },
 ]
 
@@ -448,7 +448,7 @@ export const FAQ_TECH: FAQ[] = [
   },
   {
     question: 'Was passiert nach Ablauf des Hostings?',
-    answer: 'Nach den inkludierten 12 Monaten kann das Servicepaket verlängert werden (ab CHF 120/Jahr) oder Sie exportieren die Tour-Dateien und hosten selbst. Kein Vendor Lock-in.',
+    answer: 'Nach den inkludierten 12 Monaten verlängern Sie das Servicepaket (ab CHF 120.–/Jahr), und Ihre Tour bleibt ohne Aufwand online. Die Tour gehört Ihnen – kein Vendor Lock-in; eine Übergabe zum Selbsthosten ist im Ausnahmefall möglich.',
   },
 ]
 
@@ -467,7 +467,7 @@ export const FAQ_DATA: FAQ[] = [
   },
   {
     question: 'Wem gehören die Daten und die Tour?',
-    answer: 'Ihnen. Kein Vendor Lock-in. Dateien jederzeit exportierbar, Selbst-Hosting möglich. Partnerschaft basiert auf Qualität, nicht auf Abhängigkeit.',
+    answer: 'Ihnen. Die Tour gehört Ihnen – kein Vendor Lock-in. Wir hosten sie für Sie (12 Monate inklusive, danach optional ab CHF 120.–/Jahr); eine Übergabe zum Selbsthosten ist im Ausnahmefall möglich. Partnerschaft basiert auf Qualität, nicht auf Abhängigkeit.',
   },
 ]
 
@@ -504,7 +504,7 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
   { feature: 'Preismodell', signatour: 'ab CHF 990 einmalig', matterport: '$69/Monat + USD 5\'400 Kamera', ogulo: '', signatourWins: true },
   { feature: 'Kamera nötig', signatour: 'Nein – wir bringen alles mit', matterport: 'Ja – Pro3 (USD 5\'400)', ogulo: '' },
   { feature: 'Vertragsbindung', signatour: 'Keine', matterport: 'Jährliche Abrechnung', ogulo: '', signatourWins: true },
-  { feature: 'Versteckte Kosten', signatour: 'Keine – alles inklusive', matterport: 'Grundrisse $15–50, Exporte $49–150', ogulo: '', signatourWins: true },
+  { feature: 'Versteckte Kosten', signatour: 'Keine – im Paketpreis enthalten', matterport: 'Grundrisse $15–50, Exporte $49–150', ogulo: '', signatourWins: true },
   { feature: 'Support', signatour: 'Persönlich & lokal – DE, FR & EN', matterport: 'Englisch (Trustpilot 1.4/5)', ogulo: '', signatourWins: true },
   { feature: 'Datenhoheit', signatour: 'Beim Kunden – kein Lock-in', matterport: 'Vendor Lock-in – Kündigung = Datenverlust', ogulo: '', signatourWins: true },
   { feature: 'DSGVO', signatour: 'CH/EU Hosting ✓', matterport: 'US-Cloud ✗', ogulo: '', signatourWins: true },
@@ -516,7 +516,7 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
 export const UEBER_UNS_REASONS = [
   { title: 'Done-for-You statt DIY', description: 'Wir kommen, fotografieren und liefern. Null Aufwand für Sie.' },
   { title: 'Persönlich statt Callcenter', description: 'Ein Ansprechpartner, keine Tickets – auf Deutsch, Französisch oder Englisch.' },
-  { title: 'Transparent statt versteckt', description: 'Einmalpreis, kein Abo, keine versteckten Kosten.' },
+  { title: 'Transparent statt versteckt', description: 'Einmalpreis, kein Abo – die Tour gehört Ihnen, keine Plattform-Miete.' },
   { title: 'Lokal statt US-Cloud', description: 'Schweizer/EU-Server, DSGVO-konform.' },
   { title: 'Multi-Branche statt nur Immobilien', description: 'Hotels, Restaurants, Spas, Fitness, Immobilien.' },
   { title: 'Flexibel statt Langzeitvertrag', description: 'Keine Mindestlaufzeit, keine Kündigungsfrist.' },

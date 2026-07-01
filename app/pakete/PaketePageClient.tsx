@@ -19,7 +19,7 @@ export default function PaketePageClient() {
       <PageHero
         badge="Transparent & fair"
         title="Transparente Preise. Keine Überraschungen."
-        subtitle="Einmalpreis pro Tour. Kein Abo. Kein Vertrag. Keine versteckten Kosten."
+        subtitle="Einmalpreis pro Tour, kein Abo – die Tour gehört Ihnen. Kein Vertrag, keine Plattform-Miete."
       />
 
       {/* Pricing Cards */}

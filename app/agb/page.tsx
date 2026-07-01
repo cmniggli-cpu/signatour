@@ -21,27 +21,30 @@ export default function AgbPage() {
       <h2>4. Hosting und Service</h2>
       <p>Für das Hosting der produzierten VR-Touren fallen jährliche Service- und Hostinggebühren an. Die genauen Konditionen ergeben sich aus dem aktuellen Preisblatt. Der Auftraggeber kann alternativ den Output-Ordner erhalten und das Hosting selbst übernehmen.</p>
 
-      <h2>5. Haftung</h2>
+      <h2>5. Abnahme und Rückmeldefrist</h2>
+      <p>Der Kunde hat ab Zusendung des Viewer-Links 14 Kalendertage Zeit, den ersten Entwurf zu prüfen und Korrekturwünsche mitzuteilen. Als Rückmeldung gelten ausschliesslich konkrete, schriftliche Korrekturwünsche. Blosse Vertröstungen oder Ankündigungen halten die Frist weder an noch setzen sie sie neu in Gang. Erfolgt innert Frist keine Rückmeldung, gilt der Entwurf als abgenommen und die Schlussrechnung wird fällig (Abnahme-Fiktion gemäss OR Art. 370).</p>
+
+      <h2>6. Haftung</h2>
       <p>Der Auftragnehmer haftet nur für Schäden, die durch grobe Fahrlässigkeit oder Vorsatz entstehen. Bei höherer Gewalt, technischen Störungen oder unvorhersehbaren Ereignissen entfällt die Haftung.</p>
       <p>Für Schäden am Equipment, die durch nicht vereinbarte Betriebszustände der Räume (z. B. Sauna, Dampfbad) entstehen, haftet der Auftraggeber vollumfänglich.</p>
       <p>Der Auftraggeber haftet zudem für Schäden am Equipment, die durch seine Kunden, Gäste oder Personal verursacht werden. Dies gilt insbesondere, wenn Personen mit der Ausrüstung in Kontakt kommen, diese umstossen oder anderweitig beschädigen. Der Auftraggeber ist für das Verhalten aller anwesenden Personen während der Produktion verantwortlich.</p>
 
-      <h2>6. Exklusivität während der Aufnahmen</h2>
+      <h2>7. Exklusivität während der Aufnahmen</h2>
       <p>Der Auftraggeber verpflichtet sich, die für die Aufnahme vorgesehenen Räume während der vereinbarten Produktionszeit für Kundenbesuche geschlossen zu halten. Sollte diese Bedingung nicht eingehalten werden und die Aufnahmen durch anwesende Gäste oder Besucher gestört werden, fällt ein pauschaler Zuschlag von CHF 1’000 an.</p>
 
-      <h2>7. Verzögerungen und Wartezeiten</h2>
+      <h2>8. Verzögerungen und Wartezeiten</h2>
       <p>Der Auftraggeber ist verpflichtet, die für die Produktion notwendigen Vorbereitungen (z. B. Sauberkeit, Funktionsfähigkeit von Licht- und Technik, rechtzeitige Bereitstellung des Personals) rechtzeitig und vollständig sicherzustellen.</p>
       <p>Kommt es aufgrund ungenügender Vorbereitung oder durch das eingesetzte Personal des Auftraggebers zu Verzögerungen während der Produktion, werden die dadurch entstehenden Wartezeiten mit CHF 250.– pro Stunde in Rechnung gestellt.</p>
       <p>Sollte der Produktionsstart infolge ungenügender Vorbereitung oder fehlender Einsatzbereitschaft des Personals nicht wie vereinbart erfolgen können, behält sich der Auftragnehmer das Recht vor, ebenfalls eine Entschädigung von CHF 250.– pro Stunde für die Ausfallzeit bis zum effektiven Beginn der Arbeiten zu verrechnen.</p>
 
-      <h2>8. Urheberrechte &amp; Nutzungsrechte</h2>
+      <h2>9. Urheberrechte &amp; Nutzungsrechte</h2>
       <p>Alle erstellten Aufnahmen und VR-Touren bleiben bis zur vollständigen Bezahlung Eigentum des Auftragnehmers. Mit Zahlung erhält der Auftraggeber ein nicht exklusives, zeitlich unbeschränktes Nutzungsrecht für die vereinbarten Zwecke. Eine Weitergabe an Dritte oder Weiterverkauf bedarf der Zustimmung des Auftragnehmers.</p>
 
-      <h2>9. Datenschutz</h2>
+      <h2>10. Datenschutz</h2>
       <p>Die Bearbeitung personenbezogener Daten erfolgt gemäss der separaten Datenschutzerklärung. Diese ist Bestandteil der Zusammenarbeit.</p>
       <p>Der Auftraggeber ist verpflichtet, dafür zu sorgen, dass während der Produktion nur Personen anwesend sind, die mit der Aufnahme und einer möglichen Veröffentlichung einverstanden sind. Für allfällige Ansprüche Dritter haftet der Auftraggeber vollumfänglich.</p>
 
-      <h2>10. Schlussbestimmungen</h2>
+      <h2>11. Schlussbestimmungen</h2>
       <p>Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Gültigkeit der übrigen AGB unberührt. Gerichtsstand ist der Geschäftssitz des Auftragnehmers, soweit nicht zwingend anders vorgeschrieben. Diese AGB treten am 01.09.2025 in Kraft und ersetzen alle früheren Fassungen.</p>
 
       <h2>Zusatzbedingungen (integrierter Bestandteil)</h2>

@@ -37,7 +37,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
   hotel: {
     slug: 'hotel',
     metaTitle: '360-Grad-Rundgang für Hotels – mehr Direktbuchungen',
-    metaDescription: 'Mehr Direktbuchungen, weniger OTA-Provisionen: Professionelle 360-Grad-Touren für Hotels ab CHF 3\'490. Schweizer Anbieter, kein Abo.',
+    metaDescription: 'Mehr Direktbuchungen, weniger OTA-Provisionen: Professionelle 360-Grad-Touren für Hotels ab CHF 3\'490. Schweizer Anbieter – die Tour gehört Ihnen, kein Abo.',
     badge: 'Hotels & Resorts',
     headline: '360-Grad-Rundgang für Ihr Hotel',
     tagline: 'Mehr Direktbuchungen, weniger OTA-Abhängigkeit. Zeigen Sie Gästen Zimmer, Spa, Restaurant und Lobby – bevor sie buchen.',

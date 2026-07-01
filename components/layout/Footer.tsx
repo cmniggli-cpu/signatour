@@ -21,7 +21,7 @@ export default function Footer() {
             </p>
             <ul className="mt-5 space-y-1.5 text-xs text-primary-500">
               <li>✓ Schweizer Anbieter, persönlicher Ansprechpartner</li>
-              <li>✓ Einmalpreis – kein Abo, keine Vertragsbindung</li>
+              <li>✓ Einmalpreis, kein Abo – die Tour gehört Ihnen</li>
               <li>✓ DSGVO-konformes Hosting in CH/EU</li>
             </ul>
           </div>
