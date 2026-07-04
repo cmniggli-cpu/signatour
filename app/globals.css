@@ -223,7 +223,7 @@ body {
 .nigpage .hero .bg{position:absolute;inset:0}
 .nigpage .hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
 .nigpage .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.92),rgba(8,8,10,.55) 60%,rgba(8,8,10,.35)),radial-gradient(60% 60% at 80% 10%,rgba(227,178,58,.16),transparent 60%)}
-.nigpage .hero .inner{position:relative;padding:84px 0 92px}
+.nigpage .hero .inner{position:relative;padding-top:84px;padding-bottom:92px}
 .nigpage .hero .herologo{width:min(220px,52vw);height:auto;margin-bottom:10px;filter:drop-shadow(0 10px 34px rgba(0,0,0,.55))}
 .nigpage .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(36px,5.2vw,62px);line-height:1.05;margin:18px 0 14px;max-width:18ch}
 .nigpage .hero h1 em{font-style:italic;color:var(--gd)}
