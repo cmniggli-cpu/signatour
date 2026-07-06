@@ -72,6 +72,10 @@ body{
 .trust .dot{color:var(--gold-dim); margin:0 6px}
 .lang-add{display:flex; align-items:center; gap:10px; margin-top:10px; font-size:13.5px; color:var(--muted)}
 .lang-add input{width:64px; text-align:center; padding:8px}
+.consent{display:flex; align-items:flex-start; gap:10px; margin-top:16px; font-size:13.5px; color:var(--muted); cursor:pointer}
+.consent input{margin:3px 0 0; width:16px; height:16px; flex-shrink:0; accent-color:var(--gold); cursor:pointer}
+.consent a{color:var(--gold); text-decoration:underline}
+.consent a:hover{color:var(--gold-soft)}
 .done{text-align:center; padding:14px 6px}
 .done .mark{width:64px; height:64px; border-radius:50%; margin:0 auto 16px; background:rgba(92,184,116,.15); border:1.5px solid var(--green); color:var(--green); display:flex; align-items:center; justify-content:center; font-size:30px}
 .done h2{font-size:22px; margin:0 0 8px}
@@ -122,14 +126,13 @@ const CONFIG = {
     {id:"staging",  name:"Virtual Staging",        note:"+ ab CHF 240 pro Panorama",    add:240, priced:true, perPano:true},
     {id:"street",   name:"Google Street View & Business", note:"+ CHF 490 einmalig",    add:490, priced:true},
     {id:"lead",     name:"Lead-Capture-Formular",  note:"+ CHF 390 einmalig",           add:390, priced:true},
-    {id:"clips",    name:"Social-Media-Clip-Paket",note:"+ CHF 390 (3 Hochformat-Clips)", add:390, priced:true},
     {id:"moebel",   name:"Furniture Removal",      note:"+ ab CHF 180 pro Panorama",    add:180, priced:true, perPano:true},
     {id:"tagnacht", name:"Tag-/Nacht-Modus",       note:"+ ab CHF 180 pro Szene",       add:180, priced:true, perPano:true},
     {id:"web",      name:"Signature Web (Webseite)",note:"individuell programmiert · ab CHF 2'500", add:0, priced:false},
   ],
 };
 let step = 1;
-const state = { branche:null, groesse:null, extras:{}, langs:1, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
+const state = { branche:null, groesse:null, extras:{}, langs:1, agb:false, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
 const stepNames = ["Branche","Grösse","Extras","Kontakt"];
 const fmt = n => "CHF " + n.toLocaleString("de-CH").replace(/,/g,"’");
 const panel = document.getElementById("panel");
@@ -229,6 +232,13 @@ function renderKontakt(){
   panel.appendChild(mk("tel","Telefon (optional)",false,"tel","+41 …"));
   panel.appendChild(mk("msg","Nachricht (optional)",false,"textarea","Etwas, das wir wissen sollten?"));
   panel.appendChild(buildSummary());
+  const consent=document.createElement("label"); consent.className="consent";
+  consent.innerHTML=`<input type="checkbox" id="agbCheck"${state.agb?" checked":""}>
+    <span>Ich akzeptiere die <a href="/agb" target="_blank" rel="noopener">Allgemeinen Geschäftsbedingungen (AGB)</a> für die angefragten Dienstleistungen inkl. Pakete. <span class="req">*</span></span>`;
+  consent.querySelector("input").onchange=(ev)=>{ state.agb=ev.target.checked; document.getElementById("agbErr").classList.remove("show"); };
+  panel.appendChild(consent);
+  const agbErr=document.createElement("div"); agbErr.className="errmsg"; agbErr.id="agbErr";
+  agbErr.textContent="Bitte akzeptieren Sie die AGB"; panel.appendChild(agbErr);
   nav(true,"Angebot anfordern →",true,submit);
 }
 function buildSummary(){
@@ -266,6 +276,7 @@ function submit(){
         e.classList.add("show"); }
     }
   });
+  if(!state.agb){ ok=false; document.getElementById("agbErr")?.classList.add("show"); }
   if(!ok) return;
   const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
   const chosenExtras=CONFIG.extras.filter(x=>state.extras[x.id]).map(x=>x.name);
@@ -273,7 +284,7 @@ function submit(){
     branche:(CONFIG.branchen.find(b=>b.id===state.branche)||{}).name,
     groesse:sz?sz.name:"", paket:sz?sz.pkg:"",
     extras:chosenExtras, zusatzsprachen: state.extras.sprachen?state.langs:0,
-    ...state.contact, quelle:"Paket-Konfigurator"
+    ...state.contact, "AGB akzeptiert": state.agb?"Ja":"Nein", quelle:"Paket-Konfigurator"
   };
   const mailtoFallback=()=>{
     const body=[
@@ -287,6 +298,7 @@ function submit(){
       "E-Mail: "+payload.email,
       "Telefon: "+payload.tel,
       "Nachricht: "+payload.msg,
+      "AGB akzeptiert: "+payload["AGB akzeptiert"],
       "",
       "(Quelle: Paket-Konfigurator)"
     ].join("\n");

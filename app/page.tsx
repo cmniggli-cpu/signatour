@@ -286,13 +286,12 @@ export default function HomePage() {
             <div className="ocard"><Icon id="i-palette" /><h3>Virtual Staging – virtuelle Möblierung</h3><div className="pr">ab CHF 240.– pro Panorama</div></div>
             <div className="ocard"><Icon id="i-pin" /><h3>Google Street View & Business-Einbindung</h3><div className="pr">CHF 490.– einmalig</div></div>
             <div className="ocard"><Icon id="i-users" /><h3>Lead-Capture-Formular in der Tour</h3><div className="pr">CHF 390.– einmalig</div></div>
-            <div className="ocard"><Icon id="i-play" /><h3>Social-Media-Clip-Paket</h3><div className="pr">CHF 390.– (3 Clips)</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">ab CHF 180.– pro Panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Tag-/Nacht-Modus</h3><div className="pr">ab CHF 180.– pro Szene</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
-            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle 18 Erweiterungen mit Nutzen & Preisen ansehen →</a>
+            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle Erweiterungen mit Nutzen & Preisen ansehen →</a>
           </p>
         </div>
       </section>

@@ -90,8 +90,8 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       'Grosse Häuser, Thermen & Resorts: Pro-Linie ab CHF 4\'497.–',
     ],
     faqs: [
-      { question: 'Wie lange dauert das Shooting?', answer: '2–4 Stunden je nach Hotelgrösse. Wir planen den Termin nach dem Check-out / vor dem Check-in.' },
-      { question: 'Was wenn wir Zimmer renovieren?', answer: 'Einzelne Panorama-Updates ab CHF 180.– pro Szene. Kein komplett neues Shooting nötig.' },
+      { question: 'Wie lange dauert das Shooting?', answer: '4–6 Stunden je nach Hotelgrösse. Wir planen den Termin nach dem Check-out / vor dem Check-in.' },
+      { question: 'Was wenn wir Zimmer renovieren?', answer: 'Je nach Servicepaket sind Panorama-Updates bereits inklusive – oder einzeln ab CHF 180.– pro Szene. Kein komplett neues Shooting nötig.' },
       { question: 'Kann die Tour in unser Buchungssystem verlinken?', answer: 'Ja. Gäste können direkt aus dem Rundgang heraus für den Zimmertyp buchen, den sie gerade betrachten.' },
       { question: 'Funktioniert die Tour auch auf Smartphones?', answer: 'Ja, vollständig responsiv. Keine App nötig. VR-Brillen werden ebenfalls unterstützt.' },
     ],
@@ -437,7 +437,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { question: 'Wie stellen Sie Diskretion sicher?', answer: 'Wir fotografieren ausserhalb der Geschäftszeiten, ohne Personen, Dokumente oder Bildschirminhalte. Jedes Panorama durchläuft Ihren Freigabeprozess, bevor es online geht. Sicherheitskritische Bereiche bleiben aussen vor.' },
       { question: 'Wie lange dauert das Shooting?', answer: 'Für Empfang, Beratungsräume und Sitzungszimmer in der Regel 1–2 Stunden – planbar am Abend oder am Wochenende, ohne Betriebsunterbruch.' },
       { question: 'Lohnt sich das für eine kleine Kanzlei?', answer: 'Gerade dort: Mandanten vergleichen online, bevor sie anfragen. Wer als einzige Kanzlei am Ort seine Räume zeigt, hebt sich sichtbar ab – die Tour arbeitet jahrelang ohne Folgekosten.' },
-      { question: 'Geht das auch auf Französisch oder Englisch?', answer: 'Ja. Wir beraten auf Deutsch und Französisch, nehmen Aufträge auch auf Englisch an, und die Tour selbst kann mehrsprachig umgesetzt werden (ab CHF 300 pro Zusatzsprache).' },
+      { question: 'Geht das auch auf Französisch oder Englisch?', answer: 'Ja. Beratung & Aufträge auf Deutsch, Französisch und Englisch – und die Tour selbst kann mehrsprachig umgesetzt werden (ab CHF 300 pro Zusatzsprache).' },
     ],
   },
 
@@ -499,7 +499,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     packagePrice: 'ab CHF 2\'990.–',
     packageFeatures: [
       'Signature-Tour der kompletten Location inkl. Aussenbereiche',
-      'Tag-/Nacht-Modus, Video-Hotspots und Social-Media-Clips',
+      'Tag-/Nacht-Modus und Video-Hotspots',
       'Anfrage-Hotspots und PDF-Integration (Technik, Catering, Pläne)',
       'Google-Business-Einbindung & Website-Einbettung',
       'Inkl. 12 Monate Signature Care (Betreuungsservice)',

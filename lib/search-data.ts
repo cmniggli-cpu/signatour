@@ -26,7 +26,7 @@ export const SEARCH_INDEX: SearchEntry[] = [
 
   // Themen / FAQ
   { title: 'Was kostet eine Tour?', snippet: 'Fixpakete ab CHF 990 – die Tour gehört Ihnen, kein Abo.', href: '/pakete', category: 'Thema', keywords: 'preis kosten guenstig wieviel chf budget' },
-  { title: 'Optionale Add-ons & Erweiterungen', snippet: 'Virtual Staging, Lead-Capture, Google Street View, Social-Clips, Audio-Guide und mehr.', href: '/pakete', category: 'Thema', keywords: 'add-on addon erweiterung virtual staging lead capture street view social media audio guide grundriss dollhouse qr nadir' },
+  { title: 'Optionale Add-ons & Erweiterungen', snippet: 'Virtual Staging, Lead-Capture, Google Street View, Audio-Guide und mehr.', href: '/pakete', category: 'Thema', keywords: 'add-on addon erweiterung virtual staging lead capture street view audio guide grundriss dollhouse qr nadir' },
   { title: 'Nadir-Patch – sauberer Boden', snippet: 'Boden unter der Kamera zu 95% retuschiert, optional 100% – sauberer als Matterport.', href: '/faq', category: 'Thema', keywords: 'nadir boden stativ fleck retusche matterport blur logo' },
   { title: 'Vergleich mit Matterport & Ogulo', snippet: 'Ihre Tour gehört Ihnen statt Abo, Done-for-You, Datenhoheit, sauberer Nadir.', href: '/', category: 'Thema', keywords: 'matterport ogulo vergleich konkurrenz abo alternative unterschied' },
   { title: 'Datenschutz & DSGVO', snippet: 'CH/EU-Hosting, Aufnahmen ohne Personen, AVV inklusive.', href: '/faq', category: 'Thema', keywords: 'dsgvo datenschutz avv hosting schweiz eu sicher daten privatsphaere' },

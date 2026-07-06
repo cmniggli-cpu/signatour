@@ -186,7 +186,7 @@ export default function PaketePageClient() {
               { n: '1', t: 'Beratung & Offerte', d: 'Unverbindlich – wir klären Ziele, Räume und das passende Paket.' },
               { n: '2', t: 'Bestätigung & Anzahlung', d: 'Auftragsbestätigung und 50% Anzahlung. Erst danach planen wir den Aufnahmetermin.' },
               { n: '3', t: 'Shooting & Produktion', d: 'Aufnahme vor Ort und Produktion Ihrer Signature Tour.' },
-              { n: '4', t: 'Freigabe & Go-live', d: 'Freigabe und Schlusszahlung – danach geht Ihre Tour live.' },
+              { n: '4', t: 'Freigabe & Go-live', d: 'Sie prüfen Ihre Tour bequem über den Embed-Link und geben sie frei. Nach der Schlusszahlung erhalten Sie den Embed-Link für Ihre Website – auf Wunsch mit laufendem Wartungsservice.' },
             ].map((step) => (
               <StaggerItem key={step.n}>
                 <Card className="h-full bg-cream border-accent-200/70">

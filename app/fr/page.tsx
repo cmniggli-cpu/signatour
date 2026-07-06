@@ -308,13 +308,12 @@ export default function HomePageFr() {
             <div className="ocard"><Icon id="i-palette" /><h3>Virtual Staging – ameublement virtuel</h3><div className="pr">dès CHF 240.– par panorama</div></div>
             <div className="ocard"><Icon id="i-pin" /><h3>Google Street View & intégration Business</h3><div className="pr">CHF 490.– unique</div></div>
             <div className="ocard"><Icon id="i-users" /><h3>Formulaire de capture de leads dans la visite</h3><div className="pr">CHF 390.– unique</div></div>
-            <div className="ocard"><Icon id="i-play" /><h3>Pack clips réseaux sociaux</h3><div className="pr">CHF 390.– (3 clips)</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">dès CHF 180.– par panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Mode jour/nuit</h3><div className="pr">dès CHF 180.– par scène</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Panoramas supplémentaires</h3><div className="pr">dès CHF 150.– par scène</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
-            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir les 16 options avec bénéfices & prix →</a>
+            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir toutes les options avec bénéfices & prix →</a>
           </p>
         </div>
       </section>

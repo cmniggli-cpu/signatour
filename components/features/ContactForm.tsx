@@ -19,6 +19,7 @@ const contactSchema = z.object({
   industry: z.string().optional(),
   area: z.string().optional(),
   message: z.string().optional(),
+  agb: z.boolean().refine((v) => v === true, 'Bitte akzeptieren Sie die AGB'),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -30,6 +31,7 @@ function buildMailto(data: ContactFormData) {
     `Telefon: ${data.phone || '-'}`,
     `Branche: ${data.industry || '-'}`,
     `Fläche: ${data.area || '-'}`,
+    `AGB akzeptiert: ${data.agb ? 'Ja' : 'Nein'}`,
     '',
     data.message || '',
     '',
@@ -52,6 +54,7 @@ export default function ContactForm() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           ...data,
+          agb: data.agb ? 'akzeptiert' : 'nicht akzeptiert',
           _subject: `Anfrage über signatour.ch – ${data.name}`,
           _template: 'table',
           _captcha: 'false',
@@ -121,6 +124,24 @@ export default function ContactForm() {
         placeholder="Erzählen Sie uns von Ihrem Projekt..."
         {...register('message')}
       />
+
+      <div>
+        <label className="flex items-start gap-3 cursor-pointer text-sm text-primary-600">
+          <input
+            type="checkbox"
+            {...register('agb')}
+            className="mt-0.5 w-4 h-4 shrink-0 accent-[#C8901C]"
+          />
+          <span>
+            Ich akzeptiere die{' '}
+            <Link href="/agb" target="_blank" rel="noopener" className="underline hover:text-primary-900">
+              Allgemeinen Geschäftsbedingungen (AGB)
+            </Link>{' '}
+            für die angefragten Dienstleistungen inkl. Pakete.<span className="text-red-500 ml-1">*</span>
+          </span>
+        </label>
+        {errors.agb && <p className="text-sm text-red-500 pl-7 mt-1.5">{errors.agb.message}</p>}
+      </div>
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? 'Wird gesendet...' : 'Kostenlose Beratung anfragen'}

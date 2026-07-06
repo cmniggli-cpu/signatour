@@ -192,11 +192,6 @@ export const ADDON_GROUPS: AddOnGroup[] = [
         price: 'CHF 240.–',
         nutzen: 'Fensteraufkleber, Tischaufsteller und Schilder führen direkt in die Tour – die Location wird zum Eingangstor.',
       },
-      {
-        name: 'Social-Media-Clip-Paket',
-        price: 'CHF 390.– (3 Hochformat-Clips)',
-        nutzen: 'Fertige Reels und Stories direkt aus Ihrer Tour – Content ohne eigenen Drehaufwand.',
-      },
     ],
   },
   {
@@ -308,7 +303,7 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
   {
     name: 'Eventlocations & Showrooms',
     cfg: 'events',
-    intro: 'Signature-Tour mit Tag-/Nacht-Modus, Video-Hotspots und Social-Media-Clips.',
+    intro: 'Signature-Tour mit Tag-/Nacht-Modus und Video-Hotspots.',
     lines: ['ab CHF 2\'990.–'],
     note: 'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'497.–',
   },
@@ -338,7 +333,6 @@ export const ORDER_OPTIONS: OrderOption[] = [
   { id: 'lead', name: 'Lead-Capture-Formular in der Tour', price: '+ CHF 390.–', add: 390 },
   { id: 'nadir', name: 'Nadir-Patch 100% (Boden makellos)', price: '+ ab CHF 90.–', add: 90, approx: true },
   { id: 'tagnacht', name: 'Tag-/Nacht-Modus', price: '+ ab CHF 180.– pro Szene', add: 180, approx: true },
-  { id: 'clips', name: 'Social-Media-Clip-Paket', price: '+ CHF 390.–', add: 390 },
 ]
 
 export const SERVICE_TIERS: ServiceTier[] = [

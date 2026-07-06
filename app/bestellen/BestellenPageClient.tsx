@@ -15,6 +15,7 @@ export default function BestellenPageClient() {
   const [pkgId, setPkgId] = useState('signature')
   const [opts, setOpts] = useState<Record<string, boolean>>({})
   const [c, setC] = useState<Contact>({ name: '', firma: '', email: '', tel: '', adresse: '', msg: '' })
+  const [agb, setAgb] = useState(false)
   const [errors, setErrors] = useState<Record<string, boolean>>({})
   const [sending, setSending] = useState(false)
   const [done, setDone] = useState(false)
@@ -40,6 +41,7 @@ export default function BestellenPageClient() {
     if (c.name.trim().length < 2) e.name = true
     if (c.firma.trim().length < 2) e.firma = true
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.email)) e.email = true
+    if (!agb) e.agb = true
     setErrors(e)
     if (Object.keys(e).length) return
 
@@ -52,6 +54,7 @@ export default function BestellenPageClient() {
       'Geschätzte Investition': `${approx ? 'ab ' : ''}${fmt(total)} einmalig`,
       Name: c.name, Firma: c.firma, 'E-Mail': c.email, Telefon: c.tel || '-',
       Rechnungsadresse: c.adresse || '-', Nachricht: c.msg || '-',
+      'AGB akzeptiert': agb ? 'Ja' : 'Nein',
       Quelle: 'Bestellseite signatour.ch',
     }
     setSending(true)
@@ -159,8 +162,16 @@ export default function BestellenPageClient() {
               </div>
               <p className="mt-1 text-xs text-primary-400">einmalig · zzgl. optionalem Service ab CHF 120.– / Jahr · verbindliche Offerte folgt</p>
 
+              <label className="mt-5 flex items-start gap-3 cursor-pointer text-xs text-primary-600">
+                <input type="checkbox" checked={agb}
+                  onChange={(ev) => { setAgb(ev.target.checked); setErrors((er) => ({ ...er, agb: false })) }}
+                  className="mt-0.5 shrink-0 accent-[#C8901C]" />
+                <span>Ich akzeptiere die <a href="/agb" target="_blank" rel="noopener" className="underline hover:text-primary-900">Allgemeinen Geschäftsbedingungen (AGB)</a> für die bestellten Dienstleistungen inkl. Pakete.<span className="text-accent-600 ml-1">*</span></span>
+              </label>
+              {errors.agb && <p className="mt-1.5 text-xs text-red-500">Bitte akzeptieren Sie die AGB, um die Bestellung abzusenden.</p>}
+
               <button type="button" onClick={submit} disabled={sending}
-                className="mt-6 w-full rounded-full bg-marine-900 text-accent-400 px-6 py-3.5 text-sm font-semibold hover:bg-marine-800 transition-colors disabled:opacity-50">
+                className="mt-4 w-full rounded-full bg-marine-900 text-accent-400 px-6 py-3.5 text-sm font-semibold hover:bg-marine-800 transition-colors disabled:opacity-50">
                 {sending ? 'Wird gesendet…' : 'Bestellung absenden →'}
               </button>
 

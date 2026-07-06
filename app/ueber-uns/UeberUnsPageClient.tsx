@@ -20,14 +20,14 @@ export default function UeberUnsPageClient() {
       />
 
       {/* Mission */}
-      <section className="py-20">
+      <section className="py-20 bg-marine-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
-            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Unsere Mission</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl cd-serif text-primary-800">
+            <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">Unsere Mission</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl cd-serif text-white">
               Wir machen das stärkste Verkaufsargument von KMUs – ihre Räumlichkeiten – online erlebbar.
             </h2>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-6 text-lg text-primary-300 leading-relaxed">
               KMU-Inhaberinnen und Inhaber haben 14-Stunden-Tage. Sie verdienen einen Partner, der kommt, professionell arbeitet und ein fertiges Ergebnis liefert.
             </p>
           </AnimatedSection>
