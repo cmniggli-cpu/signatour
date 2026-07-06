@@ -70,6 +70,11 @@ export interface AddOn {
   hinweis?: string
 }
 
+export interface AddOnGroup {
+  title: string
+  items: AddOn[]
+}
+
 export interface BranchenPackage {
   name: string
   intro: string

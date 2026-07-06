@@ -6,7 +6,7 @@ import PricingCard from '@/components/sections/PricingCard'
 import AnimatedSection, { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection'
 import Card from '@/components/ui/Card'
 import CTASection from '@/components/sections/CTASection'
-import { PRICING_TIERS, ADDONS, BRANCHEN_PACKAGES, INCLUDED_BENEFITS, SERVICE_TIERS } from '@/lib/constants'
+import { PRICING_TIERS, ADDON_GROUPS, BRANCHEN_PACKAGES, INCLUDED_BENEFITS, SERVICE_TIERS } from '@/lib/constants'
 
 const ORDER_MAP: Record<string, string> = {
   immobilien: 'immo-einzel', hotel: 'hotel', spa: 'spa', restaurant: 'restaurant',
@@ -90,45 +90,59 @@ export default function PaketePageClient() {
           </AnimatedSection>
 
           <AnimatedSection>
-            {/* Desktop: 3-spaltige Tabelle im hellen Gold-/Pastell-CD */}
-            <div className="hidden md:block bg-white rounded-2xl border border-primary-200/60 card-shadow overflow-hidden">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b-2 border-primary-100">
-                    <th className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-400">Erweiterung</th>
-                    <th className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-400">Nutzen</th>
-                    <th className="text-right px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent-600">Preis</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {ADDONS.map((addon, i) => (
-                    <tr key={i} className={`border-b border-primary-50 last:border-0 ${i % 2 === 1 ? 'bg-cream' : 'bg-white'}`}>
-                      <td className="px-5 py-4 text-primary-900 font-medium align-top">
-                        {addon.name}
-                        {addon.hinweis && (
-                          <span className="mt-1.5 block">
-                            <span className="inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
-                          </span>
-                        )}
-                      </td>
-                      <td className="px-5 py-4 text-primary-500 text-sm align-top">{addon.nutzen}</td>
-                      <td className="px-5 py-4 text-right align-top"><span className="text-accent-600 font-semibold">{addon.price}</span></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            {/* Desktop: 3-spaltige Tabelle pro Kategorie im hellen Gold-/Pastell-CD */}
+            <div className="hidden md:block space-y-12">
+              {ADDON_GROUPS.map((group) => (
+                <div key={group.title}>
+                  <h3 className="mb-4 text-xl cd-serif text-primary-800">{group.title}</h3>
+                  <div className="bg-white rounded-2xl border border-primary-200/60 card-shadow overflow-hidden">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b-2 border-primary-100">
+                          <th className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-400">Erweiterung</th>
+                          <th className="text-left px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-400">Nutzen</th>
+                          <th className="text-right px-5 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent-600">Preis</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {group.items.map((addon, i) => (
+                          <tr key={addon.name} className={`border-b border-primary-50 last:border-0 ${i % 2 === 1 ? 'bg-cream' : 'bg-white'}`}>
+                            <td className="px-5 py-4 text-primary-900 font-medium align-top">
+                              {addon.name}
+                              {addon.hinweis && (
+                                <span className="mt-1.5 block">
+                                  <span className="inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
+                                </span>
+                              )}
+                            </td>
+                            <td className="px-5 py-4 text-primary-500 text-sm align-top">{addon.nutzen}</td>
+                            <td className="px-5 py-4 text-right align-top"><span className="text-accent-600 font-semibold">{addon.price}</span></td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Mobil: gestapelte Karten */}
-            <div className="md:hidden space-y-4">
-              {ADDONS.map((addon, i) => (
-                <div key={i} className="bg-white rounded-2xl border border-primary-200/60 card-shadow p-5">
-                  <h3 className="font-bold text-primary-900">{addon.name}</h3>
-                  {addon.hinweis && (
-                    <span className="mt-1.5 inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
-                  )}
-                  <p className="mt-2 text-sm text-primary-500">{addon.nutzen}</p>
-                  <p className="mt-3 text-right font-semibold text-accent-600">{addon.price}</p>
+            {/* Mobil: gestapelte Karten pro Kategorie */}
+            <div className="md:hidden space-y-10">
+              {ADDON_GROUPS.map((group) => (
+                <div key={group.title}>
+                  <h3 className="mb-4 text-lg cd-serif text-primary-800">{group.title}</h3>
+                  <div className="space-y-4">
+                    {group.items.map((addon) => (
+                      <div key={addon.name} className="bg-white rounded-2xl border border-primary-200/60 card-shadow p-5">
+                        <h4 className="font-bold text-primary-900">{addon.name}</h4>
+                        {addon.hinweis && (
+                          <span className="mt-1.5 inline-block text-xs text-accent-700 bg-accent-100 rounded-full px-3 py-0.5">{addon.hinweis}</span>
+                        )}
+                        <p className="mt-2 text-sm text-primary-500">{addon.nutzen}</p>
+                        <p className="mt-3 text-right font-semibold text-accent-600">{addon.price}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

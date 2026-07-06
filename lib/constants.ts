@@ -1,4 +1,4 @@
-import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, AddOn, Stat, BranchenPackage, ServiceTier } from './types'
+import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, AddOn, AddOnGroup, Stat, BranchenPackage, ServiceTier } from './types'
 
 export const SITE_NAME = 'Niggli 360° Signature Tours'
 export const SITE_URL = 'https://www.signatour.ch'
@@ -108,7 +108,7 @@ export const PRICING_TIERS: PricingTier[] = [
     hosting: 'inkl. 12 Monate Signature Care',
     featured: true,
     features: [
-      'bis 60 Panoramen',
+      'bis 40 Panoramen',
       '4K-Qualität',
       'bis 25 Hotspots',
       'Corporate Design Integration',
@@ -125,7 +125,7 @@ export const PRICING_TIERS: PricingTier[] = [
     features: [
       'bis 100 Panoramen',
       '8K-Qualität',
-      'unbegrenzte Hotspots',
+      'bis 50 Hotspots',
       'Buchungsintegration',
       'Video & Interaktionen',
       '5 Korrekturrunden',
@@ -133,99 +133,121 @@ export const PRICING_TIERS: PricingTier[] = [
   },
 ]
 
-export const ADDONS: AddOn[] = [
+export const ADDON_GROUPS: AddOnGroup[] = [
   {
-    name: 'Signature Web – Webseite nach Mass',
-    price: 'ab CHF 2\'500.–',
-    nutzen: 'Tour und Webseite aus einer Hand – ein durchgängiges digitales Verkaufserlebnis.',
+    title: '01 · Bildqualität & Raumgestaltung',
+    items: [
+      {
+        name: 'Nadir-Patch 100% – Boden makellos',
+        price: 'ab CHF 90.– pro Tour',
+        nutzen: 'Statt verschwommenem Stativ-Fleck ein sauberer Boden oder Ihr Logo – ein Detail, das Profis sofort sehen.',
+      },
+      {
+        name: 'Furniture Removal – digitales Ausräumen',
+        price: 'ab CHF 180.– pro Panorama',
+        nutzen: 'Möblierte Räume werden digital geleert – ideal für Vermietung und Verkauf.',
+      },
+      {
+        name: 'Virtual Staging – virtuelle Möblierung',
+        price: 'ab CHF 240.– pro Panorama, ab 3 Panoramen CHF 200.–',
+        nutzen: 'Leere Räume werden zum eingerichteten Zuhause – der Interessent sieht das Potenzial, nicht die Leere.',
+      },
+      {
+        name: 'Zusätzliche Panoramen',
+        price: 'ab CHF 150.– pro Szene',
+        nutzen: 'Die Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
+      },
+      {
+        name: '3D-Grundriss & Dollhouse-Ansicht',
+        price: 'ab CHF 390.–',
+        nutzen: 'Besucher erfassen das ganze Objekt auf einen Blick – sofortige Orientierung.',
+      },
+      {
+        name: 'Tag-/Nacht-Modus',
+        price: 'ab CHF 180.– pro Szene',
+        nutzen: 'Dieselbe Szene bei Tag und bei Abendstimmung umschaltbar – stark für Restaurants und Eventlocations.',
+      },
+    ],
   },
   {
-    name: 'Mehrsprachige Version (DE / FR / EN)',
-    price: 'ab CHF 300.– pro Sprache',
-    nutzen: 'Gäste und Käufer erleben die Tour in ihrer Sprache – mehr Reichweite, mehr Vertrauen.',
+    title: '02 · Reichweite & Sichtbarkeit',
+    items: [
+      {
+        name: 'Mehrsprachige Version (DE / FR / EN)',
+        price: 'ab CHF 300.– pro Sprache',
+        nutzen: 'Gäste und Käufer erleben die Tour in ihrer Sprache – mehr Reichweite, mehr Vertrauen.',
+      },
+      {
+        name: 'Google Street View & Business-Einbindung',
+        price: 'CHF 490.– einmalig',
+        nutzen: 'Ihre Tour erscheint direkt in Google Maps und im Unternehmensprofil – Sichtbarkeit dort, wo Kunden suchen.',
+      },
+      {
+        name: 'QR-Code Print- & Display-Paket',
+        price: 'CHF 240.–',
+        nutzen: 'Fensteraufkleber, Tischaufsteller und Schilder führen direkt in die Tour – die Location wird zum Eingangstor.',
+      },
+      {
+        name: 'Social-Media-Clip-Paket',
+        price: 'CHF 390.– (3 Hochformat-Clips)',
+        nutzen: 'Fertige Reels und Stories direkt aus Ihrer Tour – Content ohne eigenen Drehaufwand.',
+      },
+    ],
   },
   {
-    name: 'Furniture Removal',
-    price: 'ab CHF 180.– pro Panorama',
-    nutzen: 'Möblierte Räume werden digital geleert – ideal für Vermietung und Verkauf.',
+    title: '03 · Conversion & Erlebnis',
+    items: [
+      {
+        name: 'Lead-Capture-Formular in der Tour',
+        price: 'CHF 390.– einmalig',
+        nutzen: 'Aus anonymen Besuchern werden qualifizierte Anfragen – mit Name und Mailadresse.',
+      },
+      {
+        name: 'Audio-Guide mit professioneller Sprecherstimme',
+        price: 'ab CHF 490.– pro Sprache',
+        nutzen: 'Ihre Räume bekommen eine Stimme – Atmosphäre und Storytelling statt blossem Text.',
+      },
+      {
+        name: 'Signature Web – Webseite nach Mass',
+        price: 'ab CHF 2\'500.–',
+        nutzen: 'Tour und Webseite aus einer Hand – ein durchgängiges digitales Verkaufserlebnis.',
+      },
+    ],
   },
   {
-    name: 'Nadir-Patch 100% (Boden makellos)',
-    price: 'ab CHF 90.– pro Tour',
-    nutzen: 'Statt verschwommenem Stativ-Fleck ein sauberer Boden oder Ihr Logo – ein Detail, das Profis sofort sehen.',
-  },
-  {
-    name: 'Zusätzliche Panoramen',
-    price: 'ab CHF 150.– pro Szene',
-    nutzen: 'Die Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
-  },
-  {
-    name: 'Virtual Staging – virtuelle Möblierung',
-    price: 'ab CHF 240.– pro Panorama, ab 3 Panoramen CHF 200.–',
-    nutzen: 'Leere Räume werden zum eingerichteten Zuhause – der Interessent sieht das Potenzial, nicht die Leere.',
-  },
-  {
-    name: 'Google Street View & Google-Business-Einbindung',
-    price: 'CHF 490.– einmalig',
-    nutzen: 'Ihre Tour erscheint direkt in Google Maps und im Unternehmensprofil – Sichtbarkeit dort, wo Kunden suchen.',
-  },
-  {
-    name: 'Lead-Capture-Formular in der Tour',
-    price: 'CHF 390.– einmalig',
-    nutzen: 'Aus anonymen Besuchern werden qualifizierte Anfragen – mit Name und Mailadresse.',
-  },
-  {
-    name: 'Performance-Report Tour',
-    price: 'CHF 150.– pro Report',
-    nutzen: 'Aufrufe, beliebteste Räume, Klicks auf Buchungspunkte – der ROI Ihrer Tour schwarz auf weiss.',
-    hinweis: 'In Signature Care & Evolution bereits enthalten',
-  },
-  {
-    name: 'Performance-Report Webseite',
-    price: 'CHF 150.– pro Report / CHF 490.– pro Jahr (4 Reports)',
-    nutzen: 'Besucher, Verweildauer, Top-Seiten – Sie sehen, was Ihre Online-Präsenz leistet.',
-  },
-  {
-    name: 'Saisonales Szenen-Update',
-    price: 'CHF 180.– pro Szene / Saisonpaket CHF 650.–',
-    nutzen: 'Sommerterrasse, Weihnachtsstimmung, neue Bepflanzung – Ihre Tour bleibt aktuell und lebendig.',
-  },
-  {
-    name: 'Vier-Jahreszeiten-Terrasse',
-    price: 'CHF 1\'490.– / Jahr',
-    nutzen: 'Vier Shootings pro Jahr als umschaltbare Saisonszenen – der Aussenbereich bleibt ganzjährig aktuell.',
-  },
-  {
-    name: 'Social-Media-Clip-Paket',
-    price: 'CHF 390.– (3 Hochformat-Clips)',
-    nutzen: 'Fertige Reels und Stories direkt aus Ihrer Tour – Content ohne eigenen Drehaufwand.',
-  },
-  {
-    name: 'Audio-Guide mit professioneller Sprecherstimme',
-    price: 'ab CHF 490.– pro Sprache',
-    nutzen: 'Ihre Räume bekommen eine Stimme – Atmosphäre und Storytelling statt blossem Text.',
-  },
-  {
-    name: '3D-Grundriss & Dollhouse-Ansicht',
-    price: 'ab CHF 390.–',
-    nutzen: 'Besucher erfassen das ganze Objekt auf einen Blick – sofortige Orientierung.',
-  },
-  {
-    name: 'QR-Code Print- & Display-Paket',
-    price: 'CHF 240.–',
-    nutzen: 'Fensteraufkleber, Tischaufsteller und Schilder führen direkt in die Tour – die Location wird zum Eingangstor.',
-  },
-  {
-    name: 'Express-Lieferung',
-    price: '+30% auf den Paketpreis',
-    nutzen: 'Ihre fertige Tour in 3 statt 5–10 Arbeitstagen.',
-  },
-  {
-    name: 'Tag-/Nacht-Modus',
-    price: 'ab CHF 180.– pro Szene',
-    nutzen: 'Dieselbe Szene bei Tag und bei Abendstimmung umschaltbar – stark für Restaurants und Eventlocations.',
+    title: '04 · Aktualität, Betrieb & Reporting',
+    items: [
+      {
+        name: 'Saisonales Szenen-Update',
+        price: 'CHF 180.– pro Szene / Saisonpaket CHF 650.–',
+        nutzen: 'Sommerterrasse, Weihnachtsstimmung, neue Bepflanzung – Ihre Tour bleibt aktuell und lebendig.',
+      },
+      {
+        name: 'Vier-Jahreszeiten-Terrasse',
+        price: 'CHF 1\'490.– / Jahr',
+        nutzen: 'Vier Shootings pro Jahr als umschaltbare Saisonszenen – der Aussenbereich bleibt ganzjährig aktuell.',
+      },
+      {
+        name: 'Performance-Report Tour',
+        price: 'CHF 150.– pro Report',
+        nutzen: 'Aufrufe, beliebteste Räume, Klicks auf Buchungspunkte – der ROI Ihrer Tour schwarz auf weiss.',
+        hinweis: 'In Signature Care & Evolution bereits enthalten',
+      },
+      {
+        name: 'Performance-Report Webseite',
+        price: 'CHF 150.– pro Report / CHF 490.– pro Jahr (4 Reports)',
+        nutzen: 'Besucher, Verweildauer, Top-Seiten – Sie sehen, was Ihre Online-Präsenz leistet.',
+      },
+      {
+        name: 'Express-Lieferung',
+        price: '+30% auf den Paketpreis',
+        nutzen: 'Ihre fertige Tour in 3 statt 5–10 Arbeitstagen.',
+      },
+    ],
   },
 ]
+
+export const ADDONS: AddOn[] = ADDON_GROUPS.flatMap((g) => g.items)
 
 export const BRANCHEN_PACKAGES: BranchenPackage[] = [
   {
@@ -401,11 +423,11 @@ export const FAQ_GENERAL: FAQ[] = [
 export const FAQ_COSTS: FAQ[] = [
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 60 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise statt Abo – die Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
+    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 40 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise statt Abo – die Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
   },
   {
     question: 'Gibt es versteckte Kosten?',
-    answer: 'Nein. Der einmalige Paketpreis deckt Shooting, Nachbearbeitung, Hosting und Einbettungscode ab – die Tour gehört Ihnen. 12 Monate Service sind enthalten, danach optional ab CHF 120.–/Jahr. Optionale Extras (Drohne, Street View, Express) sind klar ausgewiesen.',
+    answer: 'Nein. Der einmalige Paketpreis deckt Shooting, Nachbearbeitung, Hosting und Einbettungscode ab – die Tour gehört Ihnen. 12 Monate Service sind enthalten, danach optional ab CHF 120.–/Jahr. Optionale Add-ons (z. B. Street View, Virtual Staging, Express) sind klar ausgewiesen.',
   },
   {
     question: 'Wie lange dauert die Erstellung?',

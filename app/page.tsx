@@ -240,13 +240,13 @@ export default function HomePage() {
               <div className="ribbon">Bestseller</div>
               <h3>Signature</h3><div className="for">Der beliebteste Allrounder</div>
               <div className="price">CHF 2&apos;497.–</div><div className="note">einmalig · inkl. 12 Monate Signature Care</div>
-              <ul><li><Chk /> bis 60 Panoramen</li><li><Chk /> 4K-Qualität</li><li><Chk /> bis 25 Hotspots</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Audio & Interaktionen</li><li><Chk /> 3 Korrekturrunden</li></ul>
+              <ul><li><Chk /> bis 40 Panoramen</li><li><Chk /> 4K-Qualität</li><li><Chk /> bis 25 Hotspots</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Audio & Interaktionen</li><li><Chk /> 3 Korrekturrunden</li></ul>
               <a className="btn btn-gold" href="/konfigurator.html">Anfragen</a>
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">Für Hotels, Thermen & Premium-Resorts</div>
               <div className="price">ab CHF 4&apos;497.–</div><div className="note">inkl. 12 Monate Signature Evolution · Einzelofferte für grosse Projekte</div>
-              <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> unbegrenzte Hotspots</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
+              <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> bis 50 Hotspots</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
               <a className="btn btn-ghost" href="/konfigurator.html">Anfragen</a>
             </div>
           </div>
@@ -291,7 +291,7 @@ export default function HomePage() {
             <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
-            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle 16 Erweiterungen mit Nutzen & Preisen ansehen →</a>
+            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle 18 Erweiterungen mit Nutzen & Preisen ansehen →</a>
           </p>
         </div>
       </section>

@@ -262,13 +262,13 @@ export default function HomePageFr() {
               <div className="ribbon">Best-seller</div>
               <h3>Signature</h3><div className="for">Le polyvalent le plus prisé</div>
               <div className="price">CHF 2&apos;497.–</div><div className="note">unique · incl. 12 mois de Signature Care</div>
-              <ul><li><Chk /> jusqu’à 60 panoramas</li><li><Chk /> qualité 4K</li><li><Chk /> jusqu’à 25 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> audio & interactions</li><li><Chk /> 3 séries de corrections</li></ul>
+              <ul><li><Chk /> jusqu’à 40 panoramas</li><li><Chk /> qualité 4K</li><li><Chk /> jusqu’à 25 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> audio & interactions</li><li><Chk /> 3 séries de corrections</li></ul>
               <a className="btn btn-gold" href="/konfigurator.html">Demander</a>
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">Pour hôtels, thermes & resorts premium</div>
               <div className="price">dès CHF 4&apos;497.–</div><div className="note">incl. 12 mois de Signature Evolution · offre individuelle pour les grands projets</div>
-              <ul><li><Chk /> jusqu’à 100 panoramas</li><li><Chk /> qualité 8K</li><li><Chk /> points interactifs illimités</li><li><Chk /> intégration de réservation</li><li><Chk /> vidéo & interactions</li><li><Chk /> 5 séries de corrections</li></ul>
+              <ul><li><Chk /> jusqu’à 100 panoramas</li><li><Chk /> qualité 8K</li><li><Chk /> jusqu’à 50 points interactifs</li><li><Chk /> intégration de réservation</li><li><Chk /> vidéo & interactions</li><li><Chk /> 5 séries de corrections</li></ul>
               <a className="btn btn-ghost" href="/konfigurator.html">Demander</a>
             </div>
           </div>
