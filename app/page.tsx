@@ -55,8 +55,8 @@ const FAQ_ITEMS = [
   { q: 'Was bringt mir das konkret – lohnt sich das?', a: 'Je nach Branche steigen Buchungen und Anfragen deutlich, und Besucher bleiben um ein Mehrfaches länger auf der Seite. Bei Immobilien etwa rund +87% mehr Aufrufe (Matterport). Bei nachweisbarem Mehrertrag amortisiert sich die Tour oft schon nach wenigen Buchungen.' },
   { q: 'Was kostet eine Tour?', a: 'Transparente Fixpakete ab CHF 990 – der Preis hängt von Panoramen und Funktionen ab. Über den Paket-Konfigurator erhalten Sie in einer Minute eine unverbindliche Einschätzung.' },
   { q: 'Gibt es ein Abo oder versteckte Kosten?', a: 'Nein. Die Tour gehört Ihnen. Ein jährliches Servicepaket (ab CHF 120) ist optional – keine langfristige Bindung, Kündigung per Jahresende.' },
-  { q: 'Wie wird der «Erfolg» gemessen?', a: 'Sie erhalten Besucherstatistiken: Aufrufe, Verweildauer, beliebteste Räume und Klicks auf Buchungs-Hotspots – Grundlage auch für unsere Erfolgs-Garantie.' },
-  { q: 'Was ist, wenn ich nicht zufrieden bin?', a: 'Doppelte Garantie: bis zu 3 Korrekturrunden – und keine messbare Verbesserung nach 90 Tagen? 50% des Paketpreises zurück.' },
+  { q: 'Wie wird die Wirkung gemessen?', a: 'Sie erhalten Besucherstatistiken: Aufrufe, Verweildauer, beliebteste Räume und Klicks auf Buchungs-Hotspots – Zahlen statt Bauchgefühl.' },
+  { q: 'Was ist, wenn ich nicht zufrieden bin?', a: 'Doppelte Garantie: Qualität – wir verfeinern jedes Detail, bis zu 3 Korrekturrunden inklusive. Und Marke – Ihre Tour erscheint exakt in Ihrem Corporate Design, ohne fremdes Branding.' },
   { q: 'Worin unterscheidet sich das von Fotos oder einem Video?', a: 'Fotos und Videos zeigen, was wir zeigen wollen. Eine Signature Tour lässt den Besucher selbst entscheiden, wohin er schaut – und direkt handeln (buchen, anfragen). Das kann ein Video nicht.' },
   { q: 'Ist das dasselbe wie Matterport?', a: 'Matterport ist ein 3D-Scan-Standard – oft mit monatlicher Plattformgebühr und Optik von der Stange. Unsere Tour ist in Ihrem Corporate Design, verkaufsaktiv und gehört Ihnen, ohne Abo-Zwang. Ein sichtbarer Qualitätsunterschied: Wo Matterport den Boden unter der Kamera mit einem verschwommenen Fleck überdeckt (sonst sähe man das Stativ), retuschieren wir diesen Nadir-Punkt zu 95% sauber weg – auf Wunsch zu 100% mit makellosem Boden oder Ihrem Logo.' },
   { q: 'Was ist mit dem Boden unter der Kamera (Nadir)?', a: 'Bei 360°-Aufnahmen steht die Kamera auf einem Stativ – ohne Bearbeitung wäre es im Bild sichtbar. Viele Anbieter setzen einfach einen verschwommenen Fleck oder ein Logo darüber. Wir retuschieren den Boden zu 95% sauber, sodass er natürlich wirkt. Wer es perfekt will, erhält als Add-on die 100%-Lösung mit makellosem Boden oder eingesetztem Logo.' },
@@ -148,7 +148,7 @@ export default function HomePage() {
             <div className="fcard"><Icon id="i-palette" /><h3>Corporate Design</h3><p>Perfekt auf Ihre Marke abgestimmt – Farben, Logo, Stil.</p></div>
             <div className="fcard"><Icon id="i-pin" /><h3>Interaktive Hotspots</h3><p>Buchungs- und Infopunkte: mehr Interaktion, mehr Ergebnisse.</p></div>
             <div className="fcard"><Icon id="i-globe" /><h3>Website & Google</h3><p>Optimiert eingebunden. Sichtbar, schnell, überall verfügbar.</p></div>
-            <div className="fcard"><Icon id="i-chart" /><h3>Messbarer Erfolg</h3><p>Analytics-Report: Aufrufe, beliebteste Räume und Klicks – Zahlen statt Bauchgefühl.</p></div>
+            <div className="fcard"><Icon id="i-chart" /><h3>Messbare Ergebnisse</h3><p>Analytics-Report: Aufrufe, beliebteste Räume und Klicks – Zahlen statt Bauchgefühl.</p></div>
             <div className="fcard"><Icon id="i-shield" /><h3>Voller Besitz, kein Abo</h3><p>Die Tour gehört Ihnen. Keine Plattform-Miete – nur ein faires, optionales Servicepaket.</p></div>
             <div className="fcard"><Icon id="i-bolt" /><h3>Blitzschnelle Ladezeit</h3><p>Mobil optimiert – jede Sekunde Ladezeit entscheidet über Conversion.</p></div>
             <div className="fcard"><Icon id="i-phone" /><h3>Schweizer Ansprechpartner</h3><p>Kein Callcenter, kein Ticket-System – direkt mit dem Macher. Hosting in CH/EU, DSGVO-konform.</p></div>
@@ -246,7 +246,7 @@ export default function HomePage() {
             <div className="pcard">
               <h3>Pro</h3><div className="for">Für Hotels, Thermen & Premium-Resorts</div>
               <div className="price">ab CHF 4&apos;497.–</div><div className="note">inkl. 12 Monate Signature Evolution · Einzelofferte für grosse Projekte</div>
-              <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> bis 50 Hotspots</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
+              <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> bis 50 Hotspots</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
               <a className="btn btn-ghost" href="/konfigurator.html">Anfragen</a>
             </div>
           </div>
@@ -269,10 +269,11 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center"><div className="kicker">Ihre Sicherheit ist unser Versprechen</div><h2 className="sec">Doppelte Garantie</h2><div className="rule" /></div>
           <div className="guar">
-            <div className="gcard"><Icon id="i-shield" /><h3>Qualitäts-Garantie</h3><p>Höchste Qualität in Bild, Design und Funktion. Nicht zufrieden? Wir verbessern, bis es perfekt ist – bis zu 3 Korrekturrunden inklusive.</p></div>
-            <div className="gcard"><Icon id="i-target" /><h3>Erfolgs-Garantie</h3><p>Keine messbare Verbesserung nach 90 Tagen? Wir erstatten Ihnen 50% des Paketpreises zurück. Ohne Diskussion.</p></div>
+            <div className="gcard"><Icon id="i-shield" /><h3>Qualitäts-Garantie</h3><p>Jedes Panorama wird von Hand veredelt — Licht, Farben, Details. Nichts verlässt unser Studio, bevor es unserem Anspruch genügt. Und sollte etwas nicht Ihren Vorstellungen entsprechen, verfeinern wir es — bis zu 3 Korrekturrunden inklusive.</p></div>
+            <div className="gcard"><Icon id="i-palette" /><h3>Marken-Garantie*</h3><p>Ihre Tour trägt Ihre Handschrift: Farben, Schriften, Logo und Navigation exakt nach Ihrem Corporate Design. Kein Standard-Player, kein fremdes Branding — Ihre Besucher bleiben vom ersten Klick bis zur Buchungsanfrage in Ihrer Welt.</p></div>
           </div>
-          <div className="nullrisk">Null Risiko. Maximale Chance.</div>
+          <p style={{ marginTop: 14, textAlign: 'center', fontSize: 12.5, color: 'var(--dmut)' }}>* Corporate-Design-Integration ab Signature Tour. Die VR-Tour Basic nutzt das elegante Signatour-Standarddesign.</p>
+          <div className="nullrisk">Minimales Risiko. Maximaler Mehrwert.</div>
         </div>
       </section>
 

@@ -126,12 +126,17 @@ export const PRICING_TIERS: PricingTier[] = [
       'bis 100 Panoramen',
       '8K-Qualität',
       'bis 50 Hotspots',
+      'Corporate Design Integration',
       'Buchungsintegration',
       'Video & Interaktionen',
       '5 Korrekturrunden',
     ],
   },
 ]
+
+// Qualitäts-Garantie, Text-Variante V2 (vorbereitet, wird bewusst NICHT gerendert).
+// Zum Aktivieren: V1-Text der Qualitäts-Garantie-Karte in app/page.tsx (#garantie) durch diese Konstante ersetzen.
+export const QUALITY_V2 = 'Scharf bis in den letzten Winkel — auch dort, wo automatisierte Scans einen verschwommenen Fleck hinterlassen. Jedes Panorama wird von Hand veredelt: Licht, Farben, Boden. Und sollte etwas nicht Ihren Vorstellungen entsprechen, verfeinern wir es — bis zu 3 Korrekturrunden inklusive.'
 
 export const ADDON_GROUPS: AddOnGroup[] = [
   {

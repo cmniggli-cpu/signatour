@@ -76,8 +76,8 @@ const FAQ_ITEMS = [
   { q: 'Concrètement, qu’est-ce que cela m’apporte – est-ce rentable ?', a: 'Selon le secteur, les réservations et les demandes augmentent nettement, et les visiteurs restent bien plus longtemps sur le site. Pour l’immobilier par exemple, environ +87 % de vues (Matterport). Avec un gain mesurable, la visite s’amortit souvent après quelques réservations seulement.' },
   { q: 'Combien coûte une visite ?', a: 'Des forfaits transparents à prix fixe dès CHF 990 – le prix dépend du nombre de panoramas et des fonctions. Via le configurateur, vous obtenez en une minute une estimation sans engagement.' },
   { q: 'Y a-t-il un abonnement ou des coûts cachés ?', a: 'Non. La visite vous appartient. Un forfait de service annuel (dès CHF 120) est facultatif – sans engagement de longue durée, résiliable pour la fin de l’année.' },
-  { q: 'Comment le « succès » est-il mesuré ?', a: 'Vous recevez des statistiques de visiteurs : vues, durée de visite, pièces les plus consultées et clics sur les points de réservation – la base aussi de notre garantie de résultat.' },
-  { q: 'Que se passe-t-il si je ne suis pas satisfait ?', a: 'Double garantie : jusqu’à 3 séries de corrections – et aucune amélioration mesurable après 90 jours ? 50 % du prix du forfait remboursés.' },
+  { q: 'Comment l’impact est-il mesuré ?', a: 'Vous recevez des statistiques de visiteurs : vues, durée de visite, pièces les plus consultées et clics sur les points de réservation – des chiffres au lieu d’un ressenti.' },
+  { q: 'Que se passe-t-il si je ne suis pas satisfait ?', a: 'Double garantie : qualité – nous affinons chaque détail, jusqu’à 3 séries de corrections incluses. Et marque – votre visite reste exactement fidèle à votre charte graphique, sans branding étranger.' },
   { q: 'En quoi est-ce différent de photos ou d’une vidéo ?', a: 'Les photos et vidéos montrent ce que nous voulons montrer. Une Signature Tour laisse le visiteur décider lui-même où regarder – et agir directement (réserver, demander). Une vidéo ne peut pas faire cela.' },
   { q: 'Est-ce la même chose que Matterport ?', a: 'Matterport est un standard de scan 3D – souvent avec un abonnement mensuel et un rendu standardisé. Notre visite est à votre charte graphique, active à la vente et vous appartient, sans abonnement obligatoire. Différence de qualité visible : là où Matterport recouvre le sol sous la caméra d’une tache floue (sinon on verrait le trépied), nous retouchons ce point nadir à 95 % proprement – sur demande à 100 % avec un sol impeccable ou votre logo.' },
   { q: 'Et le sol sous la caméra (nadir) ?', a: 'Lors de prises de vue à 360°, la caméra est posée sur un trépied – sans traitement, il serait visible. Beaucoup de prestataires posent simplement une tache floue ou un logo par-dessus. Nous retouchons le sol à 95 % proprement pour un rendu naturel. Pour un résultat parfait, l’option 100 % offre un sol impeccable ou un logo intégré.' },
@@ -170,7 +170,7 @@ export default function HomePageFr() {
             <div className="fcard"><Icon id="i-palette" /><h3>Charte graphique</h3><p>Parfaitement accordée à votre marque – couleurs, logo, style.</p></div>
             <div className="fcard"><Icon id="i-pin" /><h3>Points interactifs</h3><p>Points de réservation et d’information : plus d’interaction, plus de résultats.</p></div>
             <div className="fcard"><Icon id="i-globe" /><h3>Site web & Google</h3><p>Intégrée de façon optimale. Visible, rapide, accessible partout.</p></div>
-            <div className="fcard"><Icon id="i-chart" /><h3>Succès mesurable</h3><p>Rapport analytique : vues, pièces les plus consultées et clics – des chiffres au lieu d’un ressenti.</p></div>
+            <div className="fcard"><Icon id="i-chart" /><h3>Résultats mesurables</h3><p>Rapport analytique : vues, pièces les plus consultées et clics – des chiffres au lieu d’un ressenti.</p></div>
             <div className="fcard"><Icon id="i-shield" /><h3>Pleine propriété, sans abonnement</h3><p>La visite vous appartient. Pas de location de plateforme – seulement un forfait de service équitable et facultatif.</p></div>
             <div className="fcard"><Icon id="i-bolt" /><h3>Chargement ultra-rapide</h3><p>Optimisée pour le mobile – chaque seconde de chargement compte pour la conversion.</p></div>
             <div className="fcard"><Icon id="i-phone" /><h3>Interlocuteur suisse</h3><p>Pas de centre d’appels ni de système de tickets – directement avec le créateur. Hébergement en CH/UE, conforme au RGPD.</p></div>
@@ -268,7 +268,7 @@ export default function HomePageFr() {
             <div className="pcard">
               <h3>Pro</h3><div className="for">Pour hôtels, thermes & resorts premium</div>
               <div className="price">dès CHF 4&apos;497.–</div><div className="note">incl. 12 mois de Signature Evolution · offre individuelle pour les grands projets</div>
-              <ul><li><Chk /> jusqu’à 100 panoramas</li><li><Chk /> qualité 8K</li><li><Chk /> jusqu’à 50 points interactifs</li><li><Chk /> intégration de réservation</li><li><Chk /> vidéo & interactions</li><li><Chk /> 5 séries de corrections</li></ul>
+              <ul><li><Chk /> jusqu’à 100 panoramas</li><li><Chk /> qualité 8K</li><li><Chk /> jusqu’à 50 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> intégration de réservation</li><li><Chk /> vidéo & interactions</li><li><Chk /> 5 séries de corrections</li></ul>
               <a className="btn btn-ghost" href="/konfigurator.html">Demander</a>
             </div>
           </div>
@@ -291,10 +291,11 @@ export default function HomePageFr() {
         <div className="wrap">
           <div className="center"><div className="kicker">Votre sécurité est notre promesse</div><h2 className="sec">Double garantie</h2><div className="rule" /></div>
           <div className="guar">
-            <div className="gcard"><Icon id="i-shield" /><h3>Garantie de qualité</h3><p>Qualité maximale en image, design et fonction. Pas satisfait ? Nous améliorons jusqu’à la perfection – jusqu’à 3 séries de corrections incluses.</p></div>
-            <div className="gcard"><Icon id="i-target" /><h3>Garantie de résultat</h3><p>Aucune amélioration mesurable après 90 jours ? Nous vous remboursons 50 % du prix du forfait. Sans discussion.</p></div>
+            <div className="gcard"><Icon id="i-shield" /><h3>Garantie de qualité</h3><p>Chaque panorama est peaufiné à la main — lumière, couleurs, détails. Rien ne quitte notre studio avant de répondre à nos exigences. Et si quelque chose ne correspond pas à vos attentes, nous l’affinons — jusqu’à 3 séries de corrections incluses.</p></div>
+            <div className="gcard"><Icon id="i-palette" /><h3>Garantie de marque*</h3><p>Votre visite porte votre signature : couleurs, typographies, logo et navigation exactement selon votre charte graphique. Pas de lecteur standard, pas de branding étranger — vos visiteurs restent dans votre univers, du premier clic à la demande de réservation.</p></div>
           </div>
-          <div className="nullrisk">Zéro risque. Un maximum de chances.</div>
+          <p style={{ marginTop: 14, textAlign: 'center', fontSize: 12.5, color: 'var(--dmut)' }}>* Intégration de la charte graphique dès la Signature Tour. La visite VR Basic utilise l’élégant design standard Signatour.</p>
+          <div className="nullrisk">Risque minimal. Valeur ajoutée maximale.</div>
         </div>
       </section>
 
