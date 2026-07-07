@@ -61,6 +61,9 @@ export default function ContactForm() {
         }),
       })
       if (!res.ok) throw new Error('send failed')
+      // FormSubmit antwortet auch bei Ablehnung mit HTTP 200 – Erfolg steht nur im JSON-Body
+      const result = await res.json().catch(() => null)
+      if (!result || String(result.success) !== 'true') throw new Error('send rejected')
       setSubmitted(true)
     } catch {
       // Fallback: E-Mail-Programm mit vorausgefüllter Anfrage öffnen, damit kein Lead verloren geht

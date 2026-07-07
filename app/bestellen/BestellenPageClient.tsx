@@ -61,6 +61,9 @@ export default function BestellenPageClient() {
     try {
       const res = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
       if (!res.ok) throw new Error()
+      // FormSubmit antwortet auch bei Ablehnung mit HTTP 200 – Erfolg steht nur im JSON-Body
+      const result = await res.json().catch(() => null)
+      if (!result || String(result.success) !== 'true') throw new Error()
       setDone(true)
     } catch {
       const body = Object.entries(payload).filter(([k]) => !k.startsWith('_')).map(([k, v]) => `${k}: ${v}`).join('\n')

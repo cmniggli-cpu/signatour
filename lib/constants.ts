@@ -446,7 +446,7 @@ export const FAQ_COSTS: FAQ[] = [
   },
   {
     question: 'Was passiert, wenn ich kein Servicepaket nehme?',
-    answer: 'Ihre Tour gehört Ihnen. In jedem Paket sind 12 Monate Betrieb des gehosteten Viewer- und Embed-Links inklusive. Danach hält ein optionales Servicepaket ab CHF 120.–/Jahr Ihre Tour online – inklusive Hosting, Updates und Auswertung. Ohne Servicepaket bleibt die Tour nicht automatisch online; für Sonderfälle finden wir gemeinsam eine individuelle Lösung. Möchten Sie die Tour später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
+    answer: 'Ihre Tour gehört Ihnen – ohne Wenn und Aber. In jedem Paket sind 12 Monate Betrieb des gehosteten Viewer- und Embed-Links inklusive. Danach hält ein optionales Servicepaket ab CHF 120.–/Jahr Ihre Tour online – inklusive Hosting, Updates und Auswertung. Wer kein Servicepaket möchte, erhält den kompletten Output-Ordner auf USB-Stick und kann das Hosting selbst übernehmen – die Tour bleibt vollständig in Ihrem Besitz. Und möchten Sie sie später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
   },
 ]
 

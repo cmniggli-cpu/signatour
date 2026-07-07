@@ -311,7 +311,8 @@ function submit(){
     const btn=panel.querySelector(".btn--primary"); btn.disabled=true; btn.textContent="Senden…";
     fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
       body:JSON.stringify({...payload, _subject:"Paket-Anfrage – "+payload.paket+" ("+payload.firma+")", _template:"table", _captcha:"false"})})
-      .then(r=>{ if(!r.ok) throw new Error(); state.viaMail=false; step=5; render(); })
+      .then(r=>{ if(!r.ok) throw new Error(); return r.json(); })
+      .then(j=>{ if(String(j.success)!=="true") throw new Error(); state.viaMail=false; step=5; render(); })
       .catch(mailtoFallback);
   } else {
     mailtoFallback();
