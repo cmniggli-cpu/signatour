@@ -111,7 +111,7 @@ export default function HomePageFr() {
       <section className="hero">
         <div className="bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hero-aquavirat-pool.jpg" alt="Piscine intérieure du spa AQUAVIRAT – visite 360° signée Niggli" fetchPriority="high" />
+          <img src="/hero-apartment-living.jpg" alt="Salon lumineux d’un appartement de luxe – visite 360° signée Niggli" fetchPriority="high" />
         </div>
         <div className="wrap inner">
           <p style={{ marginBottom: 16, fontSize: 13, letterSpacing: '0.08em', color: 'var(--g)' }}>

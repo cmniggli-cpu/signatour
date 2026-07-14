@@ -90,7 +90,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hero-aquavirat-pool.jpg" alt="Innenpool des AQUAVIRAT-Spa – 360°-Signature-Tour von Niggli" fetchPriority="high" />
+          <img src="/hero-apartment-living.jpg" alt="Helles Wohnzimmer eines Luxus-Apartments – 360°-Signature-Tour von Niggli" fetchPriority="high" />
         </div>
         <div className="wrap inner">
           <p style={{ marginBottom: 16, fontSize: 13, letterSpacing: '0.08em', color: 'var(--g)' }}>
