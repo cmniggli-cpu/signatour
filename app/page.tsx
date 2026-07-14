@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CONTACT_PHONE } from '@/lib/constants'
+import { CONTACT_PHONE, UEBER_UNS_REASONS } from '@/lib/constants'
 
 export const metadata: Metadata = {
   alternates: {
@@ -222,6 +222,20 @@ export default function HomePage() {
             <div className="fcard"><Icon id="i-zoom" /><h3>Zoom & Vollbild</h3><p>Bilder und Fenster lassen sich vergrössern und im Vollbild öffnen – jedes Detail wird sichtbar.</p></div>
             <div className="fcard"><Icon id="i-pin" /><h3>Grundriss & Mini-Map</h3><p>Orientierung per Grundriss und Mini-Karte – Besucher finden sich sofort zurecht.</p></div>
             <div className="fcard"><Icon id="i-doc" /><h3>Downloads</h3><p>Broschüren, Menüs, Preislisten und PDFs direkt aus der Tour herunterladen.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="blk" id="gruende">
+        <div className="wrap">
+          <div className="center"><div className="kicker">Warum Signatour</div><h2 className="sec">9 Gründe für Signatour</h2><div className="rule" /></div>
+          <div className="fgrid fgrid3" style={{ textAlign: 'left' }}>
+            {UEBER_UNS_REASONS.map((r, i) => (
+              <div className="tcard" key={r.title}>
+                <h3><span style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--g)', fontSize: 24, fontWeight: 600, marginRight: 10 }}>{String(i + 1).padStart(2, '0')}</span>{r.title}</h3>
+                <p>{r.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

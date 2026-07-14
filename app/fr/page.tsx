@@ -248,6 +248,30 @@ export default function HomePageFr() {
         </div>
       </section>
 
+      <section className="blk" id="gruende">
+        <div className="wrap">
+          <div className="center"><div className="kicker">Pourquoi Signatour</div><h2 className="sec">9 raisons de choisir Signatour</h2><div className="rule" /></div>
+          <div className="fgrid fgrid3" style={{ textAlign: 'left' }}>
+            {[
+              { t: 'Done-for-You plutôt que DIY', d: 'Nous venons, photographions et livrons. Zéro effort pour vous.' },
+              { t: 'Transparent plutôt que caché', d: 'Prix unique, pas d’abonnement – la visite vous appartient, aucune location de plateforme.' },
+              { t: 'Local plutôt que cloud américain', d: 'Serveurs suisses/UE, conformité RGPD.' },
+              { t: 'Multi-secteurs plutôt qu’immobilier seul', d: 'Hôtels, restaurants, spas, fitness, immobilier.' },
+              { t: 'Flexible plutôt que contrat longue durée', d: 'Aucune durée minimale, aucun délai de résiliation.' },
+              { t: 'Optimisation continue plutôt qu’immobilisme', d: 'Votre visite évolue – mises à jour, nouvelles scènes et extensions à tout moment.' },
+              { t: 'Sol impeccable plutôt que tache de trépied', d: 'Le nadir est retouché à 95% – sur demande à 100% ou avec votre logo.' },
+              { t: 'Instrument de vente plutôt que gadget', d: 'Liens de réservation, formulaires de contact et intégration Google transforment les visiteurs en demandes.' },
+              { t: 'Mesurable plutôt qu’à l’aveugle', d: 'Vues, durée de visite et clics sur les points de réservation – vous voyez ce que votre visite rapporte.' },
+            ].map((r, i) => (
+              <div className="tcard" key={r.t}>
+                <h3><span style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--g)', fontSize: 24, fontWeight: 600, marginRight: 10 }}>{String(i + 1).padStart(2, '0')}</span>{r.t}</h3>
+                <p>{r.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="blk" id="pakete" style={{ background: 'var(--paper2)' }}>
         <div className="wrap">
           <div className="center"><div className="kicker">Nos forfaits de vente</div><h2 className="sec">Frais de mise en place uniques</h2><div className="rule" /></div>
