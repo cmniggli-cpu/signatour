@@ -76,7 +76,10 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
                 <span>{CONTACT_ADDRESS}</span>
               </li>
-              <li className="text-xs text-primary-500">Beratung & Aufträge auf: Deutsch, Französisch & Englisch</li>
+              <li className="text-xs text-primary-500">
+                <span className="block">Beratung & Aufträge auf:</span>
+                <span className="block mt-1">Deutsch, Französisch & Englisch</span>
+              </li>
             </ul>
           </div>
         </div>

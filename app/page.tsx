@@ -102,7 +102,7 @@ export default function HomePage() {
           <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
             Wir verwandeln Ihre Räumlichkeiten in ein digitales Verkaufserlebnis: Besucher erleben Ihr Angebot, bauen Vertrauen auf und buchen, kaufen oder fragen direkt in der Tour an – noch bevor das erste Gespräch stattfindet.</p>
           <div className="cta">
-            <a className="btn btn-gold" href="#referenzen">Referenz-Touren ansehen <span className="arrow">→</span></a>
+            <a className="btn btn-gold" href="#referenzen">Referenz-Touren ansehen</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
           <p className="herotrust">Schweizer Anbieter · Persönliche Betreuung · Antwort innert 24 Stunden</p>
@@ -131,10 +131,10 @@ export default function HomePage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img loading="lazy" src={`https://images.unsplash.com/photo-${b.img}?w=900&q=80&auto=format&fit=crop`} alt={b.t} />
                 </div>
-                <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">Mehr erfahren →</span></div>
+                <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">Mehr erfahren</span></div>
               </a>
             ))}
-            <a className="bcard empty" href="/kontakt"><Icon id="i-diamond" /><h3>Andere Branche?</h3><p>Für jeden Betrieb mit sehenswerten Räumlichkeiten.</p><span className="more">Kontakt aufnehmen →</span></a>
+            <a className="bcard empty" href="/kontakt"><Icon id="i-diamond" /><h3>Andere Branche?</h3><p>Für jeden Betrieb mit sehenswerten Räumlichkeiten.</p><span className="more">Kontakt aufnehmen</span></a>
           </div>
         </div>
       </section>
@@ -291,7 +291,7 @@ export default function HomePage() {
             <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
-            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle Erweiterungen mit Nutzen & Preisen ansehen →</a>
+            <a href="/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle Erweiterungen mit Nutzen & Preisen ansehen</a>
           </p>
         </div>
       </section>
@@ -300,9 +300,9 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center"><div className="kicker">Referenzprojekte</div><h2 className="sec">Sehen Sie selbst</h2><div className="rule" /></div>
           <div className="refs">
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: Spa Signature Tour" /><div className="bot"><b>Spa Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: Immobilien Signature Tour" /><div className="bot"><b>Immobilien Signature Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
-            <div className="ref"><span className="badge">Add-On</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-On: Furniture Removal" /><div className="bot"><b>Add-On: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Tour öffnen →</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: Immobilien Basic Tour" /><div className="bot"><b>Immobilien Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
+            <div className="ref"><span className="badge">Add-On</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-On: Furniture Removal" /><div className="bot"><b>Add-On: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
           </div>
         </div>
       </section>
@@ -331,7 +331,7 @@ export default function HomePage() {
               <h2 className="serif">Lassen Sie uns Ihr Angebot digital zum Leben erwecken.</h2>
               <p>Ein unverbindliches Gespräch genügt, um zu klären, wie eine Signature Experience aus Besuchern Kunden macht.</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
-              <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung <span className="arrow">→</span></a>
+              <a className="btn btn-gold" href="/konfigurator.html">Kostenlose Beratung</a>
               <p className="finaltrust">Unverbindlich · Antwort innert 24 Stunden · Persönlich durch den Inhaber</p>
             </div>
           </div>

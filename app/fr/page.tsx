@@ -123,7 +123,7 @@ export default function HomePageFr() {
           <p className="lead"><span className="accent">Les décisions se prennent aujourd’hui en ligne – pas sur place.</span><br />
             Nous transformons vos locaux en une expérience de vente numérique : les visiteurs découvrent votre offre, gagnent en confiance et réservent, achètent ou demandent une offre directement dans la visite – avant même le premier échange.</p>
           <div className="cta">
-            <a className="btn btn-gold" href="/konfigurator.html">Conseil gratuit <span className="arrow">→</span></a>
+            <a className="btn btn-gold" href="/konfigurator.html">Conseil gratuit</a>
             <a className="btn btn-ghost" href="#referenzen">Voir les visites de référence</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
@@ -153,10 +153,10 @@ export default function HomePageFr() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img loading="lazy" src={`https://images.unsplash.com/photo-${b.img}?w=900&q=80&auto=format&fit=crop`} alt={b.t} />
                 </div>
-                <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">En savoir plus →</span></div>
+                <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">En savoir plus</span></div>
               </a>
             ))}
-            <a className="bcard empty" href="/kontakt"><Icon id="i-diamond" /><h3>Un autre secteur ?</h3><p>Pour toute entreprise aux espaces remarquables.</p><span className="more">Prendre contact →</span></a>
+            <a className="bcard empty" href="/kontakt"><Icon id="i-diamond" /><h3>Un autre secteur ?</h3><p>Pour toute entreprise aux espaces remarquables.</p><span className="more">Prendre contact</span></a>
           </div>
         </div>
       </section>
@@ -313,7 +313,7 @@ export default function HomePageFr() {
             <div className="ocard"><Icon id="i-plus" /><h3>Panoramas supplémentaires</h3><div className="pr">dès CHF 150.– par scène</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
-            <a href="/pakete" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir toutes les options avec bénéfices & prix →</a>
+            <a href="/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir toutes les options avec bénéfices & prix</a>
           </p>
         </div>
       </section>
@@ -322,9 +322,9 @@ export default function HomePageFr() {
         <div className="wrap">
           <div className="center"><div className="kicker">Projets de référence</div><h2 className="sec">Voyez par vous-même</h2><div className="rule" /></div>
           <div className="refs">
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : Spa Signature Tour" /><div className="bot"><b>Spa Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Ouvrir la visite →</a></div></div>
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : Immobilier Signature Tour" /><div className="bot"><b>Immobilier Signature Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Ouvrir la visite →</a></div></div>
-            <div className="ref"><span className="badge">Add-on</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-on : Furniture Removal" /><div className="bot"><b>Add-on : Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Ouvrir la visite →</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Ouvrir la visite</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : Immobilier Basic Tour" /><div className="bot"><b>Immobilier Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Ouvrir la visite</a></div></div>
+            <div className="ref"><span className="badge">Add-on</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-on : Furniture Removal" /><div className="bot"><b>Add-on : Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Ouvrir la visite</a></div></div>
           </div>
         </div>
       </section>
@@ -353,7 +353,7 @@ export default function HomePageFr() {
               <h2 className="serif">Donnons vie à votre offre, sous forme numérique.</h2>
               <p>Un entretien sans engagement suffit pour comprendre comment une Signature Experience transforme vos visiteurs en clients.</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
-              <a className="btn btn-gold" href="/konfigurator.html">Conseil gratuit <span className="arrow">→</span></a>
+              <a className="btn btn-gold" href="/konfigurator.html">Conseil gratuit</a>
               <p className="finaltrust">Sans engagement · Réponse sous 24 heures · Personnellement par le propriétaire</p>
             </div>
           </div>

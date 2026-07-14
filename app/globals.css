@@ -214,7 +214,6 @@ body {
 .nigpage .btn-ghost{border:1px solid var(--ln);color:var(--ink)}
 .nigpage .btn-ghost:hover{border-color:var(--g);color:var(--g)}
 .nigpage .icn{width:42px;height:42px}.nigpage .icn-sm{width:28px;height:28px}
-.nigpage .arrow{transition:.22s}.nigpage .btn:hover .arrow{transform:translateX(3px)}
 .nigpage .dark{background:var(--dk);color:var(--cream)}
 .nigpage .dark .sec{color:#fff}.nigpage .dark .sub{color:var(--dmut)}.nigpage .dark .kicker{color:var(--gd)}
 

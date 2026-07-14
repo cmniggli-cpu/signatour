@@ -33,8 +33,11 @@ export default function PaketePageClient() {
           <AnimatedSection className="mt-12">
             <div className="max-w-3xl mx-auto rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'linear-gradient(135deg,#F7DC8A 0%,#E3B23A 55%,#C8901C 100%)' }}>
               <h3 className="text-xl cd-serif" style={{ color: '#231703' }}>Doppelte Garantie – minimales Risiko, maximaler Mehrwert</h3>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: '#3c2c08' }}>
-                Qualitäts-Garantie: Jedes Panorama wird von Hand veredelt – bis zu 3 Korrekturrunden inklusive. Marken-Garantie: Ihre Tour exakt in Ihrem Corporate Design, ohne fremdes Branding (ab Signature Tour).
+              <p className="mt-3 text-sm leading-relaxed" style={{ color: '#3c2c08' }}>
+                <strong>Qualitäts-Garantie:</strong> Jedes Panorama wird von Hand veredelt – bis zu 3 Korrekturrunden inklusive.
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed" style={{ color: '#3c2c08' }}>
+                <strong>Marken-Garantie:</strong> Ihre Tour trägt Ihre Handschrift – Farben, Logo und Navigation exakt in Ihrem Corporate Design, ohne fremdes Branding (ab Signature Tour).
               </p>
             </div>
           </AnimatedSection>
@@ -70,7 +73,7 @@ export default function PaketePageClient() {
                     href={`/bestellen?paket=${ORDER_MAP[pkg.cfg] ?? ''}`}
                     className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-marine-900 text-accent-400 px-5 py-2.5 text-sm font-semibold hover:bg-marine-800 transition-colors"
                   >
-                    Paket bestellen →
+                    Paket bestellen
                   </a>
                 </Card>
               </StaggerItem>
@@ -80,7 +83,7 @@ export default function PaketePageClient() {
       </section>
 
       {/* Add-ons */}
-      <section className="py-20">
+      <section id="add-ons" className="py-20 scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Zusatzleistungen</span>
@@ -186,7 +189,7 @@ export default function PaketePageClient() {
               { n: '1', t: 'Beratung & Offerte', d: 'Unverbindlich – wir klären Ziele, Räume und das passende Paket.' },
               { n: '2', t: 'Bestätigung & Anzahlung', d: 'Auftragsbestätigung und 50% Anzahlung. Erst danach planen wir den Aufnahmetermin.' },
               { n: '3', t: 'Shooting & Produktion', d: 'Aufnahme vor Ort und Produktion Ihrer Signature Tour.' },
-              { n: '4', t: 'Freigabe & Go-live', d: 'Sie prüfen Ihre Tour bequem über den Embed-Link und geben sie frei. Nach der Schlusszahlung erhalten Sie den Embed-Link für Ihre Website – auf Wunsch mit laufendem Wartungsservice.' },
+              { n: '4', t: 'Freigabe & Go-live', d: 'Sie prüfen Ihre Tour bequem über den Viewer-Link und geben sie frei. Nach der Schlusszahlung erhalten Sie den Embed-Link für Ihre Website – auf Wunsch mit laufendem Wartungsservice.' },
             ].map((step) => (
               <StaggerItem key={step.n}>
                 <Card className="h-full bg-cream border-accent-200/70">

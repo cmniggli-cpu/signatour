@@ -97,12 +97,12 @@ body{
   <div class="kf__steplabel"><span id="stepName">Branche</span><span><b id="stepNum">1</b> / 4</span></div>
   <div class="panel" id="panel"></div>
   <div class="trust" id="trust">Unverbindlich <span class="dot">·</span> Antwort innert 24 h <span class="dot">·</span> Daten in der Schweiz</div>
-  <a class="backlink" href="/">← Zurück zur Website</a>
+  <a class="backlink" href="/">Zurück zur Website</a>
 </div>
 <script>
 const CONFIG = {
-  phone: "+41 76 652 17 37",
-  phoneHref: "tel:+41766521737",
+  phone: "+41 79 371 73 60",
+  phoneHref: "tel:+41793717360",
   email: "info@signatour.ch",
   formEndpoint: "https://formsubmit.co/ajax/info@signatour.ch",   // AJAX-Versand; bei Fehler automatischer Mailto-Fallback
   branchen: [
@@ -152,7 +152,7 @@ function render(){
 function nav(backVisible, nextLabel, nextEnabled, onNext){
   const wrap=document.createElement("div"); wrap.className="nav";
   const back=document.createElement("button");
-  back.className="btn"+(backVisible?"":" btn--ghost"); back.textContent="← Zurück";
+  back.className="btn"+(backVisible?"":" btn--ghost"); back.textContent="Zurück";
   back.onclick=()=>{ step--; render(); };
   const next=document.createElement("button");
   next.className="btn btn--primary"; next.textContent=nextLabel; next.disabled=!nextEnabled;
@@ -175,7 +175,7 @@ function renderBranche(){
     g.appendChild(t);
   });
   panel.appendChild(g);
-  nav(false,"Weiter →",!!state.branche,()=>{ step=2; render(); });
+  nav(false,"Weiter",!!state.branche,()=>{ step=2; render(); });
 }
 function renderGroesse(){
   header("Wie gross ist Ihr Betrieb?","Bestimmt das empfohlene Paket. Feinheiten klären wir im Gespräch.");
@@ -188,7 +188,7 @@ function renderGroesse(){
     g.appendChild(t);
   });
   panel.appendChild(g);
-  nav(true,"Weiter →",!!state.groesse,()=>{ step=3; render(); });
+  nav(true,"Weiter",!!state.groesse,()=>{ step=3; render(); });
 }
 function renderExtras(){
   header("Wünschen Sie Extras?","Mehrfachauswahl möglich – alles optional.");
@@ -209,7 +209,7 @@ function renderExtras(){
     la.appendChild(inp); panel.appendChild(la);
   }
   panel.appendChild(buildSummary());
-  nav(true,"Weiter →",true,()=>{ step=4; render(); });
+  nav(true,"Weiter",true,()=>{ step=4; render(); });
 }
 function renderKontakt(){
   header("Fast geschafft – wohin dürfen wir die Einschätzung senden?","Wir melden uns innert 24 h mit einem konkreten Angebot.");
@@ -239,7 +239,7 @@ function renderKontakt(){
   panel.appendChild(consent);
   const agbErr=document.createElement("div"); agbErr.className="errmsg"; agbErr.id="agbErr";
   agbErr.textContent="Bitte akzeptieren Sie die AGB"; panel.appendChild(agbErr);
-  nav(true,"Angebot anfordern →",true,submit);
+  nav(true,"Angebot anfordern",true,submit);
 }
 function buildSummary(){
   const s=document.createElement("div"); s.className="summary";

@@ -45,7 +45,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
           <h1>{data.headline}</h1>
           <p className="sub">{data.tagline}</p>
           <div className="bhero-cta">
-            <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung <span className="arrow">→</span></a>
+            <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung</a>
             <a className="btn btn-ghost" href="#paket">Paket & Preis ansehen</a>
           </div>
           <p className="herotrust">Unverbindlich · Antwort innert 24 Stunden · Die Tour gehört Ihnen, kein Abo</p>
@@ -197,8 +197,8 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
                 <li key={f}><Check size={18} /> {f}</li>
               ))}
             </ul>
-            <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung anfragen <span className="arrow">→</span></a>
-            <Link href="/pakete" className="plink">Alle Pakete & Preise vergleichen →</Link>
+            <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung anfragen</a>
+            <Link href="/pakete" className="plink">Alle Pakete & Preise vergleichen</Link>
           </div>
         </div>
       </section>
@@ -240,7 +240,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
               <h2 className="serif">Machen wir aus Ihren Besuchern Kunden.</h2>
               <p>Ein unverbindliches Gespräch genügt, um zu klären, wie eine Signature Tour in Ihrem Betrieb mehr qualifizierte Anfragen erzeugt.</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Phone size={22} /> {CONTACT_PHONE}</a></div>
-              <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung <span className="arrow">→</span></a>
+              <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung</a>
               <p className="finaltrust">Unverbindlich · Antwort innert 24 Stunden · Persönlich durch den Inhaber</p>
             </div>
           </div>

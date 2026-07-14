@@ -114,7 +114,7 @@ export default function SiteSearch() {
               {query.trim() !== '' && results.length === 0 && (
                 <div className="px-5 py-6 text-sm text-primary-500">
                   Keine Treffer für «{query}».{' '}
-                  <a href="/kontakt" onClick={() => setOpen(false)} className="text-accent-600 underline">Fragen Sie uns direkt →</a>
+                  <a href="/kontakt" onClick={() => setOpen(false)} className="text-accent-600 underline">Fragen Sie uns direkt</a>
                 </div>
               )}
               {results.map((r) => (

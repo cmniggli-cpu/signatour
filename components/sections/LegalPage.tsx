@@ -11,7 +11,7 @@ export default function LegalPage({
 }) {
   return (
     <article className="max-w-3xl mx-auto px-6 pt-28 pb-24">
-      <Link href="/" className="text-sm text-accent-600 hover:underline">← Zur Startseite</Link>
+      <Link href="/" className="text-sm text-accent-600 hover:underline">Zur Startseite</Link>
       <h1 className="mt-6 text-4xl sm:text-5xl text-primary-900" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, lineHeight: 1.05 }}>
         {title}
       </h1>

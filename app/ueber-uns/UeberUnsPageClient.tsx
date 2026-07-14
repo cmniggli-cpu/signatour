@@ -57,13 +57,13 @@ export default function UeberUnsPageClient() {
         </div>
       </section>
 
-      {/* 6 Reasons */}
+      {/* 9 Reasons */}
       <section className="py-20 bg-section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Warum Signatour</span>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
-              6 Gründe für Signatour
+              9 Gründe für Signatour
             </h2>
           </AnimatedSection>
 
@@ -130,12 +130,12 @@ export default function UeberUnsPageClient() {
               const Icon = valueIcons[i]
               return (
                 <StaggerItem key={value.title}>
-                  <Card className="h-full text-center bg-cream border-accent-200/70">
-                    <div className="mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center text-[#1a1304] shadow-lg shadow-accent-600/30">
+                  <Card className="h-full text-center bg-marine-900 border-marine-900 text-white">
+                    <div className="mx-auto w-14 h-14 rounded-2xl bg-white/5 border border-accent-400/40 flex items-center justify-center text-accent-400">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <h3 className="mt-5 text-xl font-bold text-primary-800">{value.title}</h3>
-                    <p className="mt-3 text-gray-600 leading-relaxed">{value.description}</p>
+                    <h3 className="mt-5 text-xl font-bold text-white">{value.title}</h3>
+                    <p className="mt-3 text-primary-300 leading-relaxed">{value.description}</p>
                   </Card>
                 </StaggerItem>
               )

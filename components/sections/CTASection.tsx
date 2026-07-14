@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 
 interface CTASectionProps {
   title?: string
@@ -59,7 +58,6 @@ export default function CTASection({
             style={{ background: '#0C1B2E', color: '#E3B23A' }}
           >
             {buttonText}
-            <ArrowRight className="ml-2 w-5 h-5" />
           </a>
           <p className="mt-5 text-sm" style={{ color: '#5a430f' }}>Unverbindlich · Antwort innert 24 Stunden · Schweizer Anbieter</p>
         </motion.div>

@@ -4,7 +4,7 @@ export const SITE_NAME = 'Niggli 360° Signature Tours'
 export const SITE_URL = 'https://www.signatour.ch'
 export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter – die Tour gehört Ihnen, kein Abo.'
 export const CONTACT_EMAIL = 'info@signatour.ch'
-export const CONTACT_PHONE = '+41 76 652 17 37'
+export const CONTACT_PHONE = '+41 79 371 73 60'
 export const CONTACT_ADDRESS = 'Rue de l\'Industrie 43, 2720 Tramelan'
 export const CONTACT_UID = 'CHE-368.437.989'
 
@@ -536,11 +536,14 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
 
 export const UEBER_UNS_REASONS = [
   { title: 'Done-for-You statt DIY', description: 'Wir kommen, fotografieren und liefern. Null Aufwand für Sie.' },
-  { title: 'Persönlich statt Callcenter', description: 'Ein Ansprechpartner, keine Tickets – auf Deutsch, Französisch oder Englisch.' },
   { title: 'Transparent statt versteckt', description: 'Einmalpreis, kein Abo – die Tour gehört Ihnen, keine Plattform-Miete.' },
   { title: 'Lokal statt US-Cloud', description: 'Schweizer/EU-Server, DSGVO-konform.' },
   { title: 'Multi-Branche statt nur Immobilien', description: 'Hotels, Restaurants, Spas, Fitness, Immobilien.' },
   { title: 'Flexibel statt Langzeitvertrag', description: 'Keine Mindestlaufzeit, keine Kündigungsfrist.' },
+  { title: 'Laufende Optimierung statt Stillstand', description: 'Ihre Tour wächst mit – Updates, neue Szenen und Erweiterungen jederzeit möglich.' },
+  { title: 'Makelloser Boden statt Stativ-Fleck', description: 'Der Nadir-Punkt wird zu 95% sauber retuschiert – auf Wunsch 100% oder mit Ihrem Logo.' },
+  { title: 'Verkaufsinstrument statt Spielerei', description: 'Buchungslinks, Lead-Formulare und Google-Einbindung machen aus Besuchern Anfragen.' },
+  { title: 'Messbar statt Blindflug', description: 'Aufrufe, Verweildauer und Klicks auf Buchungspunkte – Sie sehen, was Ihre Tour leistet.' },
 ]
 
 export const UEBER_UNS_VALUES = [

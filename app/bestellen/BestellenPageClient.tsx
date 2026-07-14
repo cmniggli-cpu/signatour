@@ -175,7 +175,7 @@ export default function BestellenPageClient() {
 
               <button type="button" onClick={submit} disabled={sending}
                 className="mt-4 w-full rounded-full bg-marine-900 text-accent-400 px-6 py-3.5 text-sm font-semibold hover:bg-marine-800 transition-colors disabled:opacity-50">
-                {sending ? 'Wird gesendet…' : 'Bestellung absenden →'}
+                {sending ? 'Wird gesendet…' : 'Bestellung absenden'}
               </button>
 
               <div className="mt-5 space-y-2 text-xs text-primary-500">
