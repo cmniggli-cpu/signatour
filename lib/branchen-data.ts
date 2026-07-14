@@ -8,6 +8,7 @@ export interface BranchenPageData {
   headline: string
   tagline: string
   heroImage?: string
+  demoTour?: { url: string; title: string; note: string }
   challenges: { title: string; description: string }[]
   stats: Stat[]
   statsNote?: string
@@ -175,6 +176,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: 'Ihre Wohlfühl-Atmosphäre erlebbar machen',
     tagline: 'Gäste sagen: «Es ist noch viel schöner als auf den Bildern.» Lassen Sie sie die Atmosphäre schon online spüren.',
     heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'AQUAVIRAT – Spa & Bäder', note: 'Echte Signature Tour: Pool, Saunalandschaft und Ruhebereiche – inklusive Buchung direkt in der Tour.' },
     challenges: [
       { title: 'Atmosphäre nicht vermittelbar', description: 'Fotos zeigen Räume, aber nicht das Gefühl: Sauna-Wärme, Ruhebereich-Stille, Anlage-Ausmass.' },
       { title: 'Conversion-Lücke', description: 'Besucher sind interessiert, buchen aber nicht. Es fehlt das entscheidende Erlebnis, das Vertrauen schafft.' },
@@ -309,6 +311,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: 'Professionelle 360-Touren für Ihre Objekte',
     tagline: 'Weniger Besichtigungstourismus, mehr qualifizierte Interessenten. Ohne Langzeitvertrag.',
     heroImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/cltkwbjc/', title: 'Luxury Apartment – Widen', note: 'Echte Signature Tour eines Premium-Apartments: Wohnräume, Küche, Bad und Aussenbereiche rund um die Uhr begehbar.' },
     challenges: [
       { title: 'Besichtigungstourismus', description: 'Quer durch die Stadt fahren, aufschliessen, präsentieren. Interessent sagt nach 5 Minuten: «Nicht was ich erwartet habe.»' },
       { title: 'Konkurrenz der Grossmakler', description: 'Engel & Völkers nutzen bereits virtuelle Touren und Visualisierungen. Ohne vergleichbare Präsenz verlieren Sie Mandate.' },

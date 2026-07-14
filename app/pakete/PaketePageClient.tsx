@@ -41,6 +41,17 @@ export default function PaketePageClient() {
               </p>
             </div>
           </AnimatedSection>
+
+          <AnimatedSection className="mt-12 text-center">
+            <p className="text-primary-600">Nicht sicher, welches Paket zu Ihnen passt?</p>
+            <a
+              href="/konfigurator.html"
+              className="mt-3 inline-flex items-center justify-center rounded-full bg-marine-900 text-accent-400 px-8 py-4 text-base font-semibold hover:bg-marine-800 transition-colors"
+            >
+              Paketrechner in 4 Schritten starten
+            </a>
+            <p className="mt-3 text-xs text-primary-400">Unverbindlich · Antwort innert 24 Stunden · kostenlos</p>
+          </AnimatedSection>
         </div>
       </section>
 

@@ -113,6 +113,22 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
         </div>
       </section>
 
+      {/* Referenz-Tour (echtes Beispiel) */}
+      {data.demoTour && (
+        <section className="blk">
+          <div className="wrap center" style={{ maxWidth: 900 }}>
+            <div className="kicker">Sehen Sie selbst</div>
+            <h2 className="sec">Eine echte Signature Tour</h2>
+            <div className="rule" />
+            <p className="sub" style={{ margin: '0 auto 30px' }}>{data.demoTour.note}</p>
+            <div className="ref" style={{ maxWidth: 840, margin: '0 auto', textAlign: 'left' }}>
+              <iframe loading="lazy" src={data.demoTour.url} allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title={`Referenz-Tour: ${data.demoTour.title}`} />
+              <div className="bot"><b>{data.demoTour.title}</b><a href={data.demoTour.url} target="_blank" rel="noopener noreferrer">Tour öffnen</a></div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Extra Section */}
       {data.extraSection && (
         <section className="blk">
