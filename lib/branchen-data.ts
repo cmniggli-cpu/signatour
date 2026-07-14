@@ -369,7 +369,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       'Inkl. 12 Monate Betreuungsservice pro Tour',
     ],
     faqs: [
-      { question: 'Wie schnell ist die Tour nach dem Shooting verfügbar?', answer: 'In der Regel 3–5 Arbeitstage. Dringend: 24–48h Express-Service verfügbar (Aufpreis).' },
+      { question: 'Wie schnell ist die Tour nach dem Shooting verfügbar?', answer: 'In der Regel 5–10 Arbeitstage. Dringend: Express-Lieferung in 3 Arbeitstagen (+30%).' },
       { question: 'Was passiert, wenn das Objekt verkauft oder vermietet ist?', answer: 'Tour wird deaktiviert/gelöscht. Nächste Tour von der Karte für neues Objekt nutzen. Kein Ablaufdatum.' },
       { question: 'Muss die Immobilie für das Shooting leer sein?', answer: 'Nein. Möblierte Objekte wirken in 360 Grad oft ansprechender. Besser zur Nutzung vorstellbar. Wir beraten zur optimalen Vorbereitung.' },
     ],

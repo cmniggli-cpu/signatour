@@ -362,8 +362,8 @@ body {
 /* ---- Niggli homepage: light / silver overrides (no black) ---- */
 .nigpage{--gd:#C8901C;--dk:#E9ECEF;--dk2:#FFFFFF;--dln:rgba(200,144,28,.32);--dlns:rgba(20,17,11,.10);--cream:#2a2620;--dmut:#6d6657}
 .nigpage .hero{color:var(--ink);background:linear-gradient(160deg,#F4F5F7 0%,#DCE0E5 100%)}
-.nigpage .hero .bg img{opacity:.32;filter:saturate(.92) contrast(1.02)}
-.nigpage .hero .bg::after{background:linear-gradient(90deg,rgba(244,245,247,.92),rgba(244,245,247,.62) 52%,rgba(244,245,247,.28)),radial-gradient(70% 75% at 82% 8%,rgba(200,144,28,.20),transparent 62%)}
+.nigpage .hero .bg img{opacity:.5;filter:saturate(.96) contrast(1.02)}
+.nigpage .hero .bg::after{background:linear-gradient(90deg,rgba(244,245,247,.9),rgba(244,245,247,.55) 52%,rgba(244,245,247,.16)),radial-gradient(70% 75% at 82% 8%,rgba(200,144,28,.16),transparent 62%)}
 .nigpage .hero .lead{color:var(--ink2)}
 .nigpage .hero .phone{color:var(--ink)}
 .nigpage .dark .sec{color:var(--ink)}

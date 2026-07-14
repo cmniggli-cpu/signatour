@@ -376,7 +376,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     question: 'Wie lange dauert die Erstellung?',
-    answer: 'Das Shooting dauert 2–4 Stunden vor Ort. Die fertige Tour erhalten Sie in 5–10 Arbeitstagen. Express in 48 Stunden möglich.',
+    answer: 'Das Shooting dauert 2–4 Stunden vor Ort. Die fertige Tour erhalten Sie in 5–10 Arbeitstagen. Express-Lieferung in 3 Arbeitstagen möglich.',
   },
   {
     question: 'Brauche ich eine spezielle App oder Kamera?',
@@ -430,7 +430,7 @@ export const FAQ_COSTS: FAQ[] = [
   },
   {
     question: 'Wie lange dauert die Erstellung?',
-    answer: 'Shooting vor Ort: 2–4 Stunden. Lieferung: 5–10 Arbeitstage. Express-Option: 48 Stunden (+30%).',
+    answer: 'Shooting vor Ort: 2–4 Stunden. Lieferung: 5–10 Arbeitstage. Express-Option: 3 Arbeitstage (+30%).',
   },
   {
     question: 'Wie läuft ein Shooting ab?',
@@ -465,7 +465,7 @@ export const FAQ_TECH: FAQ[] = [
   },
   {
     question: 'Kann die Tour auf Google Maps angezeigt werden?',
-    answer: 'Ja, direkt im Google Business Profile und Google Maps integrierbar. 2× mehr Profilaufrufe mit 360-Grad-Inhalten. Google Street View Publikation verfügbar (CHF 150).',
+    answer: 'Ja, direkt im Google Business Profile und Google Maps integrierbar. 2× mehr Profilaufrufe mit 360-Grad-Inhalten. Google Street View & Business-Einbindung als Add-on verfügbar (CHF 490.– einmalig).',
   },
   {
     question: 'Was passiert nach Ablauf des Hostings?',

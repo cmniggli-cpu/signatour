@@ -90,7 +90,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1900&q=80&auto=format&fit=crop" alt="Hotel-Pool als 360°-Verkaufserlebnis – Beispiel einer Signature Tour" fetchPriority="high" />
+          <img src="https://images.unsplash.com/photo-1598822300476-b9cf1fb156ab?w=1900&q=80&auto=format&fit=crop" alt="Schweizer Bergsee im Abendlicht – Heimat der Niggli 360° Signature Tours" fetchPriority="high" />
         </div>
         <div className="wrap inner">
           <p style={{ marginBottom: 16, fontSize: 13, letterSpacing: '0.08em', color: 'var(--g)' }}>
