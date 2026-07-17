@@ -122,7 +122,7 @@ export default function HomePageFr() {
             <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
             <a href="/en" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.7 }}>English</a>
           </p>
-          <h1 className="serif">Vos espaces deviennent votre <em>meilleur vendeur</em> – 24 h/24.</h1>
+          <h1 className="serif">Vos espaces deviennent votre <em>meilleur vendeur</em> <span style={{ whiteSpace: 'nowrap' }}>– 24 h/24.</span></h1>
           <p className="lead"><span className="accent">Les décisions se prennent aujourd’hui en ligne – pas sur place.</span><br />
             Nous transformons vos locaux en une expérience de vente numérique : les visiteurs découvrent votre offre, gagnent en confiance et réservent, achètent ou demandent une offre directement dans la visite – avant même le premier échange.</p>
           <div className="cta">
