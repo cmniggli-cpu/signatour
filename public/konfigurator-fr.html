@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurateur de forfait · Niggli 360° Signature Tours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF6; --bg2:#FFFFFF; --card:#FFFFFF; --card-hover:#FBF7EE;
+  --line:rgba(20,17,11,.12); --gold:#C8901C; --gold-soft:#E3B23A; --gold-dim:rgba(200,144,28,.45);
+  --text:#15120B; --muted:#6d6657; --green:#2e7d4f; --red:#c0452c;
+  --radius:16px; --shadow:0 16px 44px rgba(20,17,11,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Jost',system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:linear-gradient(160deg,#F4F5F7 0%,#E9E5DA 100%);
+  color:var(--text); line-height:1.5; min-height:100vh;
+  display:flex; align-items:flex-start; justify-content:center; padding:32px 16px;
+}
+.kf{width:100%; max-width:760px}
+.kf__head{text-align:center; margin-bottom:26px}
+.kf__eyebrow{font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:10px}
+.kf__title{font-family:'Cormorant Garamond',serif; font-size:38px; font-weight:600; margin:0 0 8px; letter-spacing:.3px; line-height:1.1}
+.kf__sub{color:var(--muted); font-size:15px; max-width:520px; margin:0 auto}
+.kf__steps{display:flex; gap:8px; margin:26px 0 22px}
+.kf__steps .seg{flex:1; height:4px; border-radius:99px; background:var(--line); overflow:hidden}
+.kf__steps .seg.done{background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+.kf__steplabel{display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:24px; letter-spacing:.4px}
+.kf__steplabel b{color:var(--text)}
+.panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:30px 28px}
+.panel h2{font-family:'Cormorant Garamond',serif; font-size:25px; font-weight:600; margin:0 0 4px}
+.panel .hint{color:var(--muted); font-size:14px; margin:0 0 20px}
+.grid{display:grid; gap:12px}
+.grid.cols2{grid-template-columns:repeat(2,1fr)}
+.grid.cols3{grid-template-columns:repeat(3,1fr)}
+.tile{position:relative; text-align:left; cursor:pointer; border:1.5px solid var(--line); background:var(--card); border-radius:14px; padding:16px 16px; transition:.15s ease; display:flex; flex-direction:column; gap:4px; color:var(--text)}
+.tile:hover{background:var(--card-hover); border-color:var(--gold-dim)}
+.tile .t-name{font-weight:600; font-size:15px}
+.tile .t-desc{font-size:12.5px; color:var(--muted)}
+.tile .t-price{font-size:12.5px; color:var(--gold); margin-top:2px}
+.tile.sel{border-color:var(--gold); background:rgba(200,144,28,.08); box-shadow:0 0 0 1px var(--gold) inset}
+.tile .check{position:absolute; top:12px; right:12px; width:20px; height:20px; border-radius:50%; border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:12px; color:#1a1304; background:transparent}
+.tile.sel .check{background:var(--gold); border-color:var(--gold)}
+.tile.sel .check::after{content:"✓"}
+.field{margin-bottom:14px}
+.field label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px; letter-spacing:.3px}
+.field input,.field textarea{width:100%; background:#fff; border:1.5px solid var(--line); border-radius:12px; color:var(--text); font-size:15px; padding:12px 14px; font-family:inherit; transition:.15s}
+.field input:focus,.field textarea:focus{outline:none; border-color:var(--gold)}
+.field input.err,.field textarea.err{border-color:var(--red)}
+.req{color:var(--gold)}
+.errmsg{color:var(--red); font-size:12px; margin-top:5px; display:none}
+.errmsg.show{display:block}
+.summary{margin-top:18px; background:rgba(201,162,75,.07); border:1px solid var(--gold-dim); border-radius:14px; padding:16px 18px}
+.summary .s-row{display:flex; justify-content:space-between; font-size:13.5px; color:var(--muted); padding:3px 0}
+.summary .s-row span:last-child{color:var(--text)}
+.summary .s-pkg{font-size:13px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); font-weight:700}
+.summary .s-total{display:flex; justify-content:space-between; align-items:baseline; margin-top:10px; padding-top:10px; border-top:1px dashed var(--gold-dim)}
+.summary .s-total b{font-size:24px} .summary .s-total small{color:var(--muted); font-size:12px}
+.nav{display:flex; justify-content:space-between; gap:12px; margin-top:24px}
+.btn{font-family:inherit; font-size:15px; font-weight:600; border-radius:12px; padding:13px 22px; cursor:pointer; border:1.5px solid var(--line); background:transparent; color:var(--text); transition:.15s}
+.btn:hover{border-color:var(--gold-dim)}
+.btn--ghost{visibility:hidden}
+.btn--primary{background:#0C1B2E; color:#E3B23A; border:none; box-shadow:0 10px 28px rgba(12,27,46,.28)}
+.btn--primary:hover{filter:brightness(1.05)}
+.btn--primary:disabled{opacity:.45; cursor:not-allowed; filter:none; box-shadow:none}
+.trust{text-align:center; color:var(--muted); font-size:12.5px; margin-top:16px; letter-spacing:.3px}
+.trust .dot{color:var(--gold-dim); margin:0 6px}
+.lang-add{display:flex; align-items:center; gap:10px; margin-top:10px; font-size:13.5px; color:var(--muted)}
+.lang-add input{width:64px; text-align:center; padding:8px}
+.consent{display:flex; align-items:flex-start; gap:10px; margin-top:16px; font-size:13.5px; color:var(--muted); cursor:pointer}
+.consent input{margin:3px 0 0; width:16px; height:16px; flex-shrink:0; accent-color:var(--gold); cursor:pointer}
+.consent a{color:var(--gold); text-decoration:underline}
+.consent a:hover{color:var(--gold-soft)}
+.done{text-align:center; padding:14px 6px}
+.done .mark{width:64px; height:64px; border-radius:50%; margin:0 auto 16px; background:rgba(92,184,116,.15); border:1.5px solid var(--green); color:var(--green); display:flex; align-items:center; justify-content:center; font-size:30px}
+.done h2{font-size:22px; margin:0 0 8px}
+.done p{color:var(--muted); max-width:440px; margin:0 auto 6px}
+.done .phone{color:var(--gold); font-weight:600; font-size:18px; margin-top:12px; display:inline-block; text-decoration:none}
+.backlink{display:block;text-align:center;margin-top:18px;color:var(--muted);font-size:13px;text-decoration:none}
+.backlink:hover{color:var(--gold)}
+@media(max-width:560px){.kf__title{font-size:24px}.grid.cols3{grid-template-columns:1fr}.grid.cols2{grid-template-columns:1fr}.panel{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="kf">
+  <div class="kf__head">
+    <div class="kf__eyebrow">Configurateur de forfait</div>
+    <h1 class="kf__title">Trouvez le forfait qui vous convient</h1>
+    <p class="kf__sub">En 4 étapes vers votre estimation sans engagement. Réponse sous 24 heures – gratuit et sans obligation.</p>
+  </div>
+  <div class="kf__steps" id="steps"><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div></div>
+  <div class="kf__steplabel"><span id="stepName">Secteur</span><span><b id="stepNum">1</b> / 4</span></div>
+  <div class="panel" id="panel"></div>
+  <div class="trust" id="trust">Sans engagement <span class="dot">·</span> Réponse sous 24 h <span class="dot">·</span> Données en Suisse</div>
+  <a class="backlink" href="/">Retour au site</a>
+</div>
+<script>
+const CONFIG = {
+  phone: "+41 79 371 73 60",
+  phoneHref: "tel:+41793717360",
+  email: "info@signatour.ch",
+  formEndpoint: "https://formsubmit.co/ajax/info@signatour.ch",   // AJAX-Versand; bei Fehler automatischer Mailto-Fallback
+  branchen: [
+    {id:"hotel",       name:"Hôtel",                 desc:"Chambres, lobby & vue à faire vivre"},
+    {id:"restaurant",  name:"Restaurant / gastro",   desc:"Montrer l’ambiance avant la réservation"},
+    {id:"spa",         name:"Spa & wellness",        desc:"Faire ressentir calme & haut de gamme"},
+    {id:"fitness",     name:"Salle de fitness",      desc:"Équipements & atmosphère, abaisser le seuil"},
+    {id:"immobilien",  name:"Immobilier",            desc:"Objets visitables 24 h/24"},
+    {id:"banken",      name:"Banque / assurance / étude", desc:"Bureaux premium & salles de conseil"},
+    {id:"events",      name:"Lieu d’événements / showroom", desc:"Salles & surfaces à vivre avant la demande"},
+    {id:"andere",      name:"Autre secteur",         desc:"Toute entreprise aux espaces remarquables"},
+  ],
+  groessen: [
+    {id:"klein",  name:"Petit",   desc:"jusqu’à 15 panoramas · zones individuelles",     pkg:"Basic",     price:990, prefix:""},
+    {id:"mittel", name:"Moyen",   desc:"jusqu’à 40 panoramas · tout l’établissement",        pkg:"Signature", price:2497, prefix:""},
+    {id:"gross",  name:"Grand",   desc:"jusqu’à 100 panoramas · hôtel/resort/centre",  pkg:"Pro",       price:4497, prefix:"dès "},
+  ],
+  extras: [
+    {id:"buchung",  name:"Intégration de réservation",   note:"incluse dans Signature & Pro", add:0,   priced:false},
+    {id:"sprachen", name:"Multilingue (DE/FR/EN)",note:"+ CHF 300 par langue supplémentaire",  add:300, priced:true, perLang:true},
+    {id:"staging",  name:"Virtual Staging",        note:"+ dès CHF 240 par panorama",    add:240, priced:true, perPano:true},
+    {id:"street",   name:"Google Street View & Business", note:"+ CHF 490 une fois",    add:490, priced:true},
+    {id:"lead",     name:"Formulaire de capture de leads",  note:"+ CHF 390 une fois",           add:390, priced:true},
+    {id:"moebel",   name:"Furniture Removal",      note:"+ dès CHF 180 par panorama",    add:180, priced:true, perPano:true},
+    {id:"tagnacht", name:"Mode jour/nuit",       note:"+ dès CHF 180 par scène",       add:180, priced:true, perPano:true},
+    {id:"web",      name:"Signature Web (site web)",note:"programmé sur mesure · dès CHF 2'500", add:0, priced:false},
+  ],
+};
+let step = 1;
+const state = { branche:null, groesse:null, extras:{}, langs:1, agb:false, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
+const stepNames = ["Secteur","Taille","Extras","Contact"];
+const fmt = n => "CHF " + n.toLocaleString("de-CH").replace(/,/g,"’");
+const panel = document.getElementById("panel");
+const steps = document.getElementById("steps").children;
+const trust = document.getElementById("trust");
+function render(){
+  document.getElementById("stepNum").textContent = step;
+  document.getElementById("stepName").textContent = stepNames[step-1];
+  for(let i=0;i<4;i++) steps[i].classList.toggle("done", i < step);
+  trust.style.display = "block";
+  if(step===1) renderBranche();
+  else if(step===2) renderGroesse();
+  else if(step===3) renderExtras();
+  else if(step===4) renderKontakt();
+  else if(step===5) renderDone();
+}
+function nav(backVisible, nextLabel, nextEnabled, onNext){
+  const wrap=document.createElement("div"); wrap.className="nav";
+  const back=document.createElement("button");
+  back.className="btn"+(backVisible?"":" btn--ghost"); back.textContent="Retour";
+  back.onclick=()=>{ step--; render(); };
+  const next=document.createElement("button");
+  next.className="btn btn--primary"; next.textContent=nextLabel; next.disabled=!nextEnabled;
+  next.onclick=onNext;
+  wrap.appendChild(back); wrap.appendChild(next);
+  panel.appendChild(wrap);
+}
+function header(title,hint){
+  panel.innerHTML="";
+  const h=document.createElement("h2"); h.textContent=title; panel.appendChild(h);
+  const p=document.createElement("p"); p.className="hint"; p.textContent=hint; panel.appendChild(p);
+}
+function renderBranche(){
+  header("Dans quel secteur êtes-vous actif ?","Nous vous montrons ainsi des exemples et fonctions adaptés.");
+  const g=document.createElement("div"); g.className="grid cols2";
+  CONFIG.branchen.forEach(b=>{
+    const t=document.createElement("button"); t.className="tile"+(state.branche===b.id?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${b.name}</span><span class="t-desc">${b.desc}</span>`;
+    t.onclick=()=>{ state.branche=b.id; render(); };
+    g.appendChild(t);
+  });
+  panel.appendChild(g);
+  nav(false,"Continuer",!!state.branche,()=>{ step=2; render(); });
+}
+function renderGroesse(){
+  header("Quelle est la taille de votre établissement ?","Détermine le forfait recommandé. Nous précisons les détails lors de l’entretien.");
+  const g=document.createElement("div"); g.className="grid cols3";
+  CONFIG.groessen.forEach(s=>{
+    const t=document.createElement("button"); t.className="tile"+(state.groesse===s.id?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${s.name}</span><span class="t-desc">${s.desc}</span>
+                 <span class="t-price">${s.pkg} · ${s.prefix}${fmt(s.price)}</span>`;
+    t.onclick=()=>{ state.groesse=s.id; render(); };
+    g.appendChild(t);
+  });
+  panel.appendChild(g);
+  nav(true,"Continuer",!!state.groesse,()=>{ step=3; render(); });
+}
+function renderExtras(){
+  header("Souhaitez-vous des extras ?","Sélection multiple possible – tout est facultatif.");
+  const g=document.createElement("div"); g.className="grid cols2";
+  CONFIG.extras.forEach(x=>{
+    const on=!!state.extras[x.id];
+    const t=document.createElement("button"); t.className="tile"+(on?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${x.name}</span><span class="t-price">${x.note}</span>`;
+    t.onclick=()=>{ state.extras[x.id]=!on; render(); };
+    g.appendChild(t);
+  });
+  panel.appendChild(g);
+  if(state.extras.sprachen){
+    const la=document.createElement("div"); la.className="lang-add";
+    la.innerHTML=`<span>Nombre de langues supplémentaires :</span>`;
+    const inp=document.createElement("input"); inp.type="number"; inp.min=1; inp.max=2; inp.value=state.langs;
+    inp.onchange=()=>{ state.langs=Math.max(1,Math.min(2,parseInt(inp.value||1))); render(); };
+    la.appendChild(inp); panel.appendChild(la);
+  }
+  panel.appendChild(buildSummary());
+  nav(true,"Continuer",true,()=>{ step=4; render(); });
+}
+function renderKontakt(){
+  header("Presque terminé – où pouvons-nous envoyer l’estimation ?","Nous vous répondons sous 24 h avec une offre concrète.");
+  const mk=(key,label,req,type,ph)=>{
+    const f=document.createElement("div"); f.className="field";
+    f.innerHTML=`<label>${label}${req?' <span class="req">*</span>':''}</label>`;
+    const inp=document.createElement(type==="textarea"?"textarea":"input");
+    if(type!=="textarea") inp.type=type||"text";
+    if(type==="textarea") inp.rows=3;
+    inp.placeholder=ph||""; inp.value=state.contact[key]||"";
+    inp.oninput=()=>{ state.contact[key]=inp.value; inp.classList.remove("err"); f.querySelector(".errmsg")?.classList.remove("show"); };
+    f.appendChild(inp);
+    const e=document.createElement("div"); e.className="errmsg"; e.textContent="Veuillez remplir ce champ"; f.appendChild(e);
+    f.dataset.key=key; f.dataset.req=req?"1":"";
+    return f;
+  };
+  panel.appendChild(mk("name","Nom",true,"text","Prénom et nom"));
+  panel.appendChild(mk("email","E-mail",true,"email","nom@entreprise.ch"));
+  panel.appendChild(mk("firma","Entreprise / établissement",true,"text","Nom de votre établissement"));
+  panel.appendChild(mk("tel","Téléphone (facultatif)",false,"tel","+41 …"));
+  panel.appendChild(mk("msg","Message (facultatif)",false,"textarea","Quelque chose que nous devrions savoir ?"));
+  panel.appendChild(buildSummary());
+  const consent=document.createElement("label"); consent.className="consent";
+  consent.innerHTML=`<input type="checkbox" id="agbCheck"${state.agb?" checked":""}>
+    <span>J’accepte les <a href="/agb" target="_blank" rel="noopener">conditions générales de vente (CGV)</a> pour les prestations demandées, forfaits compris. <span class="req">*</span></span>`;
+  consent.querySelector("input").onchange=(ev)=>{ state.agb=ev.target.checked; document.getElementById("agbErr").classList.remove("show"); };
+  panel.appendChild(consent);
+  const agbErr=document.createElement("div"); agbErr.className="errmsg"; agbErr.id="agbErr";
+  agbErr.textContent="Veuillez accepter les CGV"; panel.appendChild(agbErr);
+  nav(true,"Demander une offre",true,submit);
+}
+function buildSummary(){
+  const s=document.createElement("div"); s.className="summary";
+  const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
+  if(!sz){ s.innerHTML=`<div class="s-row"><span>Choisissez une taille pour une estimation de prix.</span><span></span></div>`; return s; }
+  let total=sz.price; const rows=[];
+  rows.push(`<div class="s-row"><span class="s-pkg">Forfait ${sz.pkg}</span><span>${sz.prefix}${fmt(sz.price)}</span></div>`);
+  let approx = !!sz.prefix;
+  CONFIG.extras.forEach(x=>{
+    if(state.extras[x.id] && x.priced){
+      let add=x.add; let label=x.name;
+      if(x.perLang){ add=x.add*state.langs; label+=` (${state.langs}×)`; }
+      if(x.perPano){ approx=true; label+=" (dès)"; }
+      total+=add;
+      rows.push(`<div class="s-row"><span>+ ${label}</span><span>+ ${fmt(add)}</span></div>`);
+    } else if(state.extras[x.id] && !x.priced){
+      rows.push(`<div class="s-row"><span>+ ${x.name}</span><span>${x.id==="web"?"sur demande":"incl."}</span></div>`);
+    }
+  });
+  s.innerHTML = rows.join("") +
+    `<div class="s-total"><span><small>Investissement estimé</small><br><b>${approx?"ab ":""}${fmt(total)}</b></span>
+     <small>une fois · service opt. dès CHF 120/an</small></div>`;
+  return s;
+}
+function submit(){
+  let ok=true;
+  panel.querySelectorAll(".field").forEach(f=>{
+    if(f.dataset.req){
+      const inp=f.querySelector("input,textarea"); const val=(inp.value||"").trim();
+      let bad=!val;
+      if(f.dataset.key==="email" && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) bad=true;
+      if(bad){ ok=false; inp.classList.add("err"); const e=f.querySelector(".errmsg");
+        e.textContent = (f.dataset.key==="email" && val) ? "Veuillez saisir un e-mail valide" : "Veuillez remplir ce champ";
+        e.classList.add("show"); }
+    }
+  });
+  if(!state.agb){ ok=false; document.getElementById("agbErr")?.classList.add("show"); }
+  if(!ok) return;
+  const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
+  const chosenExtras=CONFIG.extras.filter(x=>state.extras[x.id]).map(x=>x.name);
+  const payload={
+    branche:(CONFIG.branchen.find(b=>b.id===state.branche)||{}).name,
+    groesse:sz?sz.name:"", paket:sz?sz.pkg:"",
+    extras:chosenExtras, zusatzsprachen: state.extras.sprachen?state.langs:0,
+    ...state.contact, "AGB akzeptiert": state.agb?"Ja":"Nein", quelle:"Paket-Konfigurator (FR)"
+  };
+  const mailtoFallback=()=>{
+    const body=[
+      "Branche: "+payload.branche,
+      "Grösse: "+payload.groesse+" (empfohlenes Paket: "+payload.paket+")",
+      "Extras: "+(payload.extras.join(", ")||"keine"),
+      "Zusatzsprachen: "+payload.zusatzsprachen,
+      "",
+      "Name: "+payload.name,
+      "Firma: "+payload.firma,
+      "E-Mail: "+payload.email,
+      "Telefon: "+payload.tel,
+      "Nachricht: "+payload.msg,
+      "AGB akzeptiert: "+payload["AGB akzeptiert"],
+      "",
+      "(Quelle: Paket-Konfigurator)"
+    ].join("\n");
+    const mail="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Demande de forfait – "+payload.paket+" ("+payload.firma+")")+"&body="+encodeURIComponent(body);
+    window.location.href=mail;
+    state.viaMail=true;
+    step=5; render();
+  };
+  if(CONFIG.formEndpoint){
+    const btn=panel.querySelector(".btn--primary"); btn.disabled=true; btn.textContent="Envoi…";
+    fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({...payload, _subject:"Demande de forfait – "+payload.paket+" ("+payload.firma+")", _template:"table", _captcha:"false"})})
+      .then(r=>{ if(!r.ok) throw new Error(); return r.json(); })
+      .then(j=>{ if(String(j.success)!=="true") throw new Error(); state.viaMail=false; step=5; render(); })
+      .catch(mailtoFallback);
+  } else {
+    mailtoFallback();
+  }
+}
+function renderDone(){
+  for(let i=0;i<4;i++) steps[i].classList.add("done");
+  document.getElementById("stepNum").textContent="✓"; document.getElementById("stepName").textContent="Terminé";
+  trust.style.display="none";
+  const sz=CONFIG.groessen.find(x=>x.id===state.groesse);
+  panel.innerHTML="";
+  const d=document.createElement("div"); d.className="done";
+  d.innerHTML=`
+    <div class="mark">✓</div>
+    <h2>Merci, ${state.contact.name.split(" ")[0]||""} !</h2>
+    <p>${state.viaMail
+      ? `Votre logiciel de messagerie s’ouvre avec la demande préremplie${sz?` – forfait recommandé : <b style="color:var(--gold)">${sz.pkg}</b>`:""}. Il ne reste qu’à l’envoyer.`
+      : `Votre demande nous est bien parvenue${sz?` – forfait recommandé : <b style="color:var(--gold)">${sz.pkg}</b>`:""}.`}</p>
+    <p>Nous vous répondons sous <b>24 heures</b> avec une offre concrète et sans engagement.</p>
+    <p>Vous préférez en parler directement ?</p>
+    <a class="phone" href="${CONFIG.phoneHref}">${CONFIG.phone}</a>`;
+  panel.appendChild(d);
+}
+(function(){var p=new URLSearchParams(location.search).get("b"); if(p && CONFIG.branchen.some(function(b){return b.id===p;})) state.branche=p;})();
+render();
+</script>
+</body>
+</html>

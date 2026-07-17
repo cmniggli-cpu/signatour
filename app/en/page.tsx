@@ -126,7 +126,7 @@ export default function HomePageEn() {
           <p className="lead"><span className="accent">Decisions are made online today – not on site.</span><br />
             We turn your premises into a digital sales experience: visitors explore your offer, build trust and book, buy or enquire directly inside the tour – before the first conversation even takes place.</p>
           <div className="cta">
-            <a className="btn btn-gold" href="/konfigurator.html">Free consultation</a>
+            <a className="btn btn-gold" href="/konfigurator-en.html">Free consultation</a>
             <a className="btn btn-ghost" href="#referenzen">View reference tours</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
@@ -382,7 +382,7 @@ export default function HomePageEn() {
               <h2 className="serif">Let’s bring your offer to life, digitally.</h2>
               <p>One no-obligation conversation is enough to see how a Signature Experience turns your visitors into customers.</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
-              <a className="btn btn-gold" href="/konfigurator.html">Free consultation</a>
+              <a className="btn btn-gold" href="/konfigurator-en.html">Free consultation</a>
               <p className="finaltrust">No obligation · Reply within 24 hours · Personally from the owner</p>
             </div>
           </div>

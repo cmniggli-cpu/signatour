@@ -21,6 +21,7 @@ const SERVICE_MAP: Record<string, string> = {
 export default function PaketePageClient({ locale = 'de' }: { locale?: Locale }) {
   const c = paketeContent[locale]
   const bestellen = localizedHref('/bestellen', locale)
+  const konfigurator = locale === 'de' ? '/konfigurator.html' : `/konfigurator-${locale}.html`
 
   return (
     <>
@@ -49,7 +50,7 @@ export default function PaketePageClient({ locale = 'de' }: { locale?: Locale })
           <AnimatedSection className="mt-12 text-center">
             <p className="text-primary-600">{c.rechner.question}</p>
             <a
-              href="/konfigurator.html"
+              href={konfigurator}
               className="mt-3 inline-flex items-center justify-center rounded-full bg-marine-900 text-accent-400 px-8 py-4 text-base font-semibold hover:bg-marine-800 transition-colors"
             >
               {c.rechner.button}

@@ -126,7 +126,7 @@ export default function HomePageFr() {
           <p className="lead"><span className="accent">Les décisions se prennent aujourd’hui en ligne – pas sur place.</span><br />
             Nous transformons vos locaux en une expérience de vente numérique : les visiteurs découvrent votre offre, gagnent en confiance et réservent, achètent ou demandent une offre directement dans la visite – avant même le premier échange.</p>
           <div className="cta">
-            <a className="btn btn-gold" href="/konfigurator.html">Conseil gratuit</a>
+            <a className="btn btn-gold" href="/konfigurator-fr.html">Conseil gratuit</a>
             <a className="btn btn-ghost" href="#referenzen">Voir les visites de référence</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
@@ -381,7 +381,7 @@ export default function HomePageFr() {
               <h2 className="serif">Donnons vie à votre offre, sous forme numérique.</h2>
               <p>Un entretien sans engagement suffit pour comprendre comment une Signature Experience transforme vos visiteurs en clients.</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a></div>
-              <a className="btn btn-gold" href="/konfigurator.html">Conseil gratuit</a>
+              <a className="btn btn-gold" href="/konfigurator-fr.html">Conseil gratuit</a>
               <p className="finaltrust">Sans engagement · Réponse sous 24 heures · Personnellement par le propriétaire</p>
             </div>
           </div>
