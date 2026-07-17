@@ -38,7 +38,7 @@ export default function UeberUnsPageClient({ locale = 'de' }: { locale?: Locale 
           <AnimatedSection>
             <div className="bg-marine-900 rounded-3xl p-8 sm:p-12 text-center text-white">
               <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">{c.partner.kicker}</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif">{c.partner.title}</h2>
+              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif text-accent-400">{c.partner.title}</h2>
               <p className="mt-4 text-primary-300 leading-relaxed max-w-2xl mx-auto">
                 {c.partner.text}
               </p>
