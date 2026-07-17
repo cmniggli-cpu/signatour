@@ -7,7 +7,10 @@ const data = BRANCHEN_DATA['banken-versicherungen']
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
-  alternates: { canonical: '/branchen/banken-versicherungen' },
+  alternates: {
+    canonical: '/branchen/banken-versicherungen',
+    languages: { 'de-CH': '/branchen/banken-versicherungen', 'fr-CH': '/fr/branchen/banken-versicherungen', en: '/en/branchen/banken-versicherungen', 'x-default': '/branchen/banken-versicherungen' },
+  },
 }
 
 export default function BankenVersicherungenPage() {

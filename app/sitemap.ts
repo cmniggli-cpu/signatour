@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/branchen/immobilien', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/branchen/banken-versicherungen', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/branchen/eventlocations', priority: 0.8, changeFrequency: 'monthly' },
+    ...['hotel', 'restaurant', 'spa-wellness', 'fitnessstudio', 'immobilien', 'banken-versicherungen', 'eventlocations'].flatMap(
+      (slug): { path: string; priority: number; changeFrequency: 'monthly' }[] => [
+        { path: `/fr/branchen/${slug}`, priority: 0.7, changeFrequency: 'monthly' },
+        { path: `/en/branchen/${slug}`, priority: 0.7, changeFrequency: 'monthly' },
+      ]
+    ),
     { path: '/ueber-uns', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
     // Rechtsseiten (/impressum, /datenschutz, /agb) sind bewusst auf noindex

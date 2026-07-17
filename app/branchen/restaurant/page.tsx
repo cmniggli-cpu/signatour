@@ -7,7 +7,10 @@ const data = BRANCHEN_DATA['restaurant']
 export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
-  alternates: { canonical: '/branchen/restaurant' },
+  alternates: {
+    canonical: '/branchen/restaurant',
+    languages: { 'de-CH': '/branchen/restaurant', 'fr-CH': '/fr/branchen/restaurant', en: '/en/branchen/restaurant', 'x-default': '/branchen/restaurant' },
+  },
 }
 
 export default function RestaurantPage() {

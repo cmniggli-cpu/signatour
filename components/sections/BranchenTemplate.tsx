@@ -2,25 +2,32 @@ import Link from 'next/link'
 import { Check, Phone } from 'lucide-react'
 import { CONTACT_PHONE } from '@/lib/constants'
 import type { BranchenPageData } from '@/lib/branchen-data'
+import { branchenTemplateStrings } from '@/lib/i18n/content/branchen-template'
+import { dictionaries } from '@/lib/i18n/dictionaries'
+import { localizedHref, type Locale } from '@/lib/i18n/config'
 
 const TEL = CONTACT_PHONE.replace(/[^+\d]/g, '')
 
-const ALL_BRANCHEN = [
-  { slug: 'hotel', label: 'Hotels' },
-  { slug: 'restaurant', label: 'Restaurants' },
-  { slug: 'spa-wellness', label: 'Spa & Wellness' },
-  { slug: 'fitnessstudio', label: 'Fitnessstudios' },
-  { slug: 'immobilien', label: 'Immobilien' },
-  { slug: 'banken-versicherungen', label: 'Banken, Versicherungen & Kanzleien' },
-  { slug: 'eventlocations', label: 'Eventlocations & Showrooms' },
-]
+const BRANCHEN_SLUGS = [
+  { slug: 'hotel', key: 'hotel' },
+  { slug: 'restaurant', key: 'restaurant' },
+  { slug: 'spa-wellness', key: 'spa' },
+  { slug: 'fitnessstudio', key: 'fitness' },
+  { slug: 'immobilien', key: 'immobilien' },
+  { slug: 'banken-versicherungen', key: 'banken' },
+  { slug: 'eventlocations', key: 'events' },
+] as const
 
 interface BranchenTemplateProps {
   data: BranchenPageData
+  locale?: Locale
 }
 
-export default function BranchenTemplate({ data }: BranchenTemplateProps) {
-  const otherBranchen = ALL_BRANCHEN.filter((b) => b.slug !== data.slug)
+export default function BranchenTemplate({ data, locale = 'de' }: BranchenTemplateProps) {
+  const t = branchenTemplateStrings[locale]
+  const labels = dictionaries[locale].branchenLabels
+  const lp = (href: string) => localizedHref(href, locale)
+  const otherBranchen = BRANCHEN_SLUGS.filter((b) => b.slug !== data.slug).map((b) => ({ slug: b.slug, label: labels[b.key] }))
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -45,18 +52,18 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
           <h1>{data.headline}</h1>
           <p className="sub">{data.tagline}</p>
           <div className="bhero-cta">
-            <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung</a>
-            <a className="btn btn-ghost" href="#paket">Paket & Preis ansehen</a>
+            <a className="btn btn-gold" href={lp('/kontakt')}>{t.ctaBeratung}</a>
+            <a className="btn btn-ghost" href="#paket">{t.ctaPaket}</a>
           </div>
-          <p className="herotrust">Unverbindlich · Antwort innert 24 Stunden · Die Tour gehört Ihnen, kein Abo</p>
+          <p className="herotrust">{t.heroTrust}</p>
         </div>
       </section>
 
       {/* Challenges */}
       <section className="blk" style={{ background: 'var(--white)' }}>
         <div className="wrap center">
-          <div className="kicker">Die Herausforderung</div>
-          <h2 className="sec">Kennen Sie das?</h2>
+          <div className="kicker">{t.challengeKicker}</div>
+          <h2 className="sec">{t.challengeTitle}</h2>
           <div className="rule" />
           <div className="fgrid fgrid3" style={{ textAlign: 'left' }}>
             {data.challenges.map((c) => (
@@ -72,8 +79,8 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {/* Stats */}
       <section className="blk statsdark">
         <div className="wrap center">
-          <div className="kicker">Was eine Signature Tour bewirkt</div>
-          <h2 className="sec">Zahlen statt Versprechen</h2>
+          <div className="kicker">{t.statsKicker}</div>
+          <h2 className="sec">{t.statsTitle}</h2>
           <div className="bstats">
             {data.stats.map((s) => (
               <div className="bstat" key={s.label}>
@@ -84,7 +91,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
           </div>
           {data.sources && (
             <p className="bsources">
-              Quellen:{' '}
+              {t.sourcesLabel}:{' '}
               {data.sources.map((src, i) => (
                 <span key={src.url}>
                   {i > 0 && ' · '}
@@ -99,8 +106,8 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {/* Captures */}
       <section className="blk" style={{ background: 'var(--paper2)' }}>
         <div className="wrap center" style={{ maxWidth: 880 }}>
-          <div className="kicker">Umfang</div>
-          <h2 className="sec">Was wir erfassen</h2>
+          <div className="kicker">{t.capturesKicker}</div>
+          <h2 className="sec">{t.capturesTitle}</h2>
           <div className="rule" />
           <div className="bchecks">
             {data.captures.map((item) => (
@@ -117,13 +124,13 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {data.demoTour && (
         <section className="blk">
           <div className="wrap center" style={{ maxWidth: 900 }}>
-            <div className="kicker">Sehen Sie selbst</div>
-            <h2 className="sec">Eine echte Signature Tour</h2>
+            <div className="kicker">{t.demoKicker}</div>
+            <h2 className="sec">{t.demoTitle}</h2>
             <div className="rule" />
             <p className="sub" style={{ margin: '0 auto 30px' }}>{data.demoTour.note}</p>
             <div className="ref" style={{ maxWidth: 840, margin: '0 auto', textAlign: 'left' }}>
-              <iframe loading="lazy" src={data.demoTour.url} allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title={`Referenz-Tour: ${data.demoTour.title}`} />
-              <div className="bot"><b>{data.demoTour.title}</b><a href={data.demoTour.url} target="_blank" rel="noopener noreferrer">Tour öffnen</a></div>
+              <iframe loading="lazy" src={data.demoTour.url} allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title={`${t.demoTitle}: ${data.demoTour.title}`} />
+              <div className="bot"><b>{data.demoTour.title}</b><a href={data.demoTour.url} target="_blank" rel="noopener noreferrer">{t.demoOpen}</a></div>
             </div>
           </div>
         </section>
@@ -152,23 +159,23 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {data.comparisonRows && (
         <section className="blk" style={{ background: 'var(--paper2)' }}>
           <div className="wrap center" style={{ maxWidth: 920 }}>
-            <div className="kicker">{data.comparisonKicker ?? 'Der ehrliche Vergleich'}</div>
+            <div className="kicker">{data.comparisonKicker ?? t.comparisonKicker}</div>
             <h2 className="sec">{data.comparisonTitle}</h2>
             <div className="rule" />
             <div className="vtab">
               <div className="vrow vhead">
-                <div className="vc crit">Kriterium</div>
+                <div className="vc crit">{t.comparisonCrit}</div>
                 <div className="vc wo">
-                  {data.comparisonWithoutHead ?? 'Ohne Signatour'}
+                  {data.comparisonWithoutHead ?? t.comparisonWithout}
                   {data.comparisonWithoutSub && <span>{data.comparisonWithoutSub}</span>}
                 </div>
-                <div className="vc wi">Mit Signatour</div>
+                <div className="vc wi">{t.comparisonWith}</div>
               </div>
               {data.comparisonRows.map((row) => (
                 <div className="vrow" key={row.label}>
                   <div className="vc crit">{row.label}</div>
-                  <div className="vc wo" data-l={data.comparisonWithoutHead ?? 'Andere'}><span className="dash">–</span>{row.without}</div>
-                  <div className="vc wi" data-l="Mit Signatour"><span className="ck">✓</span>{row.with}</div>
+                  <div className="vc wo" data-l={data.comparisonWithoutHead ?? t.comparisonWithout}><span className="dash">–</span>{row.without}</div>
+                  <div className="vc wi" data-l={t.comparisonWith}><span className="ck">✓</span>{row.with}</div>
                 </div>
               ))}
             </div>
@@ -181,7 +188,7 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
         <section className="blk">
           <div className="wrap center" style={{ maxWidth: 760 }}>
             <div className="roi">
-              <div className="kicker">Rechnet sich das?</div>
+              <div className="kicker">{t.roiKicker}</div>
               <h2 className="sec" style={{ fontSize: 'clamp(26px,3.4vw,38px)' }}>{data.roiTitle}</h2>
               {data.roiSteps && (
                 <div className="roicalc">
@@ -200,21 +207,21 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {/* Package */}
       <section className="blk" id="paket" style={{ background: 'var(--paper2)' }}>
         <div className="wrap center" style={{ maxWidth: 620 }}>
-          <div className="kicker">Unser Vorschlag für Sie</div>
-          <h2 className="sec">Das passende Paket</h2>
+          <div className="kicker">{t.packageKicker}</div>
+          <h2 className="sec">{t.packageTitle}</h2>
           <div className="rule" />
           <div className="pcard best" style={{ marginTop: 44, textAlign: 'left', transform: 'none' }}>
-            <div className="ribbon">Empfohlen</div>
+            <div className="ribbon">{t.packageRibbon}</div>
             <h3>{data.packageName}</h3>
             <div className="price">{data.packagePrice}</div>
-            <div className="note">einmalig · die Tour gehört Ihnen, kein Abo</div>
+            <div className="note">{t.packageNote}</div>
             <ul>
               {data.packageFeatures.map((f) => (
                 <li key={f}><Check size={18} /> {f}</li>
               ))}
             </ul>
-            <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung anfragen</a>
-            <Link href="/pakete" className="plink">Alle Pakete & Preise vergleichen</Link>
+            <a className="btn btn-gold" href={lp('/kontakt')}>{t.packageCta}</a>
+            <Link href={lp('/pakete')} className="plink">{t.packageCompare}</Link>
           </div>
         </div>
       </section>
@@ -223,8 +230,8 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       <section className="blk">
         <div className="wrap" style={{ maxWidth: 820 }}>
           <div className="center">
-            <div className="kicker">FAQ</div>
-            <h2 className="sec">Häufige Fragen</h2>
+            <div className="kicker">{t.faqKicker}</div>
+            <h2 className="sec">{t.faqTitle}</h2>
             <div className="rule" />
           </div>
           <div className="faq">
@@ -238,10 +245,10 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
       {/* Weitere Branchen */}
       <section className="blk" style={{ background: 'var(--paper2)', paddingTop: 54, paddingBottom: 54 }}>
         <div className="wrap center">
-          <h2 className="sec" style={{ fontSize: 'clamp(22px,2.6vw,30px)' }}>Auch interessant für andere Branchen</h2>
+          <h2 className="sec" style={{ fontSize: 'clamp(22px,2.6vw,30px)' }}>{t.otherTitle}</h2>
           <div className="chips">
             {otherBranchen.map((b) => (
-              <Link key={b.slug} href={`/branchen/${b.slug}`} className="chip">{b.label}</Link>
+              <Link key={b.slug} href={lp(`/branchen/${b.slug}`)} className="chip">{b.label}</Link>
             ))}
           </div>
         </div>
@@ -252,12 +259,12 @@ export default function BranchenTemplate({ data }: BranchenTemplateProps) {
         <div className="wrap">
           <div className="final">
             <div className="inner">
-              <div className="kicker">Bereit für den nächsten Schritt?</div>
-              <h2 className="serif">Machen wir aus Ihren Besuchern Kunden.</h2>
-              <p>Ein unverbindliches Gespräch genügt, um zu klären, wie eine Signature Tour in Ihrem Betrieb mehr qualifizierte Anfragen erzeugt.</p>
+              <div className="kicker">{t.finalKicker}</div>
+              <h2 className="serif">{t.finalTitle}</h2>
+              <p>{t.finalText}</p>
               <div className="finalphone"><a className="phone" href={`tel:${TEL}`}><Phone size={22} /> {CONTACT_PHONE}</a></div>
-              <a className="btn btn-gold" href="/kontakt">Kostenlose Beratung</a>
-              <p className="finaltrust">Unverbindlich · Antwort innert 24 Stunden · Persönlich durch den Inhaber</p>
+              <a className="btn btn-gold" href={lp('/kontakt')}>{t.finalCta}</a>
+              <p className="finaltrust">{t.finalTrust}</p>
             </div>
           </div>
         </div>

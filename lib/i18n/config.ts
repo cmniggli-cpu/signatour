@@ -51,6 +51,7 @@ export function stripLocale(pathname: string): string {
 export const LOCALIZED_PATHS = ['/', '/pakete', '/ueber-uns', '/faq', '/kontakt', '/bestellen'] as const
 
 export function isLocalizedPath(basePath: string): boolean {
+  if (basePath.startsWith('/branchen/')) return true
   return (LOCALIZED_PATHS as readonly string[]).includes(basePath)
 }
 
