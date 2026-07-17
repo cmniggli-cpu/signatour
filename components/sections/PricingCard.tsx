@@ -9,9 +9,13 @@ interface PricingCardProps {
   tier: PricingTier
   showRange?: boolean
   index?: number
+  strings?: { einmalig: string; beliebt: string; cta: string }
+  orderHref?: string
 }
 
-export default function PricingCard({ tier, showRange = false, index = 0 }: PricingCardProps) {
+const DEFAULT_STRINGS = { einmalig: 'einmalig', beliebt: 'Beliebt', cta: 'Paket bestellen' }
+
+export default function PricingCard({ tier, showRange = false, index = 0, strings = DEFAULT_STRINGS, orderHref = '/bestellen' }: PricingCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -29,7 +33,7 @@ export default function PricingCard({ tier, showRange = false, index = 0 }: Pric
       {tier.featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
           <span className="inline-flex items-center gap-1 bg-accent-500 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
-            <Star className="w-3.5 h-3.5" /> Beliebt
+            <Star className="w-3.5 h-3.5" /> {strings.beliebt}
           </span>
         </div>
       )}
@@ -43,7 +47,7 @@ export default function PricingCard({ tier, showRange = false, index = 0 }: Pric
         <span className={cn('text-5xl cd-serif', tier.featured ? 'text-accent-400' : 'text-accent-600')}>
           {showRange ? tier.priceRange : tier.price}
         </span>
-        <span className={cn('ml-2 text-sm', tier.featured ? 'text-primary-400' : 'text-primary-400')}>einmalig</span>
+        <span className={cn('ml-2 text-sm', tier.featured ? 'text-primary-400' : 'text-primary-400')}>{strings.einmalig}</span>
       </div>
 
       <p className={cn('mt-2 text-sm font-medium', tier.featured ? 'text-accent-400' : 'text-accent-600')}>{tier.hosting}</p>
@@ -59,13 +63,13 @@ export default function PricingCard({ tier, showRange = false, index = 0 }: Pric
 
       <div className="mt-8">
         <a
-          href={`/bestellen?paket=${tier.name.toLowerCase()}`}
+          href={`${orderHref}?paket=${tier.name.toLowerCase()}`}
           className={cn(
             'inline-flex w-full items-center justify-center rounded-full px-7 py-3 text-sm font-semibold tracking-wide transition-colors',
             tier.featured ? 'bg-accent-500 text-white hover:bg-accent-600' : 'bg-marine-900 text-accent-400 hover:bg-marine-800'
           )}
         >
-          {tier.cta || 'Paket bestellen'}
+          {tier.cta || strings.cta}
         </a>
       </div>
     </motion.div>

@@ -7,23 +7,23 @@ import Card from '@/components/ui/Card'
 import ContactForm from '@/components/features/ContactForm'
 import CTASection from '@/components/sections/CTASection'
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
+import { kontaktContent } from '@/lib/i18n/content/kontakt'
+import type { Locale } from '@/lib/i18n/config'
 
-const contactInfo = [
-  { icon: Phone, title: 'Telefon', description: CONTACT_PHONE, sub: 'Beratung verfügbar' },
-  { icon: Mail, title: 'E-Mail', description: CONTACT_EMAIL, sub: 'Antwort innert Stunden' },
-  { icon: MapPin, title: 'Servicegebiet', description: 'Deutsch- und französischsprachige Schweiz', sub: 'Beratung & Aufträge auf: Deutsch, Französisch & Englisch' },
-  { icon: Clock, title: 'Antwortzeit', description: 'Innerhalb von 24 Stunden', sub: '' },
-  { icon: Heart, title: 'Unser Versprechen', description: 'Unverbindlich, ehrliche Beratung – auch wenn eine Tour gerade keinen Sinn macht.', sub: '' },
-]
+export default function KontaktPageClient({ locale = 'de' }: { locale?: Locale }) {
+  const c = kontaktContent[locale]
 
-export default function KontaktPageClient() {
+  const contactInfo = [
+    { icon: Phone, title: c.info.telefonTitle, description: CONTACT_PHONE, sub: c.info.telefonSub },
+    { icon: Mail, title: c.info.emailTitle, description: CONTACT_EMAIL, sub: c.info.emailSub },
+    { icon: MapPin, title: c.info.gebietTitle, description: c.info.gebietText, sub: c.info.gebietSub },
+    { icon: Clock, title: c.info.antwortTitle, description: c.info.antwortText, sub: '' },
+    { icon: Heart, title: c.info.versprechenTitle, description: c.info.versprechenText, sub: '' },
+  ]
+
   return (
     <>
-      <PageHero
-        badge="Kostenlose Beratung"
-        title="Lassen Sie uns sprechen"
-        subtitle="Unverbindlich und ehrlich: Wir klären gemeinsam, ob sich eine Signature Tour für Ihren Betrieb rechnet – Antwort innert 24 Stunden, persönlich durch den Inhaber."
-      />
+      <PageHero badge={c.hero.badge} title={c.hero.title} subtitle={c.hero.subtitle} />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,8 +31,8 @@ export default function KontaktPageClient() {
             {/* Form */}
             <AnimatedSection className="lg:col-span-3" direction="left">
               <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h2 className="text-3xl cd-serif text-primary-900 mb-6">Anfrage senden</h2>
-                <ContactForm />
+                <h2 className="text-3xl cd-serif text-primary-900 mb-6">{c.formTitle}</h2>
+                <ContactForm locale={locale} />
               </div>
             </AnimatedSection>
 
@@ -56,9 +56,9 @@ export default function KontaktPageClient() {
       </section>
 
       <CTASection
-        title="Lieber direkt sprechen?"
-        subtitle="Rufen Sie uns an oder schreiben Sie eine E-Mail."
-        buttonText="Jetzt anrufen"
+        title={c.cta.title}
+        subtitle={c.cta.subtitle}
+        buttonText={c.cta.buttonText}
         buttonHref={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
       />
     </>

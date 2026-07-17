@@ -6,29 +6,27 @@ import PageHero from '@/components/sections/PageHero'
 import AnimatedSection, { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection'
 import Card from '@/components/ui/Card'
 import CTASection from '@/components/sections/CTASection'
-import { UEBER_UNS_REASONS, UEBER_UNS_VALUES } from '@/lib/constants'
+import { ueberUnsContent } from '@/lib/i18n/content/ueber-uns'
+import type { Locale } from '@/lib/i18n/config'
 
 const valueIcons = [Heart, Cpu, HandshakeIcon]
 
-export default function UeberUnsPageClient() {
+export default function UeberUnsPageClient({ locale = 'de' }: { locale?: Locale }) {
+  const c = ueberUnsContent[locale]
   return (
     <>
-      <PageHero
-        badge="Über Signatour"
-        title="Ihr Schweizer Partner für digitale Verkaufserlebnisse"
-        subtitle="Wir verkaufen keine Technik. Wir machen Ihr stärkstes Verkaufsargument – Ihre Räumlichkeiten – online erlebbar, damit aus Besuchern Kunden werden."
-      />
+      <PageHero badge={c.hero.badge} title={c.hero.title} subtitle={c.hero.subtitle} />
 
       {/* Mission */}
       <section className="py-20 bg-marine-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
-            <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">Unsere Mission</span>
+            <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">{c.mission.kicker}</span>
             <h2 className="mt-3 text-3xl sm:text-4xl cd-serif text-white">
-              Wir machen das stärkste Verkaufsargument von KMUs – ihre Räumlichkeiten – online erlebbar.
+              {c.mission.title}
             </h2>
             <p className="mt-6 text-lg text-primary-300 leading-relaxed">
-              KMU-Inhaberinnen und Inhaber haben 14-Stunden-Tage. Sie verdienen einen Partner, der kommt, professionell arbeitet und ein fertiges Ergebnis liefert.
+              {c.mission.text}
             </p>
           </AnimatedSection>
         </div>
@@ -39,10 +37,10 @@ export default function UeberUnsPageClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="bg-marine-900 rounded-3xl p-8 sm:p-12 text-center text-white">
-              <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">Ihr Ansprechpartner</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif">Marius Niggli – Gründer & Inhaber</h2>
+              <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">{c.partner.kicker}</span>
+              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif">{c.partner.title}</h2>
               <p className="mt-4 text-primary-300 leading-relaxed max-w-2xl mx-auto">
-                Vom ersten Gespräch über das Shooting bis zur fertigen Tour: Sie sprechen immer mit derselben Person – kein Callcenter, kein Ticket-System. Wer mit Herzblut arbeitet, bindet Kunden durch Qualität, nicht durch Verträge.
+                {c.partner.text}
               </p>
               <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 text-sm">
                 <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="inline-flex items-center justify-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
@@ -61,14 +59,14 @@ export default function UeberUnsPageClient() {
       <section className="py-20 bg-section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Warum Signatour</span>
+            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">{c.reasons.kicker}</span>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
-              9 Gründe für Signatour
+              {c.reasons.title}
             </h2>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {UEBER_UNS_REASONS.map((reason, i) => (
+            {c.reasons.items.map((reason, i) => (
               <StaggerItem key={reason.title}>
                 <Card className="h-full bg-cream border-accent-200/70">
                   <div className="flex items-baseline gap-3">
@@ -87,24 +85,18 @@ export default function UeberUnsPageClient() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
-            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Technologie</span>
+            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">{c.tech.kicker}</span>
             <h2 className="mt-3 text-3xl sm:text-4xl cd-serif text-primary-800">
-              Professionelle Software aus Europa
+              {c.tech.title}
             </h2>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-              Wir arbeiten mit <strong>Pano2VR von Garden Gnome Software</strong> – einem Wiener Unternehmen mit über 15 Jahren Entwicklungserfahrung.
+              {c.tech.intro}
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                'Keine Cloud-Abhängigkeit',
-                'Kein Vendor Lock-in',
-                'Volle Datenkontrolle',
-                'Europäische Software mit DSGVO-Konformität',
-                'Überlegene Tour-Qualität vs. Cloud-Lösungen',
-              ].map((item, i) => (
+              {c.tech.points.map((item, i) => (
                 <div key={i} className="flex items-center gap-3 p-4 bg-primary-50 rounded-xl">
                   <div className="w-2 h-2 rounded-full bg-accent-400 shrink-0" />
                   <span className="text-gray-700 font-medium">{item}</span>
@@ -119,14 +111,14 @@ export default function UeberUnsPageClient() {
       <section className="py-20 bg-section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Unsere Werte</span>
+            <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">{c.values.kicker}</span>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl cd-serif text-primary-800">
-              Woran wir glauben
+              {c.values.title}
             </h2>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {UEBER_UNS_VALUES.map((value, i) => {
+            {c.values.items.map((value, i) => {
               const Icon = valueIcons[i]
               return (
                 <StaggerItem key={value.title}>

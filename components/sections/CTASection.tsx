@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useDictionary } from '@/lib/i18n/client'
+import { localizedHref } from '@/lib/i18n/config'
 
 interface CTASectionProps {
   title?: string
@@ -9,12 +11,13 @@ interface CTASectionProps {
   buttonHref?: string
 }
 
-export default function CTASection({
-  title = 'Bereit, aus Besuchern Kunden zu machen?',
-  subtitle = 'In einem unverbindlichen Gespräch klären wir, wie eine Signature Tour in Ihrem Betrieb mehr qualifizierte Anfragen erzeugt – und ob sie sich für Sie rechnet.',
-  buttonText = 'Kostenlose Beratung',
-  buttonHref = '/kontakt',
-}: CTASectionProps) {
+export default function CTASection({ title, subtitle, buttonText, buttonHref }: CTASectionProps) {
+  const { locale, t } = useDictionary()
+  const resolvedTitle = title ?? t.cta.title
+  const resolvedSubtitle = subtitle ?? t.cta.subtitle
+  const resolvedButtonText = buttonText ?? t.cta.button
+  const resolvedButtonHref = buttonHref ?? localizedHref('/kontakt', locale)
+
   return (
     <section
       className="relative overflow-hidden"
@@ -33,7 +36,7 @@ export default function CTASection({
           className="text-4xl sm:text-5xl lg:text-6xl cd-serif leading-[1.05]"
           style={{ color: '#231703' }}
         >
-          {title}
+          {resolvedTitle}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +46,7 @@ export default function CTASection({
           className="mt-5 text-lg max-w-2xl mx-auto"
           style={{ color: '#3c2c08' }}
         >
-          {subtitle}
+          {resolvedSubtitle}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,13 +56,13 @@ export default function CTASection({
           className="mt-10"
         >
           <a
-            href={buttonHref}
+            href={resolvedButtonHref}
             className="inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 px-9 py-4 text-base rounded-full"
             style={{ background: '#0C1B2E', color: '#E3B23A' }}
           >
-            {buttonText}
+            {resolvedButtonText}
           </a>
-          <p className="mt-5 text-sm" style={{ color: '#5a430f' }}>Unverbindlich · Antwort innert 24 Stunden · Schweizer Anbieter</p>
+          <p className="mt-5 text-sm" style={{ color: '#5a430f' }}>{t.cta.trust}</p>
         </motion.div>
       </div>
     </section>

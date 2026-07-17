@@ -8,21 +8,21 @@ import Link from 'next/link'
 import { Send, CheckCircle } from 'lucide-react'
 import Input, { Select, Textarea } from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
-import { INDUSTRIES_DROPDOWN, CONTACT_EMAIL } from '@/lib/constants'
+import { CONTACT_EMAIL } from '@/lib/constants'
+import { kontaktContent } from '@/lib/i18n/content/kontakt'
+import type { Locale } from '@/lib/i18n/config'
 
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
 
-const contactSchema = z.object({
-  name: z.string().min(2, 'Bitte geben Sie Ihren Namen ein'),
-  email: z.string().email('Bitte geben Sie eine gültige E-Mail-Adresse ein'),
-  phone: z.string().optional(),
-  industry: z.string().optional(),
-  area: z.string().optional(),
-  message: z.string().optional(),
-  agb: z.boolean().refine((v) => v === true, 'Bitte akzeptieren Sie die AGB'),
-})
-
-type ContactFormData = z.infer<typeof contactSchema>
+interface ContactFormData {
+  name: string
+  email: string
+  phone?: string
+  industry?: string
+  area?: string
+  message?: string
+  agb: boolean
+}
 
 function buildMailto(data: ContactFormData) {
   const body = [
@@ -40,8 +40,19 @@ function buildMailto(data: ContactFormData) {
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Anfrage über signatour.ch – ${data.name}`)}&body=${encodeURIComponent(body)}`
 }
 
-export default function ContactForm() {
+export default function ContactForm({ locale = 'de' }: { locale?: Locale }) {
+  const f = kontaktContent[locale].form
   const [submitted, setSubmitted] = useState(false)
+
+  const contactSchema = z.object({
+    name: z.string().min(2, f.errName),
+    email: z.string().email(f.errEmail),
+    phone: z.string().optional(),
+    industry: z.string().optional(),
+    area: z.string().optional(),
+    message: z.string().optional(),
+    agb: z.boolean().refine((v) => v === true, f.errAgb),
+  })
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -55,6 +66,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           ...data,
           agb: data.agb ? 'akzeptiert' : 'nicht akzeptiert',
+          Sprache: locale.toUpperCase(),
           _subject: `Anfrage über signatour.ch – ${data.name}`,
           _template: 'table',
           _captcha: 'false',
@@ -76,8 +88,8 @@ export default function ContactForm() {
     return (
       <div className="text-center py-12">
         <CheckCircle className="w-16 h-16 text-success mx-auto" />
-        <h3 className="mt-4 text-2xl font-bold text-primary-900">Vielen Dank für Ihre Anfrage!</h3>
-        <p className="mt-2 text-primary-500">Wir melden uns innerhalb von 24 Stunden persönlich bei Ihnen.</p>
+        <h3 className="mt-4 text-2xl font-bold text-primary-900">{f.successTitle}</h3>
+        <p className="mt-2 text-primary-500">{f.successText}</p>
       </div>
     )
   }
@@ -86,16 +98,16 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Input
-          label="Name"
-          placeholder="Ihr Name"
+          label={f.labelName}
+          placeholder={f.phName}
           required
           {...register('name')}
           error={errors.name?.message}
         />
         <Input
-          label="E-Mail"
+          label={f.labelEmail}
           type="email"
-          placeholder="ihre@email.ch"
+          placeholder={f.phEmail}
           required
           {...register('email')}
           error={errors.email?.message}
@@ -104,27 +116,27 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Input
-          label="Telefon"
+          label={f.labelPhone}
           type="tel"
           placeholder="+41 ..."
           {...register('phone')}
         />
         <Select
-          label="Branche"
-          options={INDUSTRIES_DROPDOWN.map((ind) => ({ value: ind, label: ind }))}
+          label={f.labelIndustry}
+          options={f.industries.map((ind) => ({ value: ind, label: ind }))}
           {...register('industry')}
         />
       </div>
 
       <Input
-        label="Ungefähre Fläche in m²"
-        placeholder="z.B. 200"
+        label={f.labelArea}
+        placeholder={f.phArea}
         {...register('area')}
       />
 
       <Textarea
-        label="Nachricht / Anmerkungen"
-        placeholder="Erzählen Sie uns von Ihrem Projekt..."
+        label={f.labelMessage}
+        placeholder={f.phMessage}
         {...register('message')}
       />
 
@@ -136,23 +148,23 @@ export default function ContactForm() {
             className="mt-0.5 w-4 h-4 shrink-0 accent-[#C8901C]"
           />
           <span>
-            Ich akzeptiere die{' '}
+            {f.agbBefore}{' '}
             <Link href="/agb" target="_blank" rel="noopener" className="underline hover:text-primary-900">
-              Allgemeinen Geschäftsbedingungen (AGB)
+              {f.agbLink}
             </Link>{' '}
-            für die angefragten Dienstleistungen inkl. Pakete.<span className="text-red-500 ml-1">*</span>
+            {f.agbAfter}<span className="text-red-500 ml-1">*</span>
           </span>
         </label>
         {errors.agb && <p className="text-sm text-red-500 pl-7 mt-1.5">{errors.agb.message}</p>}
       </div>
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? 'Wird gesendet...' : 'Kostenlose Beratung anfragen'}
+        {isSubmitting ? f.submitting : f.submit}
         <Send className="ml-2 w-5 h-5" />
       </Button>
 
       <p className="text-xs text-primary-400 text-center">
-        Unverbindlich · Antwort innert 24 Stunden · Ihre Daten werden vertraulich behandelt (<Link href="/datenschutz" className="underline hover:text-primary-600">Datenschutz</Link>)
+        {f.trustLine} (<Link href="/datenschutz" className="underline hover:text-primary-600">{f.privacyLabel}</Link>)
       </p>
     </form>
   )

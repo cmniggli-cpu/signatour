@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     languages: {
       'de-CH': '/',
       'fr-CH': '/fr',
+      en: '/en',
       'x-default': '/',
     },
   },
@@ -97,6 +98,8 @@ export default function HomePage() {
             <span style={{ fontWeight: 600 }}>Deutsch</span>
             <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
             <a href="/fr" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.7 }}>Français</a>
+            <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
+            <a href="/en" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.7 }}>English</a>
           </p>
           <h1 className="serif">Ihre Räume werden zum <em>besten Verkäufer</em> – rund um die Uhr.</h1>
           <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />

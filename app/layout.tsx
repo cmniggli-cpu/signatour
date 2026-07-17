@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import LangSync from '@/components/layout/LangSync'
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -130,6 +131,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-sans antialiased">
+        <LangSync />
         <Header />
         <main>{children}</main>
         <Footer />
