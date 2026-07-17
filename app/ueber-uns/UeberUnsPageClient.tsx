@@ -42,8 +42,8 @@ export default function UeberUnsPageClient({ locale = 'de' }: { locale?: Locale 
               <p className="mt-4 leading-relaxed max-w-2xl mx-auto" style={{ color: '#3c2c08' }}>
                 {c.partner.text}
               </p>
-              <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 text-sm font-semibold">
-                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="inline-flex items-center justify-center gap-2 transition-opacity hover:opacity-75" style={{ color: '#231703' }}>
+              <div className="mt-7 flex flex-col sm:flex-row justify-center items-center gap-4 text-sm font-semibold">
+                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 transition-opacity hover:opacity-90" style={{ background: '#0C1B2E', color: '#E3B23A' }}>
                   <Phone className="w-4 h-4" /> {CONTACT_PHONE}
                 </a>
                 <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center justify-center gap-2 transition-opacity hover:opacity-75" style={{ color: '#231703' }}>
@@ -56,7 +56,7 @@ export default function UeberUnsPageClient({ locale = 'de' }: { locale?: Locale 
       </section>
 
       {/* 9 Reasons */}
-      <section className="py-20 bg-section-gradient">
+      <section className="pb-20 bg-section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <span className="text-sm font-semibold text-accent-500 uppercase tracking-wider">{c.reasons.kicker}</span>
