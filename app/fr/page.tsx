@@ -96,12 +96,12 @@ const FAQ_JSONLD = {
 }
 
 const BRANCHEN = [
-  { img: '1566073771259-6a8506099945', href: '/branchen/hotel', t: 'Hôtels & gastronomie', d: 'Rendez chambres, lobby, ambiance et tables vivants – plus de réservations directes et de réservations de table.' },
-  { img: '1540555700478-4be289fbecef', href: '/branchen/spa-wellness', t: 'Spa & wellness', d: 'Faites ressentir le calme et la qualité haut de gamme.' },
-  { img: '1534438327276-14e5300c3a48', href: '/branchen/fitnessstudio', t: 'Salles de fitness', d: 'Montrez les équipements et l’atmosphère – abaissez le seuil d’inhibition.' },
-  { img: '1512917774080-9991f1c4c750', href: '/branchen/immobilien', t: 'Immobilier', d: 'Des biens visitables 24 h/24 – moins de visites inutiles.' },
-  { img: '1497366754035-f200968a6e72', href: '/branchen/banken-versicherungen', t: 'Banques, assurances & études', d: 'Des bureaux premium et salles de conseil qui inspirent confiance déjà en ligne.' },
-  { img: '1519167758481-83f550bb49b3', href: '/branchen/eventlocations', t: 'Lieux d’événements & showrooms', d: 'Mettez en valeur salles, lieux et surfaces d’exposition – le client vit l’espace avant de demander.' },
+  { img: '1566073771259-6a8506099945', href: '/fr/branchen/hotel', t: 'Hôtels & gastronomie', d: 'Rendez chambres, lobby, ambiance et tables vivants – plus de réservations directes et de réservations de table.' },
+  { img: '1540555700478-4be289fbecef', href: '/fr/branchen/spa-wellness', t: 'Spa & wellness', d: 'Faites ressentir le calme et la qualité haut de gamme.' },
+  { img: '1534438327276-14e5300c3a48', href: '/fr/branchen/fitnessstudio', t: 'Salles de fitness', d: 'Montrez les équipements et l’atmosphère – abaissez le seuil d’inhibition.' },
+  { img: '1512917774080-9991f1c4c750', href: '/fr/branchen/immobilien', t: 'Immobilier', d: 'Des biens visitables 24 h/24 – moins de visites inutiles.' },
+  { img: '1497366754035-f200968a6e72', href: '/fr/branchen/banken-versicherungen', t: 'Banques, assurances & études', d: 'Des bureaux premium et salles de conseil qui inspirent confiance déjà en ligne.' },
+  { img: '1519167758481-83f550bb49b3', href: '/fr/branchen/eventlocations', t: 'Lieux d’événements & showrooms', d: 'Mettez en valeur salles, lieux et surfaces d’exposition – le client vit l’espace avant de demander.' },
 ]
 
 export default function HomePageFr() {
@@ -159,7 +159,7 @@ export default function HomePageFr() {
                 <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">En savoir plus</span></div>
               </a>
             ))}
-            <a className="bcard empty" href="/kontakt"><Icon id="i-diamond" /><h3>Un autre secteur ?</h3><p>Pour toute entreprise aux espaces remarquables.</p><span className="more">Prendre contact</span></a>
+            <a className="bcard empty" href="/fr/kontakt"><Icon id="i-diamond" /><h3>Un autre secteur ?</h3><p>Pour toute entreprise aux espaces remarquables.</p><span className="more">Prendre contact</span></a>
           </div>
         </div>
       </section>
@@ -294,20 +294,20 @@ export default function HomePageFr() {
               <h3>Basic</h3><div className="for">Idéal pour de petits espaces</div>
               <div className="price">CHF 990.–</div><div className="note">unique · incl. 12 mois de Basic Service</div>
               <ul><li><Chk /> jusqu’à 15 panoramas</li><li><Chk /> qualité Full HD 1080p</li><li><Chk /> max. 5 points interactifs</li><li><Chk /> optimisé pour le mobile</li><li><Chk /> 1 série de corrections</li></ul>
-              <a className="btn btn-ghost" href="/bestellen?paket=basic">Commander</a>
+              <a className="btn btn-ghost" href="/fr/bestellen?paket=basic">Commander</a>
             </div>
             <div className="pcard best">
               <div className="ribbon">Best-seller</div>
               <h3>Signature</h3><div className="for">Le polyvalent le plus prisé</div>
               <div className="price">CHF 2&apos;497.–</div><div className="note">unique · incl. 12 mois de Signature Care</div>
               <ul><li><Chk /> jusqu’à 40 panoramas</li><li><Chk /> qualité 4K</li><li><Chk /> jusqu’à 25 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> audio & interactions</li><li><Chk /> 3 séries de corrections</li></ul>
-              <a className="btn btn-gold" href="/bestellen?paket=signature">Commander</a>
+              <a className="btn btn-gold" href="/fr/bestellen?paket=signature">Commander</a>
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">Pour hôtels, thermes & resorts premium</div>
               <div className="price">dès CHF 4&apos;497.–</div><div className="note">incl. 12 mois de Signature Evolution · offre individuelle pour les grands projets</div>
               <ul><li><Chk /> jusqu’à 100 panoramas</li><li><Chk /> qualité 8K</li><li><Chk /> jusqu’à 50 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> intégration de réservation</li><li><Chk /> vidéo & interactions</li><li><Chk /> 5 séries de corrections</li></ul>
-              <a className="btn btn-ghost" href="/bestellen?paket=pro">Commander</a>
+              <a className="btn btn-ghost" href="/fr/bestellen?paket=pro">Commander</a>
             </div>
           </div>
           <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>Tous les forfaits : intégration Google, optimisés pour mobile, ordinateur, TV & casque VR, optimisés SEO et multilingues sur demande.</p>
@@ -318,9 +318,9 @@ export default function HomePageFr() {
         <div className="wrap">
           <div className="center"><div className="kicker">Suivi & évolution</div><h2 className="sec">Forfaits de service annuels</h2><div className="rule" /></div>
           <div className="svc">
-            <div className="scard"><h3>Basic Service</h3><ul><li><Chk /> exploitation & sécurité (hébergement)</li><li><Chk /> certificat SSL & sauvegardes</li><li><Chk /> 1 petite adaptation par an</li><li><Chk /> statistiques de visiteurs</li></ul><div className="amt">CHF 120.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/bestellen?service=basic-service">Choisir</a></div>
-            <div className="scard rec"><div className="tag">Recommandé</div><h3>Signature Care</h3><ul><li><Chk /> tout le Basic Service</li><li><Chk /> 3 adaptations par an</li><li><Chk /> 1 mise à jour annuelle de la visite</li><li><Chk /> aperçu du comportement des visiteurs</li><li><Chk /> support prioritaire</li></ul><div className="amt">CHF 360.– <small>/ an</small></div><a className="btn btn-gold" style={{ marginTop: 18, display: 'inline-block' }} href="/bestellen?service=care">Choisir</a></div>
-            <div className="scard"><h3>Signature Evolution</h3><ul><li><Chk /> tout le Signature Care</li><li><Chk /> 9 adaptations par an</li><li><Chk /> 2 « knowledge upgrades » annuels</li><li><Chk /> optimisation des performances</li><li><Chk /> rapports de trafic trimestriels</li></ul><div className="amt">CHF 600.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/bestellen?service=evolution">Choisir</a></div>
+            <div className="scard"><h3>Basic Service</h3><ul><li><Chk /> exploitation & sécurité (hébergement)</li><li><Chk /> certificat SSL & sauvegardes</li><li><Chk /> 1 petite adaptation par an</li><li><Chk /> statistiques de visiteurs</li></ul><div className="amt">CHF 120.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=basic-service">Choisir</a></div>
+            <div className="scard rec"><div className="tag">Recommandé</div><h3>Signature Care</h3><ul><li><Chk /> tout le Basic Service</li><li><Chk /> 3 adaptations par an</li><li><Chk /> 1 mise à jour annuelle de la visite</li><li><Chk /> aperçu du comportement des visiteurs</li><li><Chk /> support prioritaire</li></ul><div className="amt">CHF 360.– <small>/ an</small></div><a className="btn btn-gold" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=care">Choisir</a></div>
+            <div className="scard"><h3>Signature Evolution</h3><ul><li><Chk /> tout le Signature Care</li><li><Chk /> 9 adaptations par an</li><li><Chk /> 2 « knowledge upgrades » annuels</li><li><Chk /> optimisation des performances</li><li><Chk /> rapports de trafic trimestriels</li></ul><div className="amt">CHF 600.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=evolution">Choisir</a></div>
           </div>
         </div>
       </section>
@@ -351,7 +351,7 @@ export default function HomePageFr() {
             <div className="ocard"><Icon id="i-plus" /><h3>Panoramas supplémentaires</h3><div className="pr">dès CHF 150.– par scène</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
-            <a href="/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir toutes les options avec bénéfices & prix</a>
+            <a href="/fr/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir toutes les options avec bénéfices & prix</a>
           </p>
         </div>
       </section>

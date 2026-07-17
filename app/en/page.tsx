@@ -96,12 +96,12 @@ const FAQ_JSONLD = {
 }
 
 const BRANCHEN = [
-  { img: '1566073771259-6a8506099945', href: '/branchen/hotel', t: 'Hotels & gastronomy', d: 'Bring rooms, lobby, ambience and tables to life – more direct bookings and table reservations.' },
-  { img: '1540555700478-4be289fbecef', href: '/branchen/spa-wellness', t: 'Spa & wellness', d: 'Make calm and premium quality tangible.' },
-  { img: '1534438327276-14e5300c3a48', href: '/branchen/fitnessstudio', t: 'Fitness studios', d: 'Show equipment and atmosphere – lower the entry barrier.' },
-  { img: '1512917774080-9991f1c4c750', href: '/branchen/immobilien', t: 'Real estate', d: 'Properties open for viewing around the clock – fewer wasted viewings.' },
-  { img: '1497366754035-f200968a6e72', href: '/branchen/banken-versicherungen', t: 'Banks, insurances & law firms', d: 'Premium offices and consulting rooms that build trust already online.' },
-  { img: '1519167758481-83f550bb49b3', href: '/branchen/eventlocations', t: 'Event venues & showrooms', d: 'Let halls, venues and exhibition spaces shine – customers experience the space before enquiring.' },
+  { img: '1566073771259-6a8506099945', href: '/en/branchen/hotel', t: 'Hotels & gastronomy', d: 'Bring rooms, lobby, ambience and tables to life – more direct bookings and table reservations.' },
+  { img: '1540555700478-4be289fbecef', href: '/en/branchen/spa-wellness', t: 'Spa & wellness', d: 'Make calm and premium quality tangible.' },
+  { img: '1534438327276-14e5300c3a48', href: '/en/branchen/fitnessstudio', t: 'Fitness studios', d: 'Show equipment and atmosphere – lower the entry barrier.' },
+  { img: '1512917774080-9991f1c4c750', href: '/en/branchen/immobilien', t: 'Real estate', d: 'Properties open for viewing around the clock – fewer wasted viewings.' },
+  { img: '1497366754035-f200968a6e72', href: '/en/branchen/banken-versicherungen', t: 'Banks, insurances & law firms', d: 'Premium offices and consulting rooms that build trust already online.' },
+  { img: '1519167758481-83f550bb49b3', href: '/en/branchen/eventlocations', t: 'Event venues & showrooms', d: 'Let halls, venues and exhibition spaces shine – customers experience the space before enquiring.' },
 ]
 
 export default function HomePageEn() {
