@@ -13,6 +13,10 @@ const ORDER_MAP: Record<string, string> = {
   fitness: 'fitness', banken: 'banken', events: 'event',
 }
 
+const SERVICE_MAP: Record<string, string> = {
+  'Basic Service': 'basic-service', 'Signature Care': 'care', 'Signature Evolution': 'evolution',
+}
+
 export default function PaketePageClient() {
   return (
     <>
@@ -242,6 +246,12 @@ export default function PaketePageClient() {
                       </li>
                     ))}
                   </ul>
+                  <a
+                    href={`/bestellen?service=${SERVICE_MAP[tier.name] ?? ''}`}
+                    className={`mt-6 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${tier.recommended ? 'bg-marine-900 text-accent-400 hover:bg-marine-800' : 'border border-primary-300 text-primary-800 hover:border-accent-500 hover:text-accent-700'}`}
+                  >
+                    Auswählen
+                  </a>
                 </Card>
               </StaggerItem>
             ))}

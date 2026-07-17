@@ -176,7 +176,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: 'Ihre Wohlfühl-Atmosphäre erlebbar machen',
     tagline: 'Gäste sagen: «Es ist noch viel schöner als auf den Bildern.» Lassen Sie sie die Atmosphäre schon online spüren.',
     heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1900&q=80&auto=format&fit=crop',
-    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'AQUAVIRAT – Spa & Bäder', note: 'Echte Signature Tour: Pool, Saunalandschaft und Ruhebereiche – inklusive Buchung direkt in der Tour.' },
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node69', title: 'AQUAVIRAT – Spa & Bäder', note: 'Echte Signature Tour: Pool, Saunalandschaft und Ruhebereiche – inklusive Buchung direkt in der Tour.' },
     challenges: [
       { title: 'Atmosphäre nicht vermittelbar', description: 'Fotos zeigen Räume, aber nicht das Gefühl: Sauna-Wärme, Ruhebereich-Stille, Anlage-Ausmass.' },
       { title: 'Conversion-Lücke', description: 'Besucher sind interessiert, buchen aber nicht. Es fehlt das entscheidende Erlebnis, das Vertrauen schafft.' },

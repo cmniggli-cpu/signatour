@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Check, CheckCircle, ShieldCheck, Phone } from 'lucide-react'
 import PageHero from '@/components/sections/PageHero'
-import { ORDER_PACKAGES, ORDER_OPTIONS, CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
+import { ORDER_PACKAGES, ORDER_OPTIONS, ORDER_SERVICES, CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
 
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
 const TEL = CONTACT_PHONE.replace(/[^+\d]/g, '')
@@ -13,6 +13,7 @@ interface Contact { name: string; firma: string; email: string; tel: string; adr
 
 export default function BestellenPageClient() {
   const [pkgId, setPkgId] = useState('signature')
+  const [svcId, setSvcId] = useState('offen')
   const [opts, setOpts] = useState<Record<string, boolean>>({})
   const [c, setC] = useState<Contact>({ name: '', firma: '', email: '', tel: '', adresse: '', msg: '' })
   const [agb, setAgb] = useState(false)
@@ -21,11 +22,15 @@ export default function BestellenPageClient() {
   const [done, setDone] = useState(false)
 
   useEffect(() => {
-    const p = new URLSearchParams(window.location.search).get('paket')
+    const params = new URLSearchParams(window.location.search)
+    const p = params.get('paket')
     if (p && ORDER_PACKAGES.some((x) => x.id === p)) setPkgId(p)
+    const s = params.get('service')
+    if (s && ORDER_SERVICES.some((x) => x.id === s)) setSvcId(s)
   }, [])
 
   const pkg = ORDER_PACKAGES.find((x) => x.id === pkgId)!
+  const svc = ORDER_SERVICES.find((x) => x.id === svcId)
   const chosenOptions = ORDER_OPTIONS.filter((o) => opts[o.id])
   const { total, approx } = useMemo(() => {
     let t = pkg.from
@@ -51,6 +56,7 @@ export default function BestellenPageClient() {
       _captcha: 'false',
       Paket: `${pkg.name} (${pkg.price})`,
       Optionen: chosenOptions.map((o) => o.name).join(', ') || 'keine',
+      'Servicepaket ab 2. Jahr': svc ? `${svc.name} (${svc.price})` : 'Noch offen – im Gespräch klären',
       'Geschätzte Investition': `${approx ? 'ab ' : ''}${fmt(total)} einmalig`,
       Name: c.name, Firma: c.firma, 'E-Mail': c.email, Telefon: c.tel || '-',
       Rechnungsadresse: c.adresse || '-', Nachricht: c.msg || '-',
@@ -130,7 +136,32 @@ export default function BestellenPageClient() {
             </div>
 
             <div>
-              <h2 className="text-2xl cd-serif text-primary-900">3 · Ihre Angaben</h2>
+              <h2 className="text-2xl cd-serif text-primary-900">3 · Servicepaket ab dem 2. Jahr <span className="text-sm font-normal text-primary-400">(optional)</span></h2>
+              <p className="mt-2 text-sm text-primary-500">Im Paketpreis sind bereits 12 Monate Service inklusive. Wählen Sie, wie es danach weitergehen soll – jederzeit kündbar.</p>
+              <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button type="button" onClick={() => setSvcId('offen')}
+                  className={`text-left rounded-xl border p-4 transition-colors ${svcId === 'offen' ? 'border-accent-500 bg-cream' : 'border-primary-200 hover:border-accent-300'}`}>
+                  <span className="flex items-center justify-between gap-2">
+                    <span className="font-semibold text-primary-900 text-sm">Später entscheiden</span>
+                    {svcId === 'offen' && <Check className="w-4 h-4 text-accent-600 shrink-0" />}
+                  </span>
+                  <span className="block mt-1 text-xs text-primary-500">Wir beraten Sie im Gespräch.</span>
+                </button>
+                {ORDER_SERVICES.map((s) => (
+                  <button key={s.id} type="button" onClick={() => setSvcId(s.id)}
+                    className={`text-left rounded-xl border p-4 transition-colors ${svcId === s.id ? 'border-accent-500 bg-cream' : 'border-primary-200 hover:border-accent-300'}`}>
+                    <span className="flex items-center justify-between gap-2">
+                      <span className="font-semibold text-primary-900 text-sm">{s.name}{s.recommended ? ' · Empfohlen' : ''}</span>
+                      {svcId === s.id && <Check className="w-4 h-4 text-accent-600 shrink-0" />}
+                    </span>
+                    <span className="block mt-1 text-accent-600 font-semibold text-sm">{s.price}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl cd-serif text-primary-900">4 · Ihre Angaben</h2>
               <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div><label className="block text-sm text-primary-600 mb-1">Name <span className="text-accent-600">*</span></label><input className={inputCls('name')} value={c.name} onChange={(e) => set('name', e.target.value)} placeholder="Vor- und Nachname" /></div>
                 <div><label className="block text-sm text-primary-600 mb-1">Firma / Betrieb <span className="text-accent-600">*</span></label><input className={inputCls('firma')} value={c.firma} onChange={(e) => set('firma', e.target.value)} placeholder="Name Ihres Betriebs" /></div>
@@ -159,11 +190,16 @@ export default function BestellenPageClient() {
                   ))}
                 </ul>
               )}
+              {svc && (
+                <div className="py-3 border-b border-primary-100 flex items-start justify-between gap-3 text-xs text-primary-500">
+                  <span>Servicepaket ab 2. Jahr: {svc.name}</span><span className="whitespace-nowrap">{svc.price}</span>
+                </div>
+              )}
               <div className="flex items-baseline justify-between gap-3 mt-4">
                 <span className="text-sm text-primary-500">Geschätzte Investition</span>
                 <span className="text-2xl cd-serif text-accent-600">{approx ? 'ab ' : ''}{fmt(total)}</span>
               </div>
-              <p className="mt-1 text-xs text-primary-400">einmalig · zzgl. optionalem Service ab CHF 120.– / Jahr · verbindliche Offerte folgt</p>
+              <p className="mt-1 text-xs text-primary-400">einmalig · 12 Monate Service inklusive{svc ? ` · danach ${svc.name} (${svc.price})` : ' · Servicepaket danach optional ab CHF 120.– / Jahr'} · verbindliche Offerte folgt</p>
 
               <label className="mt-5 flex items-start gap-3 cursor-pointer text-xs text-primary-600">
                 <input type="checkbox" checked={agb}

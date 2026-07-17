@@ -144,7 +144,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
     items: [
       {
         name: 'Nadir-Patch 100% – Boden makellos',
-        price: 'ab CHF 90.– pro Tour',
+        price: 'CHF 90.– pro Panorama / ganze Tour pauschal CHF 299.–',
         nutzen: 'Statt verschwommenem Stativ-Fleck ein sauberer Boden oder Ihr Logo – ein Detail, das Profis sofort sehen.',
       },
       {
@@ -327,11 +327,19 @@ export const ORDER_PACKAGES: OrderPackage[] = [
   { id: 'event', name: 'Eventlocation & Showroom', price: 'ab CHF 2\'990.–', from: 2990, approx: true },
 ]
 
+export interface OrderService { id: string; name: string; price: string; perYear: number; recommended?: boolean }
+
+export const ORDER_SERVICES: OrderService[] = [
+  { id: 'basic-service', name: 'Basic Service', price: 'CHF 120.– / Jahr', perYear: 120 },
+  { id: 'care', name: 'Signature Care', price: 'CHF 360.– / Jahr', perYear: 360, recommended: true },
+  { id: 'evolution', name: 'Signature Evolution', price: 'CHF 600.– / Jahr', perYear: 600 },
+]
+
 export const ORDER_OPTIONS: OrderOption[] = [
   { id: 'sprachen', name: 'Mehrsprachig (DE / FR / EN)', price: '+ ab CHF 300.– pro Sprache', add: 300, approx: true },
   { id: 'street', name: 'Google Street View & Business-Einbindung', price: '+ CHF 490.–', add: 490 },
   { id: 'lead', name: 'Lead-Capture-Formular in der Tour', price: '+ CHF 390.–', add: 390 },
-  { id: 'nadir', name: 'Nadir-Patch 100% (Boden makellos)', price: '+ ab CHF 90.–', add: 90, approx: true },
+  { id: 'nadir', name: 'Nadir-Patch 100% – ganze Tour (Boden makellos)', price: '+ CHF 299.– pauschal', add: 299 },
   { id: 'tagnacht', name: 'Tag-/Nacht-Modus', price: '+ ab CHF 180.– pro Szene', add: 180, approx: true },
 ]
 

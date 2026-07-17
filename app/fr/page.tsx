@@ -280,20 +280,20 @@ export default function HomePageFr() {
               <h3>Basic</h3><div className="for">Idéal pour de petits espaces</div>
               <div className="price">CHF 990.–</div><div className="note">unique · incl. 12 mois de Basic Service</div>
               <ul><li><Chk /> jusqu’à 15 panoramas</li><li><Chk /> qualité Full HD 1080p</li><li><Chk /> max. 5 points interactifs</li><li><Chk /> optimisé pour le mobile</li><li><Chk /> 1 série de corrections</li></ul>
-              <a className="btn btn-ghost" href="/konfigurator.html">Demander</a>
+              <a className="btn btn-ghost" href="/bestellen?paket=basic">Commander</a>
             </div>
             <div className="pcard best">
               <div className="ribbon">Best-seller</div>
               <h3>Signature</h3><div className="for">Le polyvalent le plus prisé</div>
               <div className="price">CHF 2&apos;497.–</div><div className="note">unique · incl. 12 mois de Signature Care</div>
               <ul><li><Chk /> jusqu’à 40 panoramas</li><li><Chk /> qualité 4K</li><li><Chk /> jusqu’à 25 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> audio & interactions</li><li><Chk /> 3 séries de corrections</li></ul>
-              <a className="btn btn-gold" href="/konfigurator.html">Demander</a>
+              <a className="btn btn-gold" href="/bestellen?paket=signature">Commander</a>
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">Pour hôtels, thermes & resorts premium</div>
               <div className="price">dès CHF 4&apos;497.–</div><div className="note">incl. 12 mois de Signature Evolution · offre individuelle pour les grands projets</div>
               <ul><li><Chk /> jusqu’à 100 panoramas</li><li><Chk /> qualité 8K</li><li><Chk /> jusqu’à 50 points interactifs</li><li><Chk /> intégration de la charte graphique</li><li><Chk /> intégration de réservation</li><li><Chk /> vidéo & interactions</li><li><Chk /> 5 séries de corrections</li></ul>
-              <a className="btn btn-ghost" href="/konfigurator.html">Demander</a>
+              <a className="btn btn-ghost" href="/bestellen?paket=pro">Commander</a>
             </div>
           </div>
           <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>Tous les forfaits : intégration Google, optimisés pour mobile, ordinateur, TV & casque VR, optimisés SEO et multilingues sur demande.</p>
@@ -304,9 +304,9 @@ export default function HomePageFr() {
         <div className="wrap">
           <div className="center"><div className="kicker">Suivi & évolution</div><h2 className="sec">Forfaits de service annuels</h2><div className="rule" /></div>
           <div className="svc">
-            <div className="scard"><h3>Basic Service</h3><ul><li><Chk /> exploitation & sécurité (hébergement)</li><li><Chk /> certificat SSL & sauvegardes</li><li><Chk /> 1 petite adaptation par an</li><li><Chk /> statistiques de visiteurs</li></ul><div className="amt">CHF 120.– <small>/ an</small></div></div>
-            <div className="scard rec"><div className="tag">Recommandé</div><h3>Signature Care</h3><ul><li><Chk /> tout le Basic Service</li><li><Chk /> 3 adaptations par an</li><li><Chk /> 1 mise à jour annuelle de la visite</li><li><Chk /> aperçu du comportement des visiteurs</li><li><Chk /> support prioritaire</li></ul><div className="amt">CHF 360.– <small>/ an</small></div></div>
-            <div className="scard"><h3>Signature Evolution</h3><ul><li><Chk /> tout le Signature Care</li><li><Chk /> 9 adaptations par an</li><li><Chk /> 2 « knowledge upgrades » annuels</li><li><Chk /> optimisation des performances</li><li><Chk /> rapports de trafic trimestriels</li></ul><div className="amt">CHF 600.– <small>/ an</small></div></div>
+            <div className="scard"><h3>Basic Service</h3><ul><li><Chk /> exploitation & sécurité (hébergement)</li><li><Chk /> certificat SSL & sauvegardes</li><li><Chk /> 1 petite adaptation par an</li><li><Chk /> statistiques de visiteurs</li></ul><div className="amt">CHF 120.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/bestellen?service=basic-service">Choisir</a></div>
+            <div className="scard rec"><div className="tag">Recommandé</div><h3>Signature Care</h3><ul><li><Chk /> tout le Basic Service</li><li><Chk /> 3 adaptations par an</li><li><Chk /> 1 mise à jour annuelle de la visite</li><li><Chk /> aperçu du comportement des visiteurs</li><li><Chk /> support prioritaire</li></ul><div className="amt">CHF 360.– <small>/ an</small></div><a className="btn btn-gold" style={{ marginTop: 18, display: 'inline-block' }} href="/bestellen?service=care">Choisir</a></div>
+            <div className="scard"><h3>Signature Evolution</h3><ul><li><Chk /> tout le Signature Care</li><li><Chk /> 9 adaptations par an</li><li><Chk /> 2 « knowledge upgrades » annuels</li><li><Chk /> optimisation des performances</li><li><Chk /> rapports de trafic trimestriels</li></ul><div className="amt">CHF 600.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/bestellen?service=evolution">Choisir</a></div>
           </div>
         </div>
       </section>
