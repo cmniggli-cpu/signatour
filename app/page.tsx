@@ -240,6 +240,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="blk" id="referenzen" style={{ background: 'var(--paper2)' }}>
+        <div className="wrap">
+          <div className="center"><div className="kicker">Referenzprojekte</div><h2 className="sec">Sehen Sie selbst</h2><div className="rule" /></div>
+          <div className="refs">
+            <div className="ref"><span className="badge">Live-Buchung</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: Immobilien Basic Tour" /><div className="bot"><b>Immobilien Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
+            <div className="ref"><span className="badge">Add-On</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-On: Furniture Removal" /><div className="bot"><b>Add-On: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
+          </div>
+        </div>
+      </section>
+
       <section className="blk" id="pakete" style={{ background: 'var(--paper2)' }}>
         <div className="wrap">
           <div className="center"><div className="kicker">Unsere Verkaufspakete</div><h2 className="sec">Einmalige Einrichtungskosten</h2><div className="rule" /></div>
@@ -311,16 +322,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="blk" id="referenzen" style={{ background: 'var(--paper2)' }}>
-        <div className="wrap">
-          <div className="center"><div className="kicker">Referenzprojekte</div><h2 className="sec">Sehen Sie selbst</h2><div className="rule" /></div>
-          <div className="refs">
-            <div className="ref"><span className="badge">Live-Buchung</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-Tour: Immobilien Basic Tour" /><div className="bot"><b>Immobilien Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
-            <div className="ref"><span className="badge">Add-On</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-On: Furniture Removal" /><div className="bot"><b>Add-On: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Tour öffnen</a></div></div>
-          </div>
-        </div>
-      </section>
 
       <section className="blk" id="faq">
         <div className="wrap" style={{ maxWidth: 820 }}>
