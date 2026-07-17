@@ -36,17 +36,17 @@ export default function UeberUnsPageClient({ locale = 'de' }: { locale?: Locale 
       <section className="py-20 bg-section-gradient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="bg-marine-900 rounded-3xl p-8 sm:p-12 text-center text-white">
-              <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">{c.partner.kicker}</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif text-accent-400">{c.partner.title}</h2>
-              <p className="mt-4 text-primary-300 leading-relaxed max-w-2xl mx-auto">
+            <div className="rounded-3xl p-8 sm:p-12 text-center" style={{ background: 'linear-gradient(135deg,#F7DC8A 0%,#E3B23A 55%,#C8901C 100%)' }}>
+              <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: '#5a430f' }}>{c.partner.kicker}</span>
+              <h2 className="mt-3 text-2xl sm:text-3xl cd-serif" style={{ color: '#231703' }}>{c.partner.title}</h2>
+              <p className="mt-4 leading-relaxed max-w-2xl mx-auto" style={{ color: '#3c2c08' }}>
                 {c.partner.text}
               </p>
-              <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 text-sm">
-                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="inline-flex items-center justify-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
+              <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 text-sm font-semibold">
+                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="inline-flex items-center justify-center gap-2 transition-opacity hover:opacity-75" style={{ color: '#231703' }}>
                   <Phone className="w-4 h-4" /> {CONTACT_PHONE}
                 </a>
-                <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center justify-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center justify-center gap-2 transition-opacity hover:opacity-75" style={{ color: '#231703' }}>
                   <Mail className="w-4 h-4" /> {CONTACT_EMAIL}
                 </a>
               </div>
