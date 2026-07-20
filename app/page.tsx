@@ -105,7 +105,7 @@ export default function HomePage() {
           <p className="lead"><span className="accent">Entscheidungen fallen heute online – nicht vor Ort.</span><br />
             Wir verwandeln Ihre Räumlichkeiten in ein digitales Verkaufserlebnis: Besucher erleben Ihr Angebot, bauen Vertrauen auf und buchen, kaufen oder fragen direkt in der VR-Tour an – noch bevor das erste Gespräch stattfindet.</p>
           <div className="cta">
-            <a className="btn btn-gold" href="#referenzen">Referenz-VR-Touren ansehen</a>
+            <a className="btn btn-gold" href="#referenzen">Referenz-Touren ansehen</a>
             <a className="phone" href={`tel:${TEL}`}><Icon id="i-phone" c="icn-sm" /> {CONTACT_PHONE}</a>
           </div>
           <p className="herotrust">Schweizer Anbieter · Persönliche Betreuung · Antwort innert 24 Stunden</p>
