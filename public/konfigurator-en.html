@@ -130,9 +130,15 @@ const CONFIG = {
     {id:"tagnacht", name:"Day/night mode",       note:"+ from CHF 180 per scene",       add:180, priced:true, perPano:true},
     {id:"web",      name:"Signature Web (website)",note:"individually built · from CHF 2'500", add:0, priced:false},
   ],
+  services: [
+    {id:"offen",     name:"Decide later",                    note:"We will advise you in the consultation"},
+    {id:"basic",     name:"Basic Service",                   note:"CHF 120 / year"},
+    {id:"care",      name:"Signature Care · Recommended",    note:"CHF 360 / year"},
+    {id:"evolution", name:"Signature Evolution",             note:"CHF 600 / year"},
+  ],
 };
 let step = 1;
-const state = { branche:null, groesse:null, extras:{}, langs:1, agb:false, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
+const state = { branche:null, groesse:null, extras:{}, langs:1, service:"offen", agb:false, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
 const stepNames = ["Industry","Size","Extras","Contact"];
 const fmt = n => "CHF " + n.toLocaleString("de-CH").replace(/,/g,"’");
 const panel = document.getElementById("panel");
@@ -208,6 +214,17 @@ function renderExtras(){
     inp.onchange=()=>{ state.langs=Math.max(1,Math.min(2,parseInt(inp.value||1))); render(); };
     la.appendChild(inp); panel.appendChild(la);
   }
+  const sh=document.createElement("h2"); sh.style.marginTop="28px"; sh.textContent="Service package from year 2";
+  const shp=document.createElement("p"); shp.className="hint"; shp.textContent="Already included in the package price in year 1 – your choice applies from year 2, cancellable at any time.";
+  panel.appendChild(sh); panel.appendChild(shp);
+  const sg=document.createElement("div"); sg.className="grid cols2";
+  CONFIG.services.forEach(sv=>{
+    const t=document.createElement("button"); t.className="tile"+(state.service===sv.id?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${sv.name}</span><span class="t-price">${sv.note}</span>`;
+    t.onclick=()=>{ state.service=sv.id; render(); };
+    sg.appendChild(t);
+  });
+  panel.appendChild(sg);
   panel.appendChild(buildSummary());
   nav(true,"Next",true,()=>{ step=4; render(); });
 }
@@ -259,6 +276,8 @@ function buildSummary(){
       rows.push(`<div class="s-row"><span>+ ${x.name}</span><span>${x.id==="web"?"on request":"incl."}</span></div>`);
     }
   });
+  const svcSel=CONFIG.services.find(x=>x.id===state.service);
+  if(svcSel && svcSel.id!=="offen"){ rows.push(`<div class="s-row"><span>Service package from year 2: ${svcSel.name.split(" · ")[0]}</span><span>${svcSel.note}</span></div>`); }
   s.innerHTML = rows.join("") +
     `<div class="s-total"><span><small>Estimated investment</small><br><b>${approx?"ab ":""}${fmt(total)}</b></span>
      <small>one-time · plus opt. service from CHF 120/year</small></div>`;
@@ -284,6 +303,7 @@ function submit(){
     branche:(CONFIG.branchen.find(b=>b.id===state.branche)||{}).name,
     groesse:sz?sz.name:"", paket:sz?sz.pkg:"",
     extras:chosenExtras, zusatzsprachen: state.extras.sprachen?state.langs:0,
+    servicepaket: state.service==="offen" ? "Still open – to clarify in the consultation" : ((CONFIG.services.find(x=>x.id===state.service)||{}).name||"").split(" · ")[0] + " (" + ((CONFIG.services.find(x=>x.id===state.service)||{}).note||"") + ")",
     ...state.contact, "AGB akzeptiert": state.agb?"Ja":"Nein", quelle:"Paket-Konfigurator (EN)"
   };
   const mailtoFallback=()=>{
@@ -292,6 +312,7 @@ function submit(){
       "Grösse: "+payload.groesse+" (empfohlenes Paket: "+payload.paket+")",
       "Extras: "+(payload.extras.join(", ")||"keine"),
       "Zusatzsprachen: "+payload.zusatzsprachen,
+      "Service package from year 2: "+payload.servicepaket,
       "",
       "Name: "+payload.name,
       "Firma: "+payload.firma,

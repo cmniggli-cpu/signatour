@@ -130,9 +130,15 @@ const CONFIG = {
     {id:"tagnacht", name:"Mode jour/nuit",       note:"+ dès CHF 180 par scène",       add:180, priced:true, perPano:true},
     {id:"web",      name:"Signature Web (site web)",note:"programmé sur mesure · dès CHF 2'500", add:0, priced:false},
   ],
+  services: [
+    {id:"offen",     name:"Décider plus tard",              note:"Nous vous conseillons lors de l’entretien"},
+    {id:"basic",     name:"Basic Service",                  note:"CHF 120 / an"},
+    {id:"care",      name:"Signature Care · Recommandé",    note:"CHF 360 / an"},
+    {id:"evolution", name:"Signature Evolution",            note:"CHF 600 / an"},
+  ],
 };
 let step = 1;
-const state = { branche:null, groesse:null, extras:{}, langs:1, agb:false, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
+const state = { branche:null, groesse:null, extras:{}, langs:1, service:"offen", agb:false, contact:{name:"",email:"",firma:"",tel:"",msg:""} };
 const stepNames = ["Secteur","Taille","Extras","Contact"];
 const fmt = n => "CHF " + n.toLocaleString("de-CH").replace(/,/g,"’");
 const panel = document.getElementById("panel");
@@ -208,6 +214,17 @@ function renderExtras(){
     inp.onchange=()=>{ state.langs=Math.max(1,Math.min(2,parseInt(inp.value||1))); render(); };
     la.appendChild(inp); panel.appendChild(la);
   }
+  const sh=document.createElement("h2"); sh.style.marginTop="28px"; sh.textContent="Forfait de service dès la 2e année";
+  const shp=document.createElement("p"); shp.className="hint"; shp.textContent="Déjà inclus dans le prix du forfait la 1re année – votre choix s’applique dès la 2e année, résiliable à tout moment.";
+  panel.appendChild(sh); panel.appendChild(shp);
+  const sg=document.createElement("div"); sg.className="grid cols2";
+  CONFIG.services.forEach(sv=>{
+    const t=document.createElement("button"); t.className="tile"+(state.service===sv.id?" sel":"");
+    t.innerHTML=`<span class="check"></span><span class="t-name">${sv.name}</span><span class="t-price">${sv.note}</span>`;
+    t.onclick=()=>{ state.service=sv.id; render(); };
+    sg.appendChild(t);
+  });
+  panel.appendChild(sg);
   panel.appendChild(buildSummary());
   nav(true,"Continuer",true,()=>{ step=4; render(); });
 }
@@ -259,6 +276,8 @@ function buildSummary(){
       rows.push(`<div class="s-row"><span>+ ${x.name}</span><span>${x.id==="web"?"sur demande":"incl."}</span></div>`);
     }
   });
+  const svcSel=CONFIG.services.find(x=>x.id===state.service);
+  if(svcSel && svcSel.id!=="offen"){ rows.push(`<div class="s-row"><span>Forfait de service dès la 2e année : ${svcSel.name.split(" · ")[0]}</span><span>${svcSel.note}</span></div>`); }
   s.innerHTML = rows.join("") +
     `<div class="s-total"><span><small>Investissement estimé</small><br><b>${approx?"ab ":""}${fmt(total)}</b></span>
      <small>une fois · service opt. dès CHF 120/an</small></div>`;
@@ -284,6 +303,7 @@ function submit(){
     branche:(CONFIG.branchen.find(b=>b.id===state.branche)||{}).name,
     groesse:sz?sz.name:"", paket:sz?sz.pkg:"",
     extras:chosenExtras, zusatzsprachen: state.extras.sprachen?state.langs:0,
+    servicepaket: state.service==="offen" ? "Encore ouvert – à clarifier lors de l’entretien" : ((CONFIG.services.find(x=>x.id===state.service)||{}).name||"").split(" · ")[0] + " (" + ((CONFIG.services.find(x=>x.id===state.service)||{}).note||"") + ")",
     ...state.contact, "AGB akzeptiert": state.agb?"Ja":"Nein", quelle:"Paket-Konfigurator (FR)"
   };
   const mailtoFallback=()=>{
@@ -292,6 +312,7 @@ function submit(){
       "Grösse: "+payload.groesse+" (empfohlenes Paket: "+payload.paket+")",
       "Extras: "+(payload.extras.join(", ")||"keine"),
       "Zusatzsprachen: "+payload.zusatzsprachen,
+      "Forfait de service dès la 2e année : "+payload.servicepaket,
       "",
       "Name: "+payload.name,
       "Firma: "+payload.firma,
