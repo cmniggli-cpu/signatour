@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: 'AGB', robots: { index: false, follow
 
 export default function AgbPage() {
   return (
-    <LegalPage title="Allgemeine Geschäftsbedingungen" subtitle="Niggli 360° Signature Tours · Gültig ab 01.09.2025">
+    <LegalPage title="Allgemeine Geschäftsbedingungen" subtitle="Niggli 360° Signature Tours · Gültig ab 21.07.2026">
       <p>Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Rechtsbeziehung zwischen Niggli 360° Signature Tours (Auftragnehmer) und ihren Kunden (Auftraggeber). Sie gelten für alle Dienstleistungen im Bereich 360°-Fotografie, Virtual-Reality-Touren und Hosting, soweit nicht schriftlich etwas anderes vereinbart wurde.</p>
 
       <h2>1. Leistungsumfang</h2>
@@ -13,13 +13,15 @@ export default function AgbPage() {
 
       <h2>2. Preise und Zahlungsbedingungen</h2>
       <p>Es gelten die in der Offerte oder Auftragsbestätigung vereinbarten Preise. Alle Preise verstehen sich in CHF. Es wird keine Mehrwertsteuer erhoben, da der Auftragnehmer derzeit nicht mehrwertsteuerpflichtig ist. Die Rechnungen sind innert 10 Tagen ohne Abzüge (netto) zu begleichen. Rabatte gelten nur, wenn die vereinbarten Voraussetzungen eingehalten werden.</p>
+      <p>Mit der Auftragsbestätigung wird eine Anzahlung von 50% des vereinbarten Projektpreises fällig; mit den Produktionsarbeiten wird nach deren Eingang begonnen. Der Restbetrag wird nach Freigabe bzw. Abnahme (Ziffer 5) in Rechnung gestellt. Bei Projekten ab CHF 5’000.– gilt ein Teilzahlungsplan von 40% bei Auftragsbestätigung, 30% nach dem Shooting und 30% bei Freigabe. Die VR-Tour wird mit Eingang der Schlusszahlung online geschaltet.</p>
       <p>Nebenabreden zum abgeschlossenen Vertrag sind nur gültig, wenn sie schriftlich bestätigt werden. Diese Bestimmung gilt für zukünftige Vertragsänderungen. Der Hauptvertrag bleibt von dieser Regelung unberührt.</p>
 
       <h2>3. Zusatzbedingungen &amp; Zuschläge</h2>
       <p>Die Zusatzbedingungen (siehe unten) sind integrierter Bestandteil dieser AGB. Dazu gehören insbesondere Regelungen zu Exklusivität der Location, technischer Vorbereitung, Geräteschutz, Haftung bei Schäden sowie Fair-Use-Regeln bei Rabatten.</p>
 
-      <h2>4. Hosting und Service</h2>
-      <p>Für das Hosting der produzierten VR-Touren fallen jährliche Service- und Hostinggebühren an. Die genauen Konditionen ergeben sich aus dem aktuellen Preisblatt. Der Auftraggeber kann alternativ den Output-Ordner erhalten und das Hosting selbst übernehmen.</p>
+      <h2>4. Hosting, Betrieb und Folgekosten</h2>
+      <p>Im Paketpreis sind die ersten 12 Monate Hosting, Wartung und Support gemäss dem im gebuchten Paket enthaltenen Servicepaket inbegriffen. Danach ist der Weiterbetrieb optional und kostenpflichtig ab CHF 120.– pro Jahr gemäss den jeweils aktuellen Servicepaketen bzw. dem aktuellen Preisblatt.</p>
+      <p>Der Auftraggeber erwirbt mit vollständiger Bezahlung das Nutzungsrecht an der erstellten VR-Tour (Ziffer 9). Der Online-Betrieb – die Erreichbarkeit der VR-Tour über das Internet – setzt jedoch ein laufendes Hosting- bzw. Servicepaket voraus. Wird nach Ablauf der inkludierten 12 Monate kein Servicepaket abgeschlossen, kann die VR-Tour offline geschaltet werden. Die erstellten Inhalte bleiben dem Auftraggeber erhalten: Er kann den vollständigen Output-Ordner erhalten und das Hosting selbst übernehmen.</p>
 
       <h2>5. Abnahme und Rückmeldefrist</h2>
       <p>Der Kunde hat ab Zusendung des Viewer-Links 14 Kalendertage Zeit, den ersten Entwurf zu prüfen und Korrekturwünsche mitzuteilen. Als Rückmeldung gelten ausschliesslich konkrete, schriftliche Korrekturwünsche. Blosse Vertröstungen oder Ankündigungen halten die Frist weder an noch setzen sie sie neu in Gang. Erfolgt innert Frist keine Rückmeldung, gilt der Entwurf als abgenommen und die Schlussrechnung wird fällig (Abnahme-Fiktion gemäss OR Art. 370).</p>
@@ -45,7 +47,7 @@ export default function AgbPage() {
       <p>Der Auftraggeber ist verpflichtet, dafür zu sorgen, dass während der Produktion nur Personen anwesend sind, die mit der Aufnahme und einer möglichen Veröffentlichung einverstanden sind. Für allfällige Ansprüche Dritter haftet der Auftraggeber vollumfänglich.</p>
 
       <h2>11. Schlussbestimmungen</h2>
-      <p>Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Gültigkeit der übrigen AGB unberührt. Gerichtsstand ist der Geschäftssitz des Auftragnehmers, soweit nicht zwingend anders vorgeschrieben. Diese AGB treten am 01.09.2025 in Kraft und ersetzen alle früheren Fassungen.</p>
+      <p>Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Gültigkeit der übrigen AGB unberührt. Es gilt schweizerisches Recht. Gerichtsstand ist der Geschäftssitz des Auftragnehmers, soweit nicht zwingend anders vorgeschrieben. Diese AGB treten am 21.07.2026 in Kraft und ersetzen alle früheren Fassungen.</p>
 
       <h2>Zusatzbedingungen (integrierter Bestandteil)</h2>
       <p><strong>Exklusivität der Location:</strong> Der Kunde verpflichtet sich, die für die Aufnahme vorgesehenen Räume während der vereinbarten Aufnahmezeit für Besucher geschlossen zu halten. Verletzungen führen zu einem Zuschlag von CHF 200 pro Stunde für Warte- oder Mehraufwand.</p>

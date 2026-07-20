@@ -12,6 +12,7 @@ export default function ImpressumPage() {
         <p><strong>Niggli 360° Signature Tours</strong><br />Marius Niggli<br />{CONTACT_ADDRESS}<br />Schweiz</p>
         <p>E-Mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><br />Telefon: <a href={`tel:${TEL}`}>{CONTACT_PHONE}</a></p>
         <p>Unternehmens-Identifikationsnummer (UID): {CONTACT_UID}</p>
+        <p>Nicht mehrwertsteuerpflichtig – alle Preise verstehen sich ohne MWST.</p>
       </div>
       <h2>Haftungsausschluss</h2>
       <p>Die Inhalte dieser Website werden mit grösstmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen.</p>
