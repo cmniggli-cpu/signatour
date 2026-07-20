@@ -24,7 +24,7 @@ const de: UeberUnsContent = {
   partner: {
     kicker: 'Ihr Ansprechpartner',
     title: 'Marius Niggli – Gründer & Inhaber',
-    text: 'Vom ersten Gespräch über das Shooting bis zur fertigen Tour: Sie sprechen immer mit derselben Person – kein Callcenter, kein Ticket-System. Wer mit Herzblut arbeitet, bindet Kunden durch Qualität, nicht durch Verträge.',
+    text: 'Vom ersten Gespräch über das Shooting bis zur fertigen VR-Tour: Sie sprechen immer mit derselben Person – kein Callcenter, kein Ticket-System. Wer mit Herzblut arbeitet, bindet Kunden durch Qualität, nicht durch Verträge.',
   },
   reasons: { kicker: 'Warum Signatour', title: '9 Gründe für Signatour', items: UEBER_UNS_REASONS },
   tech: {
@@ -36,7 +36,7 @@ const de: UeberUnsContent = {
       'Kein Vendor Lock-in',
       'Volle Datenkontrolle',
       'Europäische Software mit DSGVO-Konformität',
-      'Überlegene Tour-Qualität vs. Cloud-Lösungen',
+      'Überlegene VR-Tour-Qualität vs. Cloud-Lösungen',
     ],
   },
   values: { kicker: 'Unsere Werte', title: 'Woran wir glauben', items: UEBER_UNS_VALUES },
@@ -56,21 +56,21 @@ const fr: UeberUnsContent = {
   partner: {
     kicker: 'Votre interlocuteur',
     title: 'Marius Niggli – fondateur & propriétaire',
-    text: 'Du premier entretien à la visite terminée, en passant par la prise de vue : vous parlez toujours à la même personne – pas de centre d’appels, pas de système de tickets. Qui travaille avec passion fidélise ses clients par la qualité, pas par des contrats.',
+    text: 'Du premier entretien à la visite VR terminée, en passant par la prise de vue : vous parlez toujours à la même personne – pas de centre d’appels, pas de système de tickets. Qui travaille avec passion fidélise ses clients par la qualité, pas par des contrats.',
   },
   reasons: {
     kicker: 'Pourquoi Signatour',
     title: '9 raisons de choisir Signatour',
     items: [
       { title: 'Done-for-You plutôt que DIY', description: 'Nous venons, photographions et livrons. Zéro effort pour vous.' },
-      { title: 'Transparent plutôt que caché', description: 'Prix unique, pas d’abonnement – la visite vous appartient, aucune location de plateforme.' },
+      { title: 'Transparent plutôt que caché', description: 'Prix unique, pas d’abonnement – la visite VR vous appartient, aucune location de plateforme.' },
       { title: 'Local plutôt que cloud américain', description: 'Serveurs suisses/UE, conformité RGPD.' },
       { title: 'Multi-secteurs plutôt qu’immobilier seul', description: 'Hôtels, restaurants, spas, fitness, immobilier.' },
       { title: 'Flexible plutôt que contrat longue durée', description: 'Aucune durée minimale, aucun délai de résiliation.' },
-      { title: 'Optimisation continue plutôt qu’immobilisme', description: 'Votre visite évolue – mises à jour, nouvelles scènes et extensions à tout moment.' },
+      { title: 'Optimisation continue plutôt qu’immobilisme', description: 'Votre visite VR évolue – mises à jour, nouvelles scènes et extensions à tout moment.' },
       { title: 'Sol impeccable plutôt que tache de trépied', description: 'Le nadir est retouché à 95% proprement – sur demande à 100% ou avec votre logo.' },
       { title: 'Instrument de vente plutôt que gadget', description: 'Liens de réservation, formulaires de contact et intégration Google transforment les visiteurs en demandes.' },
-      { title: 'Mesurable plutôt qu’à l’aveugle', description: 'Vues, durée de visite et clics sur les points de réservation – vous voyez ce que votre visite rapporte.' },
+      { title: 'Mesurable plutôt qu’à l’aveugle', description: 'Vues, durée de visite et clics sur les points de réservation – vous voyez ce que votre visite VR rapporte.' },
     ],
   },
   tech: {
@@ -117,14 +117,14 @@ const en: UeberUnsContent = {
     title: '9 reasons for Signatour',
     items: [
       { title: 'Done-for-you instead of DIY', description: 'We come, we shoot, we deliver. Zero effort for you.' },
-      { title: 'Transparent instead of hidden', description: 'One-time price, no subscription – the tour is yours, no platform rent.' },
+      { title: 'Transparent instead of hidden', description: 'One-time price, no subscription – the VR tour is yours, no platform rent.' },
       { title: 'Local instead of US cloud', description: 'Swiss/EU servers, GDPR-compliant.' },
       { title: 'Multi-industry instead of real estate only', description: 'Hotels, restaurants, spas, fitness, real estate.' },
       { title: 'Flexible instead of long-term contract', description: 'No minimum term, no notice period.' },
-      { title: 'Continuous optimisation instead of standstill', description: 'Your tour grows with you – updates, new scenes and extensions at any time.' },
+      { title: 'Continuous optimisation instead of standstill', description: 'Your VR tour grows with you – updates, new scenes and extensions at any time.' },
       { title: 'Flawless floor instead of tripod blur', description: 'The nadir point is retouched 95% clean – on request 100% or with your logo.' },
       { title: 'Sales instrument instead of gimmick', description: 'Booking links, lead forms and Google integration turn visitors into enquiries.' },
-      { title: 'Measurable instead of guesswork', description: 'Views, dwell time and clicks on booking points – you see what your tour delivers.' },
+      { title: 'Measurable instead of guesswork', description: 'Views, dwell time and clicks on booking points – you see what your VR tour delivers.' },
     ],
   },
   tech: {

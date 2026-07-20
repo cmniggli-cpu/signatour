@@ -63,7 +63,7 @@ const de: KontaktContent = {
     antwortTitle: 'Antwortzeit',
     antwortText: 'Innerhalb von 24 Stunden',
     versprechenTitle: 'Unser Versprechen',
-    versprechenText: 'Unverbindlich, ehrliche Beratung – auch wenn eine Tour gerade keinen Sinn macht.',
+    versprechenText: 'Unverbindlich, ehrliche Beratung – auch wenn eine VR-Tour gerade keinen Sinn macht.',
   },
   cta: { title: 'Lieber direkt sprechen?', subtitle: 'Rufen Sie uns an oder schreiben Sie eine E-Mail.', buttonText: 'Jetzt anrufen' },
   form: {
@@ -111,7 +111,7 @@ const fr: KontaktContent = {
     antwortTitle: 'Délai de réponse',
     antwortText: 'Sous 24 heures',
     versprechenTitle: 'Notre promesse',
-    versprechenText: 'Un conseil honnête et sans engagement – même si une visite n’a pas de sens pour le moment.',
+    versprechenText: 'Un conseil honnête et sans engagement – même si une visite VR n’a pas de sens pour le moment.',
   },
   cta: { title: 'Vous préférez en parler directement ?', subtitle: 'Appelez-nous ou écrivez-nous un e-mail.', buttonText: 'Appeler maintenant' },
   form: {
@@ -159,7 +159,7 @@ const en: KontaktContent = {
     antwortTitle: 'Response time',
     antwortText: 'Within 24 hours',
     versprechenTitle: 'Our promise',
-    versprechenText: 'No obligation, honest advice – even if a tour does not make sense for you right now.',
+    versprechenText: 'No obligation, honest advice – even if a VR tour does not make sense for you right now.',
   },
   cta: { title: 'Prefer to talk directly?', subtitle: 'Give us a call or write an e-mail.', buttonText: 'Call now' },
   form: {

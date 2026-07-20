@@ -36,7 +36,7 @@ export interface BranchenTemplateStrings {
 }
 
 const de: BranchenTemplateStrings = {
-  heroTrust: 'Unverbindlich · Antwort innert 24 Stunden · Die Tour gehört Ihnen, kein Abo',
+  heroTrust: 'Unverbindlich · Antwort innert 24 Stunden · Die VR-Tour gehört Ihnen, kein Abo',
   ctaBeratung: 'Kostenlose Beratung',
   ctaPaket: 'Paket & Preis ansehen',
   challengeKicker: 'Die Herausforderung',
@@ -48,7 +48,7 @@ const de: BranchenTemplateStrings = {
   capturesTitle: 'Was wir erfassen',
   demoKicker: 'Sehen Sie selbst',
   demoTitle: 'Eine echte Signature Tour',
-  demoOpen: 'Tour öffnen',
+  demoOpen: 'VR-Tour öffnen',
   comparisonKicker: 'Der ehrliche Vergleich',
   comparisonCrit: 'Kriterium',
   comparisonWithout: 'Ohne Signatour',
@@ -57,7 +57,7 @@ const de: BranchenTemplateStrings = {
   packageKicker: 'Unser Vorschlag für Sie',
   packageTitle: 'Das passende Paket',
   packageRibbon: 'Empfohlen',
-  packageNote: 'einmalig · die Tour gehört Ihnen, kein Abo',
+  packageNote: 'einmalig · die VR-Tour gehört Ihnen, kein Abo',
   packageCta: 'Kostenlose Beratung anfragen',
   packageCompare: 'Alle Pakete & Preise vergleichen',
   faqKicker: 'FAQ',
@@ -71,7 +71,7 @@ const de: BranchenTemplateStrings = {
 }
 
 const fr: BranchenTemplateStrings = {
-  heroTrust: 'Sans engagement · Réponse sous 24 heures · La visite vous appartient, pas d’abonnement',
+  heroTrust: 'Sans engagement · Réponse sous 24 heures · La visite VR vous appartient, pas d’abonnement',
   ctaBeratung: 'Conseil gratuit',
   ctaPaket: 'Voir forfait & prix',
   challengeKicker: 'Le défi',
@@ -83,7 +83,7 @@ const fr: BranchenTemplateStrings = {
   capturesTitle: 'Ce que nous capturons',
   demoKicker: 'Voyez par vous-même',
   demoTitle: 'Une vraie Signature Tour',
-  demoOpen: 'Ouvrir la visite',
+  demoOpen: 'Ouvrir la visite VR',
   comparisonKicker: 'La comparaison honnête',
   comparisonCrit: 'Critère',
   comparisonWithout: 'Sans Signatour',
@@ -92,7 +92,7 @@ const fr: BranchenTemplateStrings = {
   packageKicker: 'Notre proposition pour vous',
   packageTitle: 'Le forfait adapté',
   packageRibbon: 'Recommandé',
-  packageNote: 'une fois · la visite vous appartient, pas d’abonnement',
+  packageNote: 'une fois · la visite VR vous appartient, pas d’abonnement',
   packageCta: 'Demander un conseil gratuit',
   packageCompare: 'Comparer tous les forfaits & prix',
   faqKicker: 'FAQ',
@@ -106,7 +106,7 @@ const fr: BranchenTemplateStrings = {
 }
 
 const en: BranchenTemplateStrings = {
-  heroTrust: 'No obligation · Reply within 24 hours · The tour is yours, no subscription',
+  heroTrust: 'No obligation · Reply within 24 hours · The VR tour is yours, no subscription',
   ctaBeratung: 'Free consultation',
   ctaPaket: 'View package & price',
   challengeKicker: 'The challenge',
@@ -127,7 +127,7 @@ const en: BranchenTemplateStrings = {
   packageKicker: 'Our suggestion for you',
   packageTitle: 'The right package',
   packageRibbon: 'Recommended',
-  packageNote: 'one-time · the tour is yours, no subscription',
+  packageNote: 'one-time · the VR tour is yours, no subscription',
   packageCta: 'Request a free consultation',
   packageCompare: 'Compare all packages & prices',
   faqKicker: 'FAQ',

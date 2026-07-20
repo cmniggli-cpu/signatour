@@ -5,7 +5,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
   hotel: {
     slug: 'hotel',
     metaTitle: '360° tour for hotels – more direct bookings',
-    metaDescription: 'More direct bookings, fewer OTA commissions: professional 360° tours for hotels from CHF 3\'490. Swiss provider – the tour is yours, no subscription.',
+    metaDescription: 'More direct bookings, fewer OTA commissions: professional 360° tours for hotels from CHF 3\'490. Swiss provider – the VR tour is yours, no subscription.',
     badge: 'Hotels & resorts',
     headline: '360° tour for your hotel',
     tagline: 'More direct bookings, less OTA dependency. Show guests your rooms, spa, restaurant and lobby – before they book.',
@@ -40,13 +40,13 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       { label: 'Google visibility', without: 'Standard listing', with: 'Preferred placement with tour' },
       { label: 'Image quality', without: 'Phone snapshots', with: 'Professional shots, clean floor (nadir)' },
     ],
-    roiTitle: 'Just 10 direct bookings pay for your tour',
+    roiTitle: 'Just 10 direct bookings pay for your VR tour',
     roiSteps: [
       { label: 'Average room rate', value: 'CHF 200 / night' },
       { label: 'Saved OTA commission (18%)', value: 'CHF 36 / night' },
       { label: '10 direct bookings of 2 nights', value: 'CHF 720 saved' },
     ],
-    roiResult: 'The tour often pays for itself within the first quarter.',
+    roiResult: 'The VR tour often pays for itself within the first quarter.',
     packageName: 'Hotel package',
     packagePrice: 'from CHF 3\'490.–',
     packageFeatures: [
@@ -60,8 +60,8 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     faqs: [
       { question: 'How long does the shoot take?', answer: '4–6 hours depending on hotel size. We schedule the appointment after check-out / before check-in.' },
       { question: 'What if we renovate rooms?', answer: 'Depending on the service package, panorama updates are already included – or individually from CHF 180.– per scene. No completely new shoot needed.' },
-      { question: 'Can the tour link into our booking system?', answer: 'Yes. Guests can book the room type they are currently viewing directly from within the tour.' },
-      { question: 'Does the tour also work on smartphones?', answer: 'Yes, fully responsive. No app needed. VR headsets are supported as well.' },
+      { question: 'Can the VR tour link into our booking system?', answer: 'Yes. Guests can book the room type they are currently viewing directly from within the virtual tour.' },
+      { question: 'Does the VR tour also work on smartphones?', answer: 'Yes, fully responsive. No app needed. VR headsets are supported as well.' },
     ],
   },
 
@@ -101,10 +101,10 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       title: 'Google Business integration',
       description: 'Your 360° tour is embedded directly in your Google Business Profile. Professional shots replace uncontrolled guest photos.',
       items: [
-        'Tour directly in the Google Business Profile',
+        'VR tour directly in the Google Business Profile',
         'Higher click-through rate on Google Maps',
         'More calls, more reservations',
-        'Competitive advantage vs restaurants without a tour',
+        'Competitive advantage vs restaurants without a VR tour',
       ],
     },
     comparisonTitle: 'Restaurant with vs without Signature Tour',
@@ -113,7 +113,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     comparisonRows: [
       { label: 'First impression online', without: 'Shaky guest photos on Google', with: 'A professional ambience you control' },
       { label: 'Reservations', without: 'Guest is unsure, keeps clicking', with: 'The ambience convinces before the reservation' },
-      { label: 'Google Maps', without: 'Standard listing', with: 'Tour in the profile – more clicks & calls' },
+      { label: 'Google Maps', without: 'Standard listing', with: 'VR tour in the profile – more clicks & calls' },
       { label: 'Effort', without: 'No marketing alongside daily operations', with: 'Created once, works for years' },
       { label: 'Freshness', without: 'Photos age', with: 'Seasonal updates possible' },
       { label: 'Image quality', without: 'Phone snapshots', with: 'Professional shots, clean floor (nadir)' },
@@ -130,8 +130,8 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     ],
     faqs: [
       { question: 'Do we have to close during the shoot?', answer: 'No, we shoot before opening or during a quiet period. 60–90 minutes are usually enough.' },
-      { question: 'Can we have the tour adapted seasonally?', answer: 'Yes, 1 seasonal update is included. Further updates can be added at any time.' },
-      { question: 'What happens to our guests’ old Google photos?', answer: 'The professional tour appears prominently. Guest photos remain, but your tour dominates the visual first impression.' },
+      { question: 'Can we have the VR tour adapted seasonally?', answer: 'Yes, 1 seasonal update is included. Further updates can be added at any time.' },
+      { question: 'What happens to our guests’ old Google photos?', answer: 'The professional tour appears prominently. Guest photos remain, but your VR tour dominates the visual first impression.' },
     ],
   },
 
@@ -143,7 +143,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     headline: 'Make your feel-good atmosphere tangible',
     tagline: 'Guests say: “It’s even more beautiful than in the pictures.” Let them feel the atmosphere already online.',
     heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1900&q=80&auto=format&fit=crop',
-    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node69', title: 'AQUAVIRAT – spa & baths', note: 'A real Signature Tour: pool, sauna landscape and relaxation areas – including booking directly inside the tour.' },
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node69', title: 'AQUAVIRAT – spa & baths', note: 'A real Signature Tour: pool, sauna landscape and relaxation areas – including booking directly inside the VR tour.' },
     challenges: [
       { title: 'Atmosphere is hard to convey', description: 'Photos show rooms, but not the feeling: sauna warmth, the silence of the relaxation areas, the scale of the facility.' },
       { title: 'A conversion gap', description: 'Visitors are interested but do not book. The decisive experience that builds trust is missing.' },
@@ -180,7 +180,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       { label: 'Bookings', without: 'Prospects hesitate', with: 'The experience builds trust → booking' },
       { label: 'Discretion', without: 'Uncontrolled guest photos', with: 'Shots without guests, approval in advance' },
       { label: 'Differentiation', without: 'Like everyone else', with: 'A visible edge over the chains' },
-      { label: 'Google visibility', without: 'Standard listing', with: 'Tour in the profile' },
+      { label: 'Google visibility', without: 'Standard listing', with: 'VR tour in the profile' },
       { label: 'Image quality', without: 'Snapshots', with: 'Professional shots, clean floor (nadir)' },
     ],
     packageName: 'Spa & wellness premium tour',
@@ -215,7 +215,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     ],
     stats: [
       { value: '130%', label: 'higher visit probability with a Google listing with tour' },
-      { value: '2×', label: 'more Google Maps views vs listings without a tour' },
+      { value: '2×', label: 'more Google Maps views vs listings without a VR tour' },
       { value: 'EUR 960', label: 'average lifetime value per member (24 months × €40)' },
     ],
     statsNote: 'Sources: Google Street View business data, fitness industry studies',
@@ -235,7 +235,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
         'The “I want to train here” feeling before the trial workout',
       ],
     },
-    roiTitle: '3 new members pay for your tour',
+    roiTitle: '3 new members pay for your VR tour',
     roiSteps: [
       { label: 'Value per member (24 mo. × CHF 40)', value: 'around CHF 960' },
       { label: 'Investment (fitness package)', value: 'from CHF 2\'890.– one-time' },
@@ -249,7 +249,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       { label: 'Entry barrier', without: 'First-time visitor unsure, does not come', with: 'Gym experienced in advance → trial workout' },
       { label: 'Differentiation', without: 'Lost against the discounters', with: 'Quality made visible' },
       { label: 'Member retention', without: 'Wrong expectations, quick cancellation', with: 'Those who know what to expect stay longer' },
-      { label: 'Google Maps', without: 'Standard listing', with: 'Tour in the profile – more views' },
+      { label: 'Google Maps', without: 'Standard listing', with: 'VR tour in the profile – more views' },
       { label: 'Social media', without: 'No shareable content', with: 'Shareable link for Instagram & co.' },
       { label: 'Image quality', without: 'Snapshots', with: 'Professional shots, clean floor (nadir)' },
     ],
@@ -266,7 +266,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     faqs: [
       { question: 'Are members shown during the shoot?', answer: 'No, we shoot outside peak hours or before opening. The gym is shown empty and tidy – it always looks best that way.' },
       { question: 'Our gym is not particularly large. Is it still worth it?', answer: 'Yes. Compact, well-equipped gyms look impressive in 360°. The spatial effect comes fully into its own.' },
-      { question: 'Can we use the tour for social media?', answer: 'Yes, a shareable link for Instagram, Facebook, newsletters and review portals. No app download needed.' },
+      { question: 'Can we use the VR tour for social media?', answer: 'Yes, a shareable link for Instagram, Facebook, newsletters and review portals. No app download needed.' },
     ],
   },
 
@@ -322,7 +322,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     },
     roiTitle: 'One won mandate pays for the whole card',
     roiSteps: [
-      { label: 'Tour per property (10-tour card)', value: 'CHF 1\'623.–' },
+      { label: 'VR tour per property (10-tour card)', value: 'CHF 1\'623.–' },
       { label: 'More clicks on listings', value: '+40%' },
       { label: 'Higher contact rate on listings', value: '+95%' },
     ],
@@ -333,14 +333,14 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       'Single property: CHF 2\'497.– per property',
       '5-tour card: CHF 9\'990.– (CHF 1\'998.– per property, approx. 20% benefit)',
       '10-tour card: CHF 16\'230.– (CHF 1\'623.– per property, 35% benefit)',
-      'Every tour in Signature quality, fully in your corporate design',
+      'Every VR tour in Signature quality, fully in your corporate design',
       'Flexible use, no expiry date',
       'Google & portal integration per property',
       'Incl. 12 months of care service per tour',
     ],
     faqs: [
-      { question: 'How quickly is the tour available after the shoot?', answer: 'Usually 5–10 working days. Urgent: express delivery in 3 working days (+30%).' },
-      { question: 'What happens when the property is sold or rented?', answer: 'The tour is deactivated/deleted. Use the next tour on the card for a new property. No expiry date.' },
+      { question: 'How quickly is the VR tour available after the shoot?', answer: 'Usually 5–10 working days. Urgent: express delivery in 3 working days (+30%).' },
+      { question: 'What happens when the property is sold or rented?', answer: 'The VR tour is deactivated/deleted. Use the next tour on the card for a new property. No expiry date.' },
       { question: 'Does the property have to be empty for the shoot?', answer: 'No. Furnished properties often look more appealing in 360°. Easier to imagine living in. We advise on the optimal preparation.' },
     ],
   },
@@ -406,8 +406,8 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     faqs: [
       { question: 'How do you ensure discretion?', answer: 'We shoot outside business hours, without people, documents or screen content. Every panorama goes through your approval process before it goes online. Security-critical areas stay out of scope.' },
       { question: 'How long does the shoot take?', answer: 'For reception, consulting and meeting rooms usually 1–2 hours – schedulable in the evening or at the weekend, without interrupting operations.' },
-      { question: 'Is it worth it for a small law firm?', answer: 'Especially there: clients compare online before enquiring. The only firm in town that shows its premises stands out visibly – and the tour works for years without follow-up costs.' },
-      { question: 'Is it also available in German or French?', answer: 'Yes. Consulting & projects in German, French and English – and the tour itself can be produced in multiple languages (from CHF 300 per additional language).' },
+      { question: 'Is it worth it for a small law firm?', answer: 'Especially there: clients compare online before enquiring. The only firm in town that shows its premises stands out visibly – and the VR tour works for years without follow-up costs.' },
+      { question: 'Is it also available in German or French?', answer: 'Yes. Consulting & projects in German, French and English – and the VR tour itself can be produced in multiple languages (from CHF 300 per additional language).' },
     ],
   },
 
@@ -422,12 +422,12 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     challenges: [
       { title: 'Every viewing costs hours', description: 'Coordinate the appointment, prepare the venue, run the viewing – and after 10 minutes the prospect realises the hall is too small.' },
       { title: 'Photos do not show spatial impact', description: 'Ceiling height, proportions, the view from the stage: exactly what sells a venue does not come across in photos.' },
-      { title: 'Decisions are made by comparison', description: 'Anyone reviewing several venues decides by gut feeling from the first online impression. Without a tour, that impression stays thin.' },
+      { title: 'Decisions are made by comparison', description: 'Anyone reviewing several venues decides by gut feeling from the first online impression. Without a VR tour, that impression stays thin.' },
     ],
     stats: [
       { value: '+40%', label: 'more leads with a virtual showroom tour' },
       { value: '+30%', label: 'higher online interaction with a 360° showroom' },
-      { value: '2×', label: 'more interest in Google listings with a tour' },
+      { value: '2×', label: 'more interest in Google listings with a VR tour' },
       { value: '24/7', label: 'viewings possible – even on Sundays at 10 pm' },
     ],
     sources: [
@@ -437,17 +437,17 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     ],
     captures: ['Halls & event spaces', 'Foyer & reception', 'Stage & technology', 'Terraces & outdoor areas', 'Showroom & exhibition spaces', 'Access & parking'],
     extraSection: {
-      title: 'Variants and documents directly in the tour',
-      description: 'A venue sells through its possibilities. The tour shows them all – in one place.',
+      title: 'Variants and documents directly in the VR tour',
+      description: 'A venue sells through its possibilities. The VR tour shows them all – in one place.',
       items: [
         'Seating variants (banquet, concert, seminar) as switchable panoramas',
-        'Technical data sheets, plans and catering documents as PDF downloads in the tour',
+        'Technical data sheets, plans and catering documents as PDF downloads in the VR tour',
         'Enquiry hotspot right in the hall – interest becomes a concrete enquiry',
         'Seasonal updates (wedding decoration, Christmas atmosphere) possible at any time',
         'Shareable link for offers, e-mails and social media',
       ],
     },
-    roiTitle: 'One booked event pays for your tour',
+    roiTitle: 'One booked event pays for your VR tour',
     roiSteps: [
       { label: 'Investment (event venue package)', value: 'from CHF 2\'990.– one-time' },
       { label: 'Revenue per event (wedding, function)', value: 'several thousand CHF' },
@@ -461,7 +461,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       { label: 'Viewings', without: 'Many wasted appointments', with: 'Pre-qualified – only serious enquiries' },
       { label: 'Spatial impact', without: 'Photos do not show proportions', with: 'Hall & stage truly tangible' },
       { label: 'Variants', without: 'One standard image', with: 'Banquet, concert, seminar switchable' },
-      { label: 'Documents', without: 'Sending separate PDFs', with: 'Technology & catering directly in the tour' },
+      { label: 'Documents', without: 'Sending separate PDFs', with: 'Technology & catering directly in the VR tour' },
       { label: 'Availability', without: 'By appointment only', with: 'Walkable 24/7' },
       { label: 'Image quality', without: 'Snapshots', with: 'Professional shots, clean floor (nadir)' },
     ],
@@ -477,9 +477,9 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       'Seasonal update optional (CHF 180.– per scene / season pack CHF 650.–)',
     ],
     faqs: [
-      { question: 'Can we show different seating arrangements?', answer: 'Yes. We shoot the hall in several variants (e.g. banquet and concert) – visitors switch between the views inside the tour.' },
-      { question: 'What happens after a conversion or new decoration?', answer: 'Individual panoramas can be updated from CHF 180.– per scene without recreating the tour. Ideal for seasonal moods too.' },
-      { question: 'Can event planners embed the tour in their documents?', answer: 'Yes. The tour can be shared via link and embedded via iFrame – perfect for offers, pitch decks and partner websites.' },
+      { question: 'Can we show different seating arrangements?', answer: 'Yes. We shoot the hall in several variants (e.g. banquet and concert) – visitors switch between the views inside the VR tour.' },
+      { question: 'What happens after a conversion or new decoration?', answer: 'Individual panoramas can be updated from CHF 180.– per scene without recreating the VR tour. Ideal for seasonal moods too.' },
+      { question: 'Can event planners embed the VR tour in their documents?', answer: 'Yes. The virtual tour can be shared via link and embedded via iFrame – perfect for offers, pitch decks and partner websites.' },
       { question: 'How long does the shoot take?', answer: 'Depending on size, 2–4 hours, ideally when the venue is set up and empty. We deliver the finished tour in 5–10 working days.' },
     ],
   },

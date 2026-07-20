@@ -107,7 +107,7 @@ const fr: BestellenContent = {
   options: [
     { id: 'sprachen', name: 'Multilingue (DE / FR / EN)', price: '+ dès CHF 300.– par langue', add: 300, approx: true },
     { id: 'street', name: 'Google Street View & intégration Business', price: '+ CHF 490.–', add: 490 },
-    { id: 'lead', name: 'Formulaire de capture de leads dans la visite', price: '+ CHF 390.–', add: 390 },
+    { id: 'lead', name: 'Formulaire de capture de leads dans la visite VR', price: '+ CHF 390.–', add: 390 },
     { id: 'nadir', name: 'Patch nadir 100% – visite complète (sol impeccable)', price: '+ CHF 299.– forfait', add: 299 },
     { id: 'tagnacht', name: 'Mode jour/nuit', price: '+ dès CHF 180.– par scène', add: 180, approx: true },
   ],
@@ -181,7 +181,7 @@ const en: BestellenContent = {
   options: [
     { id: 'sprachen', name: 'Multilingual (DE / FR / EN)', price: '+ from CHF 300.– per language', add: 300, approx: true },
     { id: 'street', name: 'Google Street View & business integration', price: '+ CHF 490.–', add: 490 },
-    { id: 'lead', name: 'Lead capture form inside the tour', price: '+ CHF 390.–', add: 390 },
+    { id: 'lead', name: 'Lead capture form inside the VR tour', price: '+ CHF 390.–', add: 390 },
     { id: 'nadir', name: 'Nadir patch 100% – whole tour (flawless floor)', price: '+ CHF 299.– flat', add: 299 },
     { id: 'tagnacht', name: 'Day/night mode', price: '+ from CHF 180.– per scene', add: 180, approx: true },
   ],

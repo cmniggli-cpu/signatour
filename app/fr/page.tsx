@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: `Visites 360° qui vendent – Hôtels, Spa, Gastronomie & Immobilier | ${SITE_NAME}`,
   },
   description:
-    'Prestataire suisse de visites virtuelles 360° premium pour hôtels, spas, restaurants et biens immobiliers. Les visiteurs réservent et demandent directement dans la visite. Prix unique, sans abonnement.',
+    'Prestataire suisse de visites virtuelles 360° premium pour hôtels, spas, restaurants et biens immobiliers. Les visiteurs réservent et demandent directement dans la visite VR. Prix unique, sans abonnement.',
   alternates: {
     canonical: '/fr',
     languages: {
@@ -69,18 +69,18 @@ const Icon = ({ id, c = 'icn' }: { id: string; c?: string }) => (
 const Chk = () => <svg className="icn-sm" style={{ width: 18, height: 18 }}><use href="#i-check" /></svg>
 
 const FAQ_ITEMS = [
-  { q: 'Qu’est-ce qu’une visite à 360° ?', a: 'Une visite interactive dans laquelle les visiteurs se déplacent eux-mêmes – comme s’ils étaient sur place. Elle fonctionne directement dans le navigateur, sans application, et peut être enrichie de points interactifs pour réserver, acheter ou demander une offre.' },
-  { q: 'Combien de temps dure la réalisation ?', a: 'La prise de vue dure 2 à 4 heures sur place. Nous livrons la visite finie en règle générale sous 5 à 10 jours ouvrables.' },
-  { q: 'Ai-je besoin d’une application ou d’une caméra particulière ?', a: 'Non. La visite fonctionne sur tout appareil dans le navigateur – smartphone, tablette, ordinateur, TV et même casque VR. Nous nous occupons entièrement de la prise de vue, de la technique et de l’hébergement.' },
+  { q: 'Qu’est-ce qu’une visite à 360° ?', a: 'Une visite VR interactive dans laquelle les visiteurs se déplacent eux-mêmes – comme s’ils étaient sur place. Elle fonctionne directement dans le navigateur, sans application, et peut être enrichie de points interactifs pour réserver, acheter ou demander une offre.' },
+  { q: 'Combien de temps dure la réalisation ?', a: 'La prise de vue dure 2 à 4 heures sur place. Nous livrons la visite VR finie en règle générale sous 5 à 10 jours ouvrables.' },
+  { q: 'Ai-je besoin d’une application ou d’une caméra particulière ?', a: 'Non. La visite VR fonctionne sur tout appareil dans le navigateur – smartphone, tablette, ordinateur, TV et même casque VR. Nous nous occupons entièrement de la prise de vue, de la technique et de l’hébergement.' },
   { q: 'Est-ce conforme au RGPD ?', a: 'Oui. Hébergement en Suisse/UE, prises de vue en dehors des heures d’ouverture sans personnes, contrat de sous-traitance inclus sur demande.' },
-  { q: 'Que se passe-t-il en cas de rénovation ?', a: 'Avec un forfait de service, nous mettons à jour les zones concernées ou recréons certains points – votre visite reste actuelle.' },
-  { q: 'Concrètement, qu’est-ce que cela m’apporte – est-ce rentable ?', a: 'Selon le secteur, les réservations et les demandes augmentent nettement, et les visiteurs restent bien plus longtemps sur le site. Pour l’immobilier par exemple, environ +87 % de vues (Matterport). Avec un gain mesurable, la visite s’amortit souvent après quelques réservations seulement.' },
-  { q: 'Combien coûte une visite ?', a: 'Des forfaits transparents à prix fixe dès CHF 990 – le prix dépend du nombre de panoramas et des fonctions. Via le configurateur, vous obtenez en une minute une estimation sans engagement.' },
-  { q: 'Y a-t-il un abonnement ou des coûts cachés ?', a: 'Non. La visite vous appartient. Un forfait de service annuel (dès CHF 120) est facultatif – sans engagement de longue durée, résiliable pour la fin de l’année.' },
+  { q: 'Que se passe-t-il en cas de rénovation ?', a: 'Avec un forfait de service, nous mettons à jour les zones concernées ou recréons certains points – votre visite VR reste actuelle.' },
+  { q: 'Concrètement, qu’est-ce que cela m’apporte – est-ce rentable ?', a: 'Selon le secteur, les réservations et les demandes augmentent nettement, et les visiteurs restent bien plus longtemps sur le site. Pour l’immobilier par exemple, environ +87 % de vues (Matterport). Avec un gain mesurable, la visite VR s’amortit souvent après quelques réservations seulement.' },
+  { q: 'Combien coûte une visite VR ?', a: 'Des forfaits transparents à prix fixe dès CHF 990 – le prix dépend du nombre de panoramas et des fonctions. Via le configurateur, vous obtenez en une minute une estimation sans engagement.' },
+  { q: 'Y a-t-il un abonnement ou des coûts cachés ?', a: 'Non. La visite VR vous appartient. Un forfait de service annuel (dès CHF 120) est facultatif – sans engagement de longue durée, résiliable pour la fin de l’année.' },
   { q: 'Comment l’impact est-il mesuré ?', a: 'Vous recevez des statistiques de visiteurs : vues, durée de visite, pièces les plus consultées et clics sur les points de réservation – des chiffres au lieu d’un ressenti.' },
-  { q: 'Que se passe-t-il si je ne suis pas satisfait ?', a: 'Double garantie : qualité – nous affinons chaque détail, jusqu’à 3 séries de corrections incluses. Et marque – votre visite reste exactement fidèle à votre charte graphique, sans branding étranger.' },
+  { q: 'Que se passe-t-il si je ne suis pas satisfait ?', a: 'Double garantie : qualité – nous affinons chaque détail, jusqu’à 3 séries de corrections incluses. Et marque – votre visite VR reste exactement fidèle à votre charte graphique, sans branding étranger.' },
   { q: 'En quoi est-ce différent de photos ou d’une vidéo ?', a: 'Les photos et vidéos montrent ce que nous voulons montrer. Une Signature Tour laisse le visiteur décider lui-même où regarder – et agir directement (réserver, demander). Une vidéo ne peut pas faire cela.' },
-  { q: 'Est-ce la même chose que Matterport ?', a: 'Matterport est un standard de scan 3D – souvent avec un abonnement mensuel et un rendu standardisé. Notre visite est à votre charte graphique, active à la vente et vous appartient, sans abonnement obligatoire. Différence de qualité visible : là où Matterport recouvre le sol sous la caméra d’une tache floue (sinon on verrait le trépied), nous retouchons ce point nadir à 95 % proprement – sur demande à 100 % avec un sol impeccable ou votre logo.' },
+  { q: 'Est-ce la même chose que Matterport ?', a: 'Matterport est un standard de scan 3D – souvent avec un abonnement mensuel et un rendu standardisé. Notre visite VR est à votre charte graphique, active à la vente et vous appartient, sans abonnement obligatoire. Différence de qualité visible : là où Matterport recouvre le sol sous la caméra d’une tache floue (sinon on verrait le trépied), nous retouchons ce point nadir à 95 % proprement – sur demande à 100 % avec un sol impeccable ou votre logo.' },
   { q: 'Et le sol sous la caméra (nadir) ?', a: 'Lors de prises de vue à 360°, la caméra est posée sur un trépied – sans traitement, il serait visible. Beaucoup de prestataires posent simplement une tache floue ou un logo par-dessus. Nous retouchons le sol à 95 % proprement pour un rendu naturel. Pour un résultat parfait, l’option 100 % offre un sol impeccable ou un logo intégré.' },
   { q: 'Est-ce possible en plusieurs langues ?', a: 'Oui – allemand, français et anglais. Langues supplémentaires dès CHF 300 par langue.' },
 ]
@@ -124,7 +124,7 @@ export default function HomePageFr() {
           </p>
           <h1 className="serif">Vos espaces deviennent votre <em>meilleur vendeur</em> <span style={{ whiteSpace: 'nowrap' }}>– 24 h/24.</span></h1>
           <p className="lead"><span className="accent">Les décisions se prennent aujourd’hui en ligne – pas sur place.</span><br />
-            Nous transformons vos locaux en une expérience de vente numérique : les visiteurs découvrent votre offre, gagnent en confiance et réservent, achètent ou demandent une offre directement dans la visite – avant même le premier échange.</p>
+            Nous transformons vos locaux en une expérience de vente numérique : les visiteurs découvrent votre offre, gagnent en confiance et réservent, achètent ou demandent une offre directement dans la visite VR – avant même le premier échange.</p>
           <div className="cta">
             <a className="btn btn-gold" href="/konfigurator-fr.html">Conseil gratuit</a>
             <a className="btn btn-ghost" href="#referenzen">Voir les visites de référence</a>
@@ -145,7 +145,7 @@ export default function HomePageFr() {
 
       <section className="blk" id="branchen" style={{ background: 'var(--paper2)' }}>
         <div className="wrap center">
-          <div className="kicker">Secteurs</div><h2 className="sec">À chaque secteur sa visite sur mesure</h2>
+          <div className="kicker">Secteurs</div><h2 className="sec">À chaque secteur sa visite VR sur mesure</h2>
           <p className="sub">Partout où l’atmosphère, la qualité et la confiance pèsent dans la décision.</p>
         </div>
         <div className="wrap">
@@ -174,7 +174,7 @@ export default function HomePageFr() {
             <div className="fcard"><Icon id="i-pin" /><h3>Points interactifs</h3><p>Points de réservation et d’information : plus d’interaction, plus de résultats.</p></div>
             <div className="fcard"><Icon id="i-globe" /><h3>Site web & Google</h3><p>Intégrée de façon optimale. Visible, rapide, accessible partout.</p></div>
             <div className="fcard"><Icon id="i-chart" /><h3>Résultats mesurables</h3><p>Rapport analytique : vues, pièces les plus consultées et clics – des chiffres au lieu d’un ressenti.</p></div>
-            <div className="fcard"><Icon id="i-shield" /><h3>Pleine propriété, sans abonnement</h3><p>La visite vous appartient. Pas de location de plateforme – seulement un forfait de service équitable et facultatif.</p></div>
+            <div className="fcard"><Icon id="i-shield" /><h3>Pleine propriété, sans abonnement</h3><p>La visite VR vous appartient. Pas de location de plateforme – seulement un forfait de service équitable et facultatif.</p></div>
             <div className="fcard"><Icon id="i-bolt" /><h3>Chargement ultra-rapide</h3><p>Optimisée pour le mobile – chaque seconde de chargement compte pour la conversion.</p></div>
             <div className="fcard"><Icon id="i-phone" /><h3>Interlocuteur suisse</h3><p>Pas de centre d’appels ni de système de tickets – directement avec le créateur. Hébergement en CH/UE, conforme au RGPD.</p></div>
           </div>
@@ -184,7 +184,7 @@ export default function HomePageFr() {
       <section className="blk dark">
         <div className="wrap">
           <div className="center"><div className="kicker">La différence</div><h2 className="sec">Visite standard vs Signature Experience</h2>
-            <p className="sub">La plupart des visites se contentent de laisser regarder. Une Signature Experience donne envie d’agir.</p></div>
+            <p className="sub">La plupart des visites VR se contentent de laisser regarder. Une Signature Experience donne envie d’agir.</p></div>
           <input type="checkbox" id="cmpmore" className="cmptoggle" />
           <div className="cmp">
             <div className="col std"><h3>Visite standard</h3><ul>
@@ -230,9 +230,9 @@ export default function HomePageFr() {
       <section className="blk">
         <div className="wrap">
           <div className="fgrid fgrid3">
-            <div className="fcard"><Icon id="i-globe" /><h3>À l’œuvre 24 h/24</h3><p>Votre visite vend pendant que vous dormez – 365 jours par an, même en dehors des heures d’ouverture.</p></div>
+            <div className="fcard"><Icon id="i-globe" /><h3>À l’œuvre 24 h/24</h3><p>Votre visite VR vend pendant que vous dormez – 365 jours par an, même en dehors des heures d’ouverture.</p></div>
             <div className="fcard"><Icon id="i-target" /><h3>Un seul effort, un bénéfice durable</h3><p>Créée une fois, utilisée des années – sans frais publicitaires récurrents ni dispersion.</p></div>
-            <div className="fcard"><Icon id="i-chart" /><h3>Du concret, pas du ressenti</h3><p>Vues, durée de visite et clics sur les points de réservation – vous voyez ce que la visite apporte.</p></div>
+            <div className="fcard"><Icon id="i-chart" /><h3>Du concret, pas du ressenti</h3><p>Vues, durée de visite et clics sur les points de réservation – vous voyez ce que la visite VR apporte.</p></div>
           </div>
         </div>
       </section>
@@ -241,12 +241,12 @@ export default function HomePageFr() {
         <div className="wrap center">
           <div className="kicker">Possibilités interactives</div><h2 className="sec">Bien plus que des images</h2><div className="rule" />
           <div className="fgrid fgrid3">
-            <div className="fcard"><Icon id="i-cart" /><h3>Intégration de réservation</h3><p>Les clients réservent ou achètent directement dans la visite – sans détour par des sites tiers.</p></div>
+            <div className="fcard"><Icon id="i-cart" /><h3>Intégration de réservation</h3><p>Les clients réservent ou achètent directement dans la visite VR – sans détour par des sites tiers.</p></div>
             <div className="fcard"><Icon id="i-play" /><h3>Vidéo & audio</h3><p>Vidéos intégrées et audioguides racontent votre histoire au cœur de l’espace.</p></div>
             <div className="fcard"><Icon id="i-info" /><h3>Points d’information</h3><p>Horaires, prix et détails sous forme de points cliquables directement dans l’image.</p></div>
             <div className="fcard"><Icon id="i-zoom" /><h3>Zoom & plein écran</h3><p>Images et fenêtres s’agrandissent et s’ouvrent en plein écran – chaque détail devient visible.</p></div>
             <div className="fcard"><Icon id="i-pin" /><h3>Plan & mini-carte</h3><p>Orientation par plan et mini-carte – les visiteurs se repèrent immédiatement.</p></div>
-            <div className="fcard"><Icon id="i-doc" /><h3>Téléchargements</h3><p>Brochures, menus, listes de prix et PDF directement depuis la visite.</p></div>
+            <div className="fcard"><Icon id="i-doc" /><h3>Téléchargements</h3><p>Brochures, menus, listes de prix et PDF directement depuis la visite VR.</p></div>
           </div>
         </div>
       </section>
@@ -257,14 +257,14 @@ export default function HomePageFr() {
           <div className="fgrid fgrid3" style={{ textAlign: 'left' }}>
             {[
               { t: 'Done-for-You plutôt que DIY', d: 'Nous venons, photographions et livrons. Zéro effort pour vous.' },
-              { t: 'Transparent plutôt que caché', d: 'Prix unique, pas d’abonnement – la visite vous appartient, aucune location de plateforme.' },
+              { t: 'Transparent plutôt que caché', d: 'Prix unique, pas d’abonnement – la visite VR vous appartient, aucune location de plateforme.' },
               { t: 'Local plutôt que cloud américain', d: 'Serveurs suisses/UE, conformité RGPD.' },
               { t: 'Multi-secteurs plutôt qu’immobilier seul', d: 'Hôtels, restaurants, spas, fitness, immobilier.' },
               { t: 'Flexible plutôt que contrat longue durée', d: 'Aucune durée minimale, aucun délai de résiliation.' },
-              { t: 'Optimisation continue plutôt qu’immobilisme', d: 'Votre visite évolue – mises à jour, nouvelles scènes et extensions à tout moment.' },
+              { t: 'Optimisation continue plutôt qu’immobilisme', d: 'Votre visite VR évolue – mises à jour, nouvelles scènes et extensions à tout moment.' },
               { t: 'Sol impeccable plutôt que tache de trépied', d: 'Le nadir est retouché à 95% – sur demande à 100% ou avec votre logo.' },
               { t: 'Instrument de vente plutôt que gadget', d: 'Liens de réservation, formulaires de contact et intégration Google transforment les visiteurs en demandes.' },
-              { t: 'Mesurable plutôt qu’à l’aveugle', d: 'Vues, durée de visite et clics sur les points de réservation – vous voyez ce que votre visite rapporte.' },
+              { t: 'Mesurable plutôt qu’à l’aveugle', d: 'Vues, durée de visite et clics sur les points de réservation – vous voyez ce que votre visite VR rapporte.' },
             ].map((r, i) => (
               <div className="tcard" key={r.t}>
                 <h3><span style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--g)', fontSize: 24, fontWeight: 600, marginRight: 10 }}>{String(i + 1).padStart(2, '0')}</span>{r.t}</h3>
@@ -279,9 +279,9 @@ export default function HomePageFr() {
         <div className="wrap">
           <div className="center"><div className="kicker">Projets de référence</div><h2 className="sec">Voyez par vous-même</h2><div className="rule" /></div>
           <div className="refs">
-            <div className="ref"><span className="badge">Réservation intégrée</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Ouvrir la visite</a></div></div>
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : Immobilier Basic Tour" /><div className="bot"><b>Immobilier Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Ouvrir la visite</a></div></div>
-            <div className="ref"><span className="badge">Add-on</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-on : Furniture Removal" /><div className="bot"><b>Add-on : Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Ouvrir la visite</a></div></div>
+            <div className="ref"><span className="badge">Réservation intégrée</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div></div>
+            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : Immobilier Basic Tour" /><div className="bot"><b>Immobilier Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div></div>
+            <div className="ref"><span className="badge">Add-on</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-on : Furniture Removal" /><div className="bot"><b>Add-on : Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div></div>
           </div>
         </div>
       </section>
@@ -319,7 +319,7 @@ export default function HomePageFr() {
           <div className="center"><div className="kicker">Suivi & évolution</div><h2 className="sec">Forfaits de service annuels</h2><div className="rule" /></div>
           <div className="svc">
             <div className="scard"><h3>Basic Service</h3><ul><li><Chk /> exploitation & sécurité (hébergement)</li><li><Chk /> certificat SSL & sauvegardes</li><li><Chk /> 1 petite adaptation par an</li><li><Chk /> statistiques de visiteurs</li></ul><div className="amt">CHF 120.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=basic-service">Choisir</a></div>
-            <div className="scard rec"><div className="tag">Recommandé</div><h3>Signature Care</h3><ul><li><Chk /> tout le Basic Service</li><li><Chk /> 3 adaptations par an</li><li><Chk /> 1 mise à jour annuelle de la visite</li><li><Chk /> aperçu du comportement des visiteurs</li><li><Chk /> support prioritaire</li></ul><div className="amt">CHF 360.– <small>/ an</small></div><a className="btn btn-gold" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=care">Choisir</a></div>
+            <div className="scard rec"><div className="tag">Recommandé</div><h3>Signature Care</h3><ul><li><Chk /> tout le Basic Service</li><li><Chk /> 3 adaptations par an</li><li><Chk /> 1 mise à jour annuelle de la visite VR</li><li><Chk /> aperçu du comportement des visiteurs</li><li><Chk /> support prioritaire</li></ul><div className="amt">CHF 360.– <small>/ an</small></div><a className="btn btn-gold" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=care">Choisir</a></div>
             <div className="scard"><h3>Signature Evolution</h3><ul><li><Chk /> tout le Signature Care</li><li><Chk /> 9 adaptations par an</li><li><Chk /> 2 « knowledge upgrades » annuels</li><li><Chk /> optimisation des performances</li><li><Chk /> rapports de trafic trimestriels</li></ul><div className="amt">CHF 600.– <small>/ an</small></div><a className="btn btn-ghost" style={{ marginTop: 18, display: 'inline-block' }} href="/fr/bestellen?service=evolution">Choisir</a></div>
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function HomePageFr() {
           <div className="center"><div className="kicker">Votre sécurité est notre promesse</div><h2 className="sec">Double garantie</h2><div className="rule" /></div>
           <div className="guar">
             <div className="gcard"><Icon id="i-shield" /><h3>Garantie de qualité</h3><p>Chaque panorama est peaufiné à la main — lumière, couleurs, détails. Rien ne quitte notre studio avant de répondre à nos exigences. Et si quelque chose ne correspond pas à vos attentes, nous l’affinons — jusqu’à 3 séries de corrections incluses.</p></div>
-            <div className="gcard"><Icon id="i-palette" /><h3>Garantie de marque*</h3><p>Votre visite porte votre signature : couleurs, typographies, logo et navigation exactement selon votre charte graphique. Pas de lecteur standard, pas de branding étranger — vos visiteurs restent dans votre univers, du premier clic à la demande de réservation.</p></div>
+            <div className="gcard"><Icon id="i-palette" /><h3>Garantie de marque*</h3><p>Votre visite VR porte votre signature : couleurs, typographies, logo et navigation exactement selon votre charte graphique. Pas de lecteur standard, pas de branding étranger — vos visiteurs restent dans votre univers, du premier clic à la demande de réservation.</p></div>
           </div>
           <p style={{ marginTop: 14, textAlign: 'center', fontSize: 12.5, color: 'var(--dmut)' }}>* Intégration de la charte graphique dès la Signature Tour. La visite VR Basic utilise l’élégant design standard Signatour.</p>
           <div className="nullrisk">Risque minimal. Valeur ajoutée maximale.</div>
@@ -345,7 +345,7 @@ export default function HomePageFr() {
             <div className="ocard"><Icon id="i-globe" /><h3>Version multilingue (DE / FR / EN)</h3><div className="pr">dès CHF 300.– par langue</div></div>
             <div className="ocard"><Icon id="i-palette" /><h3>Virtual Staging – ameublement virtuel</h3><div className="pr">dès CHF 240.– par panorama</div></div>
             <div className="ocard"><Icon id="i-pin" /><h3>Google Street View & intégration Business</h3><div className="pr">CHF 490.– unique</div></div>
-            <div className="ocard"><Icon id="i-users" /><h3>Formulaire de capture de leads dans la visite</h3><div className="pr">CHF 390.– unique</div></div>
+            <div className="ocard"><Icon id="i-users" /><h3>Formulaire de capture de leads dans la visite VR</h3><div className="pr">CHF 390.– unique</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">dès CHF 180.– par panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Mode jour/nuit</h3><div className="pr">dès CHF 180.– par scène</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Panoramas supplémentaires</h3><div className="pr">dès CHF 150.– par scène</div></div>

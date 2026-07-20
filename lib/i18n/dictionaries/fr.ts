@@ -34,7 +34,7 @@ export const fr: Dictionary = {
   footer: {
     tagline: 'Nous transformons vos espaces en expériences de vente numériques – pour que les visiteurs deviennent des clients.',
     bullet1: 'Prestataire suisse, interlocuteur personnel',
-    bullet2: 'Prix unique, pas d’abonnement – la visite vous appartient',
+    bullet2: 'Prix unique, pas d’abonnement – la visite VR vous appartient',
     bullet3: 'Hébergement conforme au RGPD en CH/UE',
     branchenTitle: 'Secteurs',
     infoTitle: 'Informations',

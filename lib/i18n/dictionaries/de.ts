@@ -32,7 +32,7 @@ export const de = {
   footer: {
     tagline: 'Wir verwandeln Räume in digitale Verkaufserlebnisse – damit aus Besuchern Kunden werden.',
     bullet1: 'Schweizer Anbieter, persönlicher Ansprechpartner',
-    bullet2: 'Einmalpreis, kein Abo – die Tour gehört Ihnen',
+    bullet2: 'Einmalpreis, kein Abo – die VR-Tour gehört Ihnen',
     bullet3: 'DSGVO-konformes Hosting in CH/EU',
     branchenTitle: 'Branchen',
     infoTitle: 'Informationen',

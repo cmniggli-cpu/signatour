@@ -34,7 +34,7 @@ export const en: Dictionary = {
   footer: {
     tagline: 'We turn spaces into digital sales experiences – so visitors become customers.',
     bullet1: 'Swiss provider, personal point of contact',
-    bullet2: 'One-time price, no subscription – the tour is yours',
+    bullet2: 'One-time price, no subscription – the VR tour is yours',
     bullet3: 'GDPR-compliant hosting in CH/EU',
     branchenTitle: 'Industries',
     infoTitle: 'Information',

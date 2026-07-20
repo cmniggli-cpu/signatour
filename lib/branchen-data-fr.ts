@@ -5,7 +5,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
   hotel: {
     slug: 'hotel',
     metaTitle: 'Visite 360° pour hôtels – plus de réservations directes',
-    metaDescription: 'Plus de réservations directes, moins de commissions OTA : visites 360° professionnelles pour hôtels dès CHF 3\'490. Prestataire suisse – la visite vous appartient, pas d\'abonnement.',
+    metaDescription: 'Plus de réservations directes, moins de commissions OTA : visites 360° professionnelles pour hôtels dès CHF 3\'490. Prestataire suisse – la visite VR vous appartient, pas d\'abonnement.',
     badge: 'Hôtels & resorts',
     headline: 'Visite 360° pour votre hôtel',
     tagline: 'Plus de réservations directes, moins de dépendance aux OTA. Montrez chambres, spa, restaurant et lobby à vos hôtes – avant qu’ils réservent.',
@@ -40,13 +40,13 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       { label: 'Visibilité Google', without: 'Fiche standard', with: 'Placement privilégié avec visite' },
       { label: 'Qualité d’image', without: 'Instantanés au smartphone', with: 'Prises de vue pro, sol propre (nadir)' },
     ],
-    roiTitle: '10 réservations directes suffisent à payer votre visite',
+    roiTitle: '10 réservations directes suffisent à payer votre visite VR',
     roiSteps: [
       { label: 'Prix moyen d’une chambre', value: 'CHF 200 / nuit' },
       { label: 'Commission OTA économisée (18%)', value: 'CHF 36 / nuit' },
       { label: '10 réservations directes de 2 nuits', value: 'CHF 720 économisés' },
     ],
-    roiResult: 'La visite s’amortit souvent dès le premier trimestre.',
+    roiResult: 'La visite VR s’amortit souvent dès le premier trimestre.',
     packageName: 'Forfait hôtel',
     packagePrice: 'dès CHF 3\'490.–',
     packageFeatures: [
@@ -60,8 +60,8 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     faqs: [
       { question: 'Combien de temps dure la prise de vue ?', answer: '4–6 heures selon la taille de l’hôtel. Nous planifions le rendez-vous après le check-out / avant le check-in.' },
       { question: 'Et si nous rénovons des chambres ?', answer: 'Selon le forfait de service, les mises à jour de panoramas sont déjà incluses – ou à l’unité dès CHF 180.– par scène. Pas besoin d’une nouvelle prise de vue complète.' },
-      { question: 'La visite peut-elle renvoyer vers notre système de réservation ?', answer: 'Oui. Les hôtes peuvent réserver directement depuis la visite le type de chambre qu’ils sont en train de regarder.' },
-      { question: 'La visite fonctionne-t-elle aussi sur smartphone ?', answer: 'Oui, entièrement responsive. Aucune application nécessaire. Les casques VR sont également pris en charge.' },
+      { question: 'La visite VR peut-elle renvoyer vers notre système de réservation ?', answer: 'Oui. Les hôtes peuvent réserver directement depuis la visite virtuelle le type de chambre qu’ils sont en train de regarder.' },
+      { question: 'La visite VR fonctionne-t-elle aussi sur smartphone ?', answer: 'Oui, entièrement responsive. Aucune application nécessaire. Les casques VR sont également pris en charge.' },
     ],
   },
 
@@ -96,7 +96,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       { label: 'Calculé sur 3 ans', value: 'env. CHF 2.65 / jour' },
       { label: '1 réservation de plus par semaine (CHF 45 p.p.)', value: '> CHF 7\'000 / an' },
     ],
-    roiResult: 'Deux réservations supplémentaires par semaine suffisent à payer toute la visite.',
+    roiResult: 'Deux réservations supplémentaires par semaine suffisent à payer toute la visite VR.',
     extraSection: {
       title: 'Intégration Google Business',
       description: 'Votre visite 360° est intégrée directement à votre profil Google Business. Des prises de vue professionnelles remplacent les photos incontrôlées des clients.',
@@ -130,8 +130,8 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     ],
     faqs: [
       { question: 'Devons-nous fermer pendant la prise de vue ?', answer: 'Non, nous photographions avant l’ouverture ou pendant une période calme. 60–90 minutes suffisent généralement.' },
-      { question: 'Peut-on adapter la visite selon les saisons ?', answer: 'Oui, 1 mise à jour saisonnière est incluse. D’autres peuvent être ajoutées à tout moment.' },
-      { question: 'Qu’advient-il des anciennes photos Google de nos clients ?', answer: 'La visite professionnelle apparaît en bonne place. Les photos des clients restent, mais votre visite domine la première impression visuelle.' },
+      { question: 'Peut-on adapter la visite VR selon les saisons ?', answer: 'Oui, 1 mise à jour saisonnière est incluse. D’autres peuvent être ajoutées à tout moment.' },
+      { question: 'Qu’advient-il des anciennes photos Google de nos clients ?', answer: 'La visite VR professionnelle apparaît en bonne place. Les photos des clients restent, mais votre visite virtuelle domine la première impression visuelle.' },
     ],
   },
 
@@ -143,7 +143,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     headline: 'Faites vivre votre atmosphère de bien-être',
     tagline: 'Les hôtes disent : « C’est encore plus beau que sur les photos. » Faites-leur ressentir l’atmosphère déjà en ligne.',
     heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1900&q=80&auto=format&fit=crop',
-    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node69', title: 'AQUAVIRAT – Spa & bains', note: 'Une vraie Signature Tour : piscine, espace saunas et zones de repos – avec réservation directement dans la visite.' },
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node69', title: 'AQUAVIRAT – Spa & bains', note: 'Une vraie Signature Tour : piscine, espace saunas et zones de repos – avec réservation directement dans la visite VR.' },
     challenges: [
       { title: 'Une atmosphère intransmissible', description: 'Les photos montrent des pièces, pas la sensation : chaleur du sauna, silence des zones de repos, ampleur des lieux.' },
       { title: 'Un déficit de conversion', description: 'Les visiteurs sont intéressés mais ne réservent pas. Il manque l’expérience décisive qui crée la confiance.' },
@@ -151,7 +151,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     ],
     stats: [
       { value: '+45%', label: 'de réservations en plus après une visite virtuelle' },
-      { value: '67%', label: 'de probabilité de réservation en plus chez les visiteurs de la visite' },
+      { value: '67%', label: 'de probabilité de réservation en plus chez les visiteurs de la visite VR' },
       { value: '4–5×', label: 'plus de temps passé sur les pages avec visite 360°' },
       { value: '15–25%', label: 'd’adoption dans l’espace DACH – votre avance, maintenant' },
     ],
@@ -235,7 +235,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
         'La sensation « je veux m’entraîner ici » avant l’essai',
       ],
     },
-    roiTitle: '3 nouveaux membres paient votre visite',
+    roiTitle: '3 nouveaux membres paient votre visite VR',
     roiSteps: [
       { label: 'Valeur par membre (24 mois × CHF 40)', value: 'env. CHF 960' },
       { label: 'Investissement (forfait fitness)', value: 'dès CHF 2\'890.– une fois' },
@@ -266,7 +266,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     faqs: [
       { question: 'Des membres apparaissent-ils pendant la prise de vue ?', answer: 'Non, nous photographions en dehors des heures de pointe ou avant l’ouverture. La salle est montrée vide et rangée – c’est toujours ainsi qu’elle paraît le mieux.' },
       { question: 'Notre salle n’est pas très grande. Est-ce quand même rentable ?', answer: 'Oui. Les salles compactes et bien équipées sont impressionnantes en 360°. L’effet d’espace est pleinement mis en valeur.' },
-      { question: 'Pouvons-nous utiliser la visite sur les réseaux sociaux ?', answer: 'Oui, lien partageable pour Instagram, Facebook, newsletter, portails d’avis. Aucun téléchargement d’application nécessaire.' },
+      { question: 'Pouvons-nous utiliser la visite VR sur les réseaux sociaux ?', answer: 'Oui, lien partageable pour Instagram, Facebook, newsletter, portails d’avis. Aucun téléchargement d’application nécessaire.' },
     ],
   },
 
@@ -314,7 +314,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       description: 'Nos visites 360° fonctionnent sur tous les grands portails immobiliers.',
       items: [
         'Homegate – visite virtuelle directement dans l’annonce',
-        'ImmoScout24.ch – visibilité maximale grâce à l’intégration de la visite',
+        'ImmoScout24.ch – visibilité maximale grâce à l’intégration de la visite VR',
         'flatfox – présentation moderne pour la recherche locative numérique',
         'newhome – présence professionnelle sur la place de marché suisse',
         'Votre propre site – intégration simple par iFrame ou lien',
@@ -339,8 +339,8 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       'Incl. 12 mois de service de suivi par visite',
     ],
     faqs: [
-      { question: 'Quand la visite est-elle disponible après la prise de vue ?', answer: 'En règle générale 5–10 jours ouvrables. En urgence : livraison express en 3 jours ouvrables (+30%).' },
-      { question: 'Que se passe-t-il une fois l’objet vendu ou loué ?', answer: 'La visite est désactivée/supprimée. Utilisez la visite suivante de la carte pour un nouvel objet. Pas de date d’expiration.' },
+      { question: 'Quand la visite VR est-elle disponible après la prise de vue ?', answer: 'En règle générale 5–10 jours ouvrables. En urgence : livraison express en 3 jours ouvrables (+30%).' },
+      { question: 'Que se passe-t-il une fois l’objet vendu ou loué ?', answer: 'La visite VR est désactivée/supprimée. Utilisez la visite virtuelle suivante de la carte pour un nouvel objet. Pas de date d’expiration.' },
       { question: 'Le bien doit-il être vide pour la prise de vue ?', answer: 'Non. Les objets meublés paraissent souvent plus attrayants en 360°. On s’y projette mieux. Nous vous conseillons sur la préparation optimale.' },
     ],
   },
@@ -406,8 +406,8 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     faqs: [
       { question: 'Comment garantissez-vous la discrétion ?', answer: 'Nous photographions en dehors des heures d’ouverture, sans personnes, documents ni contenus d’écran. Chaque panorama passe par votre processus de validation avant d’être mis en ligne. Les zones sensibles restent exclues.' },
       { question: 'Combien de temps dure la prise de vue ?', answer: 'Pour l’accueil, les salles de conseil et de réunion, en général 1–2 heures – planifiable le soir ou le week-end, sans interruption d’exploitation.' },
-      { question: 'Est-ce rentable pour une petite étude ?', answer: 'Justement : les mandants comparent en ligne avant de demander. La seule étude de la place qui montre ses locaux se distingue visiblement – la visite travaille des années sans frais récurrents.' },
-      { question: 'Est-ce possible aussi en allemand ou en anglais ?', answer: 'Oui. Conseil & mandats en allemand, français et anglais – et la visite elle-même peut être réalisée en plusieurs langues (dès CHF 300 par langue supplémentaire).' },
+      { question: 'Est-ce rentable pour une petite étude ?', answer: 'Justement : les mandants comparent en ligne avant de demander. La seule étude de la place qui montre ses locaux se distingue visiblement – la visite VR travaille des années sans frais récurrents.' },
+      { question: 'Est-ce possible aussi en allemand ou en anglais ?', answer: 'Oui. Conseil & mandats en allemand, français et anglais – et la visite VR elle-même peut être réalisée en plusieurs langues (dès CHF 300 par langue supplémentaire).' },
     ],
   },
 
@@ -420,7 +420,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     tagline: 'Futurs mariés, organisateurs et acheteurs comparent en ligne. Qui rend salle, scène et ambiance accessibles reçoit la demande qualifiée – la concurrence, seulement le clic suivant.',
     heroImage: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1900&q=80&auto=format&fit=crop',
     challenges: [
-      { title: 'Chaque visite coûte des heures', description: 'Coordonner le rendez-vous, préparer le lieu, faire la visite – et l’intéressé constate après 10 minutes que la salle est trop petite.' },
+      { title: 'Chaque visite coûte des heures', description: 'Coordonner le rendez-vous, préparer le lieu, faire la visite sur place – et l’intéressé constate après 10 minutes que la salle est trop petite.' },
       { title: 'Les photos ne montrent pas l’effet d’espace', description: 'Hauteur sous plafond, proportions, vue depuis la scène : exactement ce qui vend un lieu ne passe pas sur les photos.' },
       { title: 'Les décisions se prennent en comparant', description: 'Qui examine plusieurs lieux décide à l’instinct sur la première impression en ligne. Sans visite, cette impression reste mince.' },
     ],
@@ -437,17 +437,17 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     ],
     captures: ['Salles & surfaces événementielles', 'Foyer & accueil', 'Scène & technique', 'Terrasses & extérieurs', 'Surfaces de showroom & d’exposition', 'Accès & parking'],
     extraSection: {
-      title: 'Variantes et documents directement dans la visite',
-      description: 'Un lieu se vend par ses possibilités. La visite les montre toutes – au même endroit.',
+      title: 'Variantes et documents directement dans la visite VR',
+      description: 'Un lieu se vend par ses possibilités. La visite VR les montre toutes – au même endroit.',
       items: [
         'Variantes de disposition (banquet, concert, séminaire) en panoramas commutables',
-        'Fiches techniques, plans et documents traiteur en PDF dans la visite',
+        'Fiches techniques, plans et documents traiteur en PDF dans la visite VR',
         'Point de demande directement dans la salle – l’intérêt devient une demande concrète',
         'Mises à jour saisonnières (déco de mariage, ambiance de Noël) à tout moment',
         'Lien partageable pour offres, e-mails et réseaux sociaux',
       ],
     },
-    roiTitle: 'Un seul événement réservé paie votre visite',
+    roiTitle: 'Un seul événement réservé paie votre visite VR',
     roiSteps: [
       { label: 'Investissement (forfait lieu d’événements)', value: 'dès CHF 2\'990.– une fois' },
       { label: 'Chiffre d’affaires par événement (mariage, fête)', value: 'plusieurs milliers de CHF' },
@@ -461,7 +461,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       { label: 'Visites', without: 'Beaucoup de rendez-vous à vide', with: 'Préqualifiées – seulement des demandes sérieuses' },
       { label: 'Effet d’espace', without: 'Les photos ne montrent pas les proportions', with: 'Salle & scène réellement perceptibles' },
       { label: 'Variantes', without: 'Une seule image standard', with: 'Banquet, concert, séminaire commutables' },
-      { label: 'Documents', without: 'PDF envoyés séparément', with: 'Technique & traiteur directement dans la visite' },
+      { label: 'Documents', without: 'PDF envoyés séparément', with: 'Technique & traiteur directement dans la visite VR' },
       { label: 'Disponibilité', without: 'Sur rendez-vous uniquement', with: 'Visitable 24 h/24' },
       { label: 'Qualité d’image', without: 'Instantanés', with: 'Prises de vue pro, sol propre (nadir)' },
     ],
@@ -477,10 +477,10 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       'Mise à jour saisonnière en option (CHF 180.– par scène / pack saison CHF 650.–)',
     ],
     faqs: [
-      { question: 'Pouvons-nous montrer différentes dispositions ?', answer: 'Oui. Nous photographions la salle en plusieurs variantes (p. ex. banquet et concert) – les visiteurs basculent entre les vues dans la visite.' },
-      { question: 'Que se passe-t-il après une transformation ou une nouvelle déco ?', answer: 'Les panoramas individuels se mettent à jour dès CHF 180.– par scène, sans refaire la visite. Idéal aussi pour les ambiances saisonnières.' },
-      { question: 'Les organisateurs peuvent-ils intégrer la visite à leurs documents ?', answer: 'Oui. La visite se partage par lien et s’intègre par iFrame – parfait pour les offres, les présentations et les sites partenaires.' },
-      { question: 'Combien de temps dure la prise de vue ?', answer: 'Selon la taille, 2–4 heures, idéalement lorsque le lieu est aménagé et vide. Nous livrons la visite terminée en 5–10 jours ouvrables.' },
+      { question: 'Pouvons-nous montrer différentes dispositions ?', answer: 'Oui. Nous photographions la salle en plusieurs variantes (p. ex. banquet et concert) – les visiteurs basculent entre les vues dans la visite VR.' },
+      { question: 'Que se passe-t-il après une transformation ou une nouvelle déco ?', answer: 'Les panoramas individuels se mettent à jour dès CHF 180.– par scène, sans refaire la visite VR. Idéal aussi pour les ambiances saisonnières.' },
+      { question: 'Les organisateurs peuvent-ils intégrer la visite à leurs documents ?', answer: 'Oui. La visite VR se partage par lien et s’intègre par iFrame – parfait pour les offres, les présentations et les sites partenaires.' },
+      { question: 'Combien de temps dure la prise de vue ?', answer: 'Selon la taille, 2–4 heures, idéalement lorsque le lieu est aménagé et vide. Nous livrons la visite VR terminée en 5–10 jours ouvrables.' },
     ],
   },
 }

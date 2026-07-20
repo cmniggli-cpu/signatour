@@ -2,7 +2,7 @@ import type { NavItem, PricingTier, FAQ, ProcessStep, Benefit, ComparisonRow, Ad
 
 export const SITE_NAME = 'Niggli 360° Signature Tours'
 export const SITE_URL = 'https://www.signatour.ch'
-export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter – die Tour gehört Ihnen, kein Abo.'
+export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter – die VR-Tour gehört Ihnen, kein Abo.'
 export const CONTACT_EMAIL = 'info@signatour.ch'
 export const CONTACT_PHONE = '+41 79 371 73 60'
 export const CONTACT_ADDRESS = 'Rue de l\'Industrie 43, 2720 Tramelan'
@@ -31,7 +31,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const HERO_STATS: Stat[] = [
   { value: '48%', label: 'mehr Buchungen' },
   { value: '3×', label: 'längere Verweildauer' },
-  { value: 'ab 990', label: 'CHF pro Tour' },
+  { value: 'ab 990', label: 'CHF pro VR-Tour' },
   { value: '0', label: 'Abo-Kosten' },
 ]
 
@@ -66,14 +66,14 @@ export const PROCESS_STEPS: ProcessStep[] = [
   { number: 1, title: 'Beratung', description: 'Wir besprechen Ihre Wünsche, Räumlichkeiten und Ziele. Kostenlos & unverbindlich.' },
   { number: 2, title: 'Shooting', description: 'Professionelle 360-Grad-Fotografie vor Ort in 2–4 Stunden.' },
   { number: 3, title: 'Produktion', description: 'Nachbearbeitung, Hotspots, Navigation, Branding. Fertig in 5–10 Arbeitstagen.' },
-  { number: 4, title: 'Online', description: 'Tour auf Ihrer Website, Google Business, Portalen. Einbettung per Link oder Code.' },
+  { number: 4, title: 'Online', description: 'VR-Tour auf Ihrer Website, Google Business, Portalen. Einbettung per Link oder Code.' },
 ]
 
 export const BENEFITS: Benefit[] = [
-  { icon: 'BadgeCheck', title: 'Kein Abo, kein Vertrag', description: 'Die Tour gehört Ihnen – Einmalpreis statt Plattform-Miete. Ein Servicepaket ist optional.' },
+  { icon: 'BadgeCheck', title: 'Kein Abo, kein Vertrag', description: 'Die VR-Tour gehört Ihnen – Einmalpreis statt Plattform-Miete. Ein Servicepaket ist optional.' },
   { icon: 'Handshake', title: 'Alles aus einer Hand', description: 'Von der Beratung bis zum Hosting. Nichts installieren, kaufen oder lernen.' },
   { icon: 'Shield', title: 'DSGVO-konform', description: 'Schweizer/EU-Hosting, Aufnahmen ohne Personen, AVV inklusive.' },
-  { icon: 'Database', title: 'Datenhoheit beim Kunden', description: 'Die Tour gehört Ihnen – kein Vendor Lock-in, keine Plattform-Abhängigkeit.' },
+  { icon: 'Database', title: 'Datenhoheit beim Kunden', description: 'Die VR-Tour gehört Ihnen – kein Vendor Lock-in, keine Plattform-Abhängigkeit.' },
   { icon: 'MapPin', title: 'Google Business Integration', description: '2× mehr Profilaufrufe mit 360-Grad-Inhalten.' },
   { icon: 'User', title: 'Persönlicher Ansprechpartner', description: 'Ein Kontakt, kein Callcenter – Deutsch, Französisch oder Englisch.' },
 ]
@@ -144,7 +144,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
     items: [
       {
         name: 'Nadir-Patch 100% – Boden makellos',
-        price: 'CHF 90.– pro Panorama / ganze Tour pauschal CHF 299.–',
+        price: 'CHF 90.– pro Panorama / ganze VR-Tour pauschal CHF 299.–',
         nutzen: 'Statt verschwommenem Stativ-Fleck ein sauberer Boden oder Ihr Logo – ein Detail, das Profis sofort sehen.',
       },
       {
@@ -160,7 +160,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
       {
         name: 'Zusätzliche Panoramen',
         price: 'ab CHF 150.– pro Szene',
-        nutzen: 'Die Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
+        nutzen: 'Die VR-Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
       },
       {
         name: '3D-Grundriss & Dollhouse-Ansicht',
@@ -180,17 +180,17 @@ export const ADDON_GROUPS: AddOnGroup[] = [
       {
         name: 'Mehrsprachige Version (DE / FR / EN)',
         price: 'ab CHF 300.– pro Sprache',
-        nutzen: 'Gäste und Käufer erleben die Tour in ihrer Sprache – mehr Reichweite, mehr Vertrauen.',
+        nutzen: 'Gäste und Käufer erleben die VR-Tour in ihrer Sprache – mehr Reichweite, mehr Vertrauen.',
       },
       {
         name: 'Google Street View & Business-Einbindung',
         price: 'CHF 490.– einmalig',
-        nutzen: 'Ihre Tour erscheint direkt in Google Maps und im Unternehmensprofil – Sichtbarkeit dort, wo Kunden suchen.',
+        nutzen: 'Ihre VR-Tour erscheint direkt in Google Maps und im Unternehmensprofil – Sichtbarkeit dort, wo Kunden suchen.',
       },
       {
         name: 'QR-Code Print- & Display-Paket',
         price: 'CHF 240.–',
-        nutzen: 'Fensteraufkleber, Tischaufsteller und Schilder führen direkt in die Tour – die Location wird zum Eingangstor.',
+        nutzen: 'Fensteraufkleber, Tischaufsteller und Schilder führen direkt in die VR-Tour – die Location wird zum Eingangstor.',
       },
     ],
   },
@@ -198,7 +198,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
     title: '03 · Conversion & Erlebnis',
     items: [
       {
-        name: 'Lead-Capture-Formular in der Tour',
+        name: 'Lead-Capture-Formular in der VR-Tour',
         price: 'CHF 390.– einmalig',
         nutzen: 'Aus anonymen Besuchern werden qualifizierte Anfragen – mit Name und Mailadresse.',
       },
@@ -210,7 +210,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
       {
         name: 'Signature Web – Webseite nach Mass',
         price: 'ab CHF 2\'500.–',
-        nutzen: 'Tour und Webseite aus einer Hand – ein durchgängiges digitales Verkaufserlebnis.',
+        nutzen: 'VR-Tour und Webseite aus einer Hand – ein durchgängiges digitales Verkaufserlebnis.',
       },
     ],
   },
@@ -220,7 +220,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
       {
         name: 'Saisonales Szenen-Update',
         price: 'CHF 180.– pro Szene / Saisonpaket CHF 650.–',
-        nutzen: 'Sommerterrasse, Weihnachtsstimmung, neue Bepflanzung – Ihre Tour bleibt aktuell und lebendig.',
+        nutzen: 'Sommerterrasse, Weihnachtsstimmung, neue Bepflanzung – Ihre VR-Tour bleibt aktuell und lebendig.',
       },
       {
         name: 'Vier-Jahreszeiten-Terrasse',
@@ -228,9 +228,9 @@ export const ADDON_GROUPS: AddOnGroup[] = [
         nutzen: 'Vier Shootings pro Jahr als umschaltbare Saisonszenen – der Aussenbereich bleibt ganzjährig aktuell.',
       },
       {
-        name: 'Performance-Report Tour',
+        name: 'Performance-Report VR-Tour',
         price: 'CHF 150.– pro Report',
-        nutzen: 'Aufrufe, beliebteste Räume, Klicks auf Buchungspunkte – der ROI Ihrer Tour schwarz auf weiss.',
+        nutzen: 'Aufrufe, beliebteste Räume, Klicks auf Buchungspunkte – der ROI Ihrer VR-Tour schwarz auf weiss.',
         hinweis: 'In Signature Care & Evolution bereits enthalten',
       },
       {
@@ -241,7 +241,7 @@ export const ADDON_GROUPS: AddOnGroup[] = [
       {
         name: 'Express-Lieferung',
         price: '+30% auf den Paketpreis',
-        nutzen: 'Ihre fertige Tour in 3 statt 5–10 Arbeitstagen.',
+        nutzen: 'Ihre fertige VR-Tour in 3 statt 5–10 Arbeitstagen.',
       },
     ],
   },
@@ -253,13 +253,13 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
   {
     name: 'Immobilien – Signature-Vorteilskarten',
     cfg: 'immobilien',
-    intro: 'Für Makler von Premium- und Luxusobjekten. Jede Tour in Signature-Qualität, voll im Corporate Design.',
+    intro: 'Für Makler von Premium- und Luxusobjekten. Jede VR-Tour in Signature-Qualität, voll im Corporate Design.',
     lines: [
       'Einzelobjekt: CHF 2\'497.– pro Objekt',
       '5er-Vorteilskarte: CHF 9\'990.– (CHF 1\'998.– pro Objekt, rund 20% Vorteil)',
       '10er-Vorteilskarte: CHF 16\'230.– (CHF 1\'623.– pro Objekt, 35% Vorteil)',
     ],
-    note: 'Flexibel einsetzbar, kein Ablaufdatum. Inkl. 12 Monate Betreuungsservice pro Tour.',
+    note: 'Flexibel einsetzbar, kein Ablaufdatum. Inkl. 12 Monate Betreuungsservice pro VR-Tour.',
   },
   {
     name: 'Hotel & Resort',
@@ -338,8 +338,8 @@ export const ORDER_SERVICES: OrderService[] = [
 export const ORDER_OPTIONS: OrderOption[] = [
   { id: 'sprachen', name: 'Mehrsprachig (DE / FR / EN)', price: '+ ab CHF 300.– pro Sprache', add: 300, approx: true },
   { id: 'street', name: 'Google Street View & Business-Einbindung', price: '+ CHF 490.–', add: 490 },
-  { id: 'lead', name: 'Lead-Capture-Formular in der Tour', price: '+ CHF 390.–', add: 390 },
-  { id: 'nadir', name: 'Nadir-Patch 100% – ganze Tour (Boden makellos)', price: '+ CHF 299.– pauschal', add: 299 },
+  { id: 'lead', name: 'Lead-Capture-Formular in der VR-Tour', price: '+ CHF 390.–', add: 390 },
+  { id: 'nadir', name: 'Nadir-Patch 100% – ganze VR-Tour (Boden makellos)', price: '+ CHF 299.– pauschal', add: 299 },
   { id: 'tagnacht', name: 'Tag-/Nacht-Modus', price: '+ ab CHF 180.– pro Szene', add: 180, approx: true },
 ]
 
@@ -353,7 +353,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
     name: 'Signature Care',
     price: 'CHF 360.– / Jahr',
     recommended: true,
-    features: ['Alles aus Basic Service', '3 Anpassungen pro Jahr', '1 jährliches Tour-Update', 'Einblicke ins Besucherverhalten', 'Priorität beim Support'],
+    features: ['Alles aus Basic Service', '3 Anpassungen pro Jahr', '1 jährliches VR-Tour-Update', 'Einblicke ins Besucherverhalten', 'Priorität beim Support'],
   },
   {
     name: 'Signature Evolution',
@@ -380,11 +380,11 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Ab CHF 990 für das Basic-Paket (bis 15 Panoramen). Die Tour gehört Ihnen – kein Abo. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
+    answer: 'Ab CHF 990 für das Basic-Paket (bis 15 Panoramen). Die VR-Tour gehört Ihnen – kein Abo. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
   },
   {
     question: 'Wie lange dauert die Erstellung?',
-    answer: 'Das Shooting dauert 2–4 Stunden vor Ort. Die fertige Tour erhalten Sie in 5–10 Arbeitstagen. Express-Lieferung in 3 Arbeitstagen möglich.',
+    answer: 'Das Shooting dauert 2–4 Stunden vor Ort. Die fertige VR-Tour erhalten Sie in 5–10 Arbeitstagen. Express-Lieferung in 3 Arbeitstagen möglich.',
   },
   {
     question: 'Brauche ich eine spezielle App oder Kamera?',
@@ -403,7 +403,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
     answer: 'Hotels, Restaurants, Spas, Fitnessstudios, Immobilien – und grundsätzlich jeder Betrieb mit sehenswerten Räumlichkeiten.',
   },
   {
-    question: 'Wie wird die Tour in meine Website eingebunden?',
+    question: 'Wie wird die VR-Tour in meine Website eingebunden?',
     answer: 'Per iFrame-Code (Copy-Paste) oder als direkter Link zum Teilen per E-Mail, WhatsApp, Social Media oder QR-Code. Google Business Integration inklusive.',
   },
 ]
@@ -430,11 +430,11 @@ export const FAQ_GENERAL: FAQ[] = [
 export const FAQ_COSTS: FAQ[] = [
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 40 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise statt Abo – die Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
+    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 40 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise statt Abo – die VR-Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
   },
   {
     question: 'Gibt es versteckte Kosten?',
-    answer: 'Nein. Der einmalige Paketpreis deckt Shooting, Nachbearbeitung, Hosting und Einbettungscode ab – die Tour gehört Ihnen. 12 Monate Service sind enthalten, danach optional ab CHF 120.–/Jahr. Optionale Add-ons (z. B. Street View, Virtual Staging, Express) sind klar ausgewiesen.',
+    answer: 'Nein. Der einmalige Paketpreis deckt Shooting, Nachbearbeitung, Hosting und Einbettungscode ab – die VR-Tour gehört Ihnen. 12 Monate Service sind enthalten, danach optional ab CHF 120.–/Jahr. Optionale Add-ons (z. B. Street View, Virtual Staging, Express) sind klar ausgewiesen.',
   },
   {
     question: 'Wie lange dauert die Erstellung?',
@@ -446,25 +446,25 @@ export const FAQ_COSTS: FAQ[] = [
   },
   {
     question: 'Wie läuft die Bezahlung?',
-    answer: 'Transparent und in zwei Schritten: 50% bei Auftragsbestätigung, 50% bei Freigabe der fertigen Tour. Bei grösseren Projekten ab CHF 5\'000.– vereinbaren wir Teilzahlungen (40% bei Bestätigung, 30% nach dem Shooting, 30% bei Freigabe). Die Tour geht online, sobald die Schlusszahlung erfolgt ist. Einmalpreis, kein Abo – die Tour gehört Ihnen; ein Servicepaket ist danach optional (ab CHF 120.–/Jahr).',
+    answer: 'Transparent und in zwei Schritten: 50% bei Auftragsbestätigung, 50% bei Freigabe der fertigen VR-Tour. Bei grösseren Projekten ab CHF 5\'000.– vereinbaren wir Teilzahlungen (40% bei Bestätigung, 30% nach dem Shooting, 30% bei Freigabe). Die virtuelle Tour geht online, sobald die Schlusszahlung erfolgt ist. Einmalpreis, kein Abo – die VR-Tour gehört Ihnen; ein Servicepaket ist danach optional (ab CHF 120.–/Jahr).',
   },
   {
     question: 'Wie funktioniert die Bezahlung der Vorteilskarte?',
-    answer: 'Die Vorteilskarte wird bei Kauf vollständig bezahlt – dafür erhalten Sie den vollen Mengenvorteil von bis zu 35%. Danach rufen Sie Ihre Touren flexibel ab, ohne weitere Rechnung pro Objekt und ohne festes Ablaufdatum. Jede Tour liefern wir im jeweils aktuellen Signature-Standard.',
+    answer: 'Die Vorteilskarte wird bei Kauf vollständig bezahlt – dafür erhalten Sie den vollen Mengenvorteil von bis zu 35%. Danach rufen Sie Ihre VR-Touren flexibel ab, ohne weitere Rechnung pro Objekt und ohne festes Ablaufdatum. Jede virtuelle Tour liefern wir im jeweils aktuellen Signature-Standard.',
   },
   {
     question: 'Was passiert, wenn ich kein Servicepaket nehme?',
-    answer: 'Ihre Tour gehört Ihnen – ohne Wenn und Aber. In jedem Paket sind 12 Monate Betrieb des gehosteten Viewer- und Embed-Links inklusive. Danach hält ein optionales Servicepaket ab CHF 120.–/Jahr Ihre Tour online – inklusive Hosting, Updates und Auswertung. Wer kein Servicepaket möchte, erhält den kompletten Output-Ordner auf USB-Stick und kann das Hosting selbst übernehmen – die Tour bleibt vollständig in Ihrem Besitz. Und möchten Sie sie später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
+    answer: 'Ihre VR-Tour gehört Ihnen – ohne Wenn und Aber. In jedem Paket sind 12 Monate Betrieb des gehosteten Viewer- und Embed-Links inklusive. Danach hält ein optionales Servicepaket ab CHF 120.–/Jahr Ihre virtuelle Tour online – inklusive Hosting, Updates und Auswertung. Wer kein Servicepaket möchte, erhält den kompletten Output-Ordner auf USB-Stick und kann das Hosting selbst übernehmen – die VR-Tour bleibt vollständig in Ihrem Besitz. Und möchten Sie sie später erweitern oder aktualisieren, übernehmen wir das jederzeit gerne für Sie.',
   },
 ]
 
 export const FAQ_TECH: FAQ[] = [
   {
-    question: 'Wie wird die Tour in meine Website eingebunden?',
+    question: 'Wie wird die VR-Tour in meine Website eingebunden?',
     answer: 'Sie erhalten einen Einbettungscode (iFrame) und einen direkten Link zum Teilen per E-Mail, WhatsApp, Social Media und QR-Code. Direkte Integration in Google Business Profile möglich.',
   },
   {
-    question: 'Auf welchen Geräten funktioniert die Tour?',
+    question: 'Auf welchen Geräten funktioniert die VR-Tour?',
     answer: 'Auf allen: Smartphone, Tablet, Desktop und TV – vollständig responsiv und touch-optimiert. Auch mit VR-Brille erlebbar, für den vollen Raumeindruck. Kein App-Download nötig.',
   },
   {
@@ -472,12 +472,12 @@ export const FAQ_TECH: FAQ[] = [
     answer: 'Bei 360°-Touren steht die Kamera auf einem Stativ. Wo Anbieter wie Matterport den Boden mit einem verschwommenen Fleck überdecken, retuschieren wir den Nadir-Punkt zu 95% sauber weg. Auf Wunsch gibt es als Add-on die 100%-Lösung mit makellosem Boden oder Ihrem Logo.',
   },
   {
-    question: 'Kann die Tour auf Google Maps angezeigt werden?',
+    question: 'Kann die VR-Tour auf Google Maps angezeigt werden?',
     answer: 'Ja, direkt im Google Business Profile und Google Maps integrierbar. 2× mehr Profilaufrufe mit 360-Grad-Inhalten. Google Street View & Business-Einbindung als Add-on verfügbar (CHF 490.– einmalig).',
   },
   {
     question: 'Was passiert nach Ablauf des Hostings?',
-    answer: 'Nach den inkludierten 12 Monaten verlängern Sie das Servicepaket (ab CHF 120.–/Jahr), und Ihre Tour bleibt ohne Aufwand online. Die Tour gehört Ihnen – kein Vendor Lock-in; eine Übergabe zum Selbsthosten ist im Ausnahmefall möglich.',
+    answer: 'Nach den inkludierten 12 Monaten verlängern Sie das Servicepaket (ab CHF 120.–/Jahr), und Ihre VR-Tour bleibt ohne Aufwand online. Die virtuelle Tour gehört Ihnen – kein Vendor Lock-in; eine Übergabe zum Selbsthosten ist im Ausnahmefall möglich.',
   },
 ]
 
@@ -488,15 +488,15 @@ export const FAQ_DATA: FAQ[] = [
   },
   {
     question: 'Was passiert bei einer Renovation?',
-    answer: 'Teilbereiche können jederzeit aktualisiert werden (ab CHF 180.– pro Szene). Die bestehende Tour bleibt online, kann Raum für Raum erneuert werden. Perfekter Zeitpunkt: direkt nach der Investition.',
+    answer: 'Teilbereiche können jederzeit aktualisiert werden (ab CHF 180.– pro Szene). Die bestehende VR-Tour bleibt online, kann Raum für Raum erneuert werden. Perfekter Zeitpunkt: direkt nach der Investition.',
   },
   {
-    question: 'Kann die Tour nachträglich geändert werden?',
+    question: 'Kann die VR-Tour nachträglich geändert werden?',
     answer: 'Ja. Hotspots, Texte, Links, Branding können jederzeit angepasst werden. Neue Panoramapunkte oder aktualisierte Bereiche ab CHF 180.– pro Szene.',
   },
   {
-    question: 'Wem gehören die Daten und die Tour?',
-    answer: 'Ihnen. Die Tour gehört Ihnen – kein Vendor Lock-in. Wir hosten sie für Sie (12 Monate inklusive, danach optional ab CHF 120.–/Jahr); eine Übergabe zum Selbsthosten ist im Ausnahmefall möglich. Partnerschaft basiert auf Qualität, nicht auf Abhängigkeit.',
+    question: 'Wem gehören die Daten und die VR-Tour?',
+    answer: 'Ihnen. Die VR-Tour gehört Ihnen – kein Vendor Lock-in. Wir hosten sie für Sie (12 Monate inklusive, danach optional ab CHF 120.–/Jahr); eine Übergabe zum Selbsthosten ist im Ausnahmefall möglich. Partnerschaft basiert auf Qualität, nicht auf Abhängigkeit.',
   },
 ]
 
@@ -521,7 +521,7 @@ export const INDUSTRIES_DROPDOWN = [
 ]
 
 export const MATTERPORT_REASONS = [
-  { title: 'Kamera kostet USD 5\'400', description: 'Matterport Pro3 – teurer Einstieg, bevor eine einzige Tour erstellt wird.' },
+  { title: 'Kamera kostet USD 5\'400', description: 'Matterport Pro3 – teurer Einstieg, bevor eine einzige VR-Tour erstellt wird.' },
   { title: 'Abo ab $69/Monat', description: 'Plus Kamerakosten ergibt $800+ jährlich, auch wenn die Software kaum genutzt wird.' },
   { title: 'Versteckte Kosten', description: 'Grundrisse $15–50, Exporte $49–150 pro Scan. Summiert sich schnell.' },
   { title: 'Trustpilot 1.4/5', description: 'Schwacher Support, schlechte Bewertungen – ein Risiko für Ihr Geschäft.' },
@@ -544,14 +544,14 @@ export const MATTERPORT_COMPARISON: ComparisonRow[] = [
 
 export const UEBER_UNS_REASONS = [
   { title: 'Done-for-You statt DIY', description: 'Wir kommen, fotografieren und liefern. Null Aufwand für Sie.' },
-  { title: 'Transparent statt versteckt', description: 'Einmalpreis, kein Abo – die Tour gehört Ihnen, keine Plattform-Miete.' },
+  { title: 'Transparent statt versteckt', description: 'Einmalpreis, kein Abo – die VR-Tour gehört Ihnen, keine Plattform-Miete.' },
   { title: 'Lokal statt US-Cloud', description: 'Schweizer/EU-Server, DSGVO-konform.' },
   { title: 'Multi-Branche statt nur Immobilien', description: 'Hotels, Restaurants, Spas, Fitness, Immobilien.' },
   { title: 'Flexibel statt Langzeitvertrag', description: 'Keine Mindestlaufzeit, keine Kündigungsfrist.' },
-  { title: 'Laufende Optimierung statt Stillstand', description: 'Ihre Tour wächst mit – Updates, neue Szenen und Erweiterungen jederzeit möglich.' },
+  { title: 'Laufende Optimierung statt Stillstand', description: 'Ihre VR-Tour wächst mit – Updates, neue Szenen und Erweiterungen jederzeit möglich.' },
   { title: 'Makelloser Boden statt Stativ-Fleck', description: 'Der Nadir-Punkt wird zu 95% sauber retuschiert – auf Wunsch 100% oder mit Ihrem Logo.' },
   { title: 'Verkaufsinstrument statt Spielerei', description: 'Buchungslinks, Lead-Formulare und Google-Einbindung machen aus Besuchern Anfragen.' },
-  { title: 'Messbar statt Blindflug', description: 'Aufrufe, Verweildauer und Klicks auf Buchungspunkte – Sie sehen, was Ihre Tour leistet.' },
+  { title: 'Messbar statt Blindflug', description: 'Aufrufe, Verweildauer und Klicks auf Buchungspunkte – Sie sehen, was Ihre VR-Tour leistet.' },
 ]
 
 export const UEBER_UNS_VALUES = [

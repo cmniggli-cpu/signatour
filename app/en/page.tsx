@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: `360° tours that sell – hotels, spa, gastronomy & real estate | ${SITE_NAME}`,
   },
   description:
-    'Swiss provider of premium 360° virtual tours for hotels, spas, restaurants and real estate. Visitors book and enquire directly inside the tour. One-time price, no subscription.',
+    'Swiss provider of premium 360° virtual tours for hotels, spas, restaurants and real estate. Visitors book and enquire directly inside the VR tour. One-time price, no subscription.',
   alternates: {
     canonical: '/en',
     languages: {
@@ -71,16 +71,16 @@ const Chk = () => <svg className="icn-sm" style={{ width: 18, height: 18 }}><use
 const FAQ_ITEMS = [
   { q: 'What is a 360° virtual tour?', a: 'An interactive walk-through in which visitors move around by themselves – as if they were on site. It runs directly in the browser, without an app, and can be enriched with hotspots for booking, buying or enquiring.' },
   { q: 'How long does production take?', a: 'The shoot takes 2–4 hours on site. We usually deliver the finished tour within 5–10 working days.' },
-  { q: 'Do I need a special app or camera?', a: 'No. The tour runs on every device in the browser – smartphone, tablet, desktop, TV and even VR headsets. We take care of the shoot, the technology and the hosting entirely.' },
+  { q: 'Do I need a special app or camera?', a: 'No. The VR tour runs on every device in the browser – smartphone, tablet, desktop, TV and even VR headsets. We take care of the shoot, the technology and the hosting entirely.' },
   { q: 'Is it GDPR-compliant?', a: 'Yes. Hosting in Switzerland/EU, shoots outside opening hours without people, data processing agreement included on request.' },
-  { q: 'What happens if we renovate?', a: 'With a service package we update the affected areas or re-shoot individual points – your tour stays current.' },
-  { q: 'What do I actually get out of it – is it worth it?', a: 'Depending on the industry, bookings and enquiries increase significantly, and visitors stay on your site several times longer. In real estate, for example, around +87% more views (Matterport). With measurable added revenue, the tour often pays for itself after just a few bookings.' },
-  { q: 'How much does a tour cost?', a: 'Transparent fixed packages from CHF 990 – the price depends on panoramas and features. The package calculator gives you a no-obligation estimate in one minute.' },
-  { q: 'Is there a subscription or hidden costs?', a: 'No. The tour is yours. An annual service package (from CHF 120) is optional – no long-term commitment, cancellable at year-end.' },
+  { q: 'What happens if we renovate?', a: 'With a service package we update the affected areas or re-shoot individual points – your VR tour stays current.' },
+  { q: 'What do I actually get out of it – is it worth it?', a: 'Depending on the industry, bookings and enquiries increase significantly, and visitors stay on your site several times longer. In real estate, for example, around +87% more views (Matterport). With measurable added revenue, the VR tour often pays for itself after just a few bookings.' },
+  { q: 'How much does a VR tour cost?', a: 'Transparent fixed packages from CHF 990 – the price depends on panoramas and features. The package calculator gives you a no-obligation estimate in one minute.' },
+  { q: 'Is there a subscription or hidden costs?', a: 'No. The VR tour is yours. An annual service package (from CHF 120) is optional – no long-term commitment, cancellable at year-end.' },
   { q: 'How is the impact measured?', a: 'You receive visitor statistics: views, dwell time, most popular rooms and clicks on booking hotspots – numbers instead of gut feeling.' },
-  { q: 'What if I am not satisfied?', a: 'Double guarantee: quality – we refine every detail, up to 3 correction rounds included. And brand – your tour appears exactly in your corporate design, with no third-party branding.' },
+  { q: 'What if I am not satisfied?', a: 'Double guarantee: quality – we refine every detail, up to 3 correction rounds included. And brand – your VR tour appears exactly in your corporate design, with no third-party branding.' },
   { q: 'How is this different from photos or a video?', a: 'Photos and videos show what we want to show. A Signature Tour lets visitors decide for themselves where to look – and act directly (book, enquire). A video cannot do that.' },
-  { q: 'Is this the same as Matterport?', a: 'Matterport is a 3D scanning standard – often with a monthly platform fee and an off-the-shelf look. Our tour is in your corporate design, actively selling and yours to keep, with no forced subscription. A visible quality difference: where Matterport covers the floor beneath the camera with a blurred patch (otherwise you would see the tripod), we retouch this nadir point 95% clean – on request 100% with a flawless floor or your logo.' },
+  { q: 'Is this the same as Matterport?', a: 'Matterport is a 3D scanning standard – often with a monthly platform fee and an off-the-shelf look. Our VR tour is in your corporate design, actively selling and yours to keep, with no forced subscription. A visible quality difference: where Matterport covers the floor beneath the camera with a blurred patch (otherwise you would see the tripod), we retouch this nadir point 95% clean – on request 100% with a flawless floor or your logo.' },
   { q: 'What about the floor beneath the camera (nadir)?', a: 'In 360° photography the camera stands on a tripod – without editing it would be visible in the image. Many providers simply place a blurred patch or a logo over it. We retouch the floor 95% clean so it looks natural. For a perfect result, the 100% option delivers a flawless floor or an embedded logo.' },
   { q: 'Is it available in multiple languages?', a: 'Yes – German, French and English. Additional languages from CHF 300 per language.' },
 ]
@@ -124,7 +124,7 @@ export default function HomePageEn() {
           </p>
           <h1 className="serif">Your spaces become your <em>best salesperson</em> – around the clock.</h1>
           <p className="lead"><span className="accent">Decisions are made online today – not on site.</span><br />
-            We turn your premises into a digital sales experience: visitors explore your offer, build trust and book, buy or enquire directly inside the tour – before the first conversation even takes place.</p>
+            We turn your premises into a digital sales experience: visitors explore your offer, build trust and book, buy or enquire directly inside the VR tour – before the first conversation even takes place.</p>
           <div className="cta">
             <a className="btn btn-gold" href="/konfigurator-en.html">Free consultation</a>
             <a className="btn btn-ghost" href="#referenzen">View reference tours</a>
@@ -174,7 +174,7 @@ export default function HomePageEn() {
             <div className="fcard"><Icon id="i-pin" /><h3>Interactive hotspots</h3><p>Booking and information points: more interaction, more results.</p></div>
             <div className="fcard"><Icon id="i-globe" /><h3>Website & Google</h3><p>Optimally embedded. Visible, fast, accessible everywhere.</p></div>
             <div className="fcard"><Icon id="i-chart" /><h3>Measurable results</h3><p>Analytics report: views, most popular rooms and clicks – numbers instead of gut feeling.</p></div>
-            <div className="fcard"><Icon id="i-shield" /><h3>Full ownership, no subscription</h3><p>The tour is yours. No platform rent – just a fair, optional service package.</p></div>
+            <div className="fcard"><Icon id="i-shield" /><h3>Full ownership, no subscription</h3><p>The VR tour is yours. No platform rent – just a fair, optional service package.</p></div>
             <div className="fcard"><Icon id="i-bolt" /><h3>Lightning-fast loading</h3><p>Optimised for mobile – every second of loading time counts for conversion.</p></div>
             <div className="fcard"><Icon id="i-phone" /><h3>Swiss contact person</h3><p>No call centre, no ticket system – directly with the maker. Hosting in CH/EU, GDPR-compliant.</p></div>
           </div>
@@ -230,9 +230,9 @@ export default function HomePageEn() {
       <section className="blk">
         <div className="wrap">
           <div className="fgrid fgrid3">
-            <div className="fcard"><Icon id="i-globe" /><h3>On duty around the clock</h3><p>Your tour sells while you sleep – 365 days a year, even outside opening hours.</p></div>
+            <div className="fcard"><Icon id="i-globe" /><h3>On duty around the clock</h3><p>Your VR tour sells while you sleep – 365 days a year, even outside opening hours.</p></div>
             <div className="fcard"><Icon id="i-target" /><h3>One effort, lasting benefit</h3><p>Created once, used for years – without recurring advertising costs or scatter loss.</p></div>
-            <div className="fcard"><Icon id="i-chart" /><h3>Measurable instead of gut feeling</h3><p>Views, dwell time and clicks on booking points – you see what the tour delivers.</p></div>
+            <div className="fcard"><Icon id="i-chart" /><h3>Measurable instead of gut feeling</h3><p>Views, dwell time and clicks on booking points – you see what the VR tour delivers.</p></div>
           </div>
         </div>
       </section>
@@ -241,12 +241,12 @@ export default function HomePageEn() {
         <div className="wrap center">
           <div className="kicker">Interactive possibilities</div><h2 className="sec">Much more than images</h2><div className="rule" />
           <div className="fgrid fgrid3">
-            <div className="fcard"><Icon id="i-cart" /><h3>Booking integration</h3><p>Guests reserve or buy directly inside the tour – without detours via third-party sites.</p></div>
+            <div className="fcard"><Icon id="i-cart" /><h3>Booking integration</h3><p>Guests reserve or buy directly inside the VR tour – without detours via third-party sites.</p></div>
             <div className="fcard"><Icon id="i-play" /><h3>Video & audio</h3><p>Embedded videos and audio guides tell your story right inside the space.</p></div>
             <div className="fcard"><Icon id="i-info" /><h3>Info hotspots</h3><p>Opening hours, prices and details as clickable points directly in the image.</p></div>
             <div className="fcard"><Icon id="i-zoom" /><h3>Zoom & full screen</h3><p>Images and windows can be enlarged and opened full screen – every detail becomes visible.</p></div>
             <div className="fcard"><Icon id="i-pin" /><h3>Floor plan & mini-map</h3><p>Orientation via floor plan and mini-map – visitors find their way instantly.</p></div>
-            <div className="fcard"><Icon id="i-doc" /><h3>Downloads</h3><p>Brochures, menus, price lists and PDFs straight from the tour.</p></div>
+            <div className="fcard"><Icon id="i-doc" /><h3>Downloads</h3><p>Brochures, menus, price lists and PDFs straight from the VR tour.</p></div>
           </div>
         </div>
       </section>
@@ -257,14 +257,14 @@ export default function HomePageEn() {
           <div className="fgrid fgrid3" style={{ textAlign: 'left' }}>
             {[
               { t: 'Done-for-you instead of DIY', d: 'We come, we shoot, we deliver. Zero effort for you.' },
-              { t: 'Transparent instead of hidden', d: 'One-time price, no subscription – the tour is yours, no platform rent.' },
+              { t: 'Transparent instead of hidden', d: 'One-time price, no subscription – the VR tour is yours, no platform rent.' },
               { t: 'Local instead of US cloud', d: 'Swiss/EU servers, GDPR-compliant.' },
               { t: 'Multi-industry instead of real estate only', d: 'Hotels, restaurants, spas, fitness, real estate.' },
               { t: 'Flexible instead of long-term contract', d: 'No minimum term, no notice period.' },
-              { t: 'Continuous optimisation instead of standstill', d: 'Your tour grows with you – updates, new scenes and extensions at any time.' },
+              { t: 'Continuous optimisation instead of standstill', d: 'Your VR tour grows with you – updates, new scenes and extensions at any time.' },
               { t: 'Flawless floor instead of tripod blur', d: 'The nadir point is retouched 95% clean – on request 100% or with your logo.' },
               { t: 'Sales instrument instead of gimmick', d: 'Booking links, lead forms and Google integration turn visitors into enquiries.' },
-              { t: 'Measurable instead of guesswork', d: 'Views, dwell time and clicks on booking points – you see what your tour delivers.' },
+              { t: 'Measurable instead of guesswork', d: 'Views, dwell time and clicks on booking points – you see what your VR tour delivers.' },
             ].map((r, i) => (
               <div className="tcard" key={r.t}>
                 <h3><span style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--g)', fontSize: 24, fontWeight: 600, marginRight: 10 }}>{String(i + 1).padStart(2, '0')}</span>{r.t}</h3>
@@ -331,7 +331,7 @@ export default function HomePageEn() {
           <div className="center"><div className="kicker">Your security is our promise</div><h2 className="sec">Double guarantee</h2><div className="rule" /></div>
           <div className="guar">
             <div className="gcard"><Icon id="i-shield" /><h3>Quality guarantee</h3><p>Every panorama is refined by hand — light, colours, details. Nothing leaves our studio before it meets our standards. And should something not match your expectations, we refine it — up to 3 correction rounds included.</p></div>
-            <div className="gcard"><Icon id="i-palette" /><h3>Brand guarantee*</h3><p>Your tour carries your signature: colours, fonts, logo and navigation exactly to your corporate design. No standard player, no third-party branding — your visitors stay in your world from the first click to the booking enquiry.</p></div>
+            <div className="gcard"><Icon id="i-palette" /><h3>Brand guarantee*</h3><p>Your VR tour carries your signature: colours, fonts, logo and navigation exactly to your corporate design. No standard player, no third-party branding — your visitors stay in your world from the first click to the booking enquiry.</p></div>
           </div>
           <p style={{ marginTop: 14, textAlign: 'center', fontSize: 12.5, color: 'var(--dmut)' }}>* Corporate design integration from the Signature Tour. The Basic VR tour uses the elegant Signatour standard design.</p>
           <div className="nullrisk">Minimal risk. Maximum value.</div>
@@ -346,7 +346,7 @@ export default function HomePageEn() {
             <div className="ocard"><Icon id="i-globe" /><h3>Multilingual version (DE / FR / EN)</h3><div className="pr">from CHF 300.– per language</div></div>
             <div className="ocard"><Icon id="i-palette" /><h3>Virtual staging – virtual furnishing</h3><div className="pr">from CHF 240.– per panorama</div></div>
             <div className="ocard"><Icon id="i-pin" /><h3>Google Street View & business integration</h3><div className="pr">CHF 490.– one-time</div></div>
-            <div className="ocard"><Icon id="i-users" /><h3>Lead capture form inside the tour</h3><div className="pr">CHF 390.– one-time</div></div>
+            <div className="ocard"><Icon id="i-users" /><h3>Lead capture form inside the VR tour</h3><div className="pr">CHF 390.– one-time</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture removal</h3><div className="pr">from CHF 180.– per panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Day/night mode</h3><div className="pr">from CHF 180.– per scene</div></div>
             <div className="ocard"><Icon id="i-plus" /><h3>Additional panoramas</h3><div className="pr">from CHF 150.– per scene</div></div>
