@@ -61,16 +61,16 @@ const BUSINESS_JSONLD = {
   founder: { '@type': 'Person', name: 'Marius Niggli' },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: "Rue de l'Industrie 43",
-    postalCode: '2720',
-    addressLocality: 'Tramelan',
+    streetAddress: "Chemin de la Foule 11",
+    postalCode: '2540',
+    addressLocality: 'Moutier',
     addressRegion: 'BE',
     addressCountry: 'CH',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 47.2225,
-    longitude: 7.1006,
+    latitude: 47.2789,
+    longitude: 7.3697,
   },
   areaServed: { '@type': 'Country', name: 'Schweiz' },
   contactPoint: {
