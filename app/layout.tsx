@@ -61,8 +61,7 @@ const BUSINESS_JSONLD = {
   founder: { '@type': 'Person', name: 'Marius Niggli' },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: "Chemin de la Foule 11",
-    postalCode: '2540',
+    postalCode: '2740',
     addressLocality: 'Moutier',
     addressRegion: 'BE',
     addressCountry: 'CH',

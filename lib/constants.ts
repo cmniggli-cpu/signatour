@@ -5,7 +5,7 @@ export const SITE_URL = 'https://www.signatour.ch'
 export const SITE_DESCRIPTION = 'Wir verwandeln Räume in digitale Verkaufserlebnisse: 360°-Touren für Hotels, Spa, Gastronomie und Immobilien, in denen Gäste direkt buchen und anfragen. Schweizer Anbieter – die VR-Tour gehört Ihnen, kein Abo.'
 export const CONTACT_EMAIL = 'info@signatour.ch'
 export const CONTACT_PHONE = '+41 79 693 44 40'
-export const CONTACT_ADDRESS = 'Chemin de la Foule 11, 2540 Moutier'
+export const CONTACT_ADDRESS = '2740 Moutier'
 export const CONTACT_UID = 'CHE-368.437.989'
 
 export const NAV_ITEMS: NavItem[] = [
