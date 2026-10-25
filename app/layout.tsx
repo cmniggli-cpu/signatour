@@ -105,12 +105,12 @@ const BUSINESS_JSONLD = {
       },
       {
         '@type': 'Offer',
-        price: '4497',
+        price: '4997',
         priceCurrency: 'CHF',
         itemOffered: {
           '@type': 'Service',
           name: 'Pro – 360°-Tour',
-          description: "Grossprojekte ab CHF 4'497.– mit Buchungsintegration (Einzelofferte)",
+          description: "Grossprojekte ab CHF 4'997.– mit Buchungsintegration und 3D-Map (Einzelofferte)",
         },
       },
     ],

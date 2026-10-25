@@ -5,6 +5,7 @@ import { Check, CheckCircle, ShieldCheck, Phone } from 'lucide-react'
 import PageHero from '@/components/sections/PageHero'
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
 import { bestellenContent } from '@/lib/i18n/content/bestellen'
+import type { OrderOption } from '@/lib/constants'
 import type { Locale } from '@/lib/i18n/config'
 
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
@@ -34,7 +35,15 @@ export default function BestellenPageClient({ locale = 'de' }: { locale?: Locale
 
   const pkg = c.packages.find((x) => x.id === pkgId)!
   const svc = c.services.find((x) => x.id === svcId)
-  const chosenOptions = c.options.filter((o) => opts[o.id])
+  // Optionen, die im gewählten Paket schon enthalten sind (z. B. 3D-Map bei Pro), ausblenden
+  const visibleOptions = c.options.filter((o) => !o.hideFor?.includes(pkgId))
+  const chosenOptions = visibleOptions.filter((o) => opts[o.id])
+  // Optionen derselben Gruppe schliessen sich aus (3D-Map Aussen oder Signature)
+  const toggleOption = (o: OrderOption) => setOpts((s) => {
+    const next = { ...s, [o.id]: !s[o.id] }
+    if (next[o.id] && o.group) c.options.forEach((x) => { if (x.group === o.group && x.id !== o.id) next[x.id] = false })
+    return next
+  })
   const { total, approx } = useMemo(() => {
     let t = pkg.from
     let a = !!pkg.approx
@@ -126,9 +135,9 @@ export default function BestellenPageClient({ locale = 'de' }: { locale?: Locale
             <div>
               <h2 className="text-2xl cd-serif text-primary-900">{c.steps.optionen} <span className="text-sm font-normal text-primary-400">{c.steps.optionenHint}</span></h2>
               <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {c.options.map((o) => (
+                {visibleOptions.map((o) => (
                   <label key={o.id} className={`flex items-start gap-3 rounded-xl border p-4 cursor-pointer transition-colors ${opts[o.id] ? 'border-accent-500 bg-cream' : 'border-primary-200 hover:border-accent-300'}`}>
-                    <input type="checkbox" checked={!!opts[o.id]} onChange={() => setOpts((s) => ({ ...s, [o.id]: !s[o.id] }))} className="mt-1 accent-[#C8901C]" />
+                    <input type="checkbox" checked={!!opts[o.id]} onChange={() => toggleOption(o)} className="mt-1 accent-[#C8901C]" />
                     <span>
                       <span className="block text-sm font-medium text-primary-900">{o.name}</span>
                       <span className="block text-xs text-accent-600">{o.price}</span>

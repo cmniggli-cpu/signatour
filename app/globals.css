@@ -293,6 +293,12 @@ body {
 .nigpage .ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ggrad);color:#1a1304;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:6px}
 .nigpage .pcard h3{font-family:'Cormorant Garamond',serif;font-size:27px;margin-bottom:4px}
 .nigpage .pcard .for{color:var(--mut);font-size:13.5px;min-height:38px}
+.nigpage .proadv{max-width:760px;margin:30px auto 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 16px;background:var(--white);border:1px solid var(--ln);border-radius:12px;padding:16px 24px;text-align:center}
+.nigpage .proadv .kicker{font-size:11px;flex-basis:100%}
+.nigpage .proadv .einzeln{font-size:14.5px;color:var(--mut)}
+.nigpage .proadv .einzeln s{text-decoration-color:var(--g)}
+.nigpage .proadv .paket{font-size:15px;color:var(--ink)}
+.nigpage .proadv .paket strong{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--g);margin-left:4px}
 .nigpage .pcard .price{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:38px;color:var(--g);margin:12px 0 2px}
 .nigpage .pcard .note{font-size:12px;color:var(--mut);margin-bottom:18px}
 .nigpage .pcard ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--ink2);margin:0 0 22px;padding:0}

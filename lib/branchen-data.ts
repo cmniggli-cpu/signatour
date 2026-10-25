@@ -88,7 +88,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       'Mehrsprachigkeit (DE / FR / EN)',
       'Google-Business-Einbindung',
       'Inkl. 12 Monate Signature Evolution (Betreuungsservice)',
-      'Grosse Häuser, Thermen & Resorts: Pro-Linie ab CHF 4\'497.–',
+      'Grosse Häuser, Thermen & Resorts: Pro-Linie ab CHF 4\'997.–',
     ],
     faqs: [
       { question: 'Wie lange dauert das Shooting?', answer: '4–6 Stunden je nach Hotelgrösse. Wir planen den Termin nach dem Check-out / vor dem Check-in.' },
@@ -506,7 +506,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       'Anfrage-Hotspots und PDF-Integration (Technik, Catering, Pläne)',
       'Google-Business-Einbindung & Website-Einbettung',
       'Inkl. 12 Monate Signature Care (Betreuungsservice)',
-      'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'497.–',
+      'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'997.–',
       'Saisonales Update optional (CHF 180.– pro Szene / Saisonpaket CHF 650.–)',
     ],
     faqs: [

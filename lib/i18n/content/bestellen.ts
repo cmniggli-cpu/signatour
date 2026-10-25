@@ -93,7 +93,7 @@ const fr: BestellenContent = {
   packages: [
     { id: 'basic', name: 'Basic', price: 'CHF 990.–', from: 990 },
     { id: 'signature', name: 'Signature', price: 'CHF 2\'497.–', from: 2497 },
-    { id: 'pro', name: 'Pro', price: 'dès CHF 4\'497.–', from: 4497, approx: true },
+    { id: 'pro', name: 'Pro', price: 'dès CHF 4\'997.–', from: 4997, approx: true },
     { id: 'immo-einzel', name: 'Immobilier – objet individuel', price: 'CHF 2\'497.– par objet', from: 2497 },
     { id: 'immo-5', name: 'Immobilier – carte avantage 5', price: 'CHF 9\'990.–', from: 9990 },
     { id: 'immo-10', name: 'Immobilier – carte avantage 10', price: 'CHF 16\'230.–', from: 16230 },
@@ -110,6 +110,8 @@ const fr: BestellenContent = {
     { id: 'lead', name: 'Formulaire de capture de leads dans la visite VR', price: '+ CHF 390.–', add: 390 },
     { id: 'nadir', name: 'Patch nadir 100% – visite complète (sol impeccable)', price: '+ CHF 299.– forfait', add: 299 },
     { id: 'tagnacht', name: 'Mode jour/nuit', price: '+ dès CHF 180.– par scène', add: 180, approx: true },
+    { id: '3dmap-aussen', name: 'Carte 3D Extérieur (plan de situation 3D interactif)', price: '+ CHF 990.–', add: 990, hideFor: ['pro'], group: '3dmap' },
+    { id: '3dmap-signature', name: 'Carte 3D Signature (façades & vols intérieurs)', price: '+ CHF 1\'497.–', add: 1497, hideFor: ['pro'], group: '3dmap' },
   ],
   services: [
     { id: 'basic-service', name: 'Basic Service', price: 'CHF 120.– / an', perYear: 120 },
@@ -167,7 +169,7 @@ const en: BestellenContent = {
   packages: [
     { id: 'basic', name: 'Basic', price: 'CHF 990.–', from: 990 },
     { id: 'signature', name: 'Signature', price: 'CHF 2\'497.–', from: 2497 },
-    { id: 'pro', name: 'Pro', price: 'from CHF 4\'497.–', from: 4497, approx: true },
+    { id: 'pro', name: 'Pro', price: 'from CHF 4\'997.–', from: 4997, approx: true },
     { id: 'immo-einzel', name: 'Real estate – single property', price: 'CHF 2\'497.– per property', from: 2497 },
     { id: 'immo-5', name: 'Real estate – 5-tour card', price: 'CHF 9\'990.–', from: 9990 },
     { id: 'immo-10', name: 'Real estate – 10-tour card', price: 'CHF 16\'230.–', from: 16230 },
@@ -184,6 +186,8 @@ const en: BestellenContent = {
     { id: 'lead', name: 'Lead capture form inside the VR tour', price: '+ CHF 390.–', add: 390 },
     { id: 'nadir', name: 'Nadir patch 100% – whole tour (flawless floor)', price: '+ CHF 299.– flat', add: 299 },
     { id: 'tagnacht', name: 'Day/night mode', price: '+ from CHF 180.– per scene', add: 180, approx: true },
+    { id: '3dmap-aussen', name: '3D map Exterior (interactive 3D site plan)', price: '+ CHF 990.–', add: 990, hideFor: ['pro'], group: '3dmap' },
+    { id: '3dmap-signature', name: '3D map Signature (facades & indoor flights)', price: '+ CHF 1\'497.–', add: 1497, hideFor: ['pro'], group: '3dmap' },
   ],
   services: [
     { id: 'basic-service', name: 'Basic Service', price: 'CHF 120.– / year', perYear: 120 },

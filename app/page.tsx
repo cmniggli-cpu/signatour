@@ -273,11 +273,12 @@ export default function HomePage() {
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">Für Hotels, Thermen & Premium-Resorts</div>
-              <div className="price">ab CHF 4&apos;497.–</div><div className="note">inkl. 12 Monate Signature Evolution · Einzelofferte für grosse Projekte</div>
-              <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> bis 50 Hotspots</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
+              <div className="price">ab CHF 4&apos;997.–</div><div className="note">inkl. 12 Monate Signature Evolution · Einzelofferte für grosse Projekte</div>
+              <ul><li><Chk /> bis 100 Panoramen</li><li><Chk /> 8K-Qualität</li><li><Chk /> bis 50 Hotspots</li><li><Chk /> 3D-Map Signature inklusive</li><li><Chk /> Corporate Design Integration</li><li><Chk /> Buchungsintegration</li><li><Chk /> Video & Interaktionen</li><li><Chk /> 5 Korrekturrunden</li></ul>
               <a className="btn btn-ghost" href="/bestellen?paket=pro">Paket bestellen</a>
             </div>
           </div>
+          <div className="proadv"><span className="kicker">Pro-Vorteil</span><span className="einzeln">100 Panoramen + 3D-Map einzeln <s>über CHF 9&apos;000.–</s></span><span className="paket">im Pro-Paket <strong>ab CHF 4&apos;997.–</strong></span></div>
           <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>Alle Pakete: Google-Integration, optimiert für Mobile, Desktop, TV & VR-Brille, SEO-optimiert & auf Wunsch mehrsprachig.</p>
         </div>
       </section>
@@ -317,7 +318,8 @@ export default function HomePage() {
             <div className="ocard"><Icon id="i-users" /><h3>Lead-Capture-Formular in der VR-Tour</h3><div className="pr">CHF 390.– einmalig</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">ab CHF 180.– pro Panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Tag-/Nacht-Modus</h3><div className="pr">ab CHF 180.– pro Szene</div></div>
-            <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">ab CHF 150.– pro Szene</div></div>
+            <div className="ocard"><Icon id="i-plus" /><h3>Zusätzliche Panoramen</h3><div className="pr">CHF 90.– pro Panorama am Shooting-Tag</div></div>
+            <div className="ocard"><Icon id="i-diamond" /><h3>3D-Map mit Flugnavigation</h3><div className="pr">ab CHF 990.– · im Pro-Paket inklusive</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
             <a href="/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Alle Erweiterungen mit Nutzen & Preisen ansehen</a>

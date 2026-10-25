@@ -118,14 +118,15 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     name: 'Pro',
-    price: 'ab CHF 4\'497',
-    priceRange: 'ab CHF 4\'497',
+    price: 'ab CHF 4\'997',
+    priceRange: 'ab CHF 4\'997',
     description: 'Für Hotels, Thermen & Premium-Resorts',
     hosting: 'inkl. 12 Monate Signature Evolution',
     features: [
       'bis 100 Panoramen',
       '8K-Qualität',
       'bis 50 Hotspots',
+      '3D-Map Signature inklusive (Wert CHF 1\'497.–)',
       'Corporate Design Integration',
       'Buchungsintegration',
       'Video & Interaktionen',
@@ -159,8 +160,8 @@ export const ADDON_GROUPS: AddOnGroup[] = [
       },
       {
         name: 'Zusätzliche Panoramen',
-        price: 'ab CHF 150.– pro Szene',
-        nutzen: 'Die VR-Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
+        price: 'CHF 90.– pro Panorama am Shooting-Tag · später ab CHF 180.– pro Szene',
+        nutzen: 'Die VR-Tour wächst mit – am Shooting-Tag günstig mitfotografiert, später jederzeit ergänzbar.',
       },
       {
         name: 'Tag-/Nacht-Modus',
@@ -192,6 +193,16 @@ export const ADDON_GROUPS: AddOnGroup[] = [
   {
     title: '03 · Conversion & Erlebnis',
     items: [
+      {
+        name: '3D-Map Aussen – interaktiver 3D-Lageplan',
+        price: 'CHF 990.–',
+        nutzen: 'Gelände, Gebäude und alle Standorte als 3D-Modell – Besucher fliegen von Panorama zu Panorama und sehen sofort, wo Eingang, Garten und Parkplatz liegen.',
+      },
+      {
+        name: '3D-Map Signature – mit Fassaden & Innenflügen',
+        price: 'CHF 1\'497.– (im Pro-Paket inklusive)',
+        nutzen: 'Zusätzlich Fassaden in Ihren Farben mit Logo, Geschosse und Flüge zwischen den Innenräumen – das ganze Haus auf einen Blick, ohne Abo.',
+      },
       {
         name: 'Lead-Capture-Formular in der VR-Tour',
         price: 'CHF 390.– einmalig',
@@ -261,7 +272,7 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
     cfg: 'hotel',
     intro: 'Signature-Tour mit Buchungslink-Hotspots, Mehrsprachigkeit (DE / FR / EN) und Google-Business-Einbindung.',
     lines: ['ab CHF 3\'490.–'],
-    note: 'Grosse Häuser, Thermen und Resorts: Pro-Linie ab CHF 4\'497.–',
+    note: 'Grosse Häuser, Thermen und Resorts: Pro-Linie ab CHF 4\'997.–',
   },
   {
     name: 'Spa & Wellness',
@@ -300,17 +311,17 @@ export const BRANCHEN_PACKAGES: BranchenPackage[] = [
     cfg: 'events',
     intro: 'Signature-Tour mit Tag-/Nacht-Modus und Video-Hotspots.',
     lines: ['ab CHF 2\'990.–'],
-    note: 'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'497.–',
+    note: 'Grosse Säle und Hallen: Pro-Linie ab CHF 4\'997.–',
   },
 ]
 
 export interface OrderPackage { id: string; name: string; price: string; from: number; approx?: boolean }
-export interface OrderOption { id: string; name: string; price: string; add: number; approx?: boolean }
+export interface OrderOption { id: string; name: string; price: string; add: number; approx?: boolean; hideFor?: string[]; group?: string }
 
 export const ORDER_PACKAGES: OrderPackage[] = [
   { id: 'basic', name: 'Basic', price: 'CHF 990.–', from: 990 },
   { id: 'signature', name: 'Signature', price: 'CHF 2\'497.–', from: 2497 },
-  { id: 'pro', name: 'Pro', price: 'ab CHF 4\'497.–', from: 4497, approx: true },
+  { id: 'pro', name: 'Pro', price: 'ab CHF 4\'997.–', from: 4997, approx: true },
   { id: 'immo-einzel', name: 'Immobilien – Einzelobjekt', price: 'CHF 2\'497.– pro Objekt', from: 2497 },
   { id: 'immo-5', name: 'Immobilien – 5er-Vorteilskarte', price: 'CHF 9\'990.–', from: 9990 },
   { id: 'immo-10', name: 'Immobilien – 10er-Vorteilskarte', price: 'CHF 16\'230.–', from: 16230 },
@@ -336,6 +347,8 @@ export const ORDER_OPTIONS: OrderOption[] = [
   { id: 'lead', name: 'Lead-Capture-Formular in der VR-Tour', price: '+ CHF 390.–', add: 390 },
   { id: 'nadir', name: 'Nadir-Patch 100% – ganze VR-Tour (Boden makellos)', price: '+ CHF 299.– pauschal', add: 299 },
   { id: 'tagnacht', name: 'Tag-/Nacht-Modus', price: '+ ab CHF 180.– pro Szene', add: 180, approx: true },
+  { id: '3dmap-aussen', name: '3D-Map Aussen (interaktiver 3D-Lageplan)', price: '+ CHF 990.–', add: 990, hideFor: ['pro'], group: '3dmap' },
+  { id: '3dmap-signature', name: '3D-Map Signature (mit Fassaden & Innenflügen)', price: '+ CHF 1\'497.–', add: 1497, hideFor: ['pro'], group: '3dmap' },
 ]
 
 export const SERVICE_TIERS: ServiceTier[] = [
@@ -425,7 +438,7 @@ export const FAQ_GENERAL: FAQ[] = [
 export const FAQ_COSTS: FAQ[] = [
   {
     question: 'Was kostet ein virtueller Rundgang?',
-    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 40 Panoramen, 4K), Pro-Paket ab CHF 4\'497 (bis 100 Panoramen, 8K). Einmalpreise statt Abo – die VR-Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
+    answer: 'Basic-Paket CHF 990 (bis 15 Panoramen), Signature-Paket CHF 2\'497 (bis 40 Panoramen, 4K), Pro-Paket ab CHF 4\'997 (bis 100 Panoramen, 8K, inkl. 3D-Map). Einmalpreise statt Abo – die VR-Tour gehört Ihnen. 12 Monate Hosting und Service inklusive, danach optional ab CHF 120.–/Jahr.',
   },
   {
     question: 'Gibt es versteckte Kosten?',

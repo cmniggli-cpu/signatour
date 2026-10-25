@@ -34,7 +34,7 @@ const fr: FaqContent = {
     {
       title: 'Coûts & déroulement',
       faqs: [
-        { question: 'Combien coûte une visite virtuelle ?', answer: 'Forfait Basic CHF 990 (jusqu’à 15 panoramas), forfait Signature CHF 2\'497 (jusqu’à 40 panoramas, 4K), forfait Pro dès CHF 4\'497 (jusqu’à 100 panoramas, 8K). Prix uniques, sans abonnement – la visite VR vous appartient. 12 mois d’hébergement et de service inclus, ensuite en option dès CHF 120.–/an.' },
+        { question: 'Combien coûte une visite virtuelle ?', answer: 'Forfait Basic CHF 990 (jusqu’à 15 panoramas), forfait Signature CHF 2\'497 (jusqu’à 40 panoramas, 4K), forfait Pro dès CHF 4\'997 (jusqu’à 100 panoramas, 8K, carte 3D incluse). Prix uniques, sans abonnement – la visite VR vous appartient. 12 mois d’hébergement et de service inclus, ensuite en option dès CHF 120.–/an.' },
         { question: 'Y a-t-il des coûts cachés ?', answer: 'Non. Le prix forfaitaire unique couvre la prise de vue, la post-production, l’hébergement et le code d’intégration – la visite VR vous appartient. 12 mois de service sont inclus, ensuite en option dès CHF 120.–/an. Les options (p. ex. Street View, Virtual Staging, Express) sont clairement indiquées.' },
         { question: 'Combien de temps dure la réalisation ?', answer: 'Prise de vue sur place : 2 à 4 heures. Livraison : 5 à 10 jours ouvrables. Option Express : 3 jours ouvrables (+30%).' },
         { question: 'Comment se déroule la prise de vue ?', answer: 'Nous apportons une caméra 360° professionnelle. 2 à 4 heures de prise de vue selon la taille, idéalement en dehors des heures d’ouverture. Des locaux propres et rangés suffisent – nous nous occupons du reste.' },
@@ -81,7 +81,7 @@ const en: FaqContent = {
     {
       title: 'Costs & process',
       faqs: [
-        { question: 'How much does a virtual tour cost?', answer: 'Basic package CHF 990 (up to 15 panoramas), Signature package CHF 2\'497 (up to 40 panoramas, 4K), Pro package from CHF 4\'497 (up to 100 panoramas, 8K). One-time prices instead of a subscription – the VR tour is yours. 12 months of hosting and service included, thereafter optional from CHF 120.–/year.' },
+        { question: 'How much does a virtual tour cost?', answer: 'Basic package CHF 990 (up to 15 panoramas), Signature package CHF 2\'497 (up to 40 panoramas, 4K), Pro package from CHF 4\'997 (up to 100 panoramas, 8K, 3D map included). One-time prices instead of a subscription – the VR tour is yours. 12 months of hosting and service included, thereafter optional from CHF 120.–/year.' },
         { question: 'Are there any hidden costs?', answer: 'No. The one-time package price covers the shoot, post-production, hosting and embed code – the VR tour is yours. 12 months of service are included, thereafter optional from CHF 120.–/year. Optional add-ons (e.g. Street View, virtual staging, express delivery) are clearly listed.' },
         { question: 'How long does production take?', answer: 'On-site shoot: 2–4 hours. Delivery: 5–10 working days. Express option: 3 working days (+30%).' },
         { question: 'How does the shoot work?', answer: 'We bring a professional 360° camera. The shoot takes 2–4 hours depending on size, ideally outside opening hours. Clean, tidy rooms are all we need – we take care of everything else.' },

@@ -305,11 +305,12 @@ export default function HomePageEn() {
             </div>
             <div className="pcard">
               <h3>Pro</h3><div className="for">For hotels, thermal baths & premium resorts</div>
-              <div className="price">from CHF 4&apos;497.–</div><div className="note">incl. 12 months of Signature Evolution · individual offer for large projects</div>
-              <ul><li><Chk /> up to 100 panoramas</li><li><Chk /> 8K quality</li><li><Chk /> up to 50 hotspots</li><li><Chk /> corporate design integration</li><li><Chk /> booking integration</li><li><Chk /> video & interactions</li><li><Chk /> 5 correction rounds</li></ul>
+              <div className="price">from CHF 4&apos;997.–</div><div className="note">incl. 12 months of Signature Evolution · individual offer for large projects</div>
+              <ul><li><Chk /> up to 100 panoramas</li><li><Chk /> 8K quality</li><li><Chk /> up to 50 hotspots</li><li><Chk /> 3D map Signature included</li><li><Chk /> corporate design integration</li><li><Chk /> booking integration</li><li><Chk /> video & interactions</li><li><Chk /> 5 correction rounds</li></ul>
               <a className="btn btn-ghost" href="/en/bestellen?paket=pro">Order package</a>
             </div>
           </div>
+          <div className="proadv"><span className="kicker">Pro advantage</span><span className="einzeln">100 panoramas + 3D map individually <s>over CHF 9&apos;000.–</s></span><span className="paket">in the Pro package <strong>from CHF 4&apos;997.–</strong></span></div>
           <p className="center" style={{ marginTop: 22, color: 'var(--mut)', fontSize: 14 }}>All packages: Google integration, optimised for mobile, desktop, TV & VR headsets, SEO-optimised & multilingual on request.</p>
         </div>
       </section>
@@ -349,7 +350,8 @@ export default function HomePageEn() {
             <div className="ocard"><Icon id="i-users" /><h3>Lead capture form inside the VR tour</h3><div className="pr">CHF 390.– one-time</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture removal</h3><div className="pr">from CHF 180.– per panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Day/night mode</h3><div className="pr">from CHF 180.– per scene</div></div>
-            <div className="ocard"><Icon id="i-plus" /><h3>Additional panoramas</h3><div className="pr">from CHF 150.– per scene</div></div>
+            <div className="ocard"><Icon id="i-plus" /><h3>Additional panoramas</h3><div className="pr">CHF 90.– per panorama on the shoot day</div></div>
+            <div className="ocard"><Icon id="i-diamond" /><h3>3D map with flight navigation</h3><div className="pr">from CHF 990.– · included in Pro</div></div>
           </div>
           <p className="center" style={{ marginTop: 22 }}>
             <a href="/en/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>See all add-ons with benefits & prices</a>

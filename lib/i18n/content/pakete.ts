@@ -5,6 +5,7 @@ import { PRICING_TIERS, ADDON_GROUPS, BRANCHEN_PACKAGES, INCLUDED_BENEFITS, SERV
 export interface PaketeContent {
   hero: { badge: string; title: string; subtitle: string }
   tiers: PricingTier[]
+  proVorteil: { label: string; einzeln: string; einzelnPreis: string; paket: string; paketPreis: string; rechnung: string }
   card: { einmalig: string; beliebt: string; cta: string }
   garantie: { title: string; qualiLabel: string; qualiText: string; markenLabel: string; markenText: string }
   rechner: { question: string; button: string; trust: string }
@@ -23,6 +24,7 @@ const de: PaketeContent = {
     subtitle: 'Einmalpreis pro VR-Tour, kein Abo – die virtuelle Tour gehört Ihnen. Kein Vertrag, keine Plattform-Miete.',
   },
   tiers: PRICING_TIERS,
+  proVorteil: { label: 'Pro-Vorteil', einzeln: '100 Panoramen + 3D-Map einzeln', einzelnPreis: 'über CHF 9\'000.–', paket: 'im Pro-Paket', paketPreis: 'ab CHF 4\'997.–', rechnung: 'Signature CHF 2\'497.– + 60 Zusatzpanoramen à CHF 90.– + 3D-Map Signature CHF 1\'497.–' },
   card: { einmalig: 'einmalig', beliebt: 'Beliebt', cta: 'Paket bestellen' },
   garantie: {
     title: 'Doppelte Garantie – minimales Risiko, maximaler Mehrwert',
@@ -86,13 +88,14 @@ const fr: PaketeContent = {
     },
     {
       name: 'Pro',
-      price: 'dès CHF 4\'497',
-      priceRange: 'dès CHF 4\'497',
+      price: 'dès CHF 4\'997',
+      priceRange: 'dès CHF 4\'997',
       description: 'Pour hôtels, thermes & resorts premium',
       hosting: 'incl. 12 mois de Signature Evolution',
-      features: ['jusqu’à 100 panoramas', 'qualité 8K', 'jusqu’à 50 points interactifs', 'intégration de la charte graphique', 'intégration de réservation', 'vidéo & interactions', '5 séries de corrections'],
+      features: ['jusqu’à 100 panoramas', 'qualité 8K', 'jusqu’à 50 points interactifs', 'carte 3D Signature incluse (valeur CHF 1\'497.–)', 'intégration de la charte graphique', 'intégration de réservation', 'vidéo & interactions', '5 séries de corrections'],
     },
   ],
+  proVorteil: { label: 'Avantage Pro', einzeln: '100 panoramas + carte 3D séparément', einzelnPreis: 'plus de CHF 9\'000.–', paket: 'dans le forfait Pro', paketPreis: 'dès CHF 4\'997.–', rechnung: 'Signature CHF 2\'497.– + 60 panoramas supplémentaires à CHF 90.– + carte 3D Signature CHF 1\'497.–' },
   card: { einmalig: 'une fois', beliebt: 'Populaire', cta: 'Commander' },
   garantie: {
     title: 'Double garantie – risque minimal, valeur maximale',
@@ -120,7 +123,7 @@ const fr: PaketeContent = {
           { name: 'Patch nadir 100% – sol impeccable', price: 'CHF 90.– par panorama / visite complète forfait CHF 299.–', nutzen: 'Au lieu d’une tache de trépied floue, un sol propre ou votre logo – un détail que les professionnels remarquent immédiatement.' },
           { name: 'Furniture Removal – désencombrement numérique', price: 'dès CHF 180.– par panorama', nutzen: 'Les pièces meublées sont vidées numériquement – idéal pour la location et la vente.' },
           { name: 'Virtual Staging – ameublement virtuel', price: 'dès CHF 240.– par panorama, dès 3 panoramas CHF 200.–', nutzen: 'Les pièces vides deviennent un intérieur aménagé – l’intéressé voit le potentiel, pas le vide.' },
-          { name: 'Panoramas supplémentaires', price: 'dès CHF 150.– par scène', nutzen: 'La visite VR évolue – de nouvelles zones peuvent être ajoutées à tout moment.' },
+          { name: 'Panoramas supplémentaires', price: 'CHF 90.– par panorama le jour du shooting · plus tard dès CHF 180.– par scène', nutzen: 'La visite VR évolue – photographiés le jour du shooting à prix avantageux, ajoutables à tout moment par la suite.' },
           { name: 'Mode jour/nuit', price: 'dès CHF 180.– par scène', nutzen: 'La même scène de jour et en ambiance du soir – très fort pour les restaurants et lieux d’événements.' },
         ],
       },
@@ -135,6 +138,8 @@ const fr: PaketeContent = {
       {
         title: '03 · Conversion & expérience',
         items: [
+          { name: 'Carte 3D Extérieur – plan de situation 3D interactif', price: 'CHF 990.–', nutzen: 'Terrain, bâtiments et tous les points de vue en 3D – les visiteurs volent de panorama en panorama et voient tout de suite où se trouvent l’entrée, le jardin et le parking.' },
+          { name: 'Carte 3D Signature – façades & vols intérieurs', price: 'CHF 1\'497.– (incluse dans le forfait Pro)', nutzen: 'En plus : façades dans vos couleurs avec logo, étages et vols entre les pièces – tout le bâtiment d’un coup d’œil, sans abonnement.' },
           { name: 'Formulaire de capture de leads dans la visite VR', price: 'CHF 390.– une fois', nutzen: 'Les visiteurs anonymes deviennent des demandes qualifiées – avec nom et adresse e-mail.' },
           { name: 'Audioguide avec voix professionnelle', price: 'dès CHF 490.– par langue', nutzen: 'Vos espaces prennent la parole – atmosphère et storytelling au lieu de simple texte.' },
           { name: 'Signature Web – site web sur mesure', price: 'dès CHF 2\'500.–', nutzen: 'Visite et site web d’une seule main – une expérience de vente numérique cohérente.' },
@@ -193,7 +198,7 @@ const fr: PaketeContent = {
       lines: ['Objet individuel : CHF 2\'497.– par objet', 'Carte avantage 5 : CHF 9\'990.– (CHF 1\'998.– par objet, env. 20% d’avantage)', 'Carte avantage 10 : CHF 16\'230.– (CHF 1\'623.– par objet, 35% d’avantage)'],
       note: 'Utilisation flexible, sans date d’expiration. Incl. 12 mois de service de suivi par visite.',
     },
-    { name: 'Hôtel & resort', cfg: 'hotel', intro: 'Signature Tour avec points de réservation, multilinguisme (DE / FR / EN) et intégration Google Business.', lines: ['dès CHF 3\'490.–'], note: 'Grands établissements, thermes et resorts : ligne Pro dès CHF 4\'497.–' },
+    { name: 'Hôtel & resort', cfg: 'hotel', intro: 'Signature Tour avec points de réservation, multilinguisme (DE / FR / EN) et intégration Google Business.', lines: ['dès CHF 3\'490.–'], note: 'Grands établissements, thermes et resorts : ligne Pro dès CHF 4\'997.–' },
     { name: 'Spa & wellness', cfg: 'spa', intro: 'Signature Tour avec audioguide et mode jour/nuit pour une atmosphère palpable.', lines: ['dès CHF 3\'490.–'], note: 'Extension optionnelle avec la terrasse quatre saisons (voir add-ons).' },
     { name: 'Restaurant & gastronomie', cfg: 'restaurant', intro: 'Signature Tour avec intégration Google Business, mode jour/nuit et pack QR codes pour table et vitrine.', lines: ['dès CHF 2\'890.–'], note: 'Petits établissements : Basic Tour dès CHF 990.–' },
     { name: 'Fitness', cfg: 'fitness', intro: 'Signature Tour avec formulaire de capture de leads (« demander un essai ») et intégration Google Business.', lines: ['dès CHF 2\'890.–'] },
@@ -204,7 +209,7 @@ const fr: PaketeContent = {
       lines: ['1 site : CHF 2\'497.–', '3–4 sites : CHF 2\'247.– par site (10%)', '5–9 sites : CHF 1\'873.– par site (25%)', 'dès 10 sites : CHF 1\'623.– par site (35%)'],
       note: 'Dès 20 sites, contrat-cadre. Recommandé avec forfait de service par site pour une actualité et un suivi continus.',
     },
-    { name: 'Lieux d’événements & showrooms', cfg: 'events', intro: 'Signature Tour avec mode jour/nuit et points vidéo.', lines: ['dès CHF 2\'990.–'], note: 'Grandes salles et halles : ligne Pro dès CHF 4\'497.–' },
+    { name: 'Lieux d’événements & showrooms', cfg: 'events', intro: 'Signature Tour avec mode jour/nuit et points vidéo.', lines: ['dès CHF 2\'990.–'], note: 'Grandes salles et halles : ligne Pro dès CHF 4\'997.–' },
   ],
 }
 
@@ -234,13 +239,14 @@ const en: PaketeContent = {
     },
     {
       name: 'Pro',
-      price: 'from CHF 4\'497',
-      priceRange: 'from CHF 4\'497',
+      price: 'from CHF 4\'997',
+      priceRange: 'from CHF 4\'997',
       description: 'For hotels, thermal baths & premium resorts',
       hosting: 'incl. 12 months of Signature Evolution',
-      features: ['up to 100 panoramas', '8K quality', 'up to 50 hotspots', 'corporate design integration', 'booking integration', 'video & interactions', '5 correction rounds'],
+      features: ['up to 100 panoramas', '8K quality', 'up to 50 hotspots', '3D map Signature included (worth CHF 1\'497.–)', 'corporate design integration', 'booking integration', 'video & interactions', '5 correction rounds'],
     },
   ],
+  proVorteil: { label: 'Pro advantage', einzeln: '100 panoramas + 3D map individually', einzelnPreis: 'over CHF 9\'000.–', paket: 'in the Pro package', paketPreis: 'from CHF 4\'997.–', rechnung: 'Signature CHF 2\'497.– + 60 additional panoramas at CHF 90.– + 3D map Signature CHF 1\'497.–' },
   card: { einmalig: 'one-time', beliebt: 'Popular', cta: 'Order package' },
   garantie: {
     title: 'Double guarantee – minimal risk, maximum value',
@@ -268,7 +274,7 @@ const en: PaketeContent = {
           { name: 'Nadir patch 100% – flawless floor', price: 'CHF 90.– per panorama / whole tour flat CHF 299.–', nutzen: 'Instead of a blurred tripod patch, a clean floor or your logo – a detail professionals notice immediately.' },
           { name: 'Furniture removal – digital decluttering', price: 'from CHF 180.– per panorama', nutzen: 'Furnished rooms are digitally emptied – ideal for rentals and sales.' },
           { name: 'Virtual staging – virtual furnishing', price: 'from CHF 240.– per panorama, from 3 panoramas CHF 200.–', nutzen: 'Empty rooms become a furnished home – prospects see the potential, not the emptiness.' },
-          { name: 'Additional panoramas', price: 'from CHF 150.– per scene', nutzen: 'The VR tour grows with you – new areas can be added at any time.' },
+          { name: 'Additional panoramas', price: 'CHF 90.– per panorama on the shoot day · later from CHF 180.– per scene', nutzen: 'The VR tour grows with you – captured at a low rate on the shoot day, extendable at any time later.' },
           { name: 'Day/night mode', price: 'from CHF 180.– per scene', nutzen: 'The same scene by day and in evening ambience – powerful for restaurants and event venues.' },
         ],
       },
@@ -283,6 +289,8 @@ const en: PaketeContent = {
       {
         title: '03 · Conversion & experience',
         items: [
+          { name: '3D map Exterior – interactive 3D site plan', price: 'CHF 990.–', nutzen: 'Terrain, buildings and every viewpoint as a 3D model – visitors fly from panorama to panorama and instantly see where the entrance, garden and parking are.' },
+          { name: '3D map Signature – facades & indoor flights', price: 'CHF 1\'497.– (included in the Pro package)', nutzen: 'Additionally: facades in your colours with logo, floors and flights between the rooms – the whole building at a glance, no subscription.' },
           { name: 'Lead capture form inside the VR tour', price: 'CHF 390.– one-time', nutzen: 'Anonymous visitors become qualified enquiries – with name and e-mail address.' },
           { name: 'Audio guide with professional voice-over', price: 'from CHF 490.– per language', nutzen: 'Your rooms get a voice – atmosphere and storytelling instead of plain text.' },
           { name: 'Signature Web – custom website', price: 'from CHF 2\'500.–', nutzen: 'VR tour and website from one source – a seamless digital sales experience.' },
@@ -341,7 +349,7 @@ const en: PaketeContent = {
       lines: ['Single property: CHF 2\'497.– per property', '5-tour card: CHF 9\'990.– (CHF 1\'998.– per property, approx. 20% benefit)', '10-tour card: CHF 16\'230.– (CHF 1\'623.– per property, 35% benefit)'],
       note: 'Flexible use, no expiry date. Incl. 12 months of care service per tour.',
     },
-    { name: 'Hotel & resort', cfg: 'hotel', intro: 'Signature Tour with booking hotspots, multilingualism (DE / FR / EN) and Google Business integration.', lines: ['from CHF 3\'490.–'], note: 'Large properties, thermal baths and resorts: Pro line from CHF 4\'497.–' },
+    { name: 'Hotel & resort', cfg: 'hotel', intro: 'Signature Tour with booking hotspots, multilingualism (DE / FR / EN) and Google Business integration.', lines: ['from CHF 3\'490.–'], note: 'Large properties, thermal baths and resorts: Pro line from CHF 4\'997.–' },
     { name: 'Spa & wellness', cfg: 'spa', intro: 'Signature Tour with audio guide and day/night mode for tangible atmosphere.', lines: ['from CHF 3\'490.–'], note: 'Optionally extendable with the four-seasons terrace (see add-ons).' },
     { name: 'Restaurant & gastronomy', cfg: 'restaurant', intro: 'Signature Tour with Google Business integration, day/night mode and QR code pack for table and shop window.', lines: ['from CHF 2\'890.–'], note: 'Small venues: Basic Tour from CHF 990.–' },
     { name: 'Fitness', cfg: 'fitness', intro: 'Signature Tour with lead capture form (“request a trial workout”) and Google Business integration.', lines: ['from CHF 2\'890.–'] },
@@ -352,7 +360,7 @@ const en: PaketeContent = {
       lines: ['1 location: CHF 2\'497.–', '3–4 locations: CHF 2\'247.– per location (10%)', '5–9 locations: CHF 1\'873.– per location (25%)', 'from 10 locations: CHF 1\'623.– per location (35%)'],
       note: 'From 20 locations, framework agreement. Recommended with a service package per location for ongoing freshness and care.',
     },
-    { name: 'Event venues & showrooms', cfg: 'events', intro: 'Signature Tour with day/night mode and video hotspots.', lines: ['from CHF 2\'990.–'], note: 'Large halls: Pro line from CHF 4\'497.–' },
+    { name: 'Event venues & showrooms', cfg: 'events', intro: 'Signature Tour with day/night mode and video hotspots.', lines: ['from CHF 2\'990.–'], note: 'Large halls: Pro line from CHF 4\'997.–' },
   ],
 }
 

@@ -35,6 +35,14 @@ export default function PaketePageClient({ locale = 'de' }: { locale?: Locale })
               <PricingCard key={tier.name} tier={tier} showRange index={i} strings={c.card} orderHref={bestellen} />
             ))}
           </div>
+          <div className="mt-8 max-w-3xl mx-auto rounded-2xl border border-primary-200 bg-white px-6 py-5 text-center">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+              <span className="w-full text-xs font-semibold uppercase tracking-[0.22em] text-accent-600">{c.proVorteil.label}</span>
+              <span className="text-sm text-primary-500">{c.proVorteil.einzeln} <s className="decoration-accent-500">{c.proVorteil.einzelnPreis}</s></span>
+              <span className="text-sm text-primary-900">{c.proVorteil.paket} <strong className="ml-1 cd-serif text-2xl text-accent-600">{c.proVorteil.paketPreis}</strong></span>
+            </div>
+            <p className="mt-2 text-xs text-primary-400">{c.proVorteil.rechnung}</p>
+          </div>
           <AnimatedSection className="mt-12">
             <div className="max-w-3xl mx-auto rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'linear-gradient(135deg,#F7DC8A 0%,#E3B23A 55%,#C8901C 100%)' }}>
               <h3 className="text-xl cd-serif" style={{ color: '#231703' }}>{c.garantie.title}</h3>

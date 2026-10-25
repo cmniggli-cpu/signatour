@@ -55,7 +55,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       'Multilinguisme (DE / FR / EN)',
       'Intégration Google Business',
       'Incl. 12 mois de Signature Evolution (service de suivi)',
-      'Grands établissements, thermes & resorts : ligne Pro dès CHF 4\'497.–',
+      'Grands établissements, thermes & resorts : ligne Pro dès CHF 4\'997.–',
     ],
     faqs: [
       { question: 'Combien de temps dure la prise de vue ?', answer: '4–6 heures selon la taille de l’hôtel. Nous planifions le rendez-vous après le check-out / avant le check-in.' },
@@ -473,7 +473,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       'Points de demande et intégration PDF (technique, traiteur, plans)',
       'Intégration Google Business & intégration au site web',
       'Incl. 12 mois de Signature Care (service de suivi)',
-      'Grandes salles et halles : ligne Pro dès CHF 4\'497.–',
+      'Grandes salles et halles : ligne Pro dès CHF 4\'997.–',
       'Mise à jour saisonnière en option (CHF 180.– par scène / pack saison CHF 650.–)',
     ],
     faqs: [

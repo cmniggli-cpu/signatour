@@ -55,7 +55,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       'Multilingualism (DE / FR / EN)',
       'Google Business integration',
       'Incl. 12 months of Signature Evolution (care service)',
-      'Large properties, thermal baths & resorts: Pro line from CHF 4\'497.–',
+      'Large properties, thermal baths & resorts: Pro line from CHF 4\'997.–',
     ],
     faqs: [
       { question: 'How long does the shoot take?', answer: '4–6 hours depending on hotel size. We schedule the appointment after check-out / before check-in.' },
@@ -473,7 +473,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       'Enquiry hotspots and PDF integration (technology, catering, plans)',
       'Google Business integration & website embedding',
       'Incl. 12 months of Signature Care (care service)',
-      'Large halls: Pro line from CHF 4\'497.–',
+      'Large halls: Pro line from CHF 4\'997.–',
       'Seasonal update optional (CHF 180.– per scene / season pack CHF 650.–)',
     ],
     faqs: [
