@@ -163,11 +163,6 @@ export const ADDON_GROUPS: AddOnGroup[] = [
         nutzen: 'Die VR-Tour wächst mit – neue Bereiche jederzeit ergänzbar.',
       },
       {
-        name: '3D-Grundriss & Dollhouse-Ansicht',
-        price: 'ab CHF 390.–',
-        nutzen: 'Besucher erfassen das ganze Objekt auf einen Blick – sofortige Orientierung.',
-      },
-      {
         name: 'Tag-/Nacht-Modus',
         price: 'ab CHF 180.– pro Szene',
         nutzen: 'Dieselbe Szene bei Tag und bei Abendstimmung umschaltbar – stark für Restaurants und Eventlocations.',
