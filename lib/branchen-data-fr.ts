@@ -10,6 +10,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     headline: 'Visite 360° pour votre hôtel',
     tagline: 'Plus de réservations directes, moins de dépendance aux OTA. Montrez chambres, spa, restaurant et lobby à vos hôtes – avant qu’ils réservent.',
     heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Objet de référence similaire : AQUAVIRAT – Spa & bains', note: 'Une référence hôtelière est en préparation. D’ici là, cet objet de référence réel issu de l’hôtellerie bien-être montre ce que votre hôtel recevra : qualité d’image, navigation et réservation directement dans la visite VR.' },
     challenges: [
       { title: 'Les coûts OTA rongent la marge', description: 'CHF 30\'000–100\'000 par an pour les hôtels. 15–18% de commission par réservation à Booking.com & Co.' },
       { title: '« Bien plus beau que sur les photos ! »', description: '90% des hôtes le disent. Mais en ligne ? Seulement des photos statiques qui ne transmettent pas l’atmosphère.' },
@@ -73,6 +74,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     headline: 'Visite 360° pour votre restaurant',
     tagline: '93% des clients cherchent sur Google avant de choisir un restaurant. Montrez votre ambiance – pas seulement votre carte.',
     heroImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Objet de référence similaire : AQUAVIRAT – Spa & accueil', note: 'Une référence gastronomique est en préparation. D’ici là, cet objet de référence réel issu de l’hospitality montre comment vos hôtes vivraient votre ambiance : se déplacer librement, regarder autour de soi, prendre confiance.' },
     challenges: [
       { title: 'Photos Google incontrôlées', description: 'Les clients publient des photos floues et mal éclairées qui façonnent la première impression.' },
       { title: 'Invisibilité en ligne', description: 'Sans contenu visuel, vous perdez dans les résultats de recherche. La concurrence gagne.' },
@@ -208,6 +210,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     headline: 'Vivre votre salle – avant même le premier pas',
     tagline: '82% se renseignent en ligne. Abaissez le seuil d’entrée des nouveaux visiteurs.',
     heroImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node21', title: 'Objet de référence similaire : AQUAVIRAT – Piscine & training', note: 'Une référence fitness est en préparation. D’ici là, cet objet de référence réel avec espaces piscine et entraînement montre comment les intéressés découvriraient votre salle à l’avance – appareils, espaces, atmosphère.' },
     challenges: [
       { title: '« Il faut le vivre »', description: 'Impossible de juger la qualité sans visite. Seuil d’entrée élevé pour les nouveaux.' },
       { title: '20% de rotation annuelle', description: 'Le secteur lutte contre une forte rotation. Les membres qui savent à quoi s’attendre restent plus longtemps.' },
@@ -353,6 +356,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     headline: 'La confiance naît avant le premier rendez-vous',
     tagline: 'Dans les services financiers et juridiques, la première impression décide de la demande de mandat. Montrez professionnalisme et discrétion – avant même le premier entretien.',
     heroImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/cltkwbjc/', title: 'Objet de référence similaire : Luxury Apartment – Widen', note: 'Une référence du secteur financier et juridique est en préparation. D’ici là, cet objet de référence réel montre la qualité Signature discrète avec laquelle accueil et salles de conseil seraient présentés.' },
     challenges: [
       { title: 'Seuil élevé avant le premier entretien', description: 'Qui confie fortune, assurance ou dossier juridique veut savoir à qui il s’adresse. Un site anonyme n’abaisse pas ce seuil.' },
       { title: 'Des sites interchangeables', description: 'Photos de stock et textes standard dominent le secteur. Qui montre ses propres locaux prouve sa substance là où d’autres se contentent d’affirmer.' },
@@ -419,6 +423,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     headline: 'Votre lieu convainc – avant même la demande',
     tagline: 'Futurs mariés, organisateurs et acheteurs comparent en ligne. Qui rend salle, scène et ambiance accessibles reçoit la demande qualifiée – la concurrence, seulement le clic suivant.',
     heroImage: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Objet de référence similaire : AQUAVIRAT – Spa & bains', note: 'Une référence de lieu d’événements est en préparation. D’ici là, cet objet de référence réel aux halles généreuses montre comment volume, hauteur sous plafond et proportions deviennent perceptibles dans une Signature Tour.' },
     challenges: [
       { title: 'Chaque visite coûte des heures', description: 'Coordonner le rendez-vous, préparer le lieu, faire la visite sur place – et l’intéressé constate après 10 minutes que la salle est trop petite.' },
       { title: 'Les photos ne montrent pas l’effet d’espace', description: 'Hauteur sous plafond, proportions, vue depuis la scène : exactement ce qui vend un lieu ne passe pas sur les photos.' },
@@ -481,6 +486,80 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
       { question: 'Que se passe-t-il après une transformation ou une nouvelle déco ?', answer: 'Les panoramas individuels se mettent à jour dès CHF 180.– par scène, sans refaire la visite VR. Idéal aussi pour les ambiances saisonnières.' },
       { question: 'Les organisateurs peuvent-ils intégrer la visite à leurs documents ?', answer: 'Oui. La visite VR se partage par lien et s’intègre par iFrame – parfait pour les offres, les présentations et les sites partenaires.' },
       { question: 'Combien de temps dure la prise de vue ?', answer: 'Selon la taille, 2–4 heures, idéalement lorsque le lieu est aménagé et vide. Nous livrons la visite VR terminée en 5–10 jours ouvrables.' },
+    ],
+  },
+
+  pflegeheime: {
+    slug: 'pflegeheime',
+    metaTitle: 'Visite 360° pour EMS & résidences pour seniors',
+    metaDescription: 'Les proches décident souvent à distance : montrez chambres, espaces communs et jardin de votre EMS ou résidence avec une visite 360° professionnelle. Prestataire suisse, discret et conforme au RGPD.',
+    badge: 'EMS & résidences pour seniors',
+    headline: 'Créer la confiance – avant la première visite sur place',
+    tagline: 'L’entrée en institution est une décision de confiance – souvent prise par des proches qui habitent loin. Montrez chambres, espaces communs et jardin avant que quiconque doive se déplacer.',
+    heroImage: 'https://images.unsplash.com/photo-1774537617358-3614ba7e8aa6?w=1900&q=80&auto=format&fit=crop',
+    // demoTour : l'URL vtour.cloud finale de la « RÉSIDENCE Les Aliziers » suivra
+    // (validation de référence du client en attente). Volontairement sans démo d'ici là.
+    challenges: [
+      { title: 'Décision sous pression', description: 'Une place doit souvent être trouvée en quelques jours – généralement après un séjour hospitalier. Les proches comparent plusieurs établissements sans pouvoir tous les visiter.' },
+      { title: 'Des proches qui habitent loin', description: 'Fils et filles vivent dans un autre canton ou à l’étranger. Ils participent à la décision – sur la base de ce qu’ils voient en ligne. Une brochure n’y suffit pas.' },
+      { title: 'Des réticences face au « home »', description: 'Beaucoup associent les EMS à une atmosphère d’hôpital. Vous avez investi dans des chambres lumineuses, des jardins et des lieux de rencontre – en ligne, personne ne le voit.' },
+    ],
+    stats: [
+      { value: '2×', label: 'plus d’intérêt pour les fiches avec visite virtuelle' },
+      { value: '94%', label: 'de crédibilité perçue en plus avec une présence en ligne complète' },
+      { value: '24/7', label: 'visite possible – aussi pour les proches à l’étranger' },
+      { value: '3×', label: 'plus de temps passé sur votre site' },
+    ],
+    statsNote: 'Sources : données Google Street View Business, études sectorielles',
+    sources: [
+      { label: 'Google/Ipsos « Impact of Search Listings » : 94% de sérieux perçu en plus, 2× plus d’intérêt avec visite virtuelle (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
+      { label: 'Panoee : effet des contenus Street View sur les établissements locaux', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
+    ],
+    captures: ['Chambre témoin & espaces de vie', 'Salle à manger & cafétéria', 'Espaces communs & d’activités', 'Jardin & terrasses (p. ex. jardin thérapeutique)', 'Accueil & accès', 'Chapelle, coiffeur & autres offres'],
+    extraSection: {
+      title: 'Dignité & protection des données des résidentes et résidents',
+      description: 'Un EMS est un chez-soi. Chaque prise de vue suit un déroulement clair et discret – convenu avec votre direction.',
+      items: [
+        'Prises de vue sans résidents ni visiteurs – créneau convenu à l’avance',
+        'Les noms sur les portes de chambre et les affichages sont rendus illisibles',
+        'Votre direction valide chaque panorama avant publication',
+        'Les zones privées et de soins restent exclues',
+        'Hébergement conforme au RGPD en Suisse/UE, contrat de sous-traitance inclus',
+      ],
+    },
+    comparisonTitle: 'EMS avec vs sans Signature Tour',
+    comparisonKicker: 'La différence',
+    comparisonWithoutHead: 'Brochure & photos uniquement',
+    comparisonRows: [
+      { label: 'Première impression', without: 'Photos de brochure, interchangeables', with: 'De vrais espaces, un vrai jardin – honnête et convaincant' },
+      { label: 'Proches éloignés', without: 'Doivent se déplacer pour chaque visite', with: 'Visite à tout moment, de partout – même ensemble à l’écran' },
+      { label: 'Décision sous pression', without: 'Choix selon l’emplacement et les tarifs', with: 'Comparaison en confiance – l’établissement devient tangible' },
+      { label: 'Réticences', without: 'Le « home » reste une image abstraite et effrayante', with: 'Chambres lumineuses et lieux de rencontre apaisent les craintes' },
+      { label: 'Occupation', without: 'Les intéressés hésitent, des chambres restent vides', with: 'Demandes mieux informées, décisions plus rapides' },
+      { label: 'Qualité d’image', without: 'Images de brochure vieillies', with: 'Prises de vue pro, sol propre (nadir)' },
+    ],
+    roiTitle: 'Une chambre occupée plus vite paie toute la visite VR',
+    roiSteps: [
+      { label: 'Investissement (forfait EMS)', value: 'dès CHF 2\'990.– une fois' },
+      { label: 'Taxe par chambre et par mois', value: 'plusieurs milliers de CHF' },
+      { label: 'Break-even', value: 'quelques jours de vacance en moins' },
+    ],
+    roiResult: 'Une seule chambre occupée quelques jours plus tôt grâce à une meilleure présence en ligne couvre l’investissement – tout le reste est du bénéfice.',
+    packageName: 'Forfait EMS',
+    packagePrice: 'dès CHF 2\'990.–',
+    packageFeatures: [
+      'Signature Tour des chambres, espaces communs et jardin',
+      'Prise de vue discrète sans résidents, validation par votre direction',
+      'Multilinguisme (DE / FR / EN) – idéal pour les régions bilingues',
+      'Intégration Google Business & intégration au site web',
+      'Incl. 12 mois de Signature Care (service de suivi)',
+      'Grandes résidences à plusieurs bâtiments : ligne Pro dès CHF 4\'997.–',
+    ],
+    faqs: [
+      { question: 'Des résidentes ou résidents apparaissent-ils sur les images ?', answer: 'Non. Nous photographions dans un créneau convenu, sans résidents ni visiteurs. Les noms sur les portes de chambre et les affichages sont rendus illisibles en post-production.' },
+      { question: 'Quelles zones devrions-nous montrer ?', answer: 'Ce qui façonne la décision : une chambre témoin, la salle à manger, les espaces communs et le jardin. Les zones de soins et privées restent volontairement exclues – vous définissez le périmètre.' },
+      { question: 'La visite VR aide-t-elle aussi au recrutement ?', answer: 'Oui. Le personnel soignant découvre son futur lieu de travail à l’avance – des espaces lumineux et une infrastructure moderne sont un argument visible sur le marché de l’emploi.' },
+      { question: 'Est-ce possible en deux langues, p. ex. français et allemand ?', answer: 'Oui. La visite VR peut être réalisée en plusieurs langues (dès CHF 300 par langue supplémentaire) – dans les régions bilingues, vous touchez ainsi tous les proches.' },
     ],
   },
 }

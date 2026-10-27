@@ -102,6 +102,21 @@ const BRANCHEN = [
   { img: '1512917774080-9991f1c4c750', href: '/fr/branchen/immobilien', t: 'Immobilier', d: 'Des biens visitables 24 h/24 – moins de visites inutiles.' },
   { img: '1497366754035-f200968a6e72', href: '/fr/branchen/banken-versicherungen', t: 'Banques, assurances & études', d: 'Des bureaux premium et salles de conseil qui inspirent confiance déjà en ligne.' },
   { img: '1519167758481-83f550bb49b3', href: '/fr/branchen/eventlocations', t: 'Lieux d’événements & showrooms', d: 'Mettez en valeur salles, lieux et surfaces d’exposition – le client vit l’espace avant de demander.' },
+  { img: '1774537617358-3614ba7e8aa6', href: '/fr/branchen/pflegeheime', t: 'EMS & résidences pour seniors', d: 'Les proches décident souvent à distance – montrez chambres, espaces communs et jardin à l’avance.' },
+]
+
+// Projets exemples : images tirées directement des visites live (public/projekt-*.jpg).
+const PROJEKTE = [
+  { img: '/projekt-aquavirat-spa.jpg', url: 'https://vtour.cloud/e16tqj/ee82pes6/', t: 'AQUAVIRAT – Spa & bains', d: 'Spa & wellness, Crémines BE. 57 panoramas, réservation directement dans la visite VR.' },
+  { img: '/projekt-apartment-widen.jpg', url: 'https://vtour.cloud/e16tqj/cltkwbjc/', t: 'Luxury Apartment – Widen', d: 'Immobilier, Widen NW. 20 panoramas, visitable 24 h/24.' },
+  { img: '/projekt-furniture-removal.jpg', url: 'https://vtour.cloud/e16tqj/m9dre1te/', t: 'Add-on : Furniture Removal', d: 'Suppression virtuelle des meubles (IA) – la même pièce, meublée et vide.' },
+]
+
+const TRUST = [
+  { v: '5', l: 'visites en ligne' },
+  { v: '120+', l: 'panoramas produits' },
+  { v: '3', l: 'langues (DE · FR · EN)' },
+  { v: '24/7', l: 'accessible, sur chaque appareil' },
 ]
 
 export default function HomePageFr() {
@@ -277,11 +292,29 @@ export default function HomePageFr() {
 
       <section className="blk" id="referenzen" style={{ background: 'var(--paper2)' }}>
         <div className="wrap">
-          <div className="center"><div className="kicker">Projets de référence</div><h2 className="sec">Voyez par vous-même</h2><div className="rule" /></div>
-          <div className="refs">
-            <div className="ref"><span className="badge">Réservation intégrée</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div></div>
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : Immobilier Basic Tour" /><div className="bot"><b>Immobilier Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div></div>
-            <div className="ref"><span className="badge">Add-on</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-on : Furniture Removal" /><div className="bot"><b>Add-on : Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div></div>
+          <div className="center"><div className="kicker">Projets exemples</div><h2 className="sec">Voyez par vous-même – de vrais projets</h2>
+            <p className="sub">Pas de photos de stock : ces Signature Tours sont en service. Les images proviennent directement des visites – cliquez et parcourez-les vous-même.</p>
+            <div className="rule" /></div>
+          <div className="trustrow">
+            {TRUST.map((x) => (
+              <div className="tnum" key={x.l}><b>{x.v}</b><span>{x.l}</span></div>
+            ))}
+          </div>
+          <div className="bgrid">
+            {PROJEKTE.map((p) => (
+              <a className="bcard" href={p.url} key={p.t} target="_blank" rel="noopener noreferrer">
+                <div className="ph">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img loading="lazy" src={p.img} alt={`Image tirée de la Signature Tour : ${p.t}`} />
+                </div>
+                <div className="bd"><h3>{p.t}</h3><p>{p.d}</p><span className="more">Ouvrir la visite live</span></div>
+              </a>
+            ))}
+          </div>
+          <div className="ref" style={{ maxWidth: 840, margin: '40px auto 0' }}>
+            <span className="badge">Réservation intégrée</span>
+            <iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Visite de référence : SPA Signature Tour" />
+            <div className="bot"><b>SPA Signature Tour – à essayer directement ici</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Ouvrir la visite VR</a></div>
           </div>
         </div>
       </section>

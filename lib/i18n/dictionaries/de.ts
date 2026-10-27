@@ -19,6 +19,7 @@ export const de = {
     immobilien: 'Immobilien',
     banken: 'Banken & Kanzleien',
     events: 'Eventlocations & Showrooms',
+    pflege: 'Alters- & Pflegeheime',
   },
   search: {
     triggerLabel: 'Suchen…',

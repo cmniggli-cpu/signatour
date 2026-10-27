@@ -35,6 +35,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
         { label: t.branchenLabels.immobilien, href: '/branchen/immobilien' },
         { label: t.branchenLabels.banken, href: '/branchen/banken-versicherungen' },
         { label: t.branchenLabels.events, href: '/branchen/eventlocations' },
+        { label: t.branchenLabels.pflege, href: '/branchen/pflegeheime' },
       ],
     },
     { label: t.nav.pakete, href: '/pakete' },

@@ -23,6 +23,7 @@ export const SEARCH_INDEX: SearchEntry[] = [
   { title: 'Immobilien & Makler', snippet: 'Weniger Besichtigungstourismus, mehr qualifizierte Interessenten.', href: '/branchen/immobilien', category: 'Branche', keywords: 'immobilien makler objekt wohnung haus besichtigung verkauf vermietung homegate immoscout makler-vorteilskarte' },
   { title: 'Banken, Versicherungen & Kanzleien', snippet: 'Vertrauen schaffen, bevor der erste Termin gebucht wird.', href: '/branchen/banken-versicherungen', category: 'Branche', keywords: 'bank banken versicherung kanzlei anwalt treuhand beratung diskretion vertrauen dienstleister' },
   { title: 'Eventlocations & Showrooms', snippet: 'Säle, Locations und Showrooms vor der Anfrage erlebbar machen.', href: '/branchen/eventlocations', category: 'Branche', keywords: 'event eventlocation location saal hochzeit seminar showroom ausstellung autohaus moebel' },
+  { title: 'Alters- & Pflegeheime', snippet: 'Angehörige entscheiden oft aus der Ferne – Zimmer, Gemeinschaftsräume und Garten vorab zeigen.', href: '/branchen/pflegeheime', category: 'Branche', keywords: 'pflegeheim altersheim alterszentrum residenz ems heim pflege senioren angehoerige eintritt zimmer garten' },
 
   // Themen / FAQ
   { title: '3D-Map mit Flugnavigation', snippet: 'Interaktiver 3D-Lageplan: Aussen CHF 990.–, Signature CHF 1\'497.–, im Pro-Paket inklusive.', href: '/pakete', category: 'Thema', keywords: '3d map karte lageplan modell flug flugnavigation uebersicht gelaende fassaden dollhouse grundriss' },

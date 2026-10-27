@@ -102,6 +102,21 @@ const BRANCHEN = [
   { img: '1512917774080-9991f1c4c750', href: '/en/branchen/immobilien', t: 'Real estate', d: 'Properties open for viewing around the clock – fewer wasted viewings.' },
   { img: '1497366754035-f200968a6e72', href: '/en/branchen/banken-versicherungen', t: 'Banks, insurances & law firms', d: 'Premium offices and consulting rooms that build trust already online.' },
   { img: '1519167758481-83f550bb49b3', href: '/en/branchen/eventlocations', t: 'Event venues & showrooms', d: 'Let halls, venues and exhibition spaces shine – customers experience the space before enquiring.' },
+  { img: '1774537617358-3614ba7e8aa6', href: '/en/branchen/pflegeheime', t: 'Care homes & senior residences', d: 'Relatives often decide from afar – show rooms, common areas and the garden in advance.' },
+]
+
+// Example projects: stills taken directly from the live tours (public/projekt-*.jpg).
+const PROJEKTE = [
+  { img: '/projekt-aquavirat-spa.jpg', url: 'https://vtour.cloud/e16tqj/ee82pes6/', t: 'AQUAVIRAT – spa & baths', d: 'Spa & wellness, Crémines BE. 57 panoramas, booking directly inside the VR tour.' },
+  { img: '/projekt-apartment-widen.jpg', url: 'https://vtour.cloud/e16tqj/cltkwbjc/', t: 'Luxury Apartment – Widen', d: 'Real estate, Widen NW. 20 panoramas, open for viewing around the clock.' },
+  { img: '/projekt-furniture-removal.jpg', url: 'https://vtour.cloud/e16tqj/m9dre1te/', t: 'Add-on: Furniture Removal', d: 'Virtual furniture removal (AI) – the same room, furnished and empty.' },
+]
+
+const TRUST = [
+  { v: '5', l: 'tours online' },
+  { v: '120+', l: 'panoramas produced' },
+  { v: '3', l: 'languages (DE · FR · EN)' },
+  { v: '24/7', l: 'accessible, on every device' },
 ]
 
 export default function HomePageEn() {
@@ -277,11 +292,29 @@ export default function HomePageEn() {
 
       <section className="blk" id="referenzen" style={{ background: 'var(--paper2)' }}>
         <div className="wrap">
-          <div className="center"><div className="kicker">Reference projects</div><h2 className="sec">See for yourself</h2><div className="rule" /></div>
-          <div className="refs">
-            <div className="ref"><span className="badge">Live booking</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Reference tour: SPA Signature Tour" /><div className="bot"><b>SPA Signature Tour</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Open tour</a></div></div>
-            <div className="ref"><iframe loading="lazy" src="https://vtour.cloud/e16tqj/cltkwbjc/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Reference tour: Real Estate Basic Tour" /><div className="bot"><b>Real Estate Basic Tour</b><a href="https://vtour.cloud/e16tqj/cltkwbjc/" target="_blank" rel="noopener noreferrer">Open tour</a></div></div>
-            <div className="ref"><span className="badge">Add-on</span><iframe loading="lazy" src="https://vtour.cloud/e16tqj/m9dre1te/" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Add-on: Furniture Removal" /><div className="bot"><b>Add-on: Furniture Removal</b><a href="https://vtour.cloud/e16tqj/m9dre1te/" target="_blank" rel="noopener noreferrer">Open tour</a></div></div>
+          <div className="center"><div className="kicker">Example projects</div><h2 className="sec">See for yourself – real projects</h2>
+            <p className="sub">No stock photos: these Signature Tours are live in use. The images come directly from the tours – click in and walk through them yourself.</p>
+            <div className="rule" /></div>
+          <div className="trustrow">
+            {TRUST.map((x) => (
+              <div className="tnum" key={x.l}><b>{x.v}</b><span>{x.l}</span></div>
+            ))}
+          </div>
+          <div className="bgrid">
+            {PROJEKTE.map((p) => (
+              <a className="bcard" href={p.url} key={p.t} target="_blank" rel="noopener noreferrer">
+                <div className="ph">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img loading="lazy" src={p.img} alt={`Still from the Signature Tour: ${p.t}`} />
+                </div>
+                <div className="bd"><h3>{p.t}</h3><p>{p.d}</p><span className="more">Open live tour</span></div>
+              </a>
+            ))}
+          </div>
+          <div className="ref" style={{ maxWidth: 840, margin: '40px auto 0' }}>
+            <span className="badge">Live booking</span>
+            <iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Reference tour: SPA Signature Tour" />
+            <div className="bot"><b>SPA Signature Tour – try it right here</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Open tour</a></div>
           </div>
         </div>
       </section>

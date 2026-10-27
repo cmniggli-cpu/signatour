@@ -21,6 +21,7 @@ export const fr: Dictionary = {
     immobilien: 'Immobilier',
     banken: 'Banques & études',
     events: 'Lieux d’événements & showrooms',
+    pflege: 'EMS & résidences pour seniors',
   },
   search: {
     triggerLabel: 'Rechercher…',

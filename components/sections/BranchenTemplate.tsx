@@ -16,6 +16,7 @@ const BRANCHEN_SLUGS = [
   { slug: 'immobilien', key: 'immobilien' },
   { slug: 'banken-versicherungen', key: 'banken' },
   { slug: 'eventlocations', key: 'events' },
+  { slug: 'pflegeheime', key: 'pflege' },
 ] as const
 
 interface BranchenTemplateProps {

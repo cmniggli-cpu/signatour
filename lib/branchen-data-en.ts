@@ -10,6 +10,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     headline: '360° tour for your hotel',
     tagline: 'More direct bookings, less OTA dependency. Show guests your rooms, spa, restaurant and lobby – before they book.',
     heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Similar reference project: AQUAVIRAT – spa & baths', note: 'A hotel reference is in the works. Until then, this real reference project from wellness hospitality shows what your hotel would receive: image quality, navigation and booking directly inside the VR tour.' },
     challenges: [
       { title: 'OTA costs eat the margin', description: 'CHF 30\'000–100\'000 per year for hotels. 15–18% commission per booking to Booking.com & co.' },
       { title: '“So much nicer than in the photos!”', description: '90% of guests say this. But online? Only static photos that fail to convey the atmosphere.' },
@@ -73,6 +74,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     headline: '360° tour for your restaurant',
     tagline: '93% of guests google before choosing a restaurant. Show your ambience – not just your menu.',
     heroImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Similar reference project: AQUAVIRAT – spa & reception', note: 'A gastronomy reference is in the works. Until then, this real reference project from hospitality shows how guests would experience your ambience: move freely, look around, build trust.' },
     challenges: [
       { title: 'Uncontrolled Google photos', description: 'Guests upload shaky, badly lit phone photos that shape the first impression.' },
       { title: 'Online invisibility', description: 'Without visual content you lose in search results. The competition wins.' },
@@ -208,6 +210,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     headline: 'Experience your gym – before the first step is taken',
     tagline: '82% research online. Lower the entry barrier for first-time visitors.',
     heroImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node21', title: 'Similar reference project: AQUAVIRAT – pool & training', note: 'A fitness studio reference is in the works. Until then, this real reference project with pool and training areas shows how prospects would experience your gym in advance – equipment, rooms, atmosphere.' },
     challenges: [
       { title: '“You have to experience it”', description: 'Quality cannot be judged without a visit. High entry barrier for first-time visitors.' },
       { title: '20% annual churn', description: 'The industry struggles with high churn. Members who know what to expect stay longer.' },
@@ -353,6 +356,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     headline: 'Trust is built before the first appointment is booked',
     tagline: 'In financial and legal services, the first impression decides the mandate enquiry. Show professionalism and discretion – before the first conversation takes place.',
     heroImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/cltkwbjc/', title: 'Similar reference project: Luxury Apartment – Widen', note: 'A reference from the finance and legal sector is in the works. Until then, this real reference project shows the discreet Signature quality with which reception and consulting rooms would be presented.' },
     challenges: [
       { title: 'A high barrier before the first meeting', description: 'Anyone entrusting wealth, insurance or a legal case wants to know who they are dealing with. An anonymous website does not lower this barrier.' },
       { title: 'Interchangeable web presences', description: 'Stock photos and standard texts shape the industry. Showing your own premises proves substance where others merely claim it.' },
@@ -419,6 +423,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     headline: 'Your venue convinces – before the enquiry even arrives',
     tagline: 'Couples, event planners and buyers compare online. Those who make hall, stage and ambience tangible receive the qualified enquiry – the competition only the next click.',
     heroImage: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Similar reference project: AQUAVIRAT – spa & baths', note: 'An event venue reference is in the works. Until then, this real reference project with generous halls shows how spatial impact, ceiling height and proportions become tangible in a Signature Tour.' },
     challenges: [
       { title: 'Every viewing costs hours', description: 'Coordinate the appointment, prepare the venue, run the viewing – and after 10 minutes the prospect realises the hall is too small.' },
       { title: 'Photos do not show spatial impact', description: 'Ceiling height, proportions, the view from the stage: exactly what sells a venue does not come across in photos.' },
@@ -481,6 +486,80 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
       { question: 'What happens after a conversion or new decoration?', answer: 'Individual panoramas can be updated from CHF 180.– per scene without recreating the VR tour. Ideal for seasonal moods too.' },
       { question: 'Can event planners embed the VR tour in their documents?', answer: 'Yes. The virtual tour can be shared via link and embedded via iFrame – perfect for offers, pitch decks and partner websites.' },
       { question: 'How long does the shoot take?', answer: 'Depending on size, 2–4 hours, ideally when the venue is set up and empty. We deliver the finished tour in 5–10 working days.' },
+    ],
+  },
+
+  pflegeheime: {
+    slug: 'pflegeheime',
+    metaTitle: '360° tour for care homes & senior residences',
+    metaDescription: 'Relatives often decide from afar: show the rooms, common areas and garden of your care home or senior residence with a professional 360° tour. Swiss provider, discreet and GDPR-compliant.',
+    badge: 'Care homes & senior residences',
+    headline: 'Build trust – before the first visit takes place',
+    tagline: 'Moving into a care home is a decision of trust – often made by relatives who live far away. Show rooms, common areas and the garden before anyone has to travel.',
+    heroImage: 'https://images.unsplash.com/photo-1774537617358-3614ba7e8aa6?w=1900&q=80&auto=format&fit=crop',
+    // demoTour: final vtour.cloud URL of «RÉSIDENCE Les Aliziers» to follow
+    // (client's reference approval pending). Deliberately without a demo until then.
+    challenges: [
+      { title: 'Decisions under time pressure', description: 'A care place often has to be found within days – usually after a hospital stay. Relatives compare several homes without being able to visit each one.' },
+      { title: 'Relatives live far away', description: 'Sons and daughters live in another canton or abroad. They help decide – based on what they see online. A brochure is not enough for that.' },
+      { title: 'Reservations about the “home”', description: 'Many people associate care homes with a hospital atmosphere. You have invested in bright rooms, gardens and meeting places – online, nobody sees it.' },
+    ],
+    stats: [
+      { value: '2×', label: 'more interest in listings with a virtual tour' },
+      { value: '94%', label: 'higher perceived trustworthiness with a complete online presence' },
+      { value: '24/7', label: 'viewing possible – also for relatives abroad' },
+      { value: '3×', label: 'longer dwell time on your website' },
+    ],
+    statsNote: 'Sources: Google Street View business data, industry studies',
+    sources: [
+      { label: 'Google/Ipsos “Impact of Search Listings”: 94% higher perceived credibility, 2× more interest with a virtual tour (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
+      { label: 'Panoee: effect of Street View content on local institutions', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
+    ],
+    captures: ['Sample room & living areas', 'Dining room & cafeteria', 'Common & activity rooms', 'Garden & terraces (e.g. therapy garden)', 'Reception & access', 'Chapel, hairdresser & further offerings'],
+    extraSection: {
+      title: 'Dignity & privacy of the residents',
+      description: 'A care home is a home. Every shoot follows a clear, discreet procedure – coordinated with your management.',
+      items: [
+        'Shots without residents and visitors – time window by arrangement',
+        'Names on room doors and notices are made unrecognisable',
+        'Your management approves every panorama before publication',
+        'Private areas and care zones remain excluded',
+        'GDPR-compliant hosting in Switzerland/EU, DPA included',
+      ],
+    },
+    comparisonTitle: 'Care home with vs without Signature Tour',
+    comparisonKicker: 'The difference',
+    comparisonWithoutHead: 'Brochure & photos only',
+    comparisonRows: [
+      { label: 'First impression', without: 'Brochure photos, interchangeable', with: 'Real rooms, a real garden – honest and convincing' },
+      { label: 'Relatives far away', without: 'Have to travel for every viewing', with: 'Tour anytime, from anywhere – even together on screen' },
+      { label: 'Decisions under pressure', without: 'Choice by location and price list', with: 'Comparison with confidence – the home becomes tangible' },
+      { label: 'Reservations', without: 'The “home” remains an abstract, frightening image', with: 'Bright rooms and meeting places ease fears' },
+      { label: 'Occupancy', without: 'Prospects hesitate, rooms stay empty', with: 'Well-informed enquiries, faster decisions' },
+      { label: 'Image quality', without: 'Dated brochure pictures', with: 'Professional shots, clean floor (nadir)' },
+    ],
+    roiTitle: 'One room occupied sooner pays for the whole VR tour',
+    roiSteps: [
+      { label: 'Investment (care home package)', value: 'from CHF 2\'990.– one-off' },
+      { label: 'Fee per room and month', value: 'several thousand CHF' },
+      { label: 'Break-even', value: 'a few days less vacancy' },
+    ],
+    roiResult: 'A single room occupied a few days earlier thanks to a better online presence covers the investment – everything beyond that is profit.',
+    packageName: 'Care home package',
+    packagePrice: 'from CHF 2\'990.–',
+    packageFeatures: [
+      'Signature Tour of rooms, common areas and garden',
+      'Discreet shoot without residents, approval by your management',
+      'Multilingual (DE / FR / EN) – ideal for bilingual regions',
+      'Google Business integration & website embedding',
+      'Incl. 12 months of Signature Care (care service)',
+      'Large residences with several buildings: Pro line from CHF 4\'997.–',
+    ],
+    faqs: [
+      { question: 'Are residents visible in the pictures?', answer: 'No. We shoot in an agreed time window without residents and visitors. Names on room doors and notices are made unrecognisable in post-production.' },
+      { question: 'Which areas should we show?', answer: 'What shapes the decision: a sample room, the dining room, common areas and the garden. Care zones and private areas are deliberately left out – you define the scope.' },
+      { question: 'Does the VR tour also help with recruiting?', answer: 'Yes. Care professionals see their potential workplace in advance – bright rooms and modern infrastructure are a visible argument in the job market.' },
+      { question: 'Does it also work bilingually, e.g. German and French?', answer: 'Yes. The VR tour can be produced in several languages (from CHF 300 per additional language) – especially in bilingual regions you reach all relatives this way.' },
     ],
   },
 }

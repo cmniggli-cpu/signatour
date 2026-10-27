@@ -43,6 +43,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: '360-Grad-Rundgang für Ihr Hotel',
     tagline: 'Mehr Direktbuchungen, weniger OTA-Abhängigkeit. Zeigen Sie Gästen Zimmer, Spa, Restaurant und Lobby – bevor sie buchen.',
     heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Ähnliches Referenzobjekt: AQUAVIRAT – Spa & Bäder', note: 'Eine Hotel-Referenz ist in Arbeit. Bis dahin zeigt dieses echte Referenzobjekt aus der Wellness-Hotellerie, was auch Ihr Hotel erhält: Bildqualität, Navigation und Buchung direkt in der VR-Tour.' },
     challenges: [
       { title: 'OTA-Kosten fressen die Marge', description: 'CHF 30\'000–100\'000 jährlich für Hotels. 15–18% Provision pro Buchung an Booking.com & Co.' },
       { title: '«Viel schöner als auf den Bildern!»', description: '90% der Gäste sagen das. Aber online? Nur statische Fotos, die die Atmosphäre nicht transportieren.' },
@@ -106,6 +107,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: '360-Grad-Rundgang für Ihr Restaurant',
     tagline: '93% der Gäste googeln vor der Restaurantwahl. Zeigen Sie Ihr Ambiente – nicht nur die Speisekarte.',
     heroImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Ähnliches Referenzobjekt: AQUAVIRAT – Spa & Empfang', note: 'Eine Gastronomie-Referenz ist in Arbeit. Bis dahin zeigt dieses echte Referenzobjekt aus der Hospitality, wie Gäste Ihr Ambiente erleben würden: frei bewegen, umschauen, Vertrauen fassen.' },
     challenges: [
       { title: 'Unkontrollierte Google-Fotos', description: 'Gäste laden verwackelte, schlecht belichtete Handyfotos hoch, die den ersten Eindruck prägen.' },
       { title: 'Online-Unsichtbarkeit', description: 'Ohne visuellen Content verlieren Sie in den Suchergebnissen. Die Konkurrenz gewinnt.' },
@@ -241,6 +243,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: 'Ihr Studio erleben – bevor der erste Schritt gemacht ist',
     tagline: '82% recherchieren online. Senken Sie die Hemmschwelle für Erstbesucher.',
     heroImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/#node21', title: 'Ähnliches Referenzobjekt: AQUAVIRAT – Pool & Training', note: 'Eine Fitnessstudio-Referenz ist in Arbeit. Bis dahin zeigt dieses echte Referenzobjekt mit Pool- und Trainingsbereich, wie Interessenten Ihr Studio vorab erleben würden – Geräte, Räume, Atmosphäre.' },
     challenges: [
       { title: '«Muss man erleben»', description: 'Qualität nicht beurteilbar ohne Besuch. Hohe Hemmschwelle für Erstbesucher.' },
       { title: '20% jährliche Fluktuation', description: 'Branche kämpft mit hoher Fluktuation. Mitglieder, die wissen was sie erwartet, bleiben länger.' },
@@ -386,6 +389,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: 'Vertrauen entsteht, bevor der erste Termin gebucht wird',
     tagline: 'Bei Finanz- und Rechtsdienstleistungen entscheidet der erste Eindruck über die Mandatsanfrage. Zeigen Sie Professionalität und Diskretion – noch bevor das Erstgespräch stattfindet.',
     heroImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/cltkwbjc/', title: 'Ähnliches Referenzobjekt: Luxury Apartment – Widen', note: 'Eine Referenz aus der Finanz- und Rechtsbranche ist in Arbeit. Bis dahin zeigt dieses echte Referenzobjekt die diskrete Signature-Qualität, mit der auch Empfang und Beratungsräume präsentiert würden.' },
     challenges: [
       { title: 'Hohe Hemmschwelle vor dem Erstgespräch', description: 'Wer Vermögen, Versicherung oder Rechtsfall anvertraut, will vorher wissen, zu wem er geht. Eine anonyme Website senkt diese Hürde nicht.' },
       { title: 'Austauschbare Webauftritte', description: 'Stockfotos und Standardtexte prägen die Branche. Wer die eigenen Räume zeigt, beweist Substanz, wo andere nur behaupten.' },
@@ -452,6 +456,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     headline: 'Ihre Location überzeugt – noch bevor die Anfrage eintrifft',
     tagline: 'Brautpaare, Eventplaner und Einkäufer vergleichen online. Wer Saal, Bühne und Ambiente erlebbar macht, erhält die qualifizierte Anfrage – die Konkurrenz nur den Klick weiter.',
     heroImage: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1900&q=80&auto=format&fit=crop',
+    demoTour: { url: 'https://vtour.cloud/e16tqj/ee82pes6/', title: 'Ähnliches Referenzobjekt: AQUAVIRAT – Spa & Bäder', note: 'Eine Eventlocation-Referenz ist in Arbeit. Bis dahin zeigt dieses echte Referenzobjekt mit grosszügigen Hallen, wie Raumwirkung, Deckenhöhe und Proportionen in einer Signature Tour erlebbar werden.' },
     challenges: [
       { title: 'Jede Besichtigung kostet Stunden', description: 'Termin koordinieren, Location herrichten, durchführen – und der Interessent merkt nach 10 Minuten, dass der Saal zu klein ist.' },
       { title: 'Fotos zeigen keine Raumwirkung', description: 'Deckenhöhe, Proportionen, Blick von der Bühne: Genau das, was eine Location verkauft, kommt auf Fotos nicht zur Geltung.' },
@@ -514,6 +519,80 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
       { question: 'Was passiert nach einem Umbau oder neuer Deko?', answer: 'Einzelne Panoramen lassen sich ab CHF 180.– pro Szene aktualisieren, ohne die VR-Tour neu zu erstellen. Ideal auch für saisonale Stimmungen.' },
       { question: 'Können Eventplaner die VR-Tour in ihre Unterlagen einbauen?', answer: 'Ja. Die virtuelle Tour ist per Link teilbar und per iFrame einbettbar – perfekt für Offerten, Pitch-Decks und Partner-Websites.' },
       { question: 'Wie lange dauert das Shooting?', answer: 'Je nach Grösse 2–4 Stunden, idealerweise wenn die Location eingerichtet und leer ist. Die fertige VR-Tour liefern wir in 5–10 Arbeitstagen.' },
+    ],
+  },
+
+  pflegeheime: {
+    slug: 'pflegeheime',
+    metaTitle: '360-Grad-Rundgang für Alters- & Pflegeheime',
+    metaDescription: 'Angehörige entscheiden oft aus der Ferne: Zeigen Sie Zimmer, Gemeinschaftsräume und Garten Ihres Alters- oder Pflegeheims mit einer professionellen 360-Tour. Schweizer Anbieter, diskret und DSGVO-konform.',
+    badge: 'Alters- & Pflegeheime',
+    headline: 'Vertrauen schaffen – bevor der erste Besuch stattfindet',
+    tagline: 'Der Eintritt in ein Heim ist eine Vertrauensentscheidung – oft getroffen von Angehörigen, die weit weg wohnen. Zeigen Sie Zimmer, Gemeinschaftsräume und Garten, bevor jemand anreisen muss.',
+    heroImage: 'https://images.unsplash.com/photo-1774537617358-3614ba7e8aa6?w=1900&q=80&auto=format&fit=crop',
+    // demoTour: finale vtour.cloud-URL der «RÉSIDENCE Les Aliziers» folgt von Marius
+    // (Referenzfreigabe des Kunden ausstehend). Bis dahin bewusst ohne Demo.
+    challenges: [
+      { title: 'Entscheidung unter Zeitdruck', description: 'Ein Heimplatz muss oft innert Tagen gefunden werden – meist nach einem Spitalaufenthalt. Angehörige vergleichen mehrere Heime, ohne jedes besichtigen zu können.' },
+      { title: 'Angehörige wohnen weit weg', description: 'Söhne und Töchter leben im anderen Kanton oder im Ausland. Sie entscheiden mit – nach dem, was sie online sehen. Eine Broschüre reicht dafür nicht.' },
+      { title: 'Vorbehalte vor dem «Heim»', description: 'Viele verbinden Pflegeheime mit Spitalatmosphäre. In helle Zimmer, Gärten und Begegnungsräume wurde investiert – online sieht das niemand.' },
+    ],
+    stats: [
+      { value: '2×', label: 'mehr Interesse bei Einträgen mit virtueller Tour' },
+      { value: '94%', label: 'höhere wahrgenommene Vertrauenswürdigkeit mit vollständigem Online-Auftritt' },
+      { value: '24/7', label: 'Besichtigung möglich – auch für Angehörige im Ausland' },
+      { value: '3×', label: 'längere Verweildauer auf Ihrer Website' },
+    ],
+    statsNote: 'Quellen: Google Street View Business-Daten, Branchenstudien',
+    sources: [
+      { label: 'Google/Ipsos «Impact of Search Listings»: 94% höhere wahrgenommene Seriosität, 2× mehr Interesse mit virtueller Tour (CloudPano)', url: 'https://www.cloudpano.com/blog/how-google-street-view-tours-increase-foot-traffic-to-local-businesses' },
+      { label: 'Panoee: Wirkung von Street-View-Inhalten auf lokale Einrichtungen', url: 'https://panoee.com/why-google-street-view-can-boost-traffic-to-your-store/' },
+    ],
+    captures: ['Musterzimmer & Wohnbereiche', 'Speisesaal & Cafeteria', 'Gemeinschafts- & Aktivitätsräume', 'Garten & Terrassen (z.B. Therapiegarten)', 'Empfang & Zugang', 'Kapelle, Coiffeur & weitere Angebote'],
+    extraSection: {
+      title: 'Würde & Datenschutz der Bewohnerinnen und Bewohner',
+      description: 'Ein Pflegeheim ist ein Zuhause. Jedes Shooting folgt einem klaren, diskreten Ablauf – abgestimmt mit Ihrer Leitung.',
+      items: [
+        'Aufnahmen ohne Bewohnerinnen, Bewohner und Besucher – Zeitfenster nach Absprache',
+        'Namen an Zimmertüren und Aushängen werden unkenntlich gemacht',
+        'Ihre Leitung genehmigt jedes Panorama vor der Veröffentlichung',
+        'Private Bereiche und Pflegezonen bleiben aussen vor',
+        'DSGVO-konformes Hosting in der Schweiz/EU, AVV inklusive',
+      ],
+    },
+    comparisonTitle: 'Heim mit vs. ohne Signature Tour',
+    comparisonKicker: 'Der Unterschied',
+    comparisonWithoutHead: 'Nur Broschüre & Fotos',
+    comparisonRows: [
+      { label: 'Erster Eindruck', without: 'Broschüren-Fotos, austauschbar', with: 'Echte Räume, echter Garten – ehrlich und überzeugend' },
+      { label: 'Angehörige in der Ferne', without: 'Müssen für jede Besichtigung anreisen', with: 'Rundgang jederzeit, von überall – auch gemeinsam am Bildschirm' },
+      { label: 'Entscheidung unter Zeitdruck', without: 'Wahl nach Lage und Preisliste', with: 'Vergleich mit gutem Gefühl – das Heim wird erlebbar' },
+      { label: 'Vorbehalte', without: '«Heim» bleibt ein abstraktes Schreckbild', with: 'Helle Zimmer und Begegnungsorte bauen Ängste ab' },
+      { label: 'Belegung', without: 'Interessenten zögern, Zimmer stehen leer', with: 'Vorinformierte Anfragen, schnellere Zusagen' },
+      { label: 'Bildqualität', without: 'Veraltete Broschüren-Bilder', with: 'Profi-Aufnahmen, sauberer Boden (Nadir)' },
+    ],
+    roiTitle: 'Ein schneller belegtes Zimmer zahlt die ganze VR-Tour',
+    roiSteps: [
+      { label: 'Investition (Pflegeheim-Paket)', value: 'ab CHF 2\'990.– einmalig' },
+      { label: 'Taxe pro Zimmer und Monat', value: 'mehrere Tausend CHF' },
+      { label: 'Break-even', value: 'wenige Tage weniger Leerstand' },
+    ],
+    roiResult: 'Schon ein einziges Zimmer, das dank besserer Online-Präsenz ein paar Tage früher belegt wird, deckt die Investition – alles Weitere ist Gewinn.',
+    packageName: 'Pflegeheim-Paket',
+    packagePrice: 'ab CHF 2\'990.–',
+    packageFeatures: [
+      'Signature-Tour von Zimmern, Gemeinschaftsräumen und Garten',
+      'Diskretes Shooting ohne Bewohner, Freigabe durch Ihre Leitung',
+      'Mehrsprachigkeit (DE / FR / EN) – ideal für zweisprachige Regionen',
+      'Google-Business-Einbindung & Website-Einbettung',
+      'Inkl. 12 Monate Signature Care (Betreuungsservice)',
+      'Grosse Residenzen mit mehreren Häusern: Pro-Linie ab CHF 4\'997.–',
+    ],
+    faqs: [
+      { question: 'Sind Bewohnerinnen und Bewohner auf den Aufnahmen zu sehen?', answer: 'Nein. Wir fotografieren in einem abgesprochenen Zeitfenster ohne Bewohner und Besucher. Namen an Zimmertüren und Aushängen werden in der Nachbearbeitung unkenntlich gemacht.' },
+      { question: 'Welche Bereiche sollten wir zeigen?', answer: 'Was die Entscheidung prägt: ein Musterzimmer, Speisesaal, Gemeinschaftsräume und den Garten. Pflegezonen und private Bereiche bleiben bewusst aussen vor – Sie bestimmen den Umfang.' },
+      { question: 'Hilft die VR-Tour auch bei der Personalsuche?', answer: 'Ja. Pflegefachkräfte sehen ihren möglichen Arbeitsort vorab – helle Räume und moderne Infrastruktur sind im Stellenmarkt ein sichtbares Argument.' },
+      { question: 'Funktioniert das auch zweisprachig, z.B. Deutsch und Französisch?', answer: 'Ja. Die VR-Tour kann mehrsprachig umgesetzt werden (ab CHF 300 pro Zusatzsprache) – gerade in zweisprachigen Regionen erreichen Sie so alle Angehörigen.' },
     ],
   },
 }
