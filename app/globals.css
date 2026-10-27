@@ -348,6 +348,7 @@ body {
 .nigpage .ref.feature{max-width:1180px;margin:44px auto 0;box-shadow:0 24px 60px rgba(0,0,0,.12)}
 .nigpage .ref.feature iframe{aspect-ratio:16/9}
 .nigpage .ref.feature .bot b{font-size:15.5px}
+.nigpage .ref.feature .badge{position:static;display:inline-block;margin-right:12px;vertical-align:2px}
 @media(max-width:620px){.nigpage .ref.feature iframe{aspect-ratio:4/5}}
 
 /* faq */

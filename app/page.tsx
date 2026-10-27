@@ -289,9 +289,8 @@ export default function HomePage() {
           </div>
           {ALIZIERS_TOUR_URL ? (
             <div className="ref feature">
-              <span className="badge">3D-Map aussen & innen</span>
               <iframe loading="lazy" src={aliziersEmbedUrl()} allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Referenz-VR-Tour: RÉSIDENCE Les Aliziers mit 3D-Map" />
-              <div className="bot"><b>RÉSIDENCE Les Aliziers – Gebäude in 3D umfliegen, dann hineingehen</b><a href={ALIZIERS_TOUR_URL} target="_blank" rel="noopener noreferrer">VR-Tour öffnen</a></div>
+              <div className="bot"><span><span className="badge">3D-Map aussen & innen</span><b>RÉSIDENCE Les Aliziers – Gebäude in 3D umfliegen, dann hineingehen</b></span><a href={ALIZIERS_TOUR_URL} target="_blank" rel="noopener noreferrer">VR-Tour öffnen</a></div>
             </div>
           ) : (
             <div className="ref" style={{ maxWidth: 840, margin: '40px auto 0' }}>
