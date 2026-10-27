@@ -1,4 +1,5 @@
 import type { BranchenPageData } from './branchen-data'
+import { ALIZIERS_TOUR_URL, aliziersEmbedUrl } from './aliziers-tour'
 
 // Französische Inhalte der Branchenseiten. Struktur identisch zu branchen-data.ts.
 export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
@@ -498,8 +499,7 @@ export const BRANCHEN_DATA_FR: Record<string, BranchenPageData> = {
     tagline: 'L’entrée en institution est une décision de confiance – souvent prise par des proches qui habitent loin. Montrez chambres, espaces communs et jardin avant que quiconque doive se déplacer.',
     // Image réelle tirée de la Signature Tour « RÉSIDENCE Les Aliziers » (jardin thérapeutique).
     heroImage: '/hero-aliziers-jardin.jpg',
-    // demoTour : validation de référence de la « RÉSIDENCE Les Aliziers » obtenue (10/2026) ;
-    // l'URL vtour.cloud finale suivra de Marius, visite en finalisation. Sans embed d'ici là.
+    ...(ALIZIERS_TOUR_URL ? { demoTour: { url: aliziersEmbedUrl('node119'), title: 'RÉSIDENCE Les Aliziers – Moutier', note: 'Une vraie Signature Tour d’une résidence pour seniors : jardin thérapeutique, chambres, salle à manger et rotonde – avec carte 3D extérieure et intérieure.' } } : {}),
     challenges: [
       { title: 'Décision sous pression', description: 'Une place doit souvent être trouvée en quelques jours – généralement après un séjour hospitalier. Les proches comparent plusieurs établissements sans pouvoir tous les visiter.' },
       { title: 'Des proches qui habitent loin', description: 'Fils et filles vivent dans un autre canton ou à l’étranger. Ils participent à la décision – sur la base de ce qu’ils voient en ligne. Une brochure n’y suffit pas.' },

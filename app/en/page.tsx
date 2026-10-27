@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { CONTACT_PHONE, SITE_NAME } from '@/lib/constants'
 import ReferenztourLead from '@/components/features/ReferenztourLead'
 import { getReferenztourTours } from '@/lib/referenztour-tours'
+import { ALIZIERS_TOUR_URL, aliziersEmbedUrl } from '@/lib/aliziers-tour'
 
 export const metadata: Metadata = {
   title: {
@@ -111,7 +112,9 @@ const BRANCHEN = [
 const PROJEKTE = [
   { img: '/projekt-aquavirat-spa.jpg', url: 'https://vtour.cloud/e16tqj/ee82pes6/', t: 'AQUAVIRAT – spa & baths', d: 'Spa & wellness, Crémines BE. 57 panoramas, booking directly inside the VR tour.', cta: 'Open live tour', ext: true },
   { img: '/projekt-apartment-widen.jpg', url: 'https://vtour.cloud/e16tqj/cltkwbjc/', t: 'Luxury Apartment – Widen', d: 'Real estate, Widen NW. 20 panoramas, open for viewing around the clock.', cta: 'Open live tour', ext: true },
-  { img: '/projekt-aliziers-jardin.jpg', url: '/en/branchen/pflegeheime', t: 'RÉSIDENCE Les Aliziers – Moutier', d: 'Care & senior residence, 47 panoramas: therapy garden, rotunda, rooms. Tour being finalised – online soon.', cta: 'Learn more', ext: false },
+  ALIZIERS_TOUR_URL
+    ? { img: '/projekt-aliziers-jardin.jpg', url: ALIZIERS_TOUR_URL, t: 'RÉSIDENCE Les Aliziers – Moutier', d: 'Care & senior residence, 47 panoramas and a 3D map outside & inside: therapy garden, rotunda, rooms.', cta: 'Open live tour', ext: true }
+    : { img: '/projekt-aliziers-jardin.jpg', url: '/en/branchen/pflegeheime', t: 'RÉSIDENCE Les Aliziers – Moutier', d: 'Care & senior residence, 47 panoramas: therapy garden, rotunda, rooms. Tour being finalised – online soon.', cta: 'Learn more', ext: false },
 ]
 
 const TRUST = [
@@ -315,11 +318,19 @@ export default function HomePageEn() {
               </a>
             ))}
           </div>
-          <div className="ref" style={{ maxWidth: 840, margin: '40px auto 0' }}>
-            <span className="badge">Live booking</span>
-            <iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Reference tour: SPA Signature Tour" />
-            <div className="bot"><b>SPA Signature Tour – try it right here</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Open tour</a></div>
-          </div>
+          {ALIZIERS_TOUR_URL ? (
+            <div className="ref feature">
+              <span className="badge">3D map outside & inside</span>
+              <iframe loading="lazy" src={aliziersEmbedUrl()} allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Reference tour: RÉSIDENCE Les Aliziers with 3D map" />
+              <div className="bot"><b>RÉSIDENCE Les Aliziers – fly around the building in 3D, then step inside</b><a href={ALIZIERS_TOUR_URL} target="_blank" rel="noopener noreferrer">Open tour</a></div>
+            </div>
+          ) : (
+            <div className="ref" style={{ maxWidth: 840, margin: '40px auto 0' }}>
+              <span className="badge">Live booking</span>
+              <iframe loading="lazy" src="https://vtour.cloud/e16tqj/ee82pes6/#node51" allow="accelerometer; magnetometer; gyroscope; fullscreen; xr-spatial-tracking" allowFullScreen title="Reference tour: SPA Signature Tour" />
+              <div className="bot"><b>SPA Signature Tour – try it right here</b><a href="https://vtour.cloud/e16tqj/ee82pes6/" target="_blank" rel="noopener noreferrer">Open tour</a></div>
+            </div>
+          )}
         </div>
       </section>
 

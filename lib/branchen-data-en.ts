@@ -1,4 +1,5 @@
 import type { BranchenPageData } from './branchen-data'
+import { ALIZIERS_TOUR_URL, aliziersEmbedUrl } from './aliziers-tour'
 
 // Englische Inhalte der Branchenseiten. Struktur identisch zu branchen-data.ts.
 export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
@@ -498,8 +499,7 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     tagline: 'Moving into a care home is a decision of trust – often made by relatives who live far away. Show rooms, common areas and the garden before anyone has to travel.',
     // Real still from the «RÉSIDENCE Les Aliziers» Signature Tour (therapy garden).
     heroImage: '/hero-aliziers-jardin.jpg',
-    // demoTour: reference approval for «RÉSIDENCE Les Aliziers» granted (10/2026);
-    // final vtour.cloud URL to follow from Marius, tour being finalised. No embed until then.
+    ...(ALIZIERS_TOUR_URL ? { demoTour: { url: aliziersEmbedUrl('node119'), title: 'RÉSIDENCE Les Aliziers – Moutier', note: 'A real Signature Tour of a care and senior residence: therapy garden, rooms, dining room and rotunda – with a 3D map outside and inside.' } } : {}),
     challenges: [
       { title: 'Decisions under time pressure', description: 'A care place often has to be found within days – usually after a hospital stay. Relatives compare several homes without being able to visit each one.' },
       { title: 'Relatives live far away', description: 'Sons and daughters live in another canton or abroad. They help decide – based on what they see online. A brochure is not enough for that.' },
