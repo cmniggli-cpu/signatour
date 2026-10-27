@@ -6,8 +6,30 @@ import PricingCard from '@/components/sections/PricingCard'
 import AnimatedSection, { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection'
 import Card from '@/components/ui/Card'
 import CTASection from '@/components/sections/CTASection'
-import { paketeContent } from '@/lib/i18n/content/pakete'
+import { paketeContent, type PaketeContent } from '@/lib/i18n/content/pakete'
 import { localizedHref, type Locale } from '@/lib/i18n/config'
+import { ALIZIERS_TOUR_URL, aliziersEmbedUrl } from '@/lib/aliziers-tour'
+import type { AddOnGroup } from '@/lib/types'
+
+const hasMap3d = (group: AddOnGroup) => group.items.some((a) => a.name.includes('3D'))
+
+function Map3dBeispiel({ b }: { b: PaketeContent['addons']['map3d'] }) {
+  return (
+    <figure className="mb-5 overflow-hidden rounded-2xl border border-primary-200/60 bg-white card-shadow">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/aliziers-3d-map.jpg" alt={b.alt} loading="lazy" className="block w-full aspect-[16/9] object-cover" />
+      <figcaption className="px-5 py-4 text-sm text-primary-600 leading-relaxed">
+        <strong className="text-primary-900">{b.title}</strong> {b.text}
+        <span className="mt-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+          {ALIZIERS_TOUR_URL ? (
+            <a href={aliziersEmbedUrl()} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent-600 hover:text-accent-700">{b.cta}</a>
+          ) : <span />}
+          <span className="text-xs text-primary-400">{b.credit}</span>
+        </span>
+      </figcaption>
+    </figure>
+  )
+}
 
 const ORDER_MAP: Record<string, string> = {
   immobilien: 'immo-einzel', hotel: 'hotel', spa: 'spa', restaurant: 'restaurant',
@@ -122,6 +144,7 @@ export default function PaketePageClient({ locale = 'de' }: { locale?: Locale })
               {c.addons.groups.map((group) => (
                 <div key={group.title}>
                   <h3 className="mb-4 text-xl cd-serif text-primary-800">{group.title}</h3>
+                  {hasMap3d(group) && <Map3dBeispiel b={c.addons.map3d} />}
                   <div className="bg-white rounded-2xl border border-primary-200/60 card-shadow overflow-hidden">
                     <table className="w-full">
                       <thead>
@@ -158,6 +181,7 @@ export default function PaketePageClient({ locale = 'de' }: { locale?: Locale })
               {c.addons.groups.map((group) => (
                 <div key={group.title}>
                   <h3 className="mb-4 text-lg cd-serif text-primary-800">{group.title}</h3>
+                  {hasMap3d(group) && <Map3dBeispiel b={c.addons.map3d} />}
                   <div className="space-y-4">
                     {group.items.map((addon) => (
                       <div key={addon.name} className="bg-white rounded-2xl border border-primary-200/60 card-shadow p-5">

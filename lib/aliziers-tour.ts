@@ -1,4 +1,4 @@
-// RÉSIDENCE Les Aliziers (Moutier): Referenzfreigabe liegt vor (10/2026).
+// RÉSIDENCE Les Aliziers (Crémines): Referenzfreigabe liegt vor (10/2026).
 // Finale vtour.cloud-URL hier eintragen, sobald die Tour hochgeladen ist –
 // dann zeigen Startseite, Pflegeheim-Seite und Referenztour-Modul sie automatisch.
 // NEXT_PUBLIC_ALIZIERS_TOUR_URL überschreibt den Wert für lokale Vorschauen.

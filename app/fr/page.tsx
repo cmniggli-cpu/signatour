@@ -113,8 +113,8 @@ const PROJEKTE = [
   { img: '/projekt-aquavirat-spa.jpg', url: 'https://vtour.cloud/e16tqj/ee82pes6/', t: 'AQUAVIRAT – Spa & bains', d: 'Spa & wellness, Crémines BE. 57 panoramas, réservation directement dans la visite VR.', cta: 'Ouvrir la visite live', ext: true },
   { img: '/projekt-apartment-widen.jpg', url: 'https://vtour.cloud/e16tqj/cltkwbjc/', t: 'Luxury Apartment – Widen', d: 'Immobilier, Widen NW. 20 panoramas, visitable 24 h/24.', cta: 'Ouvrir la visite live', ext: true },
   ALIZIERS_TOUR_URL
-    ? { img: '/projekt-aliziers-jardin.jpg', url: ALIZIERS_TOUR_URL, t: 'RÉSIDENCE Les Aliziers – Moutier', d: 'Résidence pour seniors, 47 panoramas et carte 3D extérieure & intérieure : jardin thérapeutique, rotonde, chambres.', cta: 'Ouvrir la visite live', ext: true }
-    : { img: '/projekt-aliziers-jardin.jpg', url: '/fr/branchen/pflegeheime', t: 'RÉSIDENCE Les Aliziers – Moutier', d: 'Résidence pour seniors, 47 panoramas : jardin thérapeutique, rotonde, chambres. Visite en finalisation – bientôt en ligne.', cta: 'En savoir plus', ext: false },
+    ? { img: '/projekt-aliziers-jardin.jpg', url: ALIZIERS_TOUR_URL, t: 'RÉSIDENCE Les Aliziers – Crémines', d: 'Résidence pour seniors, 47 panoramas et carte 3D extérieure & intérieure : jardin thérapeutique, rotonde, chambres.', cta: 'Ouvrir la visite live', ext: true }
+    : { img: '/projekt-aliziers-jardin.jpg', url: '/fr/branchen/pflegeheime', t: 'RÉSIDENCE Les Aliziers – Crémines', d: 'Résidence pour seniors, 47 panoramas : jardin thérapeutique, rotonde, chambres. Visite en finalisation – bientôt en ligne.', cta: 'En savoir plus', ext: false },
 ]
 
 const TRUST = [
@@ -132,7 +132,7 @@ export default function HomePageFr() {
       <section className="hero">
         <div className="bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hero-apartment-living.jpg" alt="Salon lumineux d’un appartement de luxe – visite 360° signée Niggli" fetchPriority="high" />
+          <img src="/hero-aliziers-jardin-2.jpg" alt="Jardin thérapeutique de la RÉSIDENCE Les Aliziers avec sculpture de cerf et villa – extrait de la visite 360° signée Niggli" fetchPriority="high" />
         </div>
         <div className="wrap inner">
           <p style={{ marginBottom: 16, fontSize: 13, letterSpacing: '0.08em', color: 'var(--g)' }}>
@@ -389,6 +389,17 @@ export default function HomePageFr() {
         <div className="wrap">
           <div className="center"><div className="kicker">Options complémentaires</div><h2 className="sec">Quand il en faut un peu plus</h2><div className="rule" /></div>
           <div className="opts">
+            <div className="ocard map3d">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/aliziers-3d-map.jpg" alt="Vue d'ensemble 3D de la RÉSIDENCE Les Aliziers : bâtiments, jardin et points de vue cliquables en modèle 3D" loading="lazy" />
+              <div className="txt">
+                <h3>Carte 3D avec navigation en vol</h3>
+                <p>Tout le site en modèle 3D : les visiteurs voient d&apos;un coup d&apos;œil où se trouvent le jardin, l&apos;entrée et les chambres – et y volent d&apos;un clic. Ici, la « Vue d&apos;ensemble 3D » de la RÉSIDENCE Les Aliziers.</p>
+                <div className="pr">dès CHF 990.– · incluse dans Pro</div>
+                {ALIZIERS_TOUR_URL && <a className="more" href={aliziersEmbedUrl()} target="_blank" rel="noopener noreferrer">Essayer la carte 3D en direct</a>}
+                <small className="credit">Géodonnées © swisstopo</small>
+              </div>
+            </div>
             <div className="ocard"><Icon id="i-code" /><h3>Signature Web – site web sur mesure</h3><div className="pr">dès CHF 2&apos;500.–</div></div>
             <div className="ocard"><Icon id="i-globe" /><h3>Version multilingue (DE / FR / EN)</h3><div className="pr">dès CHF 300.– par langue</div></div>
             <div className="ocard"><Icon id="i-palette" /><h3>Virtual Staging – ameublement virtuel</h3><div className="pr">dès CHF 240.– par panorama</div></div>
@@ -396,9 +407,7 @@ export default function HomePageFr() {
             <div className="ocard"><Icon id="i-users" /><h3>Formulaire de capture de leads dans la visite VR</h3><div className="pr">CHF 390.– unique</div></div>
             <div className="ocard"><Icon id="i-sofa" /><h3>Furniture Removal</h3><div className="pr">dès CHF 180.– par panorama</div></div>
             <div className="ocard"><Icon id="i-bolt" /><h3>Mode jour/nuit</h3><div className="pr">dès CHF 180.– par scène</div></div>
-            <div className="ocard"><Icon id="i-plus" /><h3>Panoramas supplémentaires</h3><div className="pr">CHF 90.– par panorama le jour du shooting</div></div>
-            <div className="ocard"><Icon id="i-diamond" /><h3>Carte 3D avec navigation en vol</h3><div className="pr">dès CHF 990.– · incluse dans Pro</div></div>
-          </div>
+            <div className="ocard"><Icon id="i-plus" /><h3>Panoramas supplémentaires</h3><div className="pr">CHF 90.– par panorama le jour du shooting</div></div>          </div>
           <p className="center" style={{ marginTop: 22 }}>
             <a href="/fr/pakete#add-ons" style={{ color: 'var(--g)', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Voir toutes les options avec bénéfices & prix</a>
           </p>

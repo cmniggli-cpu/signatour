@@ -10,7 +10,10 @@ export interface PaketeContent {
   garantie: { title: string; qualiLabel: string; qualiText: string; markenLabel: string; markenText: string }
   rechner: { question: string; button: string; trust: string }
   spezial: { kicker: string; title: string; order: string }
-  addons: { kicker: string; title: string; colErweiterung: string; colNutzen: string; colPreis: string; groups: AddOnGroup[] }
+  addons: {
+    kicker: string; title: string; colErweiterung: string; colNutzen: string; colPreis: string; groups: AddOnGroup[]
+    map3d: { alt: string; title: string; text: string; cta: string; credit: string }
+  }
   inklusive: { title: string; items: string[] }
   ablauf: { kicker: string; title: string; steps: { n: string; t: string; d: string }[] }
   service: { kicker: string; title: string; subtitle: string; empfohlen: string; auswaehlen: string; tiers: ServiceTier[] }
@@ -39,7 +42,16 @@ const de: PaketeContent = {
     trust: 'Unverbindlich · Antwort innert 24 Stunden · kostenlos',
   },
   spezial: { kicker: 'Spezialpakete', title: 'Branchenspezifische Pakete', order: 'Paket bestellen' },
-  addons: { kicker: 'Zusatzleistungen', title: 'Optionale Add-ons', colErweiterung: 'Erweiterung', colNutzen: 'Nutzen', colPreis: 'Preis', groups: ADDON_GROUPS },
+  addons: {
+    kicker: 'Zusatzleistungen', title: 'Optionale Add-ons', colErweiterung: 'Erweiterung', colNutzen: 'Nutzen', colPreis: 'Preis', groups: ADDON_GROUPS,
+    map3d: {
+      alt: 'Vue d\'ensemble 3D der RÉSIDENCE Les Aliziers: Gebäude, Garten und anklickbare Panorama-Standorte als 3D-Modell',
+      title: 'So sieht die 3D-Map aus:',
+      text: 'die «Vue d\'ensemble 3D» der RÉSIDENCE Les Aliziers in Crémines – Gebäude, Garten und alle Standorte als 3D-Modell, jeder Punkt per Klick anfliegbar.',
+      cta: '3D-Map live ausprobieren',
+      credit: 'Geodaten © swisstopo',
+    },
+  },
   inklusive: { title: 'Bei jedem Paket inklusive', items: INCLUDED_BENEFITS },
   ablauf: {
     kicker: 'Ablauf',
@@ -116,6 +128,13 @@ const fr: PaketeContent = {
     colErweiterung: 'Extension',
     colNutzen: 'Bénéfice',
     colPreis: 'Prix',
+    map3d: {
+      alt: 'Vue d’ensemble 3D de la RÉSIDENCE Les Aliziers : bâtiments, jardin et points de vue cliquables en modèle 3D',
+      title: 'Voici à quoi ressemble la carte 3D :',
+      text: 'la « Vue d’ensemble 3D » de la RÉSIDENCE Les Aliziers à Crémines – bâtiments, jardin et tous les points de vue en modèle 3D, chacun accessible en vol d’un clic.',
+      cta: 'Essayer la carte 3D en direct',
+      credit: 'Géodonnées © swisstopo',
+    },
     groups: [
       {
         title: '01 · Qualité d’image & aménagement',
@@ -267,6 +286,13 @@ const en: PaketeContent = {
     colErweiterung: 'Add-on',
     colNutzen: 'Benefit',
     colPreis: 'Price',
+    map3d: {
+      alt: '3D overview of RÉSIDENCE Les Aliziers: buildings, garden and clickable panorama viewpoints as a 3D model',
+      title: 'This is what the 3D map looks like:',
+      text: 'the «Vue d’ensemble 3D» of RÉSIDENCE Les Aliziers in Crémines – buildings, garden and every viewpoint as a 3D model, each one reachable by flight with a single click.',
+      cta: 'Try the 3D map live',
+      credit: 'Geodata © swisstopo',
+    },
     groups: [
       {
         title: '01 · Image quality & room design',

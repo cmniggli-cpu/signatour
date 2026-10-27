@@ -532,7 +532,7 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     tagline: 'Der Eintritt in ein Heim ist eine Vertrauensentscheidung – oft getroffen von Angehörigen, die weit weg wohnen. Zeigen Sie Zimmer, Gemeinschaftsräume und Garten, bevor jemand anreisen muss.',
     // Echtes Standbild aus der Signature Tour «RÉSIDENCE Les Aliziers» (Jardin thérapeutique).
     heroImage: '/hero-aliziers-jardin.jpg',
-    ...(ALIZIERS_TOUR_URL ? { demoTour: { url: aliziersEmbedUrl('node119'), title: 'RÉSIDENCE Les Aliziers – Moutier', note: 'Echte Signature Tour einer Alters- und Pflegeresidenz: Jardin thérapeutique, Zimmer, Speisesaal und Rotonde – mit 3D-Map aussen und innen.' } } : {}),
+    ...(ALIZIERS_TOUR_URL ? { demoTour: { url: aliziersEmbedUrl('node119'), title: 'RÉSIDENCE Les Aliziers – Crémines', note: 'Echte Signature Tour einer Alters- und Pflegeresidenz: Jardin thérapeutique, Zimmer, Speisesaal und Rotonde – mit 3D-Map aussen und innen.' } } : {}),
     challenges: [
       { title: 'Entscheidung unter Zeitdruck', description: 'Ein Heimplatz muss oft innert Tagen gefunden werden – meist nach einem Spitalaufenthalt. Angehörige vergleichen mehrere Heime, ohne jedes besichtigen zu können.' },
       { title: 'Angehörige wohnen weit weg', description: 'Söhne und Töchter leben im anderen Kanton oder im Ausland. Sie entscheiden mit – nach dem, was sie online sehen. Eine Broschüre reicht dafür nicht.' },
