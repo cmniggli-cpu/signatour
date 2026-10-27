@@ -102,14 +102,14 @@ const BRANCHEN = [
   { img: '1512917774080-9991f1c4c750', href: '/en/branchen/immobilien', t: 'Real estate', d: 'Properties open for viewing around the clock – fewer wasted viewings.' },
   { img: '1497366754035-f200968a6e72', href: '/en/branchen/banken-versicherungen', t: 'Banks, insurances & law firms', d: 'Premium offices and consulting rooms that build trust already online.' },
   { img: '1519167758481-83f550bb49b3', href: '/en/branchen/eventlocations', t: 'Event venues & showrooms', d: 'Let halls, venues and exhibition spaces shine – customers experience the space before enquiring.' },
-  { img: '1774537617358-3614ba7e8aa6', href: '/en/branchen/pflegeheime', t: 'Care homes & senior residences', d: 'Relatives often decide from afar – show rooms, common areas and the garden in advance.' },
+  { img: '/projekt-aliziers-jardin.jpg', href: '/en/branchen/pflegeheime', t: 'Care homes & senior residences', d: 'Relatives often decide from afar – show rooms, common areas and the garden in advance.' },
 ]
 
-// Example projects: stills taken directly from the live tours (public/projekt-*.jpg).
+// Example projects: stills taken directly from the tours (public/projekt-*.jpg).
 const PROJEKTE = [
-  { img: '/projekt-aquavirat-spa.jpg', url: 'https://vtour.cloud/e16tqj/ee82pes6/', t: 'AQUAVIRAT – spa & baths', d: 'Spa & wellness, Crémines BE. 57 panoramas, booking directly inside the VR tour.' },
-  { img: '/projekt-apartment-widen.jpg', url: 'https://vtour.cloud/e16tqj/cltkwbjc/', t: 'Luxury Apartment – Widen', d: 'Real estate, Widen NW. 20 panoramas, open for viewing around the clock.' },
-  { img: '/projekt-furniture-removal.jpg', url: 'https://vtour.cloud/e16tqj/m9dre1te/', t: 'Add-on: Furniture Removal', d: 'Virtual furniture removal (AI) – the same room, furnished and empty.' },
+  { img: '/projekt-aquavirat-spa.jpg', url: 'https://vtour.cloud/e16tqj/ee82pes6/', t: 'AQUAVIRAT – spa & baths', d: 'Spa & wellness, Crémines BE. 57 panoramas, booking directly inside the VR tour.', cta: 'Open live tour', ext: true },
+  { img: '/projekt-apartment-widen.jpg', url: 'https://vtour.cloud/e16tqj/cltkwbjc/', t: 'Luxury Apartment – Widen', d: 'Real estate, Widen NW. 20 panoramas, open for viewing around the clock.', cta: 'Open live tour', ext: true },
+  { img: '/projekt-aliziers-jardin.jpg', url: '/en/branchen/pflegeheime', t: 'RÉSIDENCE Les Aliziers – Moutier', d: 'Care & senior residence, 47 panoramas: therapy garden, rotunda, rooms. Tour being finalised – online soon.', cta: 'Learn more', ext: false },
 ]
 
 const TRUST = [
@@ -169,7 +169,7 @@ export default function HomePageEn() {
               <a className="bcard" href={b.href} key={b.t}>
                 <div className="ph">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img loading="lazy" src={`https://images.unsplash.com/photo-${b.img}?w=900&q=80&auto=format&fit=crop`} alt={b.t} />
+                  <img loading="lazy" src={b.img.startsWith('/') ? b.img : `https://images.unsplash.com/photo-${b.img}?w=900&q=80&auto=format&fit=crop`} alt={b.t} />
                 </div>
                 <div className="bd"><h3>{b.t}</h3><p>{b.d}</p><span className="more">Learn more</span></div>
               </a>
@@ -302,12 +302,12 @@ export default function HomePageEn() {
           </div>
           <div className="bgrid">
             {PROJEKTE.map((p) => (
-              <a className="bcard" href={p.url} key={p.t} target="_blank" rel="noopener noreferrer">
+              <a className="bcard" href={p.url} key={p.t} {...(p.ext ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                 <div className="ph">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img loading="lazy" src={p.img} alt={`Still from the Signature Tour: ${p.t}`} />
                 </div>
-                <div className="bd"><h3>{p.t}</h3><p>{p.d}</p><span className="more">Open live tour</span></div>
+                <div className="bd"><h3>{p.t}</h3><p>{p.d}</p><span className="more">{p.cta}</span></div>
               </a>
             ))}
           </div>

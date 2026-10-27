@@ -496,9 +496,10 @@ export const BRANCHEN_DATA_EN: Record<string, BranchenPageData> = {
     badge: 'Care homes & senior residences',
     headline: 'Build trust – before the first visit takes place',
     tagline: 'Moving into a care home is a decision of trust – often made by relatives who live far away. Show rooms, common areas and the garden before anyone has to travel.',
-    heroImage: 'https://images.unsplash.com/photo-1774537617358-3614ba7e8aa6?w=1900&q=80&auto=format&fit=crop',
-    // demoTour: final vtour.cloud URL of «RÉSIDENCE Les Aliziers» to follow
-    // (client's reference approval pending). Deliberately without a demo until then.
+    // Real still from the «RÉSIDENCE Les Aliziers» Signature Tour (therapy garden).
+    heroImage: '/hero-aliziers-jardin.jpg',
+    // demoTour: reference approval for «RÉSIDENCE Les Aliziers» granted (10/2026);
+    // final vtour.cloud URL to follow from Marius, tour being finalised. No embed until then.
     challenges: [
       { title: 'Decisions under time pressure', description: 'A care place often has to be found within days – usually after a hospital stay. Relatives compare several homes without being able to visit each one.' },
       { title: 'Relatives live far away', description: 'Sons and daughters live in another canton or abroad. They help decide – based on what they see online. A brochure is not enough for that.' },

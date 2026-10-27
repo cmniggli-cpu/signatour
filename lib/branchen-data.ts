@@ -529,9 +529,10 @@ export const BRANCHEN_DATA: Record<string, BranchenPageData> = {
     badge: 'Alters- & Pflegeheime',
     headline: 'Vertrauen schaffen – bevor der erste Besuch stattfindet',
     tagline: 'Der Eintritt in ein Heim ist eine Vertrauensentscheidung – oft getroffen von Angehörigen, die weit weg wohnen. Zeigen Sie Zimmer, Gemeinschaftsräume und Garten, bevor jemand anreisen muss.',
-    heroImage: 'https://images.unsplash.com/photo-1774537617358-3614ba7e8aa6?w=1900&q=80&auto=format&fit=crop',
-    // demoTour: finale vtour.cloud-URL der «RÉSIDENCE Les Aliziers» folgt von Marius
-    // (Referenzfreigabe des Kunden ausstehend). Bis dahin bewusst ohne Demo.
+    // Echtes Standbild aus der Signature Tour «RÉSIDENCE Les Aliziers» (Jardin thérapeutique).
+    heroImage: '/hero-aliziers-jardin.jpg',
+    // demoTour: Referenzfreigabe der «RÉSIDENCE Les Aliziers» liegt vor (10/2026);
+    // die finale vtour.cloud-URL folgt von Marius, Tour in Fertigstellung. Bis dahin ohne Embed.
     challenges: [
       { title: 'Entscheidung unter Zeitdruck', description: 'Ein Heimplatz muss oft innert Tagen gefunden werden – meist nach einem Spitalaufenthalt. Angehörige vergleichen mehrere Heime, ohne jedes besichtigen zu können.' },
       { title: 'Angehörige wohnen weit weg', description: 'Söhne und Töchter leben im anderen Kanton oder im Ausland. Sie entscheiden mit – nach dem, was sie online sehen. Eine Broschüre reicht dafür nicht.' },
