@@ -137,6 +137,14 @@ export default function BranchenTemplate({ data, locale = 'de' }: BranchenTempla
         </section>
       )}
 
+      {/* Referenztour-Modul: Lead-Capture mit vorausgewählter Branche */}
+      <section className="blk" style={{ background: 'var(--paper2)', paddingTop: 54, paddingBottom: 54 }}>
+        <div className="wrap center" style={{ maxWidth: 760 }}>
+          <p className="sub" style={{ margin: '0 auto 20px' }}>{t.referenztourText}</p>
+          <a className="btn btn-gold" href={lp(`/referenztour?branche=${data.slug}`)}>{t.referenztourCta}</a>
+        </div>
+      </section>
+
       {/* Extra Section */}
       {data.extraSection && (
         <section className="blk">

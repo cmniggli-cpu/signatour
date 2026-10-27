@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { CONTACT_PHONE, SITE_NAME } from '@/lib/constants'
+import ReferenztourLead from '@/components/features/ReferenztourLead'
+import { getReferenztourTours } from '@/lib/referenztour-tours'
 
 export const metadata: Metadata = {
   title: {
@@ -178,6 +180,8 @@ export default function HomePageEn() {
           </div>
         </div>
       </section>
+
+      <ReferenztourLead locale="en" tours={getReferenztourTours('en')} />
 
       <section className="blk" id="leistung">
         <div className="wrap center">

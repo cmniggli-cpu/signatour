@@ -14,6 +14,8 @@ export interface BranchenTemplateStrings {
   demoKicker: string
   demoTitle: string
   demoOpen: string
+  referenztourText: string
+  referenztourCta: string
   comparisonKicker: string
   comparisonCrit: string
   comparisonWithout: string
@@ -49,6 +51,8 @@ const de: BranchenTemplateStrings = {
   demoKicker: 'Sehen Sie selbst',
   demoTitle: 'Eine echte Signature Tour',
   demoOpen: 'VR-Tour öffnen',
+  referenztourText: 'Sie möchten eine Referenztour aus Ihrer Branche in Ruhe ansehen – und erhalten dazu eine unverbindliche Offerte innert 24 Stunden?',
+  referenztourCta: 'Referenztour ansehen',
   comparisonKicker: 'Der ehrliche Vergleich',
   comparisonCrit: 'Kriterium',
   comparisonWithout: 'Ohne Signatour',
@@ -84,6 +88,8 @@ const fr: BranchenTemplateStrings = {
   demoKicker: 'Voyez par vous-même',
   demoTitle: 'Une vraie Signature Tour',
   demoOpen: 'Ouvrir la visite VR',
+  referenztourText: 'Vous souhaitez découvrir tranquillement une visite de référence de votre secteur – avec une offre sans engagement sous 24 heures ?',
+  referenztourCta: 'Voir la visite de référence',
   comparisonKicker: 'La comparaison honnête',
   comparisonCrit: 'Critère',
   comparisonWithout: 'Sans Signatour',
@@ -119,6 +125,8 @@ const en: BranchenTemplateStrings = {
   demoKicker: 'See for yourself',
   demoTitle: 'A real Signature Tour',
   demoOpen: 'Open tour',
+  referenztourText: 'Want to explore a reference tour from your industry at your own pace – with a no-obligation quote within 24 hours?',
+  referenztourCta: 'View reference tour',
   comparisonKicker: 'The honest comparison',
   comparisonCrit: 'Criterion',
   comparisonWithout: 'Without Signatour',

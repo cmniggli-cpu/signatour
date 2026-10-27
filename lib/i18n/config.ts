@@ -48,7 +48,7 @@ export function stripLocale(pathname: string): string {
 
 // Basis-Pfade, die bereits in FR/EN existieren. Beim Ausbau (z. B. Branchen)
 // hier ergänzen – Navigation und Sprachumschalter ziehen automatisch nach.
-export const LOCALIZED_PATHS = ['/', '/pakete', '/ueber-uns', '/faq', '/kontakt', '/bestellen'] as const
+export const LOCALIZED_PATHS = ['/', '/pakete', '/ueber-uns', '/faq', '/kontakt', '/bestellen', '/referenztour'] as const
 
 export function isLocalizedPath(basePath: string): boolean {
   if (basePath.startsWith('/branchen/')) return true

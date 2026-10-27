@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { CONTACT_PHONE, UEBER_UNS_REASONS } from '@/lib/constants'
+import ReferenztourLead from '@/components/features/ReferenztourLead'
+import { getReferenztourTours } from '@/lib/referenztour-tours'
 
 export const metadata: Metadata = {
   alternates: {
@@ -157,6 +159,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ReferenztourLead locale="de" tours={getReferenztourTours('de')} />
 
       <section className="blk" id="leistung">
         <div className="wrap center">
